@@ -32,7 +32,7 @@ function doPost(e) {
     var membersSheet = spreadsheet.getSheetByName(memberName);
     var members = membersSheet ? {sheet:membersSheet.getName(),values:membersSheet.getDataRange().getDisplayValues()} : null;
     var burntSheet = spreadsheet.getSheetByName('Queimadinhos');
-    var burnt = burntSheet ? {sheet:'Queimadinhos',values:burntSheet.getDataRange().getDisplayValues()} : null;
+    var burnt = burntSheet ? {sheet:'Queimadinhos',values:galleryValues_(burntSheet)} : null;
     return json_({ok:true,schemaVersion:1,sheet:sheet.getName(),sheetId:sheet.getSheetId(),
       fetchedAt:new Date().toISOString(),spreadsheetTimezone:spreadsheet.getSpreadsheetTimeZone(),values:values,members:members,burnt:burnt});
   } catch (error) {
@@ -51,7 +51,7 @@ function json_(value) {
   return ContentService.createTextOutput(JSON.stringify(value)).setMimeType(ContentService.MimeType.JSON);
 }
 
-// Photos remain in Drive; the server requests only files listed in the gallery.
+// The website gallery is public. Only active files listed in Queimadinhos are served.
 function driveId_(value) {
   var text=String(value||'').trim();
   if(!/^https:\/\/(drive|docs)\.google\.com\//.test(text))return null;
@@ -62,7 +62,7 @@ function photo_(spreadsheet,fileId) {
   if(typeof fileId!=='string'||!/^[\w-]{10,200}$/.test(fileId))return json_({ok:false,error:'invalid_photo'});
   var sheet=spreadsheet.getSheetByName('Queimadinhos');
   if(!sheet)return json_({ok:false,error:'photo_not_found'});
-  var values=sheet.getDataRange().getDisplayValues();
+  var values=galleryValues_(sheet);
   var headers=values[0].map(function(v){return String(v).trim().toLowerCase();});
   var photo=headers.indexOf('foto'),active=headers.indexOf('ativo');
   var listed=photo>=0&&values.slice(1).some(function(row){var state=active>=0?String(row[active]).trim().toLowerCase():'';return ['false','falso','não','nao','0'].indexOf(state)<0&&driveId_(row[photo])===fileId;});
@@ -84,6 +84,23 @@ function setupQueimadinhos() {
   sheet.getRange('E2:E1000').insertCheckboxes();
   sheet.setColumnWidths(1,5,180);
   sheet.setColumnWidth(3,360);sheet.setColumnWidth(4,360);
-  // Request Drive permission during this one-time setup; no photo is shared publicly.
+  // The Drive file stays private; the website serves active gallery photos publicly.
   DriveApp.getRootFolder().getName();
+}
+
+// Read the actual hyperlink, even when the cell displays a filename or caption.
+function galleryValues_(sheet) {
+  var range=sheet.getDataRange(),values=range.getDisplayValues();
+  if(!values.length)return values;
+  var photo=values[0].map(function(v){return String(v).trim().toLowerCase();}).indexOf('foto');
+  if(photo<0||typeof range.getRichTextValues!=='function')return values;
+  var rich=range.getRichTextValues();
+  for(var i=1;i<values.length;i++){
+    var cell=rich[i]&&rich[i][photo];
+    if(!cell)continue;
+    var link=cell.getLinkUrl();
+    if(!link){var links=cell.getRuns().map(function(run){return run.getLinkUrl();}).filter(Boolean);var unique=links.filter(function(url,index){return links.indexOf(url)===index;});if(unique.length===1)link=unique[0];}
+    if(link)values[i][photo]=link;
+  }
+  return values;
 }

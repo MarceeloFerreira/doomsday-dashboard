@@ -2,9 +2,9 @@
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import {useEffect} from 'react';
-const routes=[['/calendario','Calendário','Eventos e próximos ciclos','calendar'],['/alianca','Nossa aliança','Conheça a BoPE','shield'],['/membros','Área de membros','Rankings e ferramentas','users'],['/lideranca','Liderança / R4','Performance e metas','chart']];
+const routes=[['/calendario','Calendário','Eventos e próximos ciclos','calendar'],['/alianca','Nossa aliança','Conheça a BoPE','shield'],['/queimadinhos','Queimadinhos','Churrascaria da região','fire'],['/membros','Área de membros','Rankings e ferramentas','users'],['/lideranca','Liderança / R4','Performance e metas','chart']];
 function Icon({name}){
-  const paths={calendar:<><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></>,shield:<><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></>,users:<><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 5a3 3 0 0 1 0 6M21 21v-3a6 6 0 0 0-3-5"/></>,chart:<><path d="M4 3v17h17M8 15v-4M13 15V7M18 15V4"/></>};
+  const paths={fire:<><path d="M12 3c1 5 7 7 7 12a7 7 0 0 1-14 0c0-3 2-5 4-7 0 4 2 5 3 5 2-3 1-7 0-10Z"/><path d="M12 15c2 2 3 3 3 4a3 3 0 0 1-6 0c0-1 1-3 3-4Z"/></>,calendar:<><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 11h18M8 15h2M14 15h2"/></>,shield:<><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8 12 3 3 5-6"/></>,users:<><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 5a3 3 0 0 1 0 6M21 21v-3a6 6 0 0 0-3-5"/></>,chart:<><path d="M4 3v17h17M8 15v-4M13 15V7M18 15V4"/></>};
   return <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{paths[name]}</svg>;
 }
 export default function SiteFrame({logo,panels,children}){

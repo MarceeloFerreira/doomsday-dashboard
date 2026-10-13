@@ -1,4 +1,4 @@
-# Área de membros e Queimadinhos
+# Área de membros e galeria pública Queimadinhos
 
 ## Desempenho
 
@@ -21,8 +21,14 @@ Envie uma captura para uma pasta do seu Google Drive acessível à conta que exe
 | --- | --- | --- | --- | --- |
 | 13/10/2026 | Nome do jogador | Link do arquivo no Drive | Esqueceu o abrigo, virou rodízio. | checkbox marcado |
 
-As imagens do Drive são servidas pelo aplicativo apenas a membros autenticados; não é necessário torná-las públicas. Use JPG, PNG, WebP ou GIF até 4 MB. O script só lê arquivos presentes em linhas ativas da galeria. Legenda vazia recebe uma frase padrão. Desmarcar Ativo remove a foto da próxima leitura automática; uma imagem já carregada pode permanecer no cache privado do navegador por cinco minutos.
+A galeria agora tem página própria em /queimadinhos, com menu abaixo de Nossa aliança, e é pública por escolha do proprietário. O arquivo pode permanecer privado no Drive, mas as imagens cadastradas em linhas ativas são exibidas publicamente pelo site. Use JPG, PNG, WebP ou GIF até 4 MB. O script só lê arquivos presentes em linhas ativas da galeria. Legenda vazia recebe uma frase padrão. Desmarcar Ativo remove a foto da próxima leitura automática; uma imagem já carregada pode permanecer no cache privado do navegador por cinco minutos.
 
 Também é aceito um link HTTPS direto de uma imagem hospedada publicamente. Essa alternativa mantém a visibilidade definida no serviço de origem.
 
 Sem imagens reais cadastradas, a galeria mostra um estado vazio; nenhuma ocorrência é inventada. As capturas de desempenho local podem usar o histórico salvo quando as variáveis de Google Sheets não estão definidas no servidor de teste.
+
+## Atualização da página pública
+
+Atualize o Apps Script e publique Nova versão na implantação existente, mantendo URL e token. Não execute setupQueimadinhos novamente se a aba já existe. O script agora lê o destino real dos hyperlinks, mesmo quando a célula mostra apenas o nome da foto.
+
+A galeria tem cache independente de 15 segundos e consulta automática a cada minuto. Ela não retorna pontuações, poder, tropas ou metas. Links antigos /membros?aba=queimadinhos redirecionam para /queimadinhos. A aba interna foi removida.
