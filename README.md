@@ -69,3 +69,15 @@ estática compatível, com UTF-8 e o mesmo JSON; a aplicação principal é a Ne
 
 Área separada com senha e sessão no servidor, análise por edição e metas do Arquipélago.
 Configuração de ambiente e planilha: [docs/leadership.md](docs/leadership.md).
+
+## Rotas
+
+- `/calendario`: calendário de eventos (a raiz `/` redireciona para esta página).
+- `/alianca`: informações da BoPE.
+- `/membros`: acesso e calculadoras de membros.
+- `/lideranca`: acesso R4 e análise por edição.
+
+O menu usa Link do Next.js. Atualizar com F5, abrir um link direto ou usar voltar/
+avançar preserva a página correspondente. A edição selecionada pela liderança
+fica no parâmetro `data`, por exemplo `/lideranca?data=2026-08-24`.
+O cabeçalho do ranking R4 permanece visível dentro do contêiner de rolagem.

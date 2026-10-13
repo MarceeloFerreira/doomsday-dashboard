@@ -7,3 +7,8 @@
 .r4-notice{padding:14px 18px;background:var(--ops-tint);color:var(--ops-strong);border:1px solid var(--border);border-radius:10px;font-size:13px;line-height:1.6;}
 .r4-table{width:100%;border-collapse:collapse;font-size:13px;}.r4-table th,.r4-table td{padding:14px 12px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;}.r4-table th{color:var(--text-muted);white-space:nowrap;}.r4-table td{min-width:100px;}.r4-meter{height:5px;background:var(--border);border-radius:5px;margin:8px 0;overflow:hidden;}.r4-meter span{display:block;height:100%;background:var(--ops);}.r4-rules{padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:12px;line-height:1.6;}.r4-rules summary{cursor:pointer;color:var(--ops);}
 @media(max-width:600px){.r4-stats{grid-template-columns:repeat(2,minmax(0,1fr));}.r4-login{padding:24px 18px;}.r4-stats .n{font-size:26px;}}
+
+.r4-table-scroll{max-height:min(65vh,560px);overflow:auto;overscroll-behavior:contain;}
+.r4-table{border-collapse:separate;border-spacing:0;}
+.r4-table thead th{position:sticky;top:0;z-index:2;background:var(--surface-2);box-shadow:0 1px 0 var(--border);}
+.r4-table-scroll:focus-visible{outline:2px solid var(--ops);outline-offset:3px;}

@@ -535,3 +535,9 @@
 .calendar-filters input{flex:1;min-width:180px;}.calendar-id{display:block;color:var(--text-muted);font-size:11px;margin-top:5px;}
 .rot-table-wrap{overflow:auto;}.rot-table{width:100%;border-collapse:collapse;}.rot-table td,.rot-table th{padding:12px;text-align:left;border-bottom:1px solid var(--border);}
 .stats{grid-template-columns:repeat(3,minmax(0,1fr));}@media(max-width:600px){.stats{grid-template-columns:1fr;}}
+
+/* Route navigation preserves the legacy member DOM in the shared layout. */
+.topmenu a{text-decoration:none;}
+.legacy-pages .tab-panel{display:none;}
+.legacy-pages.show-alliance #tab-alianca,.legacy-pages.show-members #tab-dash{display:block;}
+html{scroll-padding-top:72px;}

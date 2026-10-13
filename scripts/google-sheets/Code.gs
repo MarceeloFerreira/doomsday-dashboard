@@ -30,7 +30,7 @@ function doPost(e) {
     var membersSheet = spreadsheet.getSheetByName(memberName);
     var members = membersSheet ? {sheet:membersSheet.getName(),values:membersSheet.getDataRange().getDisplayValues()} : null;
     return json_({ok:true,schemaVersion:1,sheet:sheet.getName(),sheetId:sheet.getSheetId(),
-      fetchedAt:new Date().toISOString(),spreadsheetTimezone:spreadsheet.getParent().getSpreadsheetTimeZone(),values:values,members:members});
+      fetchedAt:new Date().toISOString(),spreadsheetTimezone:spreadsheet.getSpreadsheetTimeZone(),values:values,members:members});
   } catch (error) {
     // Não retornar informações da conta, IDs internos ou detalhes de permissões.
     return json_({ok:false,error:'sheet_read_failed'});
