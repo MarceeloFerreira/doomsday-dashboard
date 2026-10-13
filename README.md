@@ -64,3 +64,8 @@ com dados de membros fora de `public/`. Não publicar dados confidenciais nessa 
 `npm test` verifica limites de datas, recorrência e horário de verão.
 `npm run build` compila as páginas. O arquivo `index.html` foi mantido como entrada
 estática compatível, com UTF-8 e o mesmo JSON; a aplicação principal é a Next.js.
+
+## Liderança / R4
+
+Área separada com senha e sessão no servidor, análise por edição e metas do Arquipélago.
+Configuração de ambiente e planilha: [docs/leadership.md](docs/leadership.md).

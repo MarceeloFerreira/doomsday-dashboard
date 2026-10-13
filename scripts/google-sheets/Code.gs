@@ -26,8 +26,11 @@ function doPost(e) {
       return json_({ok:false,error:'sheet_not_found'});
     }
     var values = sheet.getDataRange().getDisplayValues();
+    var memberName = PropertiesService.getScriptProperties().getProperty('MEMBER_SHEET_NAME') || 'MembrosAlianca';
+    var membersSheet = spreadsheet.getSheetByName(memberName);
+    var members = membersSheet ? {sheet:membersSheet.getName(),values:membersSheet.getDataRange().getDisplayValues()} : null;
     return json_({ok:true,schemaVersion:1,sheet:sheet.getName(),sheetId:sheet.getSheetId(),
-      fetchedAt:new Date().toISOString(),spreadsheetTimezone:spreadsheet.getParent().getSpreadsheetTimeZone(),values:values});
+      fetchedAt:new Date().toISOString(),spreadsheetTimezone:spreadsheet.getParent().getSpreadsheetTimeZone(),values:values,members:members});
   } catch (error) {
     // Não retornar informações da conta, IDs internos ou detalhes de permissões.
     return json_({ok:false,error:'sheet_read_failed'});
