@@ -6,7 +6,7 @@
   "patch": "9",
   "manifest": "D14677579",
   "timezone": "UTC",
-  "source": "Arquivos locais do cliente; disponibilidade depende do servidor e reino.",
+  "source": "Arquivos locais do cliente; disponibilidade depende do servidor e região.",
   "events": [
     {
       "id": 100009,

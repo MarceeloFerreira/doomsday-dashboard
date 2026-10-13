@@ -49,7 +49,7 @@ função, recalculada a cada minuto. A coleta antiga é sinalizada após oito di
 
 Eventos ocultos, descontinuados, sem localização ou sem data absoluta são excluídos.
 `ServerDay`, `ServerDayEnd` e `KingdomId` são preservados como restrições: sem saber
-o reino e sua idade, as janelas exibidas são estimativas do cliente, não confirmação
+a região e sua idade, as janelas exibidas são estimativas do cliente, não confirmação
 de disponibilidade no servidor. IDs distintos com o mesmo nome permanecem distintos.
 
 ## Área de membros

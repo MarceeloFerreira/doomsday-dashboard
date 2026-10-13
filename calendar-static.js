@@ -14,7 +14,7 @@
   }
   el('calendar-version').textContent=data.clientVersion+' · build '+data.build+' · patch '+data.patch;
   el('checked-on').textContent=new Intl.DateTimeFormat('pt-PT',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Lisbon'}).format(new Date(data.generatedAt));
-  el('calendar-message').textContent='Horários do calendário em UTC. Janelas calculadas a partir da configuração local; confirme a disponibilidade no seu reino.';
+  el('calendar-message').textContent='Horários do calendário em UTC. Janelas calculadas a partir da configuração local; confirme a disponibilidade na sua região.';
   const search=el('calendar-search'),filter=el('calendar-filter'),kind=el('calendar-kind');
   const norm=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
   function render(){

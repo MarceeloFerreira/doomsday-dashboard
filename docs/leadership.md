@@ -66,3 +66,14 @@ O acesso novo protege os relatórios e APIs R4. A implementação antiga de memb
 ainda contém as pontuações no JavaScript público; essa mudança não torna o
 histórico de pontuações já publicado confidencial. Para isso, migrar também a
 área antiga para autenticação e dados no servidor.
+
+## Carregamento e indisponibilidade temporária
+
+Spinner e indicação de carregamento aparecem durante consultas, com botão de
+atualização manual/tentar novamente. Apenas falhas temporárias (timeout, erro de
+rede, HTTP 429 ou 5xx) recebem uma segunda tentativa: limites de 10 e 15 segundos.
+Chaves/permissões recusadas não são repetidas. O navegador encerra uma consulta
+sem resposta em 35 segundos e permite tentar novamente.
+Em atualizações da mesma edição, os últimos dados válidos da planilha ficam
+visíveis quando a nova leitura falha, marcados como desatualizados. Uma edição
+diferente nunca reutiliza o ranking da anterior como se fosse seu próprio.

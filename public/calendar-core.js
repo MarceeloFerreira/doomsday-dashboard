@@ -12,7 +12,7 @@
     }
     const end=Math.min(start+duration,limit);
     const status=now>=limit || (!loop && now>=end) ? 'ended' : now<start ? 'upcoming' : 'active';
-    return {...event,startMs:start,endMs:end,status};
+    return {...event,name:typeof event.name==='string'?event.name.replace(/\bReinos?\b/g,word=>word==='Reinos'?'Regiões':'Região'):event.name,startMs:start,endMs:end,status};
   }
   root.CalendarCore={windowFor,DAY};
   if(typeof module!=='undefined') module.exports=root.CalendarCore;
