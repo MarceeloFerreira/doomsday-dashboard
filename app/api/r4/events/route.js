@@ -7,7 +7,7 @@ export const dynamic='force-dynamic';
 export async function GET(request){
   const headers={'Cache-Control':'private, no-store'};
   if(!auth.valid(request.cookies.get('bope_r4')?.value))return NextResponse.json({error:'Acesso exclusivo da liderança.'},{status:401,headers});
-  const source=await leadershipSource();const events=core.editions(source.rows);
+  const source=await leadershipSource();const events=core.editions(source.rows).map(e=>({...e,partial:(source.conflicts||[]).some(c=>c.date===e.date)}));
   const selected=request.nextUrl.searchParams.get('date')||events[0]?.date;
   const analysis=core.analyze(source.rows,source.members,selected);
   if(!analysis)return NextResponse.json({error:'Edição não encontrada.'},{status:404,headers});

@@ -1,6 +1,7 @@
 import './globals.css';
 import './r4.css';
 import './design-system.css';
+import './r4-analytics.css';
 import {readFile} from 'node:fs/promises';
 import path from 'node:path';
 import Script from 'next/script';

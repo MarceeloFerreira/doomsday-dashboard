@@ -77,3 +77,11 @@ sem resposta em 35 segundos e permite tentar novamente.
 Em atualizações da mesma edição, os últimos dados válidos da planilha ficam
 visíveis quando a nova leitura falha, marcados como desatualizados. Uma edição
 diferente nunca reutiliza o ranking da anterior como se fosse seu próprio.
+
+## Gráficos e seleção de edição
+
+A seleção de evento ocupa um painel próprio, com filtros por tipo, data e navegação entre edições. O ranking mostra seis colunas; Faltam e Variação foram removidas da interface.
+
+Quatro gráficos permitem acompanhar até oito edições anteriores do mesmo evento (total, média ou registros), distribuição do cumprimento das metas, top dez por pontuação e até doze jogadores com menor percentual da meta. Os filtros de jogador, meta e tipo de conta afetam os gráficos de jogadores e a tabela. O resumo da edição e o histórico permanecem completos. Clicar em um jogador abre sua seleção na tabela; clicar em uma categoria de meta filtra a seleção; as datas do histórico abrem a respectiva edição.
+
+A taxa de metas atingidas usa apenas jogadores avaliados; ausência de cadastro ou regra é mostrada como sem avaliação. Gráficos vazios não interpretam falta de dados como zero. Metas de edições antigas continuam calculadas com o cadastro atual. As barras de cumprimento param em 200%, mas o percentual escrito preserva o valor real.
