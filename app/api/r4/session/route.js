@@ -1,10 +1,10 @@
 import {NextResponse} from 'next/server';
 import auth from '../../../../lib/r4-auth.cjs';
+import {sameOrigin,secureCookie} from '../../../../lib/request-origin.cjs';
 export const runtime='nodejs';
 const cookieName='bope_r4';
 const failures=new Map();
 const json=(body,status=200)=>NextResponse.json(body,{status,headers:{'Cache-Control':'private, no-store'}});
-function sameOrigin(request){return request.headers.get('origin')===new URL(request.url).origin;}
 export async function GET(request){return json({authenticated:auth.valid(request.cookies.get(cookieName)?.value),configured:auth.configured()});}
 export async function POST(request){
   if(!sameOrigin(request))return json({error:'Origem inválida.'},403);
@@ -20,6 +20,6 @@ export async function POST(request){
     return json({error:'Senha incorreta.'},401);
   }
   failures.delete(key);const result=json({authenticated:true});
-  result.cookies.set(cookieName,auth.issue(),{httpOnly:true,secure:new URL(request.url).protocol==='https:',sameSite:'strict',path:'/',maxAge:8*3600});return result;
+  result.cookies.set(cookieName,auth.issue(),{httpOnly:true,secure:secureCookie(request),sameSite:'strict',path:'/',maxAge:8*3600});return result;
 }
-export async function DELETE(request){if(!sameOrigin(request))return json({error:'Origem inválida.'},403);const result=json({authenticated:false});result.cookies.set(cookieName,'',{httpOnly:true,sameSite:'strict',path:'/',maxAge:0});return result;}
+export async function DELETE(request){if(!sameOrigin(request))return json({error:'Origem inválida.'},403);const result=json({authenticated:false});result.cookies.set(cookieName,'',{httpOnly:true,secure:secureCookie(request),sameSite:'strict',path:'/',maxAge:0});return result;}
