@@ -1,7 +1,4 @@
 
-var DASH_FARM=["Kris2","Ganshel"];
-var DASH_EVLABEL={A:'Arquipelágo',G:'Gênesis',I:'Insular'};
-var DASH_ROSTER=["ARES","Alen_","Aninha","Avatar","Ayon","Beto_Brasil","BrianMannrich","Bronks","CAUEZERA","Calvin","Carlos","Caslu","Catrina","Chuy","Conan","Cronos","Daenerys","DarkNatsu","Death","Deleti","Dziro","Edwhois","ElWalas","Ewerton79","Felyppe","Guigo","Gus","IronLegacy","Jin","Jojo","Juci","Jukera","Ka","Kaverna","KengoBRAZIL","Kris","Kuky","Light","LuizaGuedes24","May","Mr_Potato","Nadia","Nato","Nitroxido","Orochi","Pardal","PoppA","Radamanthys","Rish","Rodrigues","Sabada","Santk","ScorpionMago","Sidney","Sioux","Sis_Tina","Skull","SmacKDowN","Stubi","SurvivorHoracio","TCAS","Tata","Tbest","Teleze","Tiifa","ToNi","Vhagar","Viking","Viniciusfmv","William","brupnopiz","killerEduardo"];
 
 (function(){
   // ---- indicador de "tem mais abas pra rolar" no menu superior (mobile) ----

@@ -19,5 +19,10 @@ test('gallery accepts private Drive links, ignores disabled/invalid rows and rej
 });
 test('member cookies are signed, expire, reject tampering and never accept an R4 cookie',()=>{
   const previous={R4_SESSION_SECRET:process.env.R4_SESSION_SECRET,MEMBERS_PASSWORD:process.env.MEMBERS_PASSWORD};
-  try{process.env.R4_SESSION_SECRET='s'.repeat(32);process.env.MEMBERS_PASSWORD='local-members-password';const now=1000,token=auth.issue(now);assert.ok(auth.passwordValid('LOCAL-MEMBERS-PASSWORD'));assert.ok(!auth.passwordValid('wrong'));assert.ok(auth.valid(token,now));assert.ok(!auth.valid(token+'x',now));assert.ok(!auth.valid(token,now+8*3600000));assert.ok(!auth.valid('r4.token',now));}finally{for(const[key,value]of Object.entries(previous)){if(value===undefined)delete process.env[key];else process.env[key]=value;}}
+  try{process.env.R4_SESSION_SECRET='s'.repeat(32);process.env.MEMBERS_PASSWORD='local-members-password';const now=1000,token=auth.issue(now);assert.ok(auth.passwordValid('local-members-password'));assert.ok(!auth.passwordValid('LOCAL-MEMBERS-PASSWORD'));assert.ok(!auth.passwordValid('wrong'));assert.ok(auth.valid(token,now));assert.ok(!auth.valid(token+'x',now));assert.ok(!auth.valid(token,now+8*3600000));assert.ok(!auth.valid('r4.token',now));}finally{for(const[key,value]of Object.entries(previous)){if(value===undefined)delete process.env[key];else process.env[key]=value;}}
+});
+
+test('unusual event labels cannot mutate JavaScript object prototypes',()=>{
+  analyzeMembers([['2026-10-16','__proto__','Player',100],['2026-10-17','constructor','Player',200]],'','0');
+  assert.equal(Object.prototype.total,undefined);assert.equal(Object.prototype.records,undefined);assert.equal(Object.total,undefined);
 });

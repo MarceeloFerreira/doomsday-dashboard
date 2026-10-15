@@ -36,3 +36,9 @@ test('goal-rule setup seeds the three rules once and preserves an existing sheet
   assert.equal(insertions,1);assert.equal(writes.length,2);
   assert.equal(writes[0][0][0],'Evento');assert.equal(writes[1].length,3);assert.equal(writes[1][0][5],30);assert.equal(writes[1][1][3],180e6);assert.equal(writes[1][2][2],180e6);
 });
+
+test('Apps Script validates null, arrays and oversized requests before reading data',()=>{
+  const {context,reads}=setup();
+  for(const contents of ['null','[]','{',JSON.stringify({token:'x'.repeat(5000)})])assert.equal(context.doPost({postData:{contents}}).error,'invalid_request');
+  assert.equal(context.doPost({}).error,'invalid_request');assert.equal(reads(),0);
+});

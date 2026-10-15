@@ -77,14 +77,15 @@ mostra apenas as janelas que satisfazem esse limite. As animações respeitam
 
 ## Área de membros
 
-A trava original de senha e localStorage é uma barreira visual; os dados e a lógica
-continuam no navegador. A migração para Next.js não cria autenticação segura.
-Para dados privados, o próximo passo é autenticação e autorização no servidor,
-com dados de membros fora de `public/`. Não publicar dados confidenciais nessa área.
+O acesso é verificado no servidor por sessão assinada de oito horas e cookie HttpOnly. Configure MEMBERS_PASSWORD (12 a 256 caracteres) e uma chave de sessão; não há senha padrão. O relatório entrega somente pontuações gerais, sem metas/poder/tropas da liderança. Configuração: [docs/members.md](docs/members.md).
+
+A galeria `/queimadinhos` é pública por escolha do proprietário e retorna somente registros ativos, com fotos servidas por ID autorizado no Apps Script. Dados já presentes no repositório público continuam públicos no Git.
+
+Revisão, limitações e ativação das proteções: [docs/security-review-2026-10-16.md](docs/security-review-2026-10-16.md).
 
 ## Validação
 
-`npm test` verifica limites de datas, recorrência e horário de verão.
+`npm test` verifica calendário, regras, análises, sessões, autorização, origem, limites de requisição e integração Apps Script.
 `npm run build` compila as páginas. O arquivo `index.html` foi mantido como entrada
 estática compatível, com UTF-8 e o mesmo JSON; a aplicação principal é a Next.js.
 
@@ -98,6 +99,7 @@ Configuração de ambiente e planilha: [docs/leadership.md](docs/leadership.md).
 - `/calendario`: calendário de eventos (a raiz `/` redireciona para esta página).
 - `/alianca`: informações da BoPE.
 - `/membros`: acesso e calculadoras de membros.
+- `/queimadinhos`: galeria pública de registros ativos.
 - `/lideranca`: acesso R4 e análise por edição.
 
 O menu usa Link do Next.js. Atualizar com F5, abrir um link direto ou usar voltar/

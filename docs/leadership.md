@@ -59,10 +59,7 @@ recarregar após expirar o cache antecipa a consulta do navegador.
 Falha de acesso ou formato inválido usa o histórico salvo no projeto, com aviso
 visível e metas indisponíveis. Não afirma estar sincronizado quando usa o snapshot.
 
-O acesso novo protege os relatórios e APIs R4. A implementação antiga de membros
-ainda contém as pontuações no JavaScript público; essa mudança não torna o
-histórico de pontuações já publicado confidencial. Para isso, migrar também a
-área antiga para autenticação e dados no servidor.
+Os relatórios e APIs de membros e R4 exigem sessão no servidor. O snapshot de pontuações do repositório público continua acessível no Git; autenticar o site não torna privado o histórico já publicado.
 
 ## Carregamento e indisponibilidade temporária
 

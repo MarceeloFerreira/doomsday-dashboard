@@ -12,16 +12,20 @@ function doGet() {
 
 function doPost(e) {
   var input;
-  try { input = JSON.parse(e.postData.contents); }
+  try { if(!e||!e.postData||typeof e.postData.contents!=='string'||e.postData.contents.length>4096)throw Error('invalid_request'); input = JSON.parse(e.postData.contents); if(!input||typeof input!=='object'||Array.isArray(input))throw Error('invalid_request'); }
   catch (error) { return json_({ok:false,error:'invalid_request'}); }
   var token = PropertiesService.getScriptProperties().getProperty('DASHBOARD_TOKEN');
-  var supplied = typeof input.token === 'string' ? input.token : '';
+  var supplied = typeof input.token === 'string' && input.token.length <= 512 ? input.token : '';
   if (!token || token.length < 32 || !supplied || !constantTimeEqual_(token, supplied)) {
     return json_({ok:false,error:'unauthorized'});
   }
   try {
     var spreadsheet = SpreadsheetApp.openById('1V2w4mNnAFZNncsheQI0HvXYSpwlWXm0YF5wJVwygIk8');
     if (input.action === 'photo') return photo_(spreadsheet, input.file);
+    if (input.action === 'gallery') {
+      var gallerySheet=spreadsheet.getSheetByName('Queimadinhos');
+      return json_({ok:true,fetchedAt:new Date().toISOString(),burnt:gallerySheet?{sheet:'Queimadinhos',values:galleryValues_(gallerySheet)}:null});
+    }
     if (input.action && input.action !== 'report') return json_({ok:false,error:'invalid_request'});
     var sheet = spreadsheet.getSheets().filter(function(s){return s.getSheetId() === 707290562;})[0];
     if (!sheet || sheet.getName() !== 'Hist. Pontuações') {
@@ -67,7 +71,7 @@ function photo_(spreadsheet,fileId) {
   var values=galleryValues_(sheet);
   var headers=values[0].map(function(v){return String(v).trim().toLowerCase();});
   var photo=headers.indexOf('foto'),active=headers.indexOf('ativo');
-  var listed=photo>=0&&values.slice(1).some(function(row){var state=active>=0?String(row[active]).trim().toLowerCase():'';return ['false','falso','não','nao','0'].indexOf(state)<0&&driveId_(row[photo])===fileId;});
+  var listed=photo>=0&&active>=0&&values.slice(1).some(function(row){var state=String(row[active]).trim().toLowerCase();return ['true','verdadeiro','sim','1'].indexOf(state)>=0&&driveId_(row[photo])===fileId;});
   if(!listed)return json_({ok:false,error:'photo_not_found'});
   try{
     var file=DriveApp.getFileById(fileId),blob=file.getBlob();

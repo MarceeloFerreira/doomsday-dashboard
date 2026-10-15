@@ -6,7 +6,7 @@ const path=require('node:path');
 function handler(){
  const source=fs.readFileSync(path.join(__dirname,'../lib/gallery-photo.js'),'utf8').replace(/^import .*;$/gm,'').replace('export async function','async function');
  const ids=[];
- const context={URL,Buffer,NextResponse:Response,process:{env:{GOOGLE_SHEETS_SCRIPT_URL:'https://script.google.com/macros/s/test/exec',GOOGLE_SHEETS_SCRIPT_TOKEN:'local-test-only'}},fetch:()=>{},auth:{valid:()=>false},requestSheet:async(_,url,token,{file})=>{ids.push(file);return {ok:true,json:async()=>file==='unlisted_photo_id'?{ok:false}:{ok:true,mime:'image/png',base64:Buffer.from(file).toString('base64')}};}};
+ const context={gallerySource:async()=>({available:true,gallery:[{file:'first_photo_id'},{file:'second_photo_id'}]}),URL,Buffer,NextResponse:Response,process:{env:{GOOGLE_SHEETS_SCRIPT_URL:'https://script.google.com/macros/s/test/exec',GOOGLE_SHEETS_SCRIPT_TOKEN:'local-test-only'}},fetch:()=>{},auth:{valid:()=>false},requestSheet:async(_,url,token,{file})=>{ids.push(file);return {ok:true,json:async()=>file==='unlisted_photo_id'?{ok:false}:{ok:true,mime:'image/png',base64:Buffer.from(file).toString('base64')}};}};
  vm.createContext(context);vm.runInContext(source,context);return {get:context.galleryPhoto,ids};
 }
 test('distinct photo paths request distinct files and return distinct image bytes',async()=>{
@@ -21,4 +21,9 @@ test('distinct photo paths request distinct files and return distinct image byte
 test('legacy query photo URLs also carry the file-specific CDN variation',async()=>{
  const {get}=handler();const r=await get({nextUrl:new URL('https://example.com/api/queimadinhos/photos?file=first_photo_id')},true);
  assert.equal(await r.text(),'first_photo_id');assert.equal(r.headers.get('Netlify-Vary'),'query=file');
+});
+
+test('public photos reject unlisted files before asking Apps Script for a blob',async()=>{
+ const {get,ids}=handler();const r=await get({nextUrl:new URL('https://example.com/api/queimadinhos/photos')},true,'unlisted_photo_id');
+ assert.equal(r.status,404);assert.deepEqual(ids,[]);assert.equal(r.headers.get('cache-control'),'private, no-store');
 });

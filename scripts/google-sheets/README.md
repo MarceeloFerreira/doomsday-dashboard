@@ -1,10 +1,8 @@
 # Conectar Hist. Pontuações por Google Apps Script
 
 O script já foi preparado em `scripts/google-sheets/Code.gs`.
-A planilha continua privada; o aplicativo da Web só retorna os valores da aba
-Hist. Pontuações quando recebe a chave configurada. A chave vai no corpo POST,
-não no endereço. A integração ainda precisa ser implantada e validada com dados
-reais: o acesso atual à planilha retorna 401.
+A planilha continua privada; o aplicativo da Web exige a chave configurada para retornar histórico, cadastro, regras ou fotos autorizadas. A chave vai no corpo POST,
+não no endereço. A integração deve ser validada no ambiente publicado após atualizar a implantação.
 
 1. Na sua planilha, abra **Extensões > Apps Script**.
 2. Copie o conteúdo de `Code.gs` para o editor.
@@ -37,3 +35,5 @@ Não precisa de gatilho semanal ou `onEdit`: cada leitura consulta os dados atua
 As cotas do Apps Script e o intervalo de cache limitam a frequência de atualização.
 
 Referência: https://developers.google.com/apps-script/guides/web
+
+A ação `gallery` retorna apenas a aba Queimadinhos, sem pontuações, membros ou regras. Fotos exigem Ativo explicitamente marcado. Alterações no código do Apps Script exigem Nova versão na implantação; edições nas linhas das abas não exigem deploy.
