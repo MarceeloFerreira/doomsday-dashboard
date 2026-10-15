@@ -20,7 +20,7 @@ Há limitação de tentativas por instância, não compartilhada entre instânci
 Atualize o script com `scripts/google-sheets/Code.gs`. Em **Implantar > Gerenciar
 implantações**, edite a implantação e selecione **Nova versão** para manter a URL.
 O script atualizado retorna `values` da Hist. Pontuações e `members.values` de
-MembrosAlianca. Não modifica nenhuma célula. Se a aba tiver outro nome, configure
+MembrosAlianca, além das regras de RegrasMetas. As leituras não modificam células. Se a aba tiver outro nome, configure
 `MEMBER_SHEET_NAME` nas propriedades do Apps Script.
 
 Cabeçalho do histórico: Data, Evento, Player, Pontuação (Pontos também é aceito).
@@ -38,10 +38,7 @@ Campos em branco ficam sem meta; não são tratados como zero.
 
 ## Metas e análise
 
-Arquipélago: T5 deve pontuar 30% do poder; T6 até 180 milhões inclusive deve
-pontuar 80 milhões; T6 acima de 180 milhões deve pontuar 120 milhões.
-Sem regras para Gênesis, Insular ou tropas diferentes de T5/T6.
-Conta/farm é um filtro, não uma regra adicional de meta.
+As metas são editáveis por evento na aba RegrasMetas. Consulte [o passo a passo e as colunas](goal-rules.md). O topo do painel mostra as mesmas regras usadas nos cálculos. Somente contas de membros atuais (Tipo = conta e situação = Sim) entram nas listagens, gráficos e totais.
 
 O painel mostra edições por data, ranking, total, registros, jogadores que pontuaram,
 meta atingida/abaixo/sem avaliação, percentual cumprido, déficit e variação em relação

@@ -31,10 +31,12 @@ function doPost(e) {
     var memberName = PropertiesService.getScriptProperties().getProperty('MEMBER_SHEET_NAME') || 'MembrosAlianca';
     var membersSheet = spreadsheet.getSheetByName(memberName);
     var members = membersSheet ? {sheet:membersSheet.getName(),values:membersSheet.getDataRange().getDisplayValues()} : null;
+    var rulesSheet = spreadsheet.getSheetByName('RegrasMetas');
+    var rules = rulesSheet ? {sheet:'RegrasMetas',values:rulesSheet.getDataRange().getDisplayValues()} : null;
     var burntSheet = spreadsheet.getSheetByName('Queimadinhos');
     var burnt = burntSheet ? {sheet:'Queimadinhos',values:galleryValues_(burntSheet)} : null;
     return json_({ok:true,schemaVersion:1,sheet:sheet.getName(),sheetId:sheet.getSheetId(),
-      fetchedAt:new Date().toISOString(),spreadsheetTimezone:spreadsheet.getSpreadsheetTimeZone(),values:values,members:members,burnt:burnt});
+      fetchedAt:new Date().toISOString(),spreadsheetTimezone:spreadsheet.getSpreadsheetTimeZone(),values:values,members:members,rules:rules,burnt:burnt});
   } catch (error) {
     // Não retornar informações da conta, IDs internos ou detalhes de permissões.
     return json_({ok:false,error:'sheet_read_failed'});
@@ -103,4 +105,21 @@ function galleryValues_(sheet) {
     if(link)values[i][photo]=link;
   }
   return values;
+}
+
+// Run once to create editable goal rules. Existing rules are never overwritten.
+function setupRegrasMetas() {
+  var spreadsheet=SpreadsheetApp.openById('1V2w4mNnAFZNncsheQI0HvXYSpwlWXm0YF5wJVwygIk8');
+  if(spreadsheet.getSheetByName('RegrasMetas'))return;
+  var sheet=spreadsheet.insertSheet('RegrasMetas');
+  sheet.getRange(1,1,1,7).setValues([['Evento','Tropa','Poder acima de','Poder até','Tipo de meta','Meta','Ativo']]).setFontWeight('bold');
+  sheet.getRange('G2:G1000').insertCheckboxes();
+  sheet.getRange(2,1,3,7).setValues([
+    ['Arquipélago','T5','','','Percentual',30,true],
+    ['Arquipélago','T6','',180000000,'Pontos',80000000,true],
+    ['Arquipélago','T6',180000000,'','Pontos',120000000,true]
+  ]);
+  sheet.setFrozenRows(1);sheet.setColumnWidths(1,7,175);
+  sheet.getRange('C2:D1000').setNumberFormat('#,##0');
+  sheet.getRange('F2:F1000').setNumberFormat('0.##');
 }
