@@ -541,3 +541,8 @@
 .legacy-pages .tab-panel{display:none;}
 .legacy-pages.show-alliance #tab-alianca,.legacy-pages.show-members #tab-dash{display:block;}
 html{scroll-padding-top:72px;}
+
+.calendar-variants { margin-top: .6rem; white-space: normal; }
+.calendar-variants summary { cursor: pointer; color: var(--accent, #8ecfff); }
+.calendar-variant { padding: .7rem 0; border-bottom: 1px solid #ffffff18; min-width: 240px; }
+.calendar-variant small { display: block; margin-top: .25rem; }

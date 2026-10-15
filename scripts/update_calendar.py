@@ -40,6 +40,33 @@ def date_array(value):
         return None
     return dt.datetime(*map(int, value[:3]), int(value[3]) if len(value)>3 else 0, tzinfo=dt.timezone.utc)
 
+def description_for(row, resolve, name):
+    """Use a short localized subtitle/tip, falling back to an excerpt of rules."""
+    fallback = ('', '')
+    for field in ('SubtitleKey', 'CalendarTipsKey', 'RuleKey'):
+        value = row.get(field) or []
+        if not value or value[0] in ('null', ''):
+            continue
+        text = resolve(value[0])
+        for index, argument in enumerate(value[1:], 1):
+            text = text.replace('{'+str(index)+'}', str(argument))
+        text = re.sub(r'<[^>]*>', ' ', text)
+        text = re.sub(r'\[/?(?:b|i|u|color(?:=[^\]]*)?|size(?:=[^\]]*)?)\]', '', text, flags=re.I)
+        text = re.sub(r'\s+', ' ', text.replace('\\n', ' ')).strip()
+        text = re.sub(r'(^|\s)\d+[.)、](?=\s|$)\s*', ' ', text).strip()
+        if not text or text == name or text == 'null' or re.search(r'\{\d+\}|%[sd]', text):
+            continue
+        # Keep complete sentences where possible; never invent event mechanics.
+        sentences = re.split(r'(?<=[.!?])\s+(?=[A-ZÁÉÍÓÚÀÂÊÔÃÕÇ0-9])', text)
+        short = ' '.join(sentences[:2])
+        if len(short) > 240:
+            short = short[:237].rsplit(' ', 1)[0].rstrip(' ,;:') + '…'
+        if len(short) >= 65:
+            return short, value[0]
+        if len(short) > len(fallback[0]):
+            fallback = (short, value[0])
+    return fallback
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--output', type=Path, default=ROOT/'public/data/calendar.json')
@@ -81,6 +108,16 @@ def main():
         if not name or name=='null': excluded['noName']+=1; continue
         end = date_array(row.get('End'))
         events.append({'id':row['Id'],'name':name,'start':start.isoformat(),'end':end.isoformat() if end else None,'durationDays':duration,'loopDays':row.get('LoopDay',0),'calendar':bool(row.get('Calendar')),'crossServer':bool(row.get('CrossServer')),'kingdomIds':row.get('KingdomId',[]),'serverDay':row.get('ServerDay',0),'serverDayEnd':row.get('ServerDayEnd',0),'sourceKey':key,'evidence':'client-config','startRaw':row['Start'],'hideType':row.get('HideType',0),'discontinue':row.get('Discontinue',0)})
+    by_id = {row['Id']: row for row in activities}
+    # Preserve additional eligibility constraints without guessing their server
+    # semantics. The UI must not silently merge variants with different rules.
+    for event in events:
+        row = by_id[event['id']]
+        event['description'], event['descriptionSourceKey'] = description_for(row, resolve, event['name'])
+        event['conditions'] = {key: row[key] for key in (
+            'SpecialzoneServer', 'NewServerActivity', 'CrossPartition',
+            'MutualExclusion', 'MutualExclusioGroup', 'GvgType', 'GvgTypeClient'
+        ) if row.get(key)}
     if len(events)<10 or len({e['id'] for e in events}) != len(events):
         raise RuntimeError('Invalid or unexpectedly empty calendar; previous data preserved')
     result={'schemaVersion':1,'generatedAt':dt.datetime.now(dt.timezone.utc).isoformat(),'clientVersion':version['version'],'build':version['build'],'patch':version['patchversion'],'manifest':version_id,'timezone':'UTC','source':'Arquivos locais do cliente; disponibilidade depende do servidor e região.','events':events,'excluded':excluded,'sources':[{'table':k,'sha256':hashlib.sha256(files[k].read_bytes()).hexdigest(),'modifiedAt':dt.datetime.fromtimestamp(files[k].stat().st_mtime,dt.timezone.utc).isoformat()} for k in required]}
@@ -91,7 +128,7 @@ def main():
         if {k:v for k,v in previous.items() if k!='generatedAt'} == {k:v for k,v in result.items() if k!='generatedAt'}:
             status='unchanged'
     temp=args.output.with_suffix('.tmp')
-    temp.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+    temp.write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8',newline='\n')
     temp.replace(args.output)
     print(json.dumps({'status':status,'clientVersion':version['version'],'events':len(events),'excluded':excluded},ensure_ascii=True))
 

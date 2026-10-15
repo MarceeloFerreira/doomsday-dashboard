@@ -50,7 +50,30 @@ função, recalculada a cada minuto. A coleta antiga é sinalizada após oito di
 Eventos ocultos, descontinuados, sem localização ou sem data absoluta são excluídos.
 `ServerDay`, `ServerDayEnd` e `KingdomId` são preservados como restrições: sem saber
 a região e sua idade, as janelas exibidas são estimativas do cliente, não confirmação
-de disponibilidade no servidor. IDs distintos com o mesmo nome permanecem distintos.
+de disponibilidade no servidor. O calendário abre com foco na região 541 e permite consultar todas as regiões.
+Listas `KingdomId` explícitas incompatíveis são excluídas; uma lista vazia não
+confirma disponibilidade. A idade da região e condições especiais não são inferidas.
+
+Cada nome aparece uma vez na lista. Janelas equivalentes são agrupadas, preservando
+todos os IDs; datas, recorrências e condições diferentes permanecem nos detalhes.
+As contagens representam nomes por estado: um evento pode ter fases em andamento
+e futuras. Os destaques cobrem os próximos 30 dias. Datas incluem a hora UTC e o
+término é exclusivo. O histórico continua acessível pelos filtros.
+
+## Interface do calendário
+
+A rota React `/calendario` apresenta cards de eventos em andamento e próximos,
+com descrições extraídas de `SubtitleKey`, `CalendarTipsKey` ou trechos de `RuleKey`.
+Os textos têm até 240 caracteres e são limitados visualmente a três linhas nos
+cards e duas na tabela. A origem fica em `descriptionSourceKey` no JSON.
+
+O radar combina prazos próximos e eventos de data fixa, sem repetir nomes.
+Os resumos numéricos, a alternância de cards e o link de cada evento filtram a
+lista. Contagens regressivas e progresso são recalculados a cada minuto.
+O aviso de 48 horas usa o próximo término exclusivo de uma janela ativa;
+uma fase terminando não significa que todo o evento termina. O filtro de prazos
+mostra apenas as janelas que satisfazem esse limite. As animações respeitam
+`prefers-reduced-motion` e os controles funcionam pelo teclado.
 
 ## Área de membros
 
