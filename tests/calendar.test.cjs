@@ -56,14 +56,16 @@ test('installed calendar has unique IDs and grouping loses no region-compatible 
   assert.deepEqual(groups.flatMap(g=>g.variants.flatMap(v=>v.ids)).sort((a,b)=>a-b),records.map(e=>e.id).sort((a,b)=>a-b));
   for(const g of groups)for(const v of g.variants)assert.ok(v.startMs<v.endMs,'inverted window for '+v.id);
 });
-test('Presentes Fantasmagóricos is one event with two active and two future windows on October 15',()=>{
+test('Presentes Fantasmagóricos is one event retaining all new phases on October 15',()=>{
   const data=require('../public/data/calendar.json');
   const now=Date.parse('2026-10-15T12:00:00Z');
   const rows=data.events.filter(e=>e.name==='Presentes Fantasmagóricos'&&regionMatches(e,541)).map(e=>windowFor(e,now));
   const groups=groupRows(rows.filter(r=>r.status!=='ended'));
   assert.equal(groups.length,1);
-  assert.equal(groups[0].variants.length,4);
-  assert.equal(windowSummary(groups[0]),'2 em andamento · 2 futuras');
+  assert.equal(groups[0].variants.length,7);
+  assert.equal(windowSummary(groups[0]),'2 em andamento · 5 futuras');
+  assert.ok(groups[0].ids.includes(191341));
+  assert.ok(groups[0].ids.includes(191344));
   assert.equal(groupRows(rows.filter(r=>r.status==='active')).length,1);
 });
 test('48-hour warning starts at its exact boundary, never for upcoming or ended events',()=>{

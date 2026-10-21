@@ -45,12 +45,27 @@ export default function Calendar(){
   const [region,setRegion]=useState('541'),[search,setSearch]=useState(''),[filter,setFilter]=useState('current'),[kind,setKind]=useState(''),[spotlight,setSpotlight]=useState('active');
   useEffect(()=>{
     const controller=new AbortController();
-    fetch('/data/calendar.json',{cache:'no-store',signal:controller.signal})
-      .then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json();})
-      .then(d=>{if(d.schemaVersion!==1||!Array.isArray(d.events))throw Error('Dados inválidos');setData(d);setNow(Date.now());})
-      .catch(e=>{if(e.name!=='AbortError')setError('Não foi possível carregar o calendário. Atualize a página para tentar novamente.');});
-    const timer=setInterval(()=>setNow(Date.now()),60000);
-    return ()=>{controller.abort();clearInterval(timer);};
+    let pending=false,loaded=false;
+    async function refresh(){
+      if(pending||controller.signal.aborted)return;
+      pending=true;
+      try{
+        let response=await fetch('/api/calendar',{cache:'no-store',signal:controller.signal});
+        if(!response.ok&&!loaded)response=await fetch('/data/calendar.json',{cache:'no-store',signal:controller.signal});
+        if(!response.ok)throw Error('HTTP '+response.status);
+        const next=await response.json();
+        if(next.schemaVersion!==1||!Array.isArray(next.events)||!next.events.length)throw Error('Dados inválidos');
+        setData(next);setNow(Date.now());loaded=true;
+        setError(next.delivery?.degraded?'A atualização está temporariamente indisponível. Exibindo a última coleta disponível.':'');
+      }catch(error){
+        if(error.name!=='AbortError')setError(loaded?'Não foi possível verificar novas datas. O calendário anterior continua disponível.':'Não foi possível carregar o calendário. Atualize a página para tentar novamente.');
+      }finally{pending=false;}
+    }
+    refresh();
+    const timer=setInterval(()=>{setNow(Date.now());if(document.visibilityState==='visible')refresh();},60000);
+    const onVisible=()=>{if(document.visibilityState==='visible')refresh();};
+    document.addEventListener('visibilitychange',onVisible);
+    return ()=>{controller.abort();clearInterval(timer);document.removeEventListener('visibilitychange',onVisible);};
   },[]);
   const rows=data&&now?data.events.filter(e=>regionMatches(e,region)).map(e=>windowFor(e,now)):[];
   const families=groupRows(rows);
@@ -82,7 +97,7 @@ export default function Calendar(){
     </div><div className="status-block"><div className="clock">{now?new Intl.DateTimeFormat('pt-PT',{timeStyle:'medium',timeZone:'UTC'}).format(now)+' UTC':'Carregando…'}</div>
       <div className="refresh-note">Cliente <b>{data?`${data.clientVersion} · build ${data.build} · patch ${data.patch}`:'—'}</b></div>
       <div className="refresh-note">Coleta: <b>{data?new Intl.DateTimeFormat('pt-PT',{dateStyle:'short',timeStyle:'short',timeZone:'Europe/Lisbon'}).format(new Date(data.generatedAt)):'—'}</b></div>
-      <div className="refresh-note">Atualização: <b>quarta-feira · 10h de Lisboa</b></div>
+      <div className="refresh-note">Novas datas: <b>verificação automática a cada minuto</b></div>
       <span className={'cal-freshness'+(fresh?'':' is-stale')}>{data?(fresh?'● Coleta recente':'◷ Nova coleta necessária'):'A ler calendário…'}</span>
     </div></div></header>
     {error&&<p className="calendar-note" role="alert">{error}</p>}

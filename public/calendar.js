@@ -4,7 +4,8 @@
   const fmt=value=>new Intl.DateTimeFormat('pt-PT',{dateStyle:'short',timeZone:'UTC'}).format(value);
   let data;
   try {
-    const response=await fetch('/data/calendar.json',{cache:'no-store'});
+    let response=await fetch('/api/calendar',{cache:'no-store'});
+    if(!response.ok)response=await fetch('/data/calendar.json',{cache:'no-store'});
     if(!response.ok) throw Error('HTTP '+response.status);
     data=await response.json();
     if(data.schemaVersion!==1 || !Array.isArray(data.events)) throw Error('Dados inválidos');

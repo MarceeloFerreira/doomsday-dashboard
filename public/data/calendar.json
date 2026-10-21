@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-15T19:57:05.484889+00:00",
+  "generatedAt": "2026-10-21T11:01:24.527039+00:00",
   "clientVersion": "1.61.5",
-  "build": "13",
-  "patch": "10",
-  "manifest": "1429D29A10",
+  "build": "29",
+  "patch": "23",
+  "manifest": "925B7FAF23",
   "timezone": "UTC",
   "source": "Arquivos locais do cliente; disponibilidade depende do servidor e região.",
   "events": [
@@ -6806,6 +6806,32 @@
       "discontinue": 0,
       "description": "Use Bilhete da Roleta da Sorte para sortear prêmios neste evento! Há um número limitado para cada tipo de recompensa.",
       "descriptionSourceKey": "activity_rule190132",
+      "conditions": {}
+    },
+    {
+      "id": 190134,
+      "name": "Roleta de aparência de unidade",
+      "start": "2026-10-20T00:00:00+00:00",
+      "end": null,
+      "durationDays": 4,
+      "loopDays": 0,
+      "calendar": true,
+      "crossServer": false,
+      "kingdomIds": [],
+      "serverDay": 28,
+      "serverDayEnd": 0,
+      "sourceKey": "activity_title190134",
+      "evidence": "client-config",
+      "startRaw": [
+        2026,
+        10,
+        20,
+        0
+      ],
+      "hideType": 0,
+      "discontinue": 0,
+      "description": "Use Bilhete da Roleta da Sorte para sortear prêmios neste evento! Há um número limitado para cada tipo de recompensa.",
+      "descriptionSourceKey": "activity_rule190134",
       "conditions": {}
     },
     {
@@ -26730,6 +26756,110 @@
       "description": "Conclua o Desafio da Cavalaria para resgatar Nanocatalisadores e mais recompensas!",
       "descriptionSourceKey": "sins_return_8",
       "conditions": {}
+    },
+    {
+      "id": 191344,
+      "name": "Presentes Fantasmagóricos",
+      "start": "2026-10-16T00:00:00+00:00",
+      "end": null,
+      "durationDays": 16,
+      "loopDays": 0,
+      "calendar": false,
+      "crossServer": false,
+      "kingdomIds": [],
+      "serverDay": 0,
+      "serverDayEnd": 0,
+      "sourceKey": "CorpseBride_text_03",
+      "evidence": "client-config",
+      "startRaw": [
+        2026,
+        10,
+        16,
+        0
+      ],
+      "hideType": 0,
+      "discontinue": 0,
+      "description": "Conclua missões para obter Rosa do Amor Verdadeiro. Gastar Rosa do Amor Verdadeiro concede Pontos de Bênção.",
+      "descriptionSourceKey": "activity_rule161341",
+      "conditions": {}
+    },
+    {
+      "id": 191341,
+      "name": "Presentes Fantasmagóricos",
+      "start": "2026-10-16T00:00:00+00:00",
+      "end": null,
+      "durationDays": 3,
+      "loopDays": 0,
+      "calendar": false,
+      "crossServer": false,
+      "kingdomIds": [],
+      "serverDay": 0,
+      "serverDayEnd": 0,
+      "sourceKey": "CorpseBride_text_03",
+      "evidence": "client-config",
+      "startRaw": [
+        2026,
+        10,
+        16,
+        0
+      ],
+      "hideType": 0,
+      "discontinue": 0,
+      "description": "Conclua missões para obter Rosa do Amor Verdadeiro. Gastar Rosa do Amor Verdadeiro concede Pontos de Bênção.",
+      "descriptionSourceKey": "activity_rule161341",
+      "conditions": {}
+    },
+    {
+      "id": 191342,
+      "name": "Presentes Fantasmagóricos",
+      "start": "2026-10-19T00:00:00+00:00",
+      "end": null,
+      "durationDays": 7,
+      "loopDays": 0,
+      "calendar": false,
+      "crossServer": false,
+      "kingdomIds": [],
+      "serverDay": 0,
+      "serverDayEnd": 0,
+      "sourceKey": "CorpseBride_text_03",
+      "evidence": "client-config",
+      "startRaw": [
+        2026,
+        10,
+        19,
+        0
+      ],
+      "hideType": 0,
+      "discontinue": 0,
+      "description": "Conclua missões para obter Rosa do Amor Verdadeiro. Gastar Rosa do Amor Verdadeiro concede Pontos de Bênção.",
+      "descriptionSourceKey": "activity_rule161341",
+      "conditions": {}
+    },
+    {
+      "id": 191343,
+      "name": "Presentes Fantasmagóricos",
+      "start": "2026-10-26T00:00:00+00:00",
+      "end": null,
+      "durationDays": 6,
+      "loopDays": 0,
+      "calendar": false,
+      "crossServer": false,
+      "kingdomIds": [],
+      "serverDay": 0,
+      "serverDayEnd": 0,
+      "sourceKey": "CorpseBride_text_03",
+      "evidence": "client-config",
+      "startRaw": [
+        2026,
+        10,
+        26,
+        0
+      ],
+      "hideType": 0,
+      "discontinue": 0,
+      "description": "Conclua missões para obter Rosa do Amor Verdadeiro. Gastar Rosa do Amor Verdadeiro concede Pontos de Bênção.",
+      "descriptionSourceKey": "activity_rule161341",
+      "conditions": {}
     }
   ],
   "excluded": {
@@ -26743,8 +26873,8 @@
   "sources": [
     {
       "table": "gameconfig_activity",
-      "sha256": "60144820214e28c49f8aad43872147d045c4a6fa9cea04981aba02b144c92bc9",
-      "modifiedAt": "2026-10-09T18:57:05.923120+00:00"
+      "sha256": "228b943e1c062de661f48431c1972ed3d4d2482ca093ca6f6ea580409391c880",
+      "modifiedAt": "2026-10-19T16:25:16.748907+00:00"
     },
     {
       "table": "gameconfig_string_pt",
@@ -26753,8 +26883,8 @@
     },
     {
       "table": "gameconfig_string_fix",
-      "sha256": "4d49c2f7f4e2c2095b946db456484a3504935735d3ac018a7ca4effe337e397a",
-      "modifiedAt": "2026-10-14T17:02:42.727060+00:00"
+      "sha256": "03b6d60d7024bad50ab8d98d6c58e5dd58bf88871a1caae2c87a0009cad5f840",
+      "modifiedAt": "2026-10-21T10:59:39.051336+00:00"
     }
   ]
 }

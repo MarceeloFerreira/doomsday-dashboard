@@ -6,9 +6,13 @@
     "dev": "next dev --hostname 127.0.0.1",
     "build": "next build",
     "start": "next start --hostname 127.0.0.1",
-    "test": "node --test tests/*.test.cjs"
+    "test": "node --test tests/*.test.cjs",
+    "calendar:update": "bash scripts/update-calendar.sh",
+    "calendar:publish": "bash scripts/publish-calendar.sh",
+    "calendar:check": "node scripts/publish-calendar.cjs --check"
   },
   "dependencies": {
+    "@netlify/blobs": "^11.1.4",
     "next": "16.4.0",
     "react": "19.2.4",
     "react-dom": "19.2.4"

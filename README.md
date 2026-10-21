@@ -1,7 +1,8 @@
 # BoPE · Doomsday Dashboard
 
 Aplicação Next.js com App Router. O calendário é um componente React separado,
-alimentado por `public/data/calendar.json`. A navegação, a identidade visual e as
+alimentado por `/api/calendar`, com dados persistidos no Netlify Blobs e
+cópia de segurança em `public/data/calendar.json`. A navegação, a identidade visual e as
 funções existentes de membros foram preservadas em `legacy/` e `public/members.js`.
 Esses módulos ainda usam a implementação original e podem ser migrados para React
 gradualmente. O calendário não depende de editar HTML a cada atualização.
@@ -20,25 +21,30 @@ Os servidores npm estão restritos ao localhost por padrão.
 
 ## Atualizar o calendário
 
-Com o cliente Steam atualizado no Windows:
+Com o cliente Steam atualizado no Windows, execute no projeto WSL:
 
 ```bash
-bash scripts/update-calendar.sh
-npm test
-npm run build
+npm run calendar:publish
 ```
 
-A coleta usa o Python Windows do runtime Codex e a biblioteca UnityPy existente
-em `C:\Users\maarc\Documents\Codex\Doomsday\.tools\unitypy`.
-Os caminhos podem ser alterados por `DOOMSDAY_WORKSPACE`, `DOOMSDAY_GAME` e
-`DOOMSDAY_CACHE` no ambiente Windows. O script resolve os bundles pelo manifesto
-atual, aplica a localização PT e seus ajustes, e registra hashes das fontes.
-Uma coleta inválida falha sem substituir o JSON anterior. O jogo não é atualizado
-por este pipeline: uma instalação/cache antigo produz dados antigos.
+Esse comando extrai os arquivos atuais do jogo, valida os eventos e publica apenas
+o JSON no armazenamento persistente do Netlify. **Não executa build, deploy, commit
+ou push.** A página consulta novas datas a cada minuto; a API mantém cache de até
+um minuto. Uma alteração aparece normalmente em até dois minutos numa aba visível.
 
-Agendamento criado neste chat Codex: quarta-feira às 10h de Europe/Lisbon.
-A tarefa coleta os arquivos locais e valida alterações. Computador e Codex precisam
-estar disponíveis; não há publicação ou push automático para GitHub.
+A primeira ativação exige um deploy desta versão do site e autenticação/vínculo
+do CLI Netlify. Procedimento completo: [docs/calendar-publishing.md](docs/calendar-publishing.md).
+
+Para atualizar somente a cópia local: `npm run calendar:update`. Para validar sem
+enviar: `npm run calendar:check`. Mudanças no código continuam exigindo deploy.
+
+A coleta usa o Python Windows do runtime Codex e UnityPy da pasta Doomsday.
+Os caminhos podem ser alterados por DOOMSDAY_WORKSPACE, DOOMSDAY_GAME e
+DOOMSDAY_CACHE no ambiente Windows. Uma coleta inválida preserva o JSON anterior.
+O jogo precisa estar atualizado: arquivos locais antigos produzem dados antigos.
+
+O agendamento já existente de quarta-feira às 10h de Lisboa continua coletando e
+validando localmente, sem publicar. Não foi alterado por esta integração.
 
 ## Datas e limites de evidência
 
