@@ -51,6 +51,7 @@ export default function Calendar(){
       pending=true;
       try{
         let response=await fetch('/api/calendar',{cache:'no-store',signal:controller.signal});
+        if(response.status===401||response.status===403){setData(null);window.location.replace('/membros?destino=calendario');return;}
         if(!response.ok&&!loaded)response=await fetch('/data/calendar.json',{cache:'no-store',signal:controller.signal});
         if(!response.ok)throw Error('HTTP '+response.status);
         const next=await response.json();

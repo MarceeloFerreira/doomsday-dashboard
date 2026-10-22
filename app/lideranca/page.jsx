@@ -1,4 +1,3 @@
-import {Suspense} from 'react';
-import Leadership from '../Leadership';
-export const metadata={title:'Liderança / R4 · BoPE'};
-export default function Page(){return <Suspense fallback={<p className="calendar-note">Carregando liderança…</p>}><Leadership/></Suspense>;}
+import {redirect} from 'next/navigation';
+export const metadata={title:'Liderança · BoPE'};
+export default async function Page({searchParams}){const data=(await searchParams)?.data;redirect('/membros?aba=lideranca'+(typeof data==='string'?'&data='+encodeURIComponent(data):''));}

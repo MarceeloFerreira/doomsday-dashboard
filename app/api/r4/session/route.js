@@ -1,8 +1,12 @@
 import {NextResponse} from 'next/server';
 import auth from '../../../../lib/r4-auth.cjs';
 import {createSessionHandlers} from '../../../../lib/session-handlers.cjs';
+import {accountMode,configured} from '../../../../lib/member-accounts.cjs';
+import {permitted} from '../../../../lib/member-access.cjs';
+import {createAccountHandlers} from '../../../../lib/account-handlers.cjs';
 export const runtime='nodejs';
+const accounts=createAccountHandlers({NextResponse});
 const handlers=createSessionHandlers({auth,NextResponse,cookieName:'bope_r4',unconfigured:'A liderança ainda não foi configurada no servidor.'});
-export const GET=handlers.GET;
-export const POST=handlers.POST;
-export const DELETE=handlers.DELETE;
+export const GET=async request=>accountMode()?NextResponse.json({mode:'accounts',configured:configured(),authenticated:await permitted(request,true)},{headers:{'Cache-Control':'private, no-store'}}):handlers.GET(request);
+export const POST=request=>accountMode()?NextResponse.json({error:'Entre com sua conta de administrador na área de membros.'},{status:401,headers:{'Cache-Control':'private, no-store'}}):handlers.POST(request);
+export const DELETE=request=>(accountMode()?accounts:handlers).DELETE(request);

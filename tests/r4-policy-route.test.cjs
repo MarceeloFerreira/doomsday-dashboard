@@ -1,7 +1,7 @@
 const {test}=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const vm=require('node:vm');const path=require('node:path');const core=require('../lib/leadership.cjs');
 function route(source,allowed=true){
   let reads=0;
-  const context={NextResponse:Response,auth:{valid:()=>allowed},core,leadershipSource:async()=>{reads++;return source;}};
+  const context={NextResponse:Response,permitted:async()=>allowed,core,leadershipSource:async()=>{reads++;return source;}};
   const code=fs.readFileSync(path.join(__dirname,'../app/api/r4/events/route.js'),'utf8').replace(/^import .*;$/gm,'').replace(/^export const .*;$/gm,'').replace('export async function','async function');
   vm.createContext(context);vm.runInContext(code,context);
   return {get:()=>context.GET({cookies:{get:()=>({value:'test-session'})},nextUrl:new URL('http://localhost/api/r4/events?date=2026-01-02')}),reads:()=>reads};

@@ -1,12 +1,12 @@
 import {NextResponse} from 'next/server';
-import auth from '../../../../lib/r4-auth.cjs';
+import {permitted} from '../../../../lib/member-access.cjs';
 import core from '../../../../lib/leadership.cjs';
 import {leadershipSource} from '../../../../lib/leadership-source';
 export const runtime='nodejs';
 export const dynamic='force-dynamic';
 export async function GET(request){
   const headers={'Cache-Control':'private, no-store'};
-  if(!auth.valid(request.cookies.get('bope_r4')?.value))return NextResponse.json({error:'Acesso exclusivo da liderança.'},{status:401,headers});
+  if(!(await permitted(request,true)))return NextResponse.json({error:'Acesso exclusivo da liderança.'},{status:401,headers});
   const source=await leadershipSource();
   const rosterAvailable=source.source==='google-sheets'&&source.members.length>0;
   const scoped=new Map(core.editions(core.eligibleRows(source.rows,source.members)).map(e=>[e.date,e]));

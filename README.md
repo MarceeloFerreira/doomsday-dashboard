@@ -43,8 +43,20 @@ Os caminhos podem ser alterados por DOOMSDAY_WORKSPACE, DOOMSDAY_GAME e
 DOOMSDAY_CACHE no ambiente Windows. Uma coleta inválida preserva o JSON anterior.
 O jogo precisa estar atualizado: arquivos locais antigos produzem dados antigos.
 
-O agendamento já existente de quarta-feira às 10h de Lisboa continua coletando e
-validando localmente, sem publicar. Não foi alterado por esta integração.
+A rotina do Codex usa a skill `doomsday-event-calendar`, às quartas-feiras às
+12h de Europe/Lisbon. Ela faz a varredura atual do cliente, audita as diferenças
+de eventos, executa os testes de calendário e publica dados válidos no Netlify
+Blobs. O agendamento anterior das 10h foi substituído; há uma única rotina ativa.
+O PC e o Codex precisam estar ligados, e a sessão Netlify deve continuar válida.
+Logs e relatório por execução: `.netlify/calendar-runs/`.
+
+Para executar o mesmo fluxo manualmente no WSL:
+
+```bash
+bash /mnt/c/Users/maarc/.codex/skills/doomsday-event-calendar/scripts/run-calendar.sh --publish
+```
+
+Troque `--publish` por `--check` para validar sem publicar.
 
 ## Datas e limites de evidência
 
@@ -112,3 +124,7 @@ O menu usa Link do Next.js. Atualizar com F5, abrir um link direto ou usar volta
 avançar preserva a página correspondente. A edição selecionada pela liderança
 fica no parâmetro `data`, por exemplo `/lideranca?data=2026-08-24`.
 O cabeçalho do ranking R4 permanece visível dentro do contêiner de rolagem.
+
+## Contas individuais
+
+Cadastro, aprovação, vínculo a player e inativação: veja [docs/member-accounts.md](docs/member-accounts.md). A integração só é ativada com ; o Supabase e o primeiro administrador precisam ser configurados antes.

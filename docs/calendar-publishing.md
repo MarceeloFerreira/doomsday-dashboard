@@ -46,9 +46,9 @@ Para recuperar uma versão, consulte o histórico com `npx netlify-cli blobs:lis
 
 ## Limites e operação
 
-A extração ainda depende dos arquivos do jogo neste PC. Separar a publicação do deploy não cria um acesso aos servidores do jogo nem confirma disponibilidade na Região 541. O agendamento local existente não foi alterado e continua sem publicação automática.
+A extração ainda depende dos arquivos do jogo neste PC. Separar a publicação do deploy não cria um acesso aos servidores do jogo nem confirma disponibilidade na Região 541. O agendamento do Codex agora executa a skill `doomsday-event-calendar` às quartas-feiras às 12h de Europe/Lisbon, com varredura, auditoria de diferenças, testes e publicação de dados válidos. Substitui a rotina anterior das 10h.
 
-Se no futuro a intenção for publicar automaticamente após cada varredura agendada, o agendamento poderá executar `npm run calendar:publish` em vez de apenas coletar. Isso exige a sessão/credencial Netlify disponível nesse ambiente.
+A rotina precisa do PC e do Codex ligados, dos arquivos locais do jogo disponíveis e da sessão Netlify válida no WSL. Diante de falha, interrompe sem deploy e solicita a ação necessária; em validação recusada, restaura o calendário local anterior. Os relatórios ficam em `.netlify/calendar-runs/<execução>/`.
 
 Referências: [Netlify Blobs](https://docs.netlify.com/build/data-and-storage/netlify-blobs/), [CLI Blobs](https://cli.netlify.com/commands/blobs/).
 
@@ -60,7 +60,7 @@ build de produção concluído e validação do JSON aprovada. A coleta retornou
 `unchanged`: a quantidade de 624 registros já estava presente no projeto ao
 retomar o trabalho; não foi anunciada como uma novidade desta execução.
 
-A publicação no site público ficou manual por escolha do proprietário.
+Na entrega de 21/10/2026, a publicação inicial do site público ficou manual por escolha do proprietário. Posteriormente, o proprietário autorizou a publicação automática semanal apenas dos dados, pela skill e pelo agendamento acima.
 Nenhum commit, push, deploy ou envio ao Netlify Blobs foi feito neste chat.
 O funcionamento em produção precisa ser confirmado após a ativação inicial.
 

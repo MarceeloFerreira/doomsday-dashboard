@@ -1,0 +1,7 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const {createAccounts}=require('../lib/member-accounts.cjs');
+test('pending badge count is admin-only and reads no member details',async()=>{
+ const keys=['SUPABASE_URL','SUPABASE_PUBLISHABLE_KEY','SUPABASE_SECRET_KEY'],before=Object.fromEntries(keys.map(k=>[k,process.env[k]]));for(const k of keys)process.env[k]='fixture';
+ let role='member',counts=0,expired=false;
+ const db={from(table){let options,columns,filter;const q={select(c,o){columns=c;options=o;return q;},eq(k,v){filter=[k,v];return q;},gt(){return q;},async maybeSingle(){return {data:table==='member_sessions'?(expired?null:{user_id:'admin'}):{role,status:'active',player_id:'player'}};},then(resolve,reject){counts++;assert.equal(table,'member_profiles');assert.equal(columns,'id');assert.deepEqual(options,{count:'exact',head:true});assert.deepEqual(filter,['status','pending']);return Promise.resolve({count:4,error:null}).then(resolve,reject);}};return q;}};
+ try{const service=createAccounts({clientFactory:()=>db});await assert.rejects(service.pendingCount('a'.repeat(64)),e=>e.status===403);assert.equal(counts,0);role='admin';assert.deepEqual(await service.pendingCount('a'.repeat(64)),{pending:4});assert.equal(counts,1);expired=true;await assert.rejects(service.pendingCount('a'.repeat(64)),e=>e.status===401);assert.equal(counts,1);}finally{for(const k of keys){if(before[k]===undefined)delete process.env[k];else process.env[k]=before[k];}}
+});

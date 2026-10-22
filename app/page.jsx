@@ -1,2 +1,2 @@
 import {redirect} from 'next/navigation';
-export default function Page(){redirect('/calendario');}
+export default function Page(){redirect('/alianca');}

@@ -41,6 +41,13 @@
         <li>Obrigatório estar no grupo de Avisos.</li>
       </ul>
 
+      <p class="decl-sub">Benefícios para os membros</p>
+      <ul class="decl-rules">
+        <li><strong>Bots de cura:</strong> contamos com bots para ajudar na cura das tropas.</li>
+        <li><strong>Cashback semanal:</strong> realizamos cashback do ouro gasto que retorna para a aliança.</li>
+        <li><strong>Área reservada para membros:</strong> acesso a painéis analíticos para acompanhar seu desempenho e a evolução dos resultados, consultar rankings e a visão da aliança, além do calendário de eventos, cálculos de pontuação do Supremo e ferramentas para planejar heróis, equipamentos e o treinamento e evolução de tropas.</li>
+      </ul>
+
       <p class="decl-sub">Aliados</p>
       <div class="decl-allies">
         <div><div class="k">Aliados 541</div><div class="v">Wyrd - PUrr</div></div>
@@ -140,6 +147,8 @@
           <button class="sup-tab-btn" data-suptab="dia4" type="button">Dia 4</button>
           <button class="sup-tab-btn" data-suptab="dia5" type="button">Dia 5</button>
           <button class="sup-tab-btn" data-suptab="dia6" type="button">Dia 6</button>
+          <span class="sup-tab-divider" aria-hidden="true">|</span>
+          <button class="sup-tab-btn" data-suptab="treinamento" type="button">Treinamento e evolução</button>
         </div>
 
         <div id="sup-panel-resumo" class="sup-panel active"></div>
@@ -149,6 +158,7 @@
         <div id="sup-panel-dia4" class="sup-panel"></div>
         <div id="sup-panel-dia5" class="sup-panel"></div>
         <div id="sup-panel-dia6" class="sup-panel"></div>
+        <div id="sup-panel-treinamento" class="sup-panel"><div id="troop-training-root"></div></div>
       </div>
 
       <div id="subview-util" class="dash-subpanel">
@@ -162,12 +172,10 @@
         <div class="sup-tabs" id="util-tabs" role="tablist">
           <button class="sup-tab-btn active" data-utiltab="heroi" type="button">Herói</button>
           <button class="sup-tab-btn" data-utiltab="oficina" type="button">Oficina</button>
-          <button class="sup-tab-btn" data-utiltab="xpherois" type="button">XP Heróis</button>
         </div>
 
         <div id="sup-panel-heroi" class="sup-panel active"></div>
         <div id="sup-panel-oficina" class="sup-panel"></div>
-        <div id="sup-panel-xpherois" class="sup-panel"></div>
       </div>
     </div>
 

@@ -1,8 +1,11 @@
 import {NextResponse} from 'next/server';
 import auth from '../../../../lib/member-auth.cjs';
 import {createSessionHandlers} from '../../../../lib/session-handlers.cjs';
+import {accountMode} from '../../../../lib/member-accounts.cjs';
+import {createAccountHandlers} from '../../../../lib/account-handlers.cjs';
 export const runtime='nodejs';
+const accounts=createAccountHandlers({NextResponse});
 const handlers=createSessionHandlers({auth,NextResponse,cookieName:'bope_member',unconfigured:'A área de membros ainda não foi configurada no servidor.'});
-export const GET=handlers.GET;
-export const POST=handlers.POST;
-export const DELETE=handlers.DELETE;
+export const GET=request=>(accountMode()?accounts:handlers).GET(request);
+export const POST=request=>(accountMode()?accounts:handlers).POST(request);
+export const DELETE=request=>(accountMode()?accounts:handlers).DELETE(request);

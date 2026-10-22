@@ -8,26 +8,37 @@ import {useRouter,useSearchParams} from 'next/navigation';
 const fmt=n=>n===null||n===undefined?'—':new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0}).format(n);
 const shortDate=s=>s?.split('-').reverse().join('/');
 const labels={met:'Meta atingida',below:'Abaixo da meta',unknown:'Sem avaliação'};
-export default function Leadership(){
+export default function Leadership({embedded=false}){
   const [session,setSession]=useState(null),[password,setPassword]=useState(''),[error,setError]=useState(''),[loading,setLoading]=useState(false);
   const router=useRouter(),searchParams=useSearchParams();
   const date=searchParams.get('data')||'';
-  const setDate=value=>router.replace('/lideranca'+(value?'?data='+encodeURIComponent(value):''),{scroll:false});
+  const setDate=value=>router.replace('/membros?aba=lideranca'+(value?'&data='+encodeURIComponent(value):''),{scroll:false});
   const [reload,setReload]=useState(0);
   const [data,setData]=useState(null),[query,setQuery]=useState(''),[status,setStatus]=useState('');
   useEffect(()=>{fetch('/api/r4/session',{cache:'no-store'}).then(r=>r.json()).then(setSession).catch(()=>setError('Não foi possível verificar o acesso da liderança.'));},[]);
   useEffect(()=>{
     if(!session?.authenticated)return;
-    const controller=new AbortController();
-    let inFlight=false;
-    async function load(){if(inFlight)return;inFlight=true;setLoading(true);try{const r=await fetch('/api/r4/events'+(date?'?date='+encodeURIComponent(date):''),{cache:'no-store',signal:AbortSignal.any([controller.signal,AbortSignal.timeout(35000)])});if(r.status===401){setSession(s=>({...s,authenticated:false}));setData(null);return;}const body=await r.json();if(!r.ok)throw Error(body.error||'Falha ao carregar os eventos.');setData(previous=>keepLatest(previous,body));setError('');}catch(e){if(!controller.signal.aborted)setError(e.name==='TimeoutError'?'A consulta demorou demais. Tente novamente; os dados já carregados foram mantidos.':e.message);}finally{inFlight=false;if(!controller.signal.aborted)setLoading(false);}}
-    load();const timer=setInterval(load,300000);return()=>{controller.abort();clearInterval(timer);};
+    let active=true,inFlight=false;
+    async function load(){if(!active||inFlight)return;inFlight=true;setLoading(true);try{const r=await fetch('/api/r4/events'+(date?'?date='+encodeURIComponent(date):''),{cache:'no-store',signal:AbortSignal.timeout(35000)});if(!active)return;if(r.status===401||r.status===403){setSession(s=>({...s,authenticated:false}));setData(null);return;}const body=await r.json();if(!active)return;if(!r.ok)throw Error(body.error||'Falha ao carregar os eventos.');setData(previous=>keepLatest(previous,body));setError('');}catch(e){if(active)setError(e.name==='TimeoutError'?'A consulta demorou demais. Tente novamente; os dados já carregados foram mantidos.':e.message);}finally{inFlight=false;if(active)setLoading(false);}}
+    load();const timer=setInterval(load,300000);return()=>{active=false;clearInterval(timer);};
   },[session?.authenticated,date,reload]);
+  useEffect(()=>{
+    if(session?.mode!=='accounts')return;
+    let stopped=false;
+    async function check(){try{const r=await fetch('/api/r4/session',{cache:'no-store'});const current=await r.json();if(!stopped){setSession(current);if(!current.authenticated)setData(null);}}catch{if(!stopped){setSession(s=>({...s,authenticated:false}));setData(null);}}}
+    const timer=setInterval(check,30000);
+    const visible=()=>{if(document.visibilityState==='visible')check();};
+    document.addEventListener('visibilitychange',visible);
+    return()=>{stopped=true;clearInterval(timer);document.removeEventListener('visibilitychange',visible);};
+  },[session?.mode]);
   async function login(e){e.preventDefault();setLoading(true);setError('');try{const r=await fetch('/api/r4/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password})});const body=await r.json();if(!r.ok)throw Error(body.error);setPassword('');setSession({authenticated:true,configured:true});}catch(e){setError(e.message);}finally{setLoading(false);}}
   async function logout(){try{const r=await fetch('/api/r4/session',{method:'DELETE'});if(!r.ok)throw Error('Não foi possível encerrar a sessão.');setSession(s=>({...s,authenticated:false}));setData(null);setDate('');}catch(e){setError(e.message);}}
+if(embedded&&!session?.authenticated)return <p className="calendar-note" role="status">{session?'Seu acesso de administrador não está disponível.':'Verificando acesso da liderança…'}</p>;
+  if(session?.mode==='accounts'&&!session.authenticated)return <section className="r4-login"><p className="brand-eyebrow">Liderança</p><h1 className="brand-title">Acesso de administrador</h1><p>Entre na área de membros com uma conta ativa de administrador.</p><a href="/membros">Entrar na minha conta</a></section>;
+
   if(!session?.authenticated)return <section className="r4-login"><p className="brand-eyebrow">Liderança · R4 + R5</p><h1 className="brand-title">Sala da liderança</h1><p>Analise cada edição dos eventos e acompanhe as metas dos jogadores.</p><form onSubmit={login}><label htmlFor="r4-password">Senha da liderança</label><input id="r4-password" type="password" autoComplete="current-password" value={password} onChange={e=>setPassword(e.target.value)} required/><button disabled={loading||!session||!session.configured}>{loading?<><span className="r4-spinner" aria-hidden="true"/> Verificando…</>:'Entrar na liderança'}</button></form>{session&&!session.configured&&<p role="status">O acesso R4 precisa ser configurado no servidor.</p>}{error&&<p role="alert">{error}</p>}</section>;
   const rows=(data?.ranking||[]).filter(r=>(!query||r.player.toLowerCase().includes(query.toLowerCase()))&&(!status||r.status===status));
-  return <section className="r4-dashboard" aria-busy={loading}><header className="r4-head"><div><p className="brand-eyebrow">Liderança · R4 + R5</p><h1 className="brand-title">Performance por evento</h1></div><button onClick={logout}>Sair da liderança</button></header>
+  return <section className="r4-dashboard" aria-busy={loading}><header className="r4-head"><div><p className="brand-eyebrow">Liderança · R4 + R5</p><h1 className="brand-title">Performance por evento</h1></div>{!embedded&&<button onClick={logout}>Sair da liderança</button>}</header>
     {error&&<p className="r4-notice" role="alert">{error}</p>}{data?.warning&&<p className="r4-notice" role="status">{data.warning}</p>}
     <p className="calendar-note">{!data?'Aguardando os dados da planilha':data.source==='google-sheets'?'Google Sheets · última leitura: '+new Date(data.fetchedAt).toLocaleString('pt-PT',{timeZone:'Europe/Lisbon'}):'Histórico salvo no projeto'} · Atualização automática a cada 5 minutos.{data?.stale?' · dados da última leitura válida':''}</p>
     <div className="r4-sync-toolbar">{loading&&<div className="r4-loading" role="status" aria-live="polite"><span className="r4-spinner" aria-hidden="true"/><span>{data?'Atualizando dados…':'Carregando eventos e jogadores…'}<small>Isso pode levar alguns segundos.</small></span></div>}<button className="r4-refresh" disabled={loading} onClick={()=>setReload(value=>value+1)}>{loading?'Carregando…':error||data?.warning?'Tentar novamente':'Atualizar dados'}</button></div>
