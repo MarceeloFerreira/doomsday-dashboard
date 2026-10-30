@@ -2,6 +2,13 @@ const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {windowFor,regionMatches,groupRows,windowSummary,timingFor,remainingLabel,DAY}=require('../public/calendar-core.js');
 const e={start:'2026-10-01T00:00:00Z',durationDays:3,loopDays:7};
+// Fixed examples test grouping/timing independently of changing game schedules.
+const monthlyPhases=(durationDays=30)=>[
+  {id:1,name:'Evento mensal',start:'2026-10-01T00:00:00Z',durationDays,loopDays:0},
+  {id:2,name:'Evento mensal',start:'2026-10-15T00:00:00Z',durationDays:4,loopDays:0},
+  ...[19,20,21,22,23].map((day,i)=>({id:i+3,name:'Evento mensal',start:`2026-10-${day}T00:00:00Z`,durationDays:1,loopDays:0})),
+];
+
 test('recurring event is active at its start and schedules next occurrence at exclusive end',()=>{
   assert.equal(windowFor(e,Date.parse(e.start)).status,'active');
   const next=windowFor(e,Date.parse('2026-10-04T00:00:00Z'));
@@ -56,16 +63,14 @@ test('installed calendar has unique IDs and grouping loses no region-compatible 
   assert.deepEqual(groups.flatMap(g=>g.variants.flatMap(v=>v.ids)).sort((a,b)=>a-b),records.map(e=>e.id).sort((a,b)=>a-b));
   for(const g of groups)for(const v of g.variants)assert.ok(v.startMs<v.endMs,'inverted window for '+v.id);
 });
-test('Presentes Fantasmagóricos is one event retaining all new phases on October 15',()=>{
-  const data=require('../public/data/calendar.json');
+test('a monthly event retains all phases and counts active versus upcoming windows',()=>{
   const now=Date.parse('2026-10-15T12:00:00Z');
-  const rows=data.events.filter(e=>e.name==='Presentes Fantasmagóricos'&&regionMatches(e,541)).map(e=>windowFor(e,now));
+  const rows=monthlyPhases().map(e=>windowFor(e,now));
   const groups=groupRows(rows.filter(r=>r.status!=='ended'));
   assert.equal(groups.length,1);
   assert.equal(groups[0].variants.length,7);
   assert.equal(windowSummary(groups[0]),'2 em andamento · 5 futuras');
-  assert.ok(groups[0].ids.includes(191341));
-  assert.ok(groups[0].ids.includes(191344));
+  assert.deepEqual([...groups[0].ids].sort((a,b)=>a-b),[1,2,3,4,5,6,7]);
   assert.equal(groupRows(rows.filter(r=>r.status==='active')).length,1);
 });
 test('48-hour warning starts at its exact boundary, never for upcoming or ended events',()=>{
@@ -78,17 +83,23 @@ test('48-hour warning starts at its exact boundary, never for upcoming or ended 
   assert.equal(timing(Date.parse('2026-09-30T12:00:00Z')).ending,false);
   assert.ok(timing(end-DAY).progress>90);
 });
-test('a phase deadline does not imply that the monthly event has ended',()=>{
-  const data=require('../public/data/calendar.json');
+for(const durationDays of [29,30])test(`a phase deadline does not end a ${durationDays}-day monthly event`,()=>{
+  const records=monthlyPhases(durationDays);
   const now=Date.parse('2026-10-18T12:00:00Z');
-  const [group]=groupRows(data.events.filter(e=>e.name==='Presentes Fantasmagóricos').map(e=>windowFor(e,now)));
+  const [group]=groupRows(records.map(e=>windowFor(e,now)));
   const timing=timingFor(group,now);
+  const end=Date.parse(durationDays===29?'2026-10-30T00:00:00Z':'2026-10-31T00:00:00Z');
   assert.equal(timing.ending,true);
   assert.equal(timing.phase,true);
-  assert.equal(timing.window.id,191328);
+  assert.equal(timing.window.id,2);
   assert.equal(timing.remaining,DAY/2);
   assert.equal(group.status,'active');
-  assert.equal(group.endMs,Date.parse('2026-10-31T00:00:00Z'));
+  assert.equal(group.endMs,end);
+  const phaseEnd=Date.parse('2026-10-19T00:00:00Z');
+  assert.equal(windowFor(records[1],phaseEnd).status,'ended');
+  assert.equal(groupRows(records.map(e=>windowFor(e,phaseEnd)))[0].status,'active');
+  assert.equal(groupRows(records.map(e=>windowFor(e,end-1)))[0].status,'active');
+  assert.equal(groupRows(records.map(e=>windowFor(e,end)))[0].status,'ended');
 });
 test('countdown rounds to readable minutes, hours and days',()=>{
   assert.equal(remainingLabel(59000),'1 min');

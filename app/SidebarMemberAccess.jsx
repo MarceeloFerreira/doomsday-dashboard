@@ -25,5 +25,5 @@ export default function SidebarMemberAccess(){
   },[isAdmin,session?.profile?.id]);
   if(!session)return null;
   if(!session.authenticated)return <div className="sidebar-member-login"><Link href="/membros" className={'topmenu-link'+(pathname==='/membros'?' active':'')} aria-current={pathname==='/membros'?'page':undefined}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M17 5a3 3 0 0 1 0 6M21 21v-3a6 6 0 0 0-3-5"/></svg><span>Área de membros<small>Entre para acessar suas ferramentas</small></span></Link></div>;
-  return <div className="sidebar-member-access"><MemberSectionNav isAdmin={isAdmin} pendingCount={pendingCount} selected={pathname==='/calendario'?'calendario':pathname==='/membros'?(params.get('aba')||'desempenho'):'none'}/></div>;
+  return <div className="sidebar-member-access"><MemberSectionNav isAdmin={isAdmin} pendingCount={pendingCount} selected={pathname==='/bestas'?'bestas':pathname==='/herois'?'herois':pathname==='/calendario'?'calendario':pathname==='/membros'?(params.get('aba')||'desempenho'):'none'}/></div>;
 }

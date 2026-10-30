@@ -5,6 +5,8 @@ import './r4-analytics.css';
 import './member-area.css';
 import './member-accounts.css';
 import './experience.css';
+import './checkboxes.css';
+import './mobile-polish.css';
 import {readFile} from 'node:fs/promises';
 import path from 'node:path';
 import Script from 'next/script';

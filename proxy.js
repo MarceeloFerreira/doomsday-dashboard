@@ -3,7 +3,7 @@ import {permitted} from './lib/member-access.cjs';
 export async function proxy(request){
   if(await permitted(request))return NextResponse.next();
   if(request.nextUrl.pathname==='/data/calendar.json')return NextResponse.json({error:'Entre na área de membros.'},{status:401,headers:{'Cache-Control':'private, no-store'}});
-  const url=new URL('/membros',request.url);url.searchParams.set('destino','calendario');
+  const url=new URL('/membros',request.url);url.searchParams.set('destino',request.nextUrl.pathname==='/bestas'?'bestas':request.nextUrl.pathname==='/herois'?'herois':'calendario');
   return NextResponse.redirect(url);
 }
-export const config={matcher:['/calendario','/data/calendar.json']};
+export const config={matcher:['/calendario','/data/calendar.json','/herois','/bestas']};

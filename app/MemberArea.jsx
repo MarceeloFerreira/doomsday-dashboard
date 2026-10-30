@@ -7,6 +7,7 @@ import AccountAccess from './AccountAccess';
 import MemberAccountActions from './MemberAccountActions';
 import Leadership from './Leadership';
 import MemberManagement from './MemberManagement';
+import SessionLoading from './SessionLoading';
 import {useSearchParams} from 'next/navigation';
 import {memberProgress} from '../lib/member-progress.cjs';
 import {memberSelection} from '../lib/member-selection.cjs';
@@ -25,10 +26,10 @@ export default function MemberArea(){
   const searchParams=useSearchParams();
   const requestedPanel=searchParams.get('aba')||'desempenho';
   const requestedAdmin=['lideranca','gestao'].includes(requestedPanel);
-  const [targets,setTargets]=useState(null),[session,setSession]=useState(null),[password,setPassword]=useState(''),[error,setError]=useState(''),[busy,setBusy]=useState(false),[data,setData]=useState(null),[reload,setReload]=useState(0);
+  const [targets,setTargets]=useState(null),[session,setSession]=useState(null),[error,setError]=useState(''),[busy,setBusy]=useState(false),[data,setData]=useState(null),[reload,setReload]=useState(0);
   const [edition,setEdition]=useState(''),[nickQuery,setNickQuery]=useState(''),[editingNick,setEditingNick]=useState(true);
   const [view,setView]=useState('me'),[event,setEvent]=useState(''),[period,setPeriod]=useState('latest'),[query,setQuery]=useState(''),[player,setPlayer]=useState(''),[sort,setSort]=useState('total'),[metric,setMetric]=useState('average');
-  useEffect(()=>{setTargets({gate:document.getElementById('members-react'),performance:document.getElementById('member-performance-root'),training:document.getElementById('troop-training-root')});fetch('/api/members/session',{cache:'no-store'}).then(r=>r.json()).then(setSession).catch(()=>setError('Não foi possível verificar seu acesso. Atualize a página para tentar novamente.'));},[]);
+  useEffect(()=>{let active=true;setTargets({gate:document.getElementById('members-react'),performance:document.getElementById('member-performance-root'),training:document.getElementById('troop-training-root')});fetch('/api/members/session',{cache:'no-store',signal:AbortSignal.timeout(20000)}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(current=>{if(active)setSession(current);}).catch(()=>{if(active)setError('Não foi possível verificar seu acesso. Atualize a página para tentar novamente.');});return()=>{active=false;};},[]);
   useEffect(()=>{const content=document.getElementById('dash-content');if(content)content.style.display=session?.authenticated&&!requestedAdmin?'block':'none';return()=>{if(content)content.style.display='none';};},[session?.authenticated,requestedAdmin]);
   useEffect(()=>{
     if(!session?.authenticated||requestedAdmin)return;
@@ -56,12 +57,11 @@ export default function MemberArea(){
     return()=>{stopped=true;clearInterval(timer);document.removeEventListener('visibilitychange',focus);};
   },[session?.mode]);
   useEffect(()=>{if(session?.mode==='accounts'&&session.profile?.player){setPlayer(session.profile.player.nick);setEditingNick(false);}},[session?.mode,session?.profile?.player?.id,session?.profile?.player?.nick]);
-  async function login(e){e.preventDefault();setBusy(true);setError('');try{const r=await fetch('/api/members/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password})});const body=await r.json();if(!r.ok)throw Error(body.error);setPassword('');setSession({authenticated:true,configured:true});}catch(e){setError(e.message);}finally{setBusy(false);}}
   async function logout(){try{const r=await fetch('/api/members/session',{method:'DELETE'});if(!r.ok)throw Error('Não foi possível sair.');setSession(s=>({...s,authenticated:false,signedIn:false,profile:null}));setData(null);setBusy(false);}catch(e){setError(e.message);}}
-  useEffect(()=>{if(!session)return;window.dispatchEvent(new CustomEvent('bope-session-changed'));if(session.authenticated&&searchParams.get('destino')==='calendario')window.location.replace('/calendario');},[session?.authenticated,session?.profile?.role,session?.profile?.status]);
+  useEffect(()=>{if(!session)return;window.dispatchEvent(new CustomEvent('bope-session-changed'));if(session.authenticated&&['calendario','herois','bestas'].includes(searchParams.get('destino')))window.location.replace('/'+searchParams.get('destino'));},[session?.authenticated,session?.profile?.role,session?.profile?.status]);
   const isAdmin=session?.mode==='accounts'&&session?.authenticated&&session.profile?.role==='admin';
-  if(!targets)return null;
-  const gate=!session?.authenticated?(session?.mode==='accounts'?<AccountAccess session={session} onSession={setSession} onLogout={logout}/>:<section className="r4-login"><p className="brand-eyebrow">BoPE · Área de membros</p><h1 className="brand-title">Seu lugar na aliança</h1><p>Acompanhe os resultados da aliança e planeje sua evolução.</p><form onSubmit={login}><label htmlFor="member-password">Senha da aliança</label><input id="member-password" type="password" autoComplete="current-password" required value={password} onChange={e=>setPassword(e.target.value)}/><button disabled={busy||!session?.configured}>{busy?'Entrando…':'Entrar na área de membros'}</button></form>{session&&!session.configured&&<p role="status">O acesso precisa ser configurado no servidor.</p>}{error&&<p role="alert">{error}</p>}</section>):<><header className="member-account-header"><div className="member-profile"><span className="member-profile-avatar" aria-hidden="true">{(session.profile?.player?.nick||'B').slice(0,1).toUpperCase()}</span><div><span className="member-profile-label">Sua conta · BoPE</span><strong className="member-profile-nick">{session.profile?.player?.nick||'Membro da aliança'}</strong><span className={'member-profile-role'+(isAdmin?' admin':'')}>{isAdmin?'Administrador · Liderança R4 / R5':'Membro ativo'}</span>{session?.mode==='accounts'&&<span className="member-profile-help">Player incorreto? Fale com a liderança.</span>}</div></div><MemberAccountActions onLogout={logout}/></header></>;
+  if(!targets)return <SessionLoading error={error}/>;
+  const gate=!session?<SessionLoading error={error}/>:!session.authenticated?<AccountAccess session={session} onSession={setSession} onLogout={logout}/>:<><header className="member-account-header"><div className="member-profile"><span className="member-profile-avatar" aria-hidden="true">{(session.profile?.player?.nick||'B').slice(0,1).toUpperCase()}</span><div><span className="member-profile-label">Sua conta · BoPE</span><strong className="member-profile-nick">{session.profile?.player?.nick||'Membro da aliança'}</strong><span className={'member-profile-role'+(isAdmin?' admin':'')}>{isAdmin?'Administrador · Liderança R4 / R5':'Membro ativo'}</span>{session?.mode==='accounts'&&<span className="member-profile-help">Player incorreto? Fale com a liderança.</span>}</div></div><MemberAccountActions onLogout={logout}/></header></>;
   const scores=data?.scores||[];
   const {analysis,effectiveEdition,lastParticipation}=memberSelection(scores,{player,event,period,edition,personal:view==='me'});
   const progress=memberProgress(scores,player,analysis,effectiveEdition);

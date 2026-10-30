@@ -2,6 +2,7 @@
 import {useEffect,useState} from 'react';
 import LeadershipCharts from './LeadershipCharts';
 import EventPicker from './EventPicker';
+import SessionLoading from './SessionLoading';
 import {describe} from '../lib/goal-rules.cjs';
 import {keepLatest} from '../lib/sheet-request.cjs';
 import {useRouter,useSearchParams} from 'next/navigation';
@@ -9,7 +10,7 @@ const fmt=n=>n===null||n===undefined?'—':new Intl.NumberFormat('pt-BR',{maximu
 const shortDate=s=>s?.split('-').reverse().join('/');
 const labels={met:'Meta atingida',below:'Abaixo da meta',unknown:'Sem avaliação'};
 export default function Leadership({embedded=false}){
-  const [session,setSession]=useState(null),[password,setPassword]=useState(''),[error,setError]=useState(''),[loading,setLoading]=useState(false);
+  const [session,setSession]=useState(null),[error,setError]=useState(''),[loading,setLoading]=useState(false);
   const router=useRouter(),searchParams=useSearchParams();
   const date=searchParams.get('data')||'';
   const setDate=value=>router.replace('/membros?aba=lideranca'+(value?'&data='+encodeURIComponent(value):''),{scroll:false});
@@ -31,12 +32,9 @@ export default function Leadership({embedded=false}){
     document.addEventListener('visibilitychange',visible);
     return()=>{stopped=true;clearInterval(timer);document.removeEventListener('visibilitychange',visible);};
   },[session?.mode]);
-  async function login(e){e.preventDefault();setLoading(true);setError('');try{const r=await fetch('/api/r4/session',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password})});const body=await r.json();if(!r.ok)throw Error(body.error);setPassword('');setSession({authenticated:true,configured:true});}catch(e){setError(e.message);}finally{setLoading(false);}}
   async function logout(){try{const r=await fetch('/api/r4/session',{method:'DELETE'});if(!r.ok)throw Error('Não foi possível encerrar a sessão.');setSession(s=>({...s,authenticated:false}));setData(null);setDate('');}catch(e){setError(e.message);}}
-if(embedded&&!session?.authenticated)return <p className="calendar-note" role="status">{session?'Seu acesso de administrador não está disponível.':'Verificando acesso da liderança…'}</p>;
-  if(session?.mode==='accounts'&&!session.authenticated)return <section className="r4-login"><p className="brand-eyebrow">Liderança</p><h1 className="brand-title">Acesso de administrador</h1><p>Entre na área de membros com uma conta ativa de administrador.</p><a href="/membros">Entrar na minha conta</a></section>;
-
-  if(!session?.authenticated)return <section className="r4-login"><p className="brand-eyebrow">Liderança · R4 + R5</p><h1 className="brand-title">Sala da liderança</h1><p>Analise cada edição dos eventos e acompanhe as metas dos jogadores.</p><form onSubmit={login}><label htmlFor="r4-password">Senha da liderança</label><input id="r4-password" type="password" autoComplete="current-password" value={password} onChange={e=>setPassword(e.target.value)} required/><button disabled={loading||!session||!session.configured}>{loading?<><span className="r4-spinner" aria-hidden="true"/> Verificando…</>:'Entrar na liderança'}</button></form>{session&&!session.configured&&<p role="status">O acesso R4 precisa ser configurado no servidor.</p>}{error&&<p role="alert">{error}</p>}</section>;
+  if(!session)return <SessionLoading error={error} label="Verificando acesso da liderança…"/>;
+  if(!session.authenticated)return embedded?<p className="calendar-note" role="status">Seu acesso de administrador não está disponível. Entre novamente na sua conta.</p>:<section className="r4-login"><p className="brand-eyebrow">Liderança</p><h1 className="brand-title">Acesso de administrador</h1><p>Entre na área de membros com uma conta ativa de administrador.</p><a href="/membros">Entrar na minha conta</a></section>;
   const rows=(data?.ranking||[]).filter(r=>(!query||r.player.toLowerCase().includes(query.toLowerCase()))&&(!status||r.status===status));
   return <section className="r4-dashboard" aria-busy={loading}><header className="r4-head"><div><p className="brand-eyebrow">Liderança · R4 + R5</p><h1 className="brand-title">Performance por evento</h1></div>{!embedded&&<button onClick={logout}>Sair da liderança</button>}</header>
     {error&&<p className="r4-notice" role="alert">{error}</p>}{data?.warning&&<p className="r4-notice" role="status">{data.warning}</p>}

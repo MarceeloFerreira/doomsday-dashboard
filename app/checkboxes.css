@@ -1,0 +1,26 @@
+/* Shared checkbox appearance. Hero cards already use this same control. */
+:root{--checkbox-size:26px;--checkbox-radius:8px;--checkbox-border:#696a59}
+html body input[type="checkbox"]:not(.hero-card-input){
+  appearance:none;-webkit-appearance:none;box-sizing:border-box;display:inline-block;
+  width:var(--checkbox-size);height:var(--checkbox-size);min-width:var(--checkbox-size);min-height:var(--checkbox-size);
+  flex:0 0 var(--checkbox-size);margin:0;padding:0;vertical-align:middle;
+  border:1.5px solid var(--checkbox-border);border-radius:var(--checkbox-radius);
+  background-color:var(--surface);background-image:none;background-position:center;background-repeat:no-repeat;background-size:17px 17px;
+  cursor:pointer;box-shadow:none;transition:background-color 150ms,border-color 150ms,box-shadow 150ms;
+}
+html body input[type="checkbox"]:not(.hero-card-input):checked{
+  border-color:var(--ops);background-color:var(--ops);box-shadow:0 0 0 3px #d0b77f12;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111210' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12 4 4L19 6'/%3E%3C/svg%3E");
+}
+html body input[type="checkbox"]:not(.hero-card-input):indeterminate{
+  border-color:var(--ops);background-color:var(--ops);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111210' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 12h12'/%3E%3C/svg%3E");
+}
+html body input[type="checkbox"]:not(.hero-card-input):enabled:hover{border-color:var(--ops)}
+html body input[type="checkbox"]:not(.hero-card-input):focus-visible{outline:2px solid var(--focus-ring);outline-offset:4px}
+html body input[type="checkbox"]:not(.hero-card-input):disabled{opacity:.45;cursor:not-allowed;box-shadow:none}
+.account-access form .account-remember,.hero-check{min-height:44px}
+@media(forced-colors:active){
+  html body input[type="checkbox"]:not(.hero-card-input){appearance:auto;-webkit-appearance:auto;background-image:none;forced-color-adjust:auto}
+}
+@media(prefers-reduced-motion:reduce){html body input[type="checkbox"]:not(.hero-card-input){transition:none}}

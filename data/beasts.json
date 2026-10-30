@@ -1,0 +1,1430 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-26",
+  "client": "1.61.5",
+  "build": "32",
+  "patch": "26",
+  "manifest": "F84F83F326",
+  "beasts": [
+    {
+      "id": 85,
+      "name": "Acnologia",
+      "nameEn": "Acnologia",
+      "rarity": "Lendário",
+      "element": "Fogo",
+      "type": "Criatura do Deserto",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6195,
+            "groupId": 6195,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Rugido do Dragão Negro",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 688%). Para cada 1 acúmulos de Detonar aplicados em batalha, aumenta este DANO em 10%, até um máximo de 30%. Também ganha Contra-ataque +150 por 3s. Se nenhum contra-ataque for acionado durante esta duração, causa DANO adicional ao alvo (Multiplicador de Habilidade: 264%). Quando enviado, Redução de DANO de Habilidade do esquadrão +4%.",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 688%). For every 1 stacks of Detonate applied in battle, increase this DMG by 10%, up to a maximum of 30%. Also gains Counter +150 for 3s. If no counterattack is triggered during this duration, deals follow-up DMG to the target (Skill Multiplier: 264%). When deployed, Squad Skill DMG Reduction +4%."
+          },
+          {
+            "id": 6196,
+            "groupId": 6196,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Golpe de Garra do Dragão Negro",
+            "description": "Causa dano ao alvo (Multiplicador de Habilidade: 232%) a cada 3 segundos, Há 50% de chance de aplicar 1 acúmulo de Detonar ao alvo. Os acúmulos desaparecem após 1 segundo e causam dano ao alvo (Multiplicador de Habilidade: 124%). Se a Habilidade Ativa foi acionada por um contra-ataque, a chance aumenta para 100%.",
+            "descriptionEn": "Deals damage to the target (Skill Multiplier: 232%) every 3 seconds, There is a 50% chance to apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 124%). If the Active Skill was triggered by a counterattack, the chance increases to 100%."
+          },
+          {
+            "id": 6198,
+            "groupId": 6198,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Dragão Devorador de Magia",
+            "description": "Ganha ATQ +18% e DEF +10% por 3s ao entrar em batalha. Ao usar a Habilidade de Líder ou acionar um contra-ataque, tem 100% de chance de aumentar o DANO do ataque atual em 16% e redefinir a duração do status.",
+            "descriptionEn": "Gains ATK +18% and DEF +10% for 3s when entering battle. When using the Leader Skill or triggering a counterattack, has a 100% chance to increase the DMG for the current attack by 16% and reset the status duration."
+          },
+          {
+            "id": 6200,
+            "groupId": 6200,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder de Matar Dragões",
+            "description": "Quando a Habilidade Ativa causa DANO a uma Besta Bioquímica do tipo Grama, ganha DANO +20% para o ataque atual. Em seguida, ganha Contra-ataque +70 por 3s.",
+            "descriptionEn": "When the Active Skill deals DMG to a Grass-type Biochemical Beast, gain DMG +20% for the current attack. then gains Counter +70 for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6197,
+            "groupId": 6197,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Golpe de Garra do Dragão Negro",
+            "description": "Ao acionar um contra-ataque, aumenta o DANO recebido pelo alvo em 15% por 3s, depois aplica 1 acúmulo de Detonar ao alvo. Os acúmulos desaparecem após 1 segundo e causam dano ao alvo (Multiplicador de Habilidade: 248%).",
+            "descriptionEn": "When triggering a counterattack, increases DMG taken by the target by 15% for 3s, then apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 248%)."
+          },
+          {
+            "id": 6199,
+            "groupId": 6199,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Dragão Devorador de Magia",
+            "description": "Quando atacado, Contra-ataque do Líder +40. O efeito pode acumular até 5 vezes. Ao acionar um contra-ataque, aumenta o DANO de Habilidade do Líder em 30% por 6s.",
+            "descriptionEn": "When attacked, Leader Counter +40. Effect can stack up to 5 times. When triggering a counterattack, increases Leader Skill DMG by 30% for 6s."
+          },
+          {
+            "id": 6201,
+            "groupId": 6201,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder de Matar Dragões",
+            "description": "Ao receber DANO das Habilidades de Líder, se a equipe do oponente tiver uma Besta Bioquímica do tipo Grama, ATQ do Líder +22% e DANO de contra-ataque +17.5% por 3s",
+            "descriptionEn": "When taking DMG from Leader Skills, if the opponent's team has a Grass-type Biochemical Beast, Leader ATK +22% and Counter DMG +17.5% for 3s."
+          }
+        ],
+        "Especial": [
+          {
+            "id": 6202,
+            "groupId": 6202,
+            "level": 1,
+            "slot": "Especial",
+            "name": "Domínio do Dragão Negro",
+            "description": "Quando atacado, se um contra-ataque for acionado, ganha DANO de contra-ataque +6.5%. Caso contrário, ganha Contra-ataque +55 por 3s.",
+            "descriptionEn": "When attacked, if a counterattack is triggered, gains Counter DMG +6.5%. Otherwise, gains Counter +55 for 3s."
+          }
+        ]
+      }
+    },
+    {
+      "id": 61,
+      "name": "Asa Fúnebre",
+      "nameEn": "Dirgewing",
+      "rarity": "Lendário",
+      "element": "Físico",
+      "type": "Criatura Social",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6211,
+            "groupId": 6211,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Lamento da Morte",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 700%). Quando em uma Invasão, aumenta o Multiplicador de Habilidade para 1050%, e usar a habilidade aumenta o DANO da Besta Bioquímica em +2%. O efeito pode acumular até 10 vezes. Se o limite de acúmulos for atingido, combos acionados causam DANO adicional ao alvo (Multiplicador de Habilidade: 200%). Quando enviado, Redução de DANO do Esquadrão+5%.",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 700%). When garrisoned, increases Skill Multiplier to 1050%, and using the skill grants Biochemical Beast DMG by +2%. Effect can stack up to 10 times. If the stack limit is reached, triggered counterattacks deal follow-up DMG to the target (Skill Multiplier: 200%). When deployed, Squad DMG Reduction+5%"
+          },
+          {
+            "id": 6212,
+            "groupId": 6212,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Cauda Rasga-Céus",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 270%). Concede DANO CRIT +20% para este ataque. Ao acionar Habilidades Ativas por meio de contra-ataques, o Combo do alvo é -60 por 3s.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 270%). Grants CRIT DMG +20% for this attack. When triggering Active Skills through counterattacks, the target's Combo -60 for 3s."
+          },
+          {
+            "id": 6214,
+            "groupId": 6214,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Soberano do Céu",
+            "description": "Quando estiver em uma Invasão ou guarnecido, aumenta o DANO de Contra-ataque em 20% e aumenta o próprio ATQ e DEF com base no número de tropas no Esquadrão e nos atributos das tropas, até um máximo de 450% dos próprios atributos. Ao acionar um acerto crítico, aumenta o próprio DANO CRIT em 2%, até um máximo de 30%.",
+            "descriptionEn": "When in a Rally or garrisoned, increases Counter DMG by 20% and increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 450% of own attributes. When triggering a critical hit, increases own CRIT DMG by 2%, up to a maximum of 30%."
+          },
+          {
+            "id": 6216,
+            "groupId": 6216,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Réquiem",
+            "description": "Quando estiver guarnecido, usar a Habilidade do Líder tem 100% de chance de acionar um efeito adicional com base no elemento da Besta Bioquímica de Suporte. Físico: Ganha Contra-ataque +200 por 3s. Fogo: Inflige Detonar ao alvo. Água: Inflige Corrosão ao alvo. Grama: Ganha um Escudo.",
+            "descriptionEn": "When garrisoned, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Counter +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6213,
+            "groupId": 6213,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Cauda Rasga-Céus",
+            "description": "Ao acionar um contra-ataque, causa DANO de acompanhamento ao alvo (Multiplicador de Habilidade: 220%). Concede DANO CRIT +20% para este ataque de acompanhamento. Além disso, o DANO de Combo do alvo é -15%.",
+            "descriptionEn": "When triggering a counterattack, deals follow-up DMG to the target (Skill Multiplier: 220%). Grants CRIT DMG +20% for this follow-up attack. Also, the target's Combo DMG -15%."
+          },
+          {
+            "id": 6215,
+            "groupId": 6215,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Soberano do Céu",
+            "description": "DEF do Líder +15% e CRIT +60. Quando estiver guarnecido, Redução de DANO do Líder +8%.",
+            "descriptionEn": "Leader DEF +15% and CRIT +60. When garrisoned, Leader DMG Reduction +8%."
+          },
+          {
+            "id": 6217,
+            "groupId": 6217,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Réquiem",
+            "description": "Ao acionar um contra-ataque contra um alvo Agrupado, ganha DANO +6% por 3s, e o DANO CRIT do alvo é -15% por 3s.",
+            "descriptionEn": "When triggering a counterattack against a Rallied target, gains DMG +6% for 3s, and the target's CRIT DMG -15% for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 52,
+      "name": "Caranguejo General",
+      "nameEn": "General Crab",
+      "rarity": "Lendário",
+      "element": "Água",
+      "type": "Criatura Aquática",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6022,
+            "groupId": 6022,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Beliscão Mortal",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 350%), e inflige Corrosão ao alvo, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 420%). Também ganha Redemoinho por 3s. Se a Besta Bioquímica tiver Redemoinho antes de usar a habilidade, aumenta o Multiplicador de DANO por Corrosão da Habilidade para 504%. Quando enviado, DANO de Ataque Básico do Esquadrão+8%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 350%), and inflicts Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 420%). Also gains Whirlpool for 3s. If the Biochemical Beast had Whirlpool before using the skill, increases Corrosion DMG Skill Multiplier to 504%. When deployed, Squad Basic Attack DMG+8%"
+          },
+          {
+            "id": 6023,
+            "groupId": 6023,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Ataque de Pinça",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 180%), e tem 70% de chance de infligir Corrosão no alvo, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 150%). Se estiver usando a habilidade com Redemoinho, aumenta a chance de infligir Corrosão em 100%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 180%), and has a 70% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 150%). If using the skill with Whirlpool, increases the chance to inflict Corrosion to 100%."
+          },
+          {
+            "id": 6025,
+            "groupId": 6025,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Domínio do Redemoinho",
+            "description": "Ao acionar um combo, ganha Redemoinho: ATQ +15% e Combo +110 por 3s. Ao acionar um combo com Redemoinho, aumenta o dano de Corrosão da rodada atual em 19%.",
+            "descriptionEn": "When triggering a combo, gains Whirlpool: ATK +15% and Combo +110 for 3s. When triggering a combo under with Whirlpool, increases current round of Corrosion DMG by 19%."
+          },
+          {
+            "id": 6027,
+            "groupId": 6027,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Torrencial",
+            "description": "Quando a Habilidade Ativa causa DANO a uma Besta Bioquímica do tipo Fogo, ganha DANO de Corrosão +15% e Combo +40 por 3s.",
+            "descriptionEn": "When the Active Skill deals DMG to a Fire-type Biochemical Beast, gains Corrosion DMG +15% and Combo +40 for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6024,
+            "groupId": 6024,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Ataque de Pinça",
+            "description": "Ao acionar um combo, causa Corrosão no alvo, infligindo DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 264%). Também ganha Combo de Líder +50 por 3s.",
+            "descriptionEn": "When triggering a combo, inflicts Corrosion on the target, dealing Corrosion DMG to the target over3s (Skill Multiplier: 264%). Also gains Leader Combo +50 for 3s."
+          },
+          {
+            "id": 6026,
+            "groupId": 6026,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Domínio do Redemoinho",
+            "description": "Ao usar a Habilidade do Líder, Combo de Líder +150 por 3s. Se um combo for acionado durante este tempo, tem 30% de chance de acionar outro combo.",
+            "descriptionEn": "When using the Leader Skill, Leader Combo +150 for 3s. If a combo is triggered during this time, has a 30% chance to trigger another combo."
+          },
+          {
+            "id": 6028,
+            "groupId": 6028,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Torrencial",
+            "description": "Ao receber um golpe crítico, se a equipe adversária tiver uma Besta Bioquímica do tipo Fogo, o DANO recebido será -14%.",
+            "descriptionEn": "When receiving a critical hit, if the opponent's team has a Fire-type Biochemical Beast, DMG taken -14%."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 54,
+      "name": "Dentes de Sabe Flamejante",
+      "nameEn": "Blaze Sabretooth",
+      "rarity": "Lendário",
+      "element": "Fogo",
+      "type": "Criatura do Deserto",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6008,
+            "groupId": 6008,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Duplo Abate Infernal",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 720%). Existe uma chance de 100% de aumentar o DANO em 20% para as próximas 1 vezes que Deslizes de Chamas for usado. Se usar a habilidade com Fogo Selvagem, o efeito muda para: aumentar o DANO em 25% para as próximas 2 vezes que Deslizes de Chamas for usado. Quando enviado, DANO de Habilidade do Esquadrão+4%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 720%). There is a 100% chance to increase DMG by 20% for the next 1 times Blaze Swipes is used. If using the skill with Wildfire, effect changes to: increase DMG by 25% for the next 2 times Blaze Swipes is used. When deployed, Squad Skill DMG+4%"
+          },
+          {
+            "id": 6009,
+            "groupId": 6009,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Deslizes de Chamas",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 256%). Se usar a habilidade com Fogo Selvagem, aumenta o Multiplicador de Habilidade para este ataque para 320%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 256%). If using the skill with Wildfire, increases the Skill Multiplier for this attack to 320%."
+          },
+          {
+            "id": 6011,
+            "groupId": 6011,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Perseguição da Vitória",
+            "description": "Quando a habilidade causa um acerto crítico, ganha Fogo Selvagem: ATQ +15% e CRÍT +110 por 3s. Ao causar um acerto crítico com Fogo Selvagem, aumenta o DANO CRIT para este ataque em 19%.",
+            "descriptionEn": "When the skill deals a critical hit, gains Wildfire: ATK +15% and CRIT +110 for 3s. When dealing a critical hit with Wildfire, increases CRIT DMG for this attack by 19%."
+          },
+          {
+            "id": 6013,
+            "groupId": 6013,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Flamejante",
+            "description": "Quando a Habilidade Ativa causa DANO a uma Besta Bioquímica do tipo Grama, ganha DANO de Habilidade +15% e CRIT +40 por 3s.",
+            "descriptionEn": "When the Active Skill deals DMG to a Grass-type Biochemical Beast, gains Active Skill DMG +15% and CRIT +40 for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6010,
+            "groupId": 6010,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Deslizes de Chamas",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, causa um DANO de acompanhamento (Multiplicador da Habilidade: 236%) e tem 100% de chance de CRIT +100 na próxima vez que a Habilidade Ativa for usada.",
+            "descriptionEn": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 236%), and has a 100% chance for CRIT +100 the next time the Active Skill is used."
+          },
+          {
+            "id": 6012,
+            "groupId": 6012,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Perseguição da Vitória",
+            "description": "Ao usar a Habilidade de Líder, CRIT de Líder +150 por 3s. Se um golpe crítico for desferido durante este tempo, tem 50% de chance de conceder DANO CRIT adicional de +26%.",
+            "descriptionEn": "When using the Leader Skill, Leader CRIT +150 for 3s. If a critical hit is dealt during this time, has a 50% chance to grant additional CRIT DMG +26%."
+          },
+          {
+            "id": 6014,
+            "groupId": 6014,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Flamejante",
+            "description": "Ao causar dano a um alvo com um Escudo, aumenta o DANO para o ataque atual em 10% e o CRÍTICO em 50.",
+            "descriptionEn": "When dealing damage to a target with a Shield, increases DMG for current attack by 10% and CRIT by 50."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 56,
+      "name": "Dragão Furcacão",
+      "nameEn": "Hurricane Draco",
+      "rarity": "Lendário",
+      "element": "Grama",
+      "type": "Criatura da Floresta",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6029,
+            "groupId": 6029,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Emboscada de Furacão",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 420%), e tem 100% de chance de ganhar um Escudo por 3s com base no DANO causado (Multiplicador de Habilidade: 260%). Também causa DANO de acompanhamento ao alvo no segundo seguinte (Multiplicador de Habilidade: 140%). Cada acúmulo de escudo aumenta o Multiplicador de DANO de Habilidade de acompanhamento em 60%. Este efeito acumula até 180% vezes. Quando enviado, Redução de DANO de Ataque Básico do Esquadrão+8%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 420%), and has a 100% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 260%). Also deals follow-up DMG to the target the next second (Skill Multiplier: 140%). Each stack of Shield increases follow-up DMG Skill Multiplier by 60%. This effect stacks up to 180% times. When deployed, Squad Basic Attack DMG Reduction+8%"
+          },
+          {
+            "id": 6030,
+            "groupId": 6030,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Mil Espinhos",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 240%). Ao ter um escudo, ganha Contra-ataque +60 por 3s.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 240%). When having a shield, gains Counter +60 for 3s."
+          },
+          {
+            "id": 6032,
+            "groupId": 6032,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Barreira de Vento",
+            "description": "Contra-ataque +70. Ao acionar um contra-ataque, tem 50% de chance de ganhar um Escudo por 3s com base no DANO causado (Multiplicador de Habilidade: 280%). Há 50% de chance de aumentar a força do Escudo em 30%.",
+            "descriptionEn": "Counter +70. When triggering a counterattack, has a 50% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 280%). There is a 50% chance to increase the Shield strength by 30%."
+          },
+          {
+            "id": 6034,
+            "groupId": 6034,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder da Floresta",
+            "description": "Quando a Habilidade Ativa causa DANO a uma Besta Bioquímica do tipo Água, ganha DANO de Habilidade +15% e Contra-ataque +4% por 3s.",
+            "descriptionEn": "When the Active Skill deals DMG to a Water-type Biochemical Beast, gains Active Skill DMG +15% and Counter +4% for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6031,
+            "groupId": 6031,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Mil Espinhos",
+            "description": "Ao acionar um contra-ataque, causa DANO de acompanhamento ao alvo (Multiplicador de Habilidade: 288%) . Também, o Combo do alvo é -50 por 3s.",
+            "descriptionEn": "When triggering a counterattack, deals follow-up DMG to the target (Skill Multiplier: 288%). Also, the target's Combo -50 for 3s."
+          },
+          {
+            "id": 6033,
+            "groupId": 6033,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Barreira de Vento",
+            "description": "Ao usar a Habilidade do Líder, Contra-ataque de Líder +150 por 3s. Se um contra-ataque for acionado durante esse tempo, tem 30% de chance de reiniciar a duração.",
+            "descriptionEn": "When using the Leader Skill, Leader Counter +150 for 3s. If a counterattack is triggered during this time, has a 30% chance to reset the duration."
+          },
+          {
+            "id": 6035,
+            "groupId": 6035,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder da Floresta",
+            "description": "Reduz o DANO de Corrosão recebido em 14%. Ao receber DANO de Corrosão, DANO de Contra-ataque de Líder +10% por 3s.",
+            "descriptionEn": "Reduces Corrosion DMG taken by 14%. When taking Corrosion DMG, Leader Counter DMG +10% for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 86,
+      "name": "Fraudrin",
+      "nameEn": "Fraudrin",
+      "rarity": "Lendário",
+      "element": "Água",
+      "type": "Criatura Aquática",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6219,
+            "groupId": 6219,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Pisada Demoníaca",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 600%, e aumenta para 750% no estado \"Tamanho Completo\"), e aumenta o DANO de Corrosão causado em +30% por 3s. Se o alvo estiver afetado por Corrosão, causa DANO adicional de acompanhamento ao alvo (Multiplicador de Habilidade: 300%). Quando enviado, Redução de DANO de Habilidade do Esquadrão+4%.",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 600%, and increases to 750% in \"Full Size\" state), and gains Corrosion DMG dealt +30% for 3s. If the target is inflicted with Corrosion, deals bonus follow-up DMG to the target (Skill Multiplier: 300%). When deployed, Squad Skill DMG Reduction+4%."
+          },
+          {
+            "id": 6220,
+            "groupId": 6220,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Garra Demoníaca",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 220%, e aumenta para 264% no estado \"Tamanho Completo\"). Há 50% de chance de infligir Corrosão ao alvo, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 120%). Ao acionar Habilidades Ativas por meio de contra-ataques, a chance de infligir Corrosão aumenta para 100%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 220%, and increases to 264% in \"Full Size\" state). There is a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 120%). When triggering Active Skills through counterattacks, the chance of inflicting Corrosion increases to 100%."
+          },
+          {
+            "id": 6222,
+            "groupId": 6222,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Tamanho Completo",
+            "description": "Usa \"Tamanho Completo\" ao entrar em batalha. Enquanto estiver neste estado, ATQ +30% e DANO de Besta Bioquímica +8% por 6s. 6s após infligir Corrosão ou \"Tamanho Completo\" terminar, se não estiver no estado \"Tamanho Completo\", usa \"Tamanho Completo\" novamente por 6s.",
+            "descriptionEn": "Uses \"Full Size\" when entering battle. While in this state, ATK +30% and Biochemical Beast DMG +8% for 6s. 6s after inflicting Corrosion or \"Full Size\" ends, if not in the \"Full Size\" state, uses \"Full Size\" again for 6s."
+          },
+          {
+            "id": 6224,
+            "groupId": 6224,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Demoníaco",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Besta Bioquímica do tipo Fogo, ganha DANO de Habilidade Ativa +20% e DANO de Corrosão +10% por 3s.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Fire-type Biochemical Beast, gains Active Skill DMG +20% and Corrosion DMG +10% for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6221,
+            "groupId": 6221,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Garra Demoníaca",
+            "description": "Ao acionar um contra-ataque, inflige Corrosão ao alvo, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 180%). Por 3s após usar a Habilidade de Líder, aumenta a duração da Corrosão infligida por esta habilidade para 6s (Multiplicador de Habilidade aumenta para 360%).",
+            "descriptionEn": "When triggering a counterattack, inflicts Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 180%). For 3s after using the Leader Skill, increases the duration of Corrosion inflicted by this skill to 6s (Skill Multiplier increases to 360%)."
+          },
+          {
+            "id": 6223,
+            "groupId": 6223,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Tamanho Completo",
+            "description": "Se o alvo estiver afetado por Corrosão, ganha Redução de DANO de Besta Bioquímica +15%. Ganha DANO de Contra-ataque +10% ao contra-atacar. Este efeito acumula até 5 vezes.",
+            "descriptionEn": "If the target is inflicted with Corrosion, gain Biochemical Beast DMG Reduction +15%. Gain Counter DMG +10% when counterattacking. This effect stacks up to 5 times."
+          },
+          {
+            "id": 6225,
+            "groupId": 6225,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Demoníaco",
+            "description": "Ao receber um acerto crítico, se a equipe do oponente tiver uma Besta Bioquímica do tipo Fogo, o DANO é recebido -15% neste golpe, e DANO de Habilidade de Líder +10% por 6s.",
+            "descriptionEn": "When receiving a critical hit, if the opponent's team has a Fire-type Biochemical Beast, DMG taken -15% for this hit, and Leader Skill DMG +10% for 6s."
+          }
+        ],
+        "Especial": [
+          {
+            "id": 6226,
+            "groupId": 6226,
+            "level": 1,
+            "slot": "Especial",
+            "name": "Pressão Demoníaca",
+            "description": "Ao contra-atacar um alvo afetado por Corrosão, este DANO é +6.5%. Caso contrário, DANO da próxima Habilidade de Líder é +2.5%.",
+            "descriptionEn": "When counterattacking a target inflicted with Corrosion, this DMG +6.5%. Otherwise, DMG of next Leader Skill +2.5%."
+          }
+        ]
+      }
+    },
+    {
+      "id": 59,
+      "name": "Kirin",
+      "nameEn": "Kirin",
+      "rarity": "Lendário",
+      "element": "Fogo",
+      "type": "Criatura do Deserto",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6171,
+            "groupId": 6171,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Carga Rápida",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 554%), e ganha CRIT +130 por 3s. Também causa DANO de acompanhamento ao alvo no segundo seguinte (Multiplicador de Habilidade: 202%). Se a Habilidade do Líder causar um acerto crítico, aumenta o Multiplicador de Habilidade do ataque de acompanhamento atual para 304%, e o ataque de acompanhamento é garantido de causar um acerto crítico. Quando enviado, DANO da Habilidade do Esquadrão+5%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 554%), and gains CRIT +130 for 3s. Also deals follow-up DMG to the target the next second (Skill Multiplier: 202%). If the Leader Skill deals a critical hit, increases the Skill Multiplier of the current follow-up attack to 304%, and the follow-up attack is guaranteed to deal a critical hit. When deployed, Squad Skill DMG+5%"
+          },
+          {
+            "id": 6172,
+            "groupId": 6172,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Dança das Chamas",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 274%). Se a Habilidade Ativa foi acionada por um combo, causa DANO de acompanhamento adicional ao alvo no segundo seguinte (Multiplicador de Habilidade: 150%), e o ataque de acompanhamento recebe CRIT +60.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 274%). If the Active Skill was triggered by a combo, additionally deals follow-up DMG to the target the next second (Skill Multiplier: 150%), and the follow-up attack gains CRIT +60."
+          },
+          {
+            "id": 6174,
+            "groupId": 6174,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Explosão de Poeira",
+            "description": "Ao causar um acerto crítico, tem 100% de chance de infligir 1 acúmulos de Detonar no alvo. Os acúmulos desaparecem após 1s para causar DANO ao alvo (Multiplicador de Habilidade: 172%). Ao usar a Habilidade Líder, inflige 2 acúmulos de Detonar no alvo.",
+            "descriptionEn": "When dealing a critical hit, has a 100% chance to inflict 1 stacks of Detonate on the target. The stacks disappear after 1s to deal DMG to the target (Skill Multiplier: 172%). When using the Leader Skill, inflicts 2 stacks of Detonate on the target."
+          },
+          {
+            "id": 6176,
+            "groupId": 6176,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder do Meteoro",
+            "description": "Quando a Habilidade Ativa causa DANO a uma Besta Bioquímica do tipo Grama, ganha DANO de Habilidade Ativa +27% e DANO de Habilidade Líder +11% por 3s.",
+            "descriptionEn": "When the Active Skill deals DMG to a Grass-type Biochemical Beast, gains Active Skill DMG +27% and Leader Skill DMG +11% for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6173,
+            "groupId": 6173,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Dança das Chamas",
+            "description": "Quando a Habilidade Ativa causa DANO, tem 50% de chance de causar DANO de acompanhamento (Multiplicador de Habilidade: 234%). Ao causar acertos críticos ou acionar Habilidades Ativas por meio de combos, a chance aumenta para 100%.",
+            "descriptionEn": "When the Active Skill deals DMG, has a 50% chance to deal follow-up DMG (Skill Multiplier: 234%). When dealing critical hits or triggering Active Skills through combos, the chance increases to 100%."
+          },
+          {
+            "id": 6175,
+            "groupId": 6175,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Explosão de Poeira",
+            "description": "Ao causar um acerto crítico ou infligir Detonar, concede ATQ de Líder +6% e CRIT +40 por 3s. Este efeito acumula até 4 vezes. A duração do efeito é redefinida cada vez que é acionado.",
+            "descriptionEn": "When dealing a critical hit or inflicting Detonate, grants Leader ATK +6% and CRIT +40 for 3s. This effect stacks up to 4 times. The effect duration resets each time it triggers."
+          },
+          {
+            "id": 6177,
+            "groupId": 6177,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder do Meteoro",
+            "description": "Quando a Habilidade Líder causa DANO a um alvo com um Escudo, ganha Combo +120 e DANO +8.5% por 3s.",
+            "descriptionEn": "When the Leader Skill deals DMG to a target with a Shield, gains Combo +120 and DMG +8.5% for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 81,
+      "name": "Knifehead",
+      "nameEn": "Knifehead",
+      "rarity": "Lendário",
+      "element": "Grama",
+      "type": "Criatura da Floresta",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6163,
+            "groupId": 6163,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Martelo de Lâmina",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 750%), CRIT para o ataque atual +150. Quando este ataque causa um acerto crítico, tem 50% de chance de causar um dano residual equivalente a 20% do DANO da Habilidade real causado. Ao ter um escudo, o Multiplicador de Habilidade desta habilidade aumenta para 900%, e a chance de dano residual de um acerto crítico aumenta para 100%. Quando enviado, DANO de Habilidade do Esquadrão+4%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 750%), CRIT for current attack +150. When this attack deals a critical hit, has a 50% chance to deal residual damage equivalent to 20% of the actual Skill DMG dealt. When having a shield, Skill Multiplier of this skill increases to 900%, and the chance of residual damage from a critical hit increases to 100%. When deployed, Squad Skill DMG+4%"
+          },
+          {
+            "id": 6164,
+            "groupId": 6164,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Garras Selvagens",
+            "description": "Causa DANO ao alvo a cada 3s （Multiplicador de Habilidade: 264%）. CRIT do ataque atual +65.",
+            "descriptionEn": "Deals DMG to the target every 3s （Skill Multiplier: 264%）. Current attack CRIT +65."
+          },
+          {
+            "id": 6166,
+            "groupId": 6166,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Fúria Insana",
+            "description": "Ao causar um acerto crítico, DANO CRIT para o ataque atual +34%, e ganha um Escudo por 3s com base no DANO causado por este ataque （Multiplicador de Habilidade: 76%）.",
+            "descriptionEn": "When dealing a critical hit, CRIT DMG for current attack +34%, and gains a Shield for 3s based on the DMG dealt for this attack （Skill Multiplier: 76%）."
+          },
+          {
+            "id": 6168,
+            "groupId": 6168,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Kaiju",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Besta Bioquímica do tipo Água, DANO para o ataque atual +22% e CRIT +70.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Water-type Biochemical Beast, DMG for current attack +22% and CRIT +70."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6165,
+            "groupId": 6165,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Garras Selvagens",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, causa um DANO de acompanhamento （Multiplicador da Habilidade: 172%）. Há 100% de chance de ganhar um Escudo por 3s no segundo seguinte com base no DANO causado por este ataque （Multiplicador da Habilidade: 116%）.",
+            "descriptionEn": "When the Active Skill deals a critical hit, deals follow-up DMG （Skill Multiplier: 172%）. There is a 100% chance to gain a Shield for 3s at the next second based on the DMG dealt for this attack （Skill Multiplier: 116%）."
+          },
+          {
+            "id": 6167,
+            "groupId": 6167,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Fúria Insana",
+            "description": "DANO CRIT +9%. Durante a duração do Escudo, CRIT de Líder +160.",
+            "descriptionEn": "CRIT DMG +9%. For the duration of the Shield, Leader CRIT +160."
+          },
+          {
+            "id": 6169,
+            "groupId": 6169,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Kaiju",
+            "description": "Ao receber ataques de combo, DEF de Líder +21.5% e Redução de DANO +5% por 3s se a equipe adversária tiver uma Besta Bioquímica do tipo Água.",
+            "descriptionEn": "When receiving combo attacks, Leader DEF +21.5% and DMG Reduction +5% for 3s if the opponent's team has a Water-type Biochemical Beast."
+          }
+        ],
+        "Especial": [
+          {
+            "id": 6170,
+            "groupId": 6170,
+            "level": 1,
+            "slot": "Especial",
+            "name": "Frenesi da Besta",
+            "description": "Ao causar DANO direto enquanto o Líder aliado tem um Escudo, DANO da Habilidade para o ataque atual +5.5%. Caso contrário, DANO CRIT para o ataque atual +6.5%.",
+            "descriptionEn": "When dealing direct DMG while the allied Leader has a Shield, Skill DMG for current attack +5.5%. Otherwise, CRIT DMG for current attack +6.5%."
+          }
+        ]
+      }
+    },
+    {
+      "id": 83,
+      "name": "Kong",
+      "nameEn": "Kong",
+      "rarity": "Lendário",
+      "element": "Fogo",
+      "type": "Criatura do Deserto",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6179,
+            "groupId": 6179,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Golpe Oco",
+            "description": "Causa dano ao alvo (Multiplicador de Habilidade: 658%) a cada 6 segundos, com Combo adicional para este ataque +150. Há 50% de chance de aplicar 1 acúmulo de Detonar ao alvo. Os acúmulos desaparecem após 1 segundo e causam dano ao alvo (Multiplicador de Habilidade: 132%). Se este ataque acionar um Combo, aplica 1 acúmulo adicional de Detonar ao alvo. Quando enviado, DANO de Habilidade do Esquadrão+4%",
+            "descriptionEn": "Deals damage to the target (Skill Multiplier: 658%) every 6 seconds, with additional Combo for this attack +150. There is a 50% chance to apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 132%). If this attack triggers a Combo, applies 1 additional stack of Detonate to the target. When deployed, Squad Skill DMG+4%"
+          },
+          {
+            "id": 6180,
+            "groupId": 6180,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Golpe Retumbante",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 236%) Combo adicional para este ataque +65. Quando acionar Habilidades Ativas através de combos, o dano aumenta em um adicional de 20%",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 236%) Additional Combo for this attack +65. When triggering Active Skills through combos, damage increases by an additional 20%"
+          },
+          {
+            "id": 6182,
+            "groupId": 6182,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Difusão de Energia",
+            "description": "Ganha 2 acúmulo(s) de [Carga] ao entrar em batalha por 3s. [Carga]: Aumenta o DANO da próxima Habilidade Ativa em 34%. O efeito pode ser acumulado até 3 vezes. Ao usar a Habilidade de Líder ou infligir Detonar, há 100% de chance de ganhar 1 acúmulo de [Carga]",
+            "descriptionEn": "Gains 2 stack(s) of [Charge] when entering battle for 3s. [Charge]: Increases DMG of next Active Skill by 34%. Effect can stack up to 3 times. When using the Leader Skill or inflicting Detonate, there is a 100% chance to gain 1 stack of [Charge]"
+          },
+          {
+            "id": 6184,
+            "groupId": 6184,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder do Titã",
+            "description": "Quando a Habilidade do Líder causa DANO a uma Besta Bioquímica do tipo Grama, DANO de Habilidade do Líder +22% e Combo +70 para o próximo ataque.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Grass-type Biochemical Beast, Leader Skill DMG +22% and Combo +70 for the next attack."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6181,
+            "groupId": 6181,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Golpe Retumbante",
+            "description": "Quando um combo é acionado, causa DANO de acompanhamento ao alvo (Multiplicador de Habilidade: 244%), com 50% de chance de aplicar 1 acúmulo de Detonar. Os acúmulos desaparecem após 1 segundo e causam DANO ao alvo (Multiplicador de Habilidade: 86%)",
+            "descriptionEn": "When a combo is triggered, deals follow-up DMG to the target (Skill Multiplier: 244%), with a 50% chance to apply 1 stack of Detonate. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 86%)"
+          },
+          {
+            "id": 6183,
+            "groupId": 6183,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Difusão de Energia",
+            "description": "Para cada Combo ou Detonação causada em uma única batalha, DANO do Combo +13%, Combo +10. Este efeito acumula até 5 vezes.",
+            "descriptionEn": "For every Combo or Detonate inflicted in a single battle, Combo DMG +13%, Combo +10. This effect stacks up to 5 times."
+          },
+          {
+            "id": 6185,
+            "groupId": 6185,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder do Titã",
+            "description": "Quando recebe DANO de contra-ataque, reduz o DANO recebido para o ataque atual em 5% e ATQ do Líder +21.5% por 3s se a equipe do oponente tiver uma Besta Bioquímica do tipo Grama.",
+            "descriptionEn": "When taking Counter DMG, reduces DMG taken for current attack by 5% and Leader ATK +21.5% for 3s if the opponent's team has a Grass-type Biochemical Beast."
+          }
+        ],
+        "Especial": [
+          {
+            "id": 6186,
+            "groupId": 6186,
+            "level": 1,
+            "slot": "Especial",
+            "name": "Ira Colossal",
+            "description": "Quando causa DANO direto ao ativar um combo, DANO de Combo para o ataque atual +6.5%. Caso contrário, DANO de Habilidade de Líder para o próximo ataque +2.5%",
+            "descriptionEn": "When dealing direct DMG when a combo is triggered, Combo DMG for current attack +6.5%. Otherwise, Leader Skill DMG for next attack +2.5%"
+          }
+        ]
+      }
+    },
+    {
+      "id": 60,
+      "name": "Leão de Olhos Celestiais",
+      "nameEn": "Celestial-Eyed Lion",
+      "rarity": "Lendário",
+      "element": "Físico",
+      "type": "Criatura Social",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6203,
+            "groupId": 6203,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Olhar do Lorde",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 700%). Quando em uma Invasão, aumenta o Multiplicador de Habilidade para 1050%, e usar a habilidade aumenta o DANO da Besta Bioquímica em +2%. O efeito pode acumular até 10 vezes. Se o limite de acúmulos for atingido, combos acionados causam DANO adicional ao alvo (Multiplicador de Habilidade: 200%). Quando enviado, DANO do Esquadrão+5%.",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 700%). When in a Rally, increases Skill Multiplier to 1050%, and using the skill grants Biochemical Beast DMG by +2%. Effect can stack up to 10 times. If the stack limit is reached, triggered combos deal follow-up DMG to the target (Skill Multiplier: 200%). When deployed, Squad DMG+5%"
+          },
+          {
+            "id": 6204,
+            "groupId": 6204,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Garra Dilaceradora",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 270%). Concede DANO CRIT +20% para este ataque. Ao acionar Habilidades Ativas por meio de combos, o Contra-ataque do alvo -60 por 3s.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 270%). Grants CRIT DMG +20% for this attack. When triggering Active Skills through combos, the target's Counter -60 for 3s."
+          },
+          {
+            "id": 6206,
+            "groupId": 6206,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Rei da Terra",
+            "description": "Quando estiver em uma Invasão ou guarnecido, aumenta o DANO de Combo em 20% e aumenta o próprio ATQ e DEF com base no número de tropas no Esquadrão e nos atributos das tropas, até um máximo de 450% dos próprios atributos. Ao acionar um acerto crítico, aumenta o próprio DANO CRIT em 2%, até um máximo de 30%.",
+            "descriptionEn": "When in a Rally or garrisoned, increases Combo DMG by 20% and increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 450% of own attributes. When triggering a critical hit, increases own CRIT DMG by 2%, up to a maximum of 30%."
+          },
+          {
+            "id": 6208,
+            "groupId": 6208,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Omnivisão",
+            "description": "Quando estiver em uma Invasão, usar a Habilidade do Líder tem 100% de chance de acionar um efeito adicional com base no elemento da Besta Bioquímica de Suporte. Físico: Ganha Combo +200 por 3s. Fogo: Inflige Detonar no alvo. Água: Inflige Corrosão no alvo. Grama: Ganha um Escudo.",
+            "descriptionEn": "When in a Rally, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Combo +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6205,
+            "groupId": 6205,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Garra Dilaceradora",
+            "description": "Ao ativar um combo, causa DANO de ataque subsequente ao alvo (Multiplicador da habilidade: 220%). Concede DANO CRIT +20% a este ataque subsequente. Além disso, o DANO de Contra-ataque do alvo -15% por 3s.",
+            "descriptionEn": "When triggering a combo, deals follow-up DMG to the target (Skill Multiplier: 220%). Grants CRIT DMG +20% for this follow-up attack. Also, the target's Counter DMG -15% for 3s."
+          },
+          {
+            "id": 6207,
+            "groupId": 6207,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Rei da Terra",
+            "description": "ATQ do Líder +15% e CRIT +60. Quando estiver em uma Invasão, DANO do Líder +8%",
+            "descriptionEn": "Leader ATK +15% and CRIT +60. When in a Rally, Leader DMG +8%."
+          },
+          {
+            "id": 6209,
+            "groupId": 6209,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Omnivisão",
+            "description": "Ao acionar um combo contra um alvo guarnecido, ganha DANO +6% por 3s, e o DANO CRIT do alvo é -15% por 3s.",
+            "descriptionEn": "When triggering a combo against a garrisoned target, gains DMG +6% for 3s, and the target's CRIT DMG -15% for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 82,
+      "name": "Otachi",
+      "nameEn": "Otachi",
+      "rarity": "Lendário",
+      "element": "Água",
+      "type": "Criatura Aquática",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6155,
+            "groupId": 6155,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Explosão Ácida",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 416%) . Há 70% de chance de infligir Corrosão ao alvo, causando DANO de Corrosão ao alvo ao longo de 3s （Multiplicador de Habilidade: 348%）. Para cada acúmulo de Ácido mantido, a chance aumenta para 10%. Para cada acúmulo de Ácido consumido, o DANO causado no ataque atual +5%. Se 3 acúmulos de Ácido forem consumidos de uma vez, o DANO de Corrosão para o ataque atual causa DANO CRÍTICO. Quando enviado, DANO de Habilidade do Esquadrão+4%",
+            "descriptionEn": "Deals DMG to the target every 6s （Skill Multiplier: 416%）. There is a 70% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s （Skill Multiplier: 348%）. For every stack of Acid held, the chance increases to 10%. For every stack of Acid consumed, DMG dealt for current attack +5%. If 3 stacks of Acid is consumed in a go, Corrosion DMG for current attack deals CRIT DMG. When deployed, Squad Skill DMG+4%"
+          },
+          {
+            "id": 6156,
+            "groupId": 6156,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Golpe de Cauda",
+            "description": "Causa DANO ao alvo a cada 3s （Multiplicador de Habilidade: 264%）. CRIT do ataque atual +65.",
+            "descriptionEn": "Deals DMG to the target every 3s （Skill Multiplier: 264%）. Current attack CRIT +65."
+          },
+          {
+            "id": 6158,
+            "groupId": 6158,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Avanço de Energia",
+            "description": "Para cada 1 golpes críticos ou acúmulos de Corrosão causados em uma única batalha, há 100% de chance de ganhar 1 acúmulos de Ácido, o que aumenta o DANO de Corrosão da próxima Habilidade de Líder em 58%. Esse efeito acumula até 3 vezes.",
+            "descriptionEn": "For every 1 critical hits or stacks of Corrosion dealt in a single battle, has a 100% chance to gain 1 stacks of Acid, which increases Corrosion DMG of the next Leader Skill by 58%. This effect stacks up to 3 times."
+          },
+          {
+            "id": 6160,
+            "groupId": 6160,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Técnica Kaiju",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Besta Bioquímica do tipo Fogo, ganha DANO +22% e CRIT +70 para o ataque atual.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Fire-type Biochemical Beast, gain DMG +22% and CRIT +70 for the current attack."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6157,
+            "groupId": 6157,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Golpe de Cauda",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, inflige Corrosão no alvo, causando DANO de Corrosão ao alvo ao longo de 3s （Multiplicador de Habilidade: 258%）. DANO CRIT de Líder +15% por 3s.",
+            "descriptionEn": "When the Active Skill deals a critical hit, inflicts Corrosion on the target, dealing Corrosion DMG to the target over 3s （Skill Multiplier: 258%）. Leader CRIT DMG +15% for 3s."
+          },
+          {
+            "id": 6159,
+            "groupId": 6159,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Avanço de Energia",
+            "description": "Para cada 1 golpes críticos causados em uma única batalha, CRIT de Líder +10 e DANO CRIT +13%. Este efeito acumula até 5 vezes.",
+            "descriptionEn": "For every 1 critical hits dealt in a single battle, Leader CRIT +10 and CRIT DMG +13%. This effect stacks up to 5 times."
+          },
+          {
+            "id": 6161,
+            "groupId": 6161,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Técnica Kaiju",
+            "description": "Ao receber DANO, reduz o DANO recebido em 8% se a equipe adversária tiver uma Besta Bioquímica do tipo Fogo. Há 50% de chance de reduzir ainda mais o DANO recebido em 7%.",
+            "descriptionEn": "When taking DMG, reduces DMG taken by 8% if the opponent's team has a Fire-type Biochemical Beast. There is a 50% chance to further reduce DMG taken by 7%."
+          }
+        ],
+        "Especial": [
+          {
+            "id": 6162,
+            "groupId": 6162,
+            "level": 1,
+            "slot": "Especial",
+            "name": "Supressão de Bestas",
+            "description": "Ao causar DANO direto a um alvo com Corrosão, DANO da Habilidade para o ataque atual +5.5%. Caso contrário, DANO CRIT para o ataque atual +6.5%.",
+            "descriptionEn": "When dealing direct DMG to a target with Corrosion, Skill DMG for current attack +5.5%. Otherwise, CRIT DMG for current attack +6.5%."
+          }
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "name": "Pangolim Martelo",
+      "nameEn": "Hammer Pangolin",
+      "rarity": "Lendário",
+      "element": "Físico",
+      "type": "Criatura Social",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6050,
+            "groupId": 6051,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Contra-ataque de Martelo",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 600%). Quando guarnecido, aumenta o Multiplicador de Habilidade para 900%, e ganha +70 de Contra-ataque por 3s. Para cada Habilidade de Líder usada em batalha, ganha 2% de ATQ, até um máximo de 20%. Quando enviado, Redução de DANO do Esquadrão+4%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 600%). When garrisoned, increases Skill Multiplier to 900%, and gains +70 Counter for 3s. For every Leader Skill used in battle, gains 2% ATK, up to a maximum of 20%. When deployed, Squad DMG Reduction+4%"
+          },
+          {
+            "id": 6051,
+            "groupId": 6052,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Corte de Foice",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 240%). Quando este ataque causa um acerto crítico, ganha Contra-ataque +60 por 3s.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 240%). When this attack deals a critical hit, gains Counter +60 for 3s."
+          },
+          {
+            "id": 6053,
+            "groupId": 6053,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Lorde da Caverna",
+            "description": "Quando em uma Invasão ou guarnecido, aumenta seu próprio ATQ e DEF com base no número de tropas no Esquadrão e nos atributos das tropas, até um máximo de 400% de seus próprios atributos. Ao acionar um contra-ataque, aumenta o próprio DANO de contra-ataque em 2%, até um máximo de 30%.",
+            "descriptionEn": "When in a Rally or garrisoned, increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 400% of own attributes. When triggering a counterattack, increases own Counter DMG by 2%, up to a maximum of 30%."
+          },
+          {
+            "id": 6055,
+            "groupId": 6055,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder da Fortaleza",
+            "description": "Quando guarnecido, CRIT +120 e Contra-ataque +50.",
+            "descriptionEn": "When garrisoned, CRIT +120 and Counter +50."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6052,
+            "groupId": 6053,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Corte de Foice",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, causa um DANO de acompanhamento (Multiplicador da Habilidade: 248%). Também, o Combo do alvo é -50 por 3s.",
+            "descriptionEn": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 248%). Also, the target's Combo -50 for 3s."
+          },
+          {
+            "id": 6054,
+            "groupId": 6054,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Lorde da Caverna",
+            "description": "DEF de Líder +15%. Quando guarnecido, Redução de DANO do Líder +7%.",
+            "descriptionEn": "Leader DEF +15%. When garrisoned, Leader DMG Reduction +7%."
+          },
+          {
+            "id": 6056,
+            "groupId": 6056,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder da Fortaleza",
+            "description": "Ao acionar um contra-ataque contra um alvo Agrupado, causa um DANO adicional de +9% para o ataque atual. Também, o CRIT do alvo é -50 por 3s.",
+            "descriptionEn": "When triggering a counterattack against a Rallied target, deals additional +9% DMG for the current attack. Also, the target's CRIT -50 for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 53,
+      "name": "Rinoceronte Vulcânico",
+      "nameEn": "Volcano Rhino",
+      "rarity": "Lendário",
+      "element": "Fogo",
+      "type": "Criatura do Deserto",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6001,
+            "groupId": 6001,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Impacto Extremo",
+            "description": "Causa DANO ao alvo a cada 5s (Multiplicador de Habilidade: 476%) e CRIT para o ataque atual +150. Sempre que um Herói no Esquadrão usa uma Habilidade de Fúria, recebe um CRIT adicional de +20, até um máximo de +100. Quando enviado, DANO de Habilidade do Esquadrão+4%",
+            "descriptionEn": "Deals DMG to the target every 5s (Skill Multiplier: 476%), and CRIT for current attack +150. Every time a Hero in the Squad uses a Rage Skill, receives an additional CRIT +20, up to a maximum of +100. When deployed, Squad Skill DMG+4%"
+          },
+          {
+            "id": 6002,
+            "groupId": 6002,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Chifrada Flamejante",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 282%). Se este ataque causar um acerto crítico, DANO +15% na próxima vez que a Habilidade de Líder for usada.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 282%). If this attack deals a critical hit, DMG +15% the next time the Leader Skill is used."
+          },
+          {
+            "id": 6004,
+            "groupId": 6004,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Explosão de Lava",
+            "description": "Quando a Habilidade do Líder causa um acerto crítico, tem 100% de chance de causar dano residual ao alvo, equivalente a 92% do DANO da Habilidade do Líder real causado.",
+            "descriptionEn": "When the Leader Skill deals a critical hit, has a 100% chance to deal residual damage to the target, equivalent to 92% of the actual Leader Skill DMG dealt."
+          },
+          {
+            "id": 6006,
+            "groupId": 6006,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Energia Vulcânica",
+            "description": "Quando a Habilidade Ativa causa DANO a uma Besta Bioquímica do tipo Grama, DANO +28% na próxima vez que a habilidade for usada. Também, ganha Redução de Dano de Grama +4% por 3s.",
+            "descriptionEn": "When the Active Skill deals DMG to a Grass-type Biochemical Beast, DMG +28% the next time the skill is used. Also, gains Grass Reduction +4% for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6003,
+            "groupId": 6003,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Chifrada Flamejante",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, causa um DANO de acompanhamento (Multiplicador da Habilidade: 248%). Também, a DEF do alvo é -15% por 3s.",
+            "descriptionEn": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 248%). Also, the target's DEF -15% for 3s."
+          },
+          {
+            "id": 6005,
+            "groupId": 6005,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Explosão de Lava",
+            "description": "Quando qualquer habilidade causa um acerto crítico, concede DANO CRIT adicional +34%.",
+            "descriptionEn": "When any skill deals a critical hit, grants additional CRIT DMG +34%."
+          },
+          {
+            "id": 6007,
+            "groupId": 6007,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Energia Vulcânica",
+            "description": "Ao causar dano a um alvo com um Escudo, aumenta o DANO para o ataque atual em 10% e o DANO CRIT em 7%.",
+            "descriptionEn": "When dealing damage to a target with a Shield, increases DMG for current attack by 10% and CRIT DMG by 7%."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 84,
+      "name": "Titã Blindado",
+      "nameEn": "Armored Titan",
+      "rarity": "Lendário",
+      "element": "Grama",
+      "type": "Criatura da Floresta",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6187,
+            "groupId": 6187,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Impacto Pesado",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 668%), com Combo adicional para este ataque +150. Se este ataque ativar um Combo, tem uma chance de 100% de causar DANO adicional de acompanhamento (Multiplicador de Habilidade: 200%). A cada 1 acúmulos de Endurecimento aumenta adicionalmente o DANO de acompanhamento para o ataque atual em 10%. Quando enviado, Redução de DANO de Habilidade do Esquadrão +4%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 668%), with additional Combo for this attack +150. If this attack triggers a Combo, has a 100% chance to deal additional follow-up DMG (Skill Multiplier: 200%). Every 1 stacks of Harden additionally increases follow-up DMG for the current attack by 10%. When deployed, Squad Skill DMG Reduction +4%."
+          },
+          {
+            "id": 6188,
+            "groupId": 6188,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Punho Desorientado",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 232%), e ganha DANO em Combo +18% por 3s.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 232%), and gains Combo DMG +18% for 3s."
+          },
+          {
+            "id": 6190,
+            "groupId": 6190,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Endurecimento",
+            "description": "Por cada 1 Habilidade Ativa usada em uma única batalha, ganha 1 acúmulos de Endurecer, ganhando ATQ +6% e DEF +3%. Este efeito acumula até 5 vezes. Com 3 acúmulos, DANO da Besta Bioquímica +6%.",
+            "descriptionEn": "For every 1 Active Skills used in a single battle, gains 1 stacks of Harden, gaining ATK +6% and DEF +3%. This effect stacks up to 5 times. At 3 stacks, Biochemical Beast DMG +6%."
+          },
+          {
+            "id": 6192,
+            "groupId": 6192,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder dos Titãs",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Besta Bioquímica do tipo Água, ganha DANO de Habilidade Ativa +20% e Combo +70 por 3s.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Water-type Biochemical Beast, gains Active Skill DMG +20% and Combo +70 for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6189,
+            "groupId": 6189,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Punho Desorientado",
+            "description": "Quando um combo é acionado, ganha um Escudo por 3s com base no DANO causado (Multiplicador de Habilidade: 232%). Enquanto o Escudo estiver ativo, DANO de Habilidade Ativa +15%",
+            "descriptionEn": "When a combo is triggered, gains a Shield for 3s based on the damage dealt (Skill Multiplier: 232%). While the Shield is active, Active Skill DMG +15%."
+          },
+          {
+            "id": 6191,
+            "groupId": 6191,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Endurecimento",
+            "description": "Ao usar a Habilidade de Líder, ganha um Escudo por 3s (Multiplicador de Habilidade: 200%). Ao receber um Escudo, se houver um alvo de ataque, cause 100% de DANO com base no valor total atual do Escudo restante, não excedendo o Multiplicador de Habilidade de 240%.",
+            "descriptionEn": "When using Leader Skill, gain a Shield for 3s (Skill Multiplier: 200%). When gaining a Shield, if there is an attack target, deal 100% DMG based on the current total remaining Shield amount, not exceeding the Skill Multiplier of 240%."
+          },
+          {
+            "id": 6193,
+            "groupId": 6193,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder dos Titãs",
+            "description": "Ao receber ataques em combo, se o time adversário tiver uma Besta Bioquímica do tipo Água, ATQ do Líder +22% e DANO +5% por 3s.",
+            "descriptionEn": "When receiving combo attacks, if the opponent's team has a Water-type Biochemical Beast, Leader ATK +22% and DMG +5% for 3s."
+          }
+        ],
+        "Especial": [
+          {
+            "id": 6194,
+            "groupId": 6194,
+            "level": 1,
+            "slot": "Especial",
+            "name": "Choque do Titã",
+            "description": "Ao causar DANO direto enquanto o Líder aliado tem um Escudo, DANO da Habilidade para o ataque atual +5.5%. Caso contrário, DANO de Combo para o ataque atual +6.5%.",
+            "descriptionEn": "When dealing direct DMG while the allied Leader has a Shield, Skill DMG for current attack +5.5%. Otherwise, Combo DMG for current attack +6.5%."
+          }
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "name": "Touro Morto-Vivo",
+      "nameEn": "Undead Bull",
+      "rarity": "Lendário",
+      "element": "Físico",
+      "type": "Criatura Social",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6043,
+            "groupId": 6044,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Carga Circundante",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 600%). Quando em uma Invasão, aumenta o Multiplicador de Habilidade para 900% e o Combo para este ataque é +70. Para cada Habilidade de Líder usada em batalha, ganha 2% de ATQ, até um máximo de 20%. Quando enviado, DANO do Esquadrão+4%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 600%). When in a Rally, increases Skill Multiplier to 900%, and Combo for this attack +70. For every Leader Skill used in battle, gain 2% ATK, up to a maximum of 20%. When deployed, Squad DMG+4%"
+          },
+          {
+            "id": 6044,
+            "groupId": 6045,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Cascos de Ferro",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 240%). Quando este ataque causa um acerto crítico, ganha Combo +60 por 3s.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 240%). When this attack deals a critical hit, gains Combo +60 for 3s."
+          },
+          {
+            "id": 6046,
+            "groupId": 6046,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Líder do Rebanho",
+            "description": "Quando em uma Invasão ou guarnecido, aumenta seu próprio ATQ e DEF com base no número de tropas no Esquadrão e nos atributos das tropas, até um máximo de 400% de seus próprios atributos. Ao acionar um Combo, aumenta o próprio DANO de Combo em 2%, até um máximo de 30%.",
+            "descriptionEn": "When in a Rally or garrisoned, increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 400% of own attributes. When triggering a Combo, increases own Combo DMG by 2%, up to a maximum of 30%."
+          },
+          {
+            "id": 6048,
+            "groupId": 6048,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Destrutivo",
+            "description": "Quando em uma Invasão, CRIT +120 e Combo +50.",
+            "descriptionEn": "When in a Rally, CRIT +120 and Combo +50."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6045,
+            "groupId": 6046,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Cascos de Ferro",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, causa um DANO de acompanhamento (Multiplicador da Habilidade: 248%). Também, o Contra-ataque do alvo é -50 por 3s.",
+            "descriptionEn": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 248%). Also, the target's Counter -50 for 3s."
+          },
+          {
+            "id": 6047,
+            "groupId": 6047,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Líder do Rebanho",
+            "description": "ATQ de Líder +15%. Quando em uma Invasão, ATQ de Líder +7%.",
+            "descriptionEn": "Leader ATK +15%. When in a Rally, Leader DMG +7%."
+          },
+          {
+            "id": 6049,
+            "groupId": 6049,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Destrutivo",
+            "description": "Ao acionar um combo contra um alvo guarnecido, causa um DANO adicional de +9% para o ataque atual. Também, o CRIT do alvo é -50 por 3s.",
+            "descriptionEn": "When triggering a combo against a garrisoned target, deals additional +9% DMG for current attack. Also, the target's CRIT -50 for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 55,
+      "name": "Veado de Gaia",
+      "nameEn": "Gaia Deer",
+      "rarity": "Lendário",
+      "element": "Grama",
+      "type": "Criatura da Floresta",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6036,
+            "groupId": 6036,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Coroa de Espinhos",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 680%). Quando estiver com um escudo, aumenta o DANO causado para o ataque atual em 15%. Também ganha Espinheiro. Contra-ataque +80. Quando atacado, causa DANO ao atacante por 3s (Multiplicador de Habilidade: 200%). Quando enviado, DANO de Contra-ataque do Esquadrão+10%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 680%). When having a shield, increases DMG dealt for current attack by 15%. Also gains Bramble. Counter +80. When attacked, deals DMG to the attacker for 3s (Skill Multiplier: 200%). When deployed, Squad Counter DMG+10%"
+          },
+          {
+            "id": 6037,
+            "groupId": 6037,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Tiros de Esporos",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 288%). Quando estiver com um escudo, CRIT +70.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 288%). When having a shield, CRIT +70."
+          },
+          {
+            "id": 6039,
+            "groupId": 6039,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Proteção da Primavera",
+            "description": "Quando perde os Espinhos, ganha um Escudo (Multiplicador de Habilidade: 432%) por 3s. Com base na duração em que os Espinhos forem mantidos, concede um valor adicional de Escudo de 15% do próprio DANO recebido, até um máximo de 325% do Multiplicador de Habilidade.",
+            "descriptionEn": "When Bramble is lost, gains a Shield (Skill Multiplier: 432%) for 3s. Based on the duration Bramble was held, grants additional Shield value by 15% of own DMG taken, up to a maximum of 325% of the Skill Multiplier."
+          },
+          {
+            "id": 6041,
+            "groupId": 6041,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Natural",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Besta Bioquímica do tipo Água, ganha DANO da Habilidade Ativa +15%, DANO de Contra-ataque +11% e Contra-ataque +50 por 3s.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Water-type Biochemical Beast, gains Active Skill DMG +15%, Counter DMG +11%, and Counter +50 for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6038,
+            "groupId": 6038,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Tiros de Esporos",
+            "description": "Quando a Habilidade Ativa causa DANO, tem 50% de chance de causar DANO de acompanhamento ao alvo (Multiplicador da Habilidade: 196%). Se o Líder tiver um Escudo, aumenta o Multiplicador de Habilidade para 294%. Caso contrário, concede ao Líder um Escudo por 3s (Multiplicador de Habilidade: 98%). Ao causar acertos críticos ou ativar Habilidades Ativas por meio de contra-ataques, a chance aumenta para 100%.",
+            "descriptionEn": "When the Active Skill deals DMG, has a 50% chance to deal follow-up DMG to the target (Skill Multiplier: 196%). If the Leader has a Shield, increases Skill Multiplier to 294%. Otherwise, grants the Leader a Shield for 3s (Skill Multiplier: 98%). When dealing critical hits or triggering Active Skills through counterattacks, the chance increases to 100%."
+          },
+          {
+            "id": 6040,
+            "groupId": 6040,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Proteção da Primavera",
+            "description": "Aumenta a força do Escudo em 25%. Durante o tempo de Escudo, DANO de Líder +15%. Quando o escudo desaparece, Redução de DANO de Líder +10% por 3s.",
+            "descriptionEn": "Increases Shield strength by 25%. For the duration of the Shield, Leader DMG +15%. When the Shield vanishes, Leader DMG Reduction +10% for 3s."
+          },
+          {
+            "id": 6042,
+            "groupId": 6042,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Natural",
+            "description": "Ao receber DANO de Corrosão, CRIT de Líder +120 e Redução de DANO +10% por 3s.",
+            "descriptionEn": "When taking Corrosion DMG, Leader CRIT +120 and DMG Reduction +10% for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 51,
+      "name": "Água-viva de Plutão",
+      "nameEn": "Pluto Jellyfish",
+      "rarity": "Lendário",
+      "element": "Água",
+      "type": "Criatura Aquática",
+      "maxClass": 21,
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6015,
+            "groupId": 6015,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Maré Tóxica",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 420%), e tem uma chance de 100% de infligir Corrosão ao alvo, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 504%). Para cada 12 Habilidades Ativas usadas em uma única batalha, inflige 1 acúmulos adicionais de Corrosão no alvo na próxima vez que a Habilidade de Líder for usada, até um máximo de 2 acúmulos. Quando enviado, DANO de Ataque Básico do Esquadrão+10%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 420%), and has a 100% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 504%). For every 12 Active Skills used in a single battle, inflicts 1 additional stacks of Corrosion on the target the next time the Leader Skill is used, up to a maximum of 2 stacks. When deployed, Squad Basic Attack DMG+10%"
+          },
+          {
+            "id": 6016,
+            "groupId": 6016,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Chicote Invisível",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 174%), e tem 70% de chance de infligir Corrosão no alvo, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 180%). Para cada 6 Habilidades Ativas usadas em uma única batalha, pode-se usar a Habilidade Ativa mais uma vez.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 174%), and has a 70% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 180%). For every 6 Active Skills used in a single battle, can use the Active Skill one more time."
+          },
+          {
+            "id": 6018,
+            "groupId": 6018,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Eco Ardente",
+            "description": "Para cada 1 acúmulos de Corrosão infligido no alvo em uma única batalha, ganha DANO de Corrosão +2% e Combo +20, até um combo máximo de +12%/+120. Ao causar DANO de Corrosão, há 25% de chance de aumentar o DANO de Corrosão da rodada atual em 37%.",
+            "descriptionEn": "For every 1 stacks of Corrosion inflicted on the target in a single battle, gains Corrosion DMG +2% and Combo +20, up to a maximum combo of +12%/+120. When dealing Corrosion DMG, has a 25% chance to increase current round of Corrosion DMG by 37%."
+          },
+          {
+            "id": 6020,
+            "groupId": 6020,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Abissal",
+            "description": "Quando a Habilidade Ativa causa DANO a uma Besta Bioquímica do tipo Fogo, ganha DANO de Corrosão +18% e Redução de Fogo +5% por 3s.",
+            "descriptionEn": "When the Active Skill deals DMG to a Fire-type Biochemical Beast, gains Corrosion DMG +18% and Fire Reduction +5% for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6017,
+            "groupId": 6017,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Chicote Invisível",
+            "description": "Quando a Habilidade Ativa causa DANO, tem 50% de chance de infligir Corrosão no alvo, causando DANO de Corrosão ao alvo por 3s (Multiplicador de Habilidade: 276%). Se a Habilidade Ativa foi acionada por um combo ou contra-ataque, a chance aumenta para 100%.",
+            "descriptionEn": "When the Active Skill deals DMG, has a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 276%). If the Active Skill was triggered by a combo or counterattack, the chance increases to 100%."
+          },
+          {
+            "id": 6019,
+            "groupId": 6019,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Eco Ardente",
+            "description": "Ao causar dano a um alvo com Corrosão, aumenta o DANO em 33%.",
+            "descriptionEn": "When dealing damage to a target with Corrosion, increases the DMG by 33%."
+          },
+          {
+            "id": 6021,
+            "groupId": 6021,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Abissal",
+            "description": "Quando receber um golpe crítico, Contra-ataque de Líder +60. Se a equipe adversária tiver uma Besta Bioquímica do tipo Fogo, concede Contra-ataque adicional +90 e Redução de DANO +10% por 3s.",
+            "descriptionEn": "When receiving a critical hit, Leader Counter +60. If the opponent's team has a Fire-type Biochemical Beast, grants additional Counter +90 and DMG Reduction +10% for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,3969 @@
+{
+  "schemaVersion": 1,
+  "asOf": "2026-10-27",
+  "client": "1.62.0",
+  "build": "4",
+  "patch": "3",
+  "manifest": "E2938DB03",
+  "heroes": [
+    {
+      "id": 1123,
+      "name": "Amir Suleiman",
+      "nameEn": "Amir Suleiman",
+      "title": "Cavalheiro das Ruínas",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "Cooperação",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11231,
+          "slot": "Fúria",
+          "name": "Rajada Precisa",
+          "description": "Causa DANO ao alvo (Fator de Dano: 12000) e aumenta o ATQ de até 3 aliados próximos em 20% por 3s.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 12000) and increases ATK of up to 3 nearby allies by 20% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11235,
+          "slot": "Despertar",
+          "name": "Líder do Deserto",
+          "description": "Aumenta a Velocidade de Construção do Abrigo em 15%. Este efeito se aplica mesmo quando não está mobilizado.",
+          "descriptionEn": "Increases Shelter Construction Speed by 15%. This effect applies even when not deployed.",
+          "level": 1
+        },
+        {
+          "id": 11233,
+          "slot": "Passiva 1",
+          "name": "Passos Graciosos",
+          "description": "O ATQ do Esquadrão aumenta em 30%, e a Velocidade de Viagem aumenta em 15%.",
+          "descriptionEn": "Squad ATK increases by 30%, and Travel Speed increases by 15%.",
+          "level": 5
+        },
+        {
+          "id": 11234,
+          "slot": "Passiva 2",
+          "name": "Comando Glorioso",
+          "description": "Aumenta a DEF do esquadrão em 30%. Aumenta o DANO de Habilidade em 15% ao flanquear o inimigo.",
+          "descriptionEn": "Increases Squad DEF by 30%. Increases Skill DMG by 15% when flanking the enemy.",
+          "level": 5
+        },
+        {
+          "id": 11236,
+          "slot": "Passiva 3",
+          "name": "Lâmina dos Céus",
+          "description": "Aumenta o PV do esquadrão em 20%. Ataques Básicos têm 20% de chance de causar DANO adicional ao alvo (Fator de Dano: 2000)",
+          "descriptionEn": "Increases Squad HP by 20%. Basic attacks have a 20% chance to deal additional DMG to the target (Damage Factor: 2000).",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1063,
+      "name": "Ammara",
+      "nameEn": "Ammara",
+      "title": "Rainha do Ouro",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10631,
+          "slot": "Fúria",
+          "name": "Disparo Avassalador",
+          "description": "Causa DANO ao alvo (Fator de Dano: 12000) e aumenta a DEF do seu Esquadrão em 30% por 3s.",
+          "descriptionEn": "Deals DMG to target (Damage Factor: 12000)and increases your Squad's DEF by 30% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10635,
+          "slot": "Despertar",
+          "name": "Orgulho Tribal",
+          "description": "Ao receber DANO da Habilidade, reduz o DANO da Habilidade recebido por você e aliados próximos em 20% por 2s. Pode ativar uma vez a cada 6s. Afeta até 5 Esquadrões.",
+          "descriptionEn": "Upon receiving Skill DMG, reduces Skill DMG received by you and nearby allies by 20% for 2s. Can be triggered once every 6s. Affects up to 5 Squads.",
+          "level": 1
+        },
+        {
+          "id": 10633,
+          "slot": "Passiva 1",
+          "name": "Rainha das Armas",
+          "description": "Aumenta o ATQ do Esquadrão de Infantaria a 11% cada 5s até 44%.",
+          "descriptionEn": "Increases Infantry Squad's ATK by 11% every 5s until 44%.",
+          "level": 5
+        },
+        {
+          "id": 10634,
+          "slot": "Passiva 2",
+          "name": "Longe do Perigo",
+          "description": "Aumenta a Velocidade de Viagem do Esquadrão de Infantaria em 30%. Se a penalidade de redução de dano estiver ativa no seu Esquadrão, há 50% de chance de anular a penalidade e curar seu Esquadrão. (Fator de Cura: 4400).",
+          "descriptionEn": "Increases Infantry Squad's Travel Speed by 30%. If the damage reduction debuff is active on your Squad, there's a 50% chance to nullify the debuff and heal your Squad. (Heal Factor: 4400)",
+          "level": 5
+        },
+        {
+          "id": 10636,
+          "slot": "Passiva 3",
+          "name": "Perseverança",
+          "description": "Aumenta o ATQ do Esquadrão de Infantaria em 40% se o Tamanho do Esquadrão restante for maior que 50% enquanto luta no Mapa Mundial. Aumenta a DEF em 40% se o tamanho restante do Esquadrão de Infantaria for menor que 50%.",
+          "descriptionEn": "Increases Infantry Squad ATK by 40% if the remaining Squad Size is greater than 50% while battling on the World Map. Increases DEF by 40% if the remaining Infantry Squad Size is smaller than 50%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1096,
+      "name": "Bardo",
+      "nameEn": "Bard",
+      "title": "Soberano Dos Mares",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "Cerco",
+        "Defesa"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10961,
+      "relic": true,
+      "skills": [
+        {
+          "id": 10961,
+          "slot": "Fúria",
+          "name": "Aniquilação em Massa",
+          "description": "Causa DANO a até 3 alvos inimigos em uma área circular (Fator de Dano: 13000). O DANO recebido por cada alvo inimigo é reduzido em 15% para cada alvo inimigo adicional. Se esta habilidade abater um esquadrão inimigo, há 50% de chance de recuperar imediatamente 60de Fúria.",
+          "descriptionEn": "Deals DMG to up to 3 enemy targets in a circular area (Damage Factor: 13000). DMG taken by each enemy target reduces by 15% for every additional enemy target. If this skill kills an enemy Squad, has 50% chance to immediately recover 60 Rage.",
+          "level": 5
+        },
+        {
+          "id": 10965,
+          "slot": "Despertar",
+          "name": "Dominando os Mares",
+          "description": "Causa DANO a até 3 alvos inimigos em uma área circular (Fator de Dano: 14300). O DANO recebido por cada alvo inimigo é reduzido em 15% para cada alvo inimigo adicional. Se esta habilidade abater um Esquadrão inimigo, há 50% de chance de recuperar imediatamente 65 de Fúria e aumenta o próprio ATQ em 30% por 3s.",
+          "descriptionEn": "Deals DMG to up to 3 enemy targets in a circular area (Damage Factor: 14300). DMG taken by each enemy target reduces by 15% for every additional enemy target. If this skill kills an enemy Squad, has 50% chance to immediately recover 65 Rage and increase own ATK by 30% for 3s.",
+          "level": 1
+        },
+        {
+          "id": 10961,
+          "slot": "Substituição do despertar",
+          "name": "Aniquilação em Massa",
+          "description": "Causa DANO a até 3 alvos inimigos em uma área circular (Fator de Dano: 13000). O DANO recebido por cada alvo inimigo é reduzido em 15% para cada alvo inimigo adicional. Se esta habilidade abater um esquadrão inimigo, há 50% de chance de recuperar imediatamente 60de Fúria.",
+          "descriptionEn": "Deals DMG to up to 3 enemy targets in a circular area (Damage Factor: 13000). DMG taken by each enemy target reduces by 15% for every additional enemy target. If this skill kills an enemy Squad, has 50% chance to immediately recover 60 Rage.",
+          "level": 5
+        },
+        {
+          "id": 10963,
+          "slot": "Passiva 1",
+          "name": "Expurgar a Fraqueza",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 30%. Se o inimigo for infligido com Silenciar, aumenta o DANO de ataque básico causado a ele em 21%.",
+          "descriptionEn": "Increases Ranged Squad ATK by 30%. If the enemy is inflicted with Silence, increases basic attack DMG dealt to them by 21%.",
+          "level": 5
+        },
+        {
+          "id": 10964,
+          "slot": "Passiva 2",
+          "name": "Frota Invencível",
+          "description": "Durante os cercos, aumenta a DEF do Esquadrão de Atiradores em 25% e PV por 25%.",
+          "descriptionEn": "During Sieges, increases Ranged Squad DEF by 25% and HP by 25%.",
+          "level": 5
+        },
+        {
+          "id": 10966,
+          "slot": "Passiva 3",
+          "name": "Confronto Direto",
+          "description": "Durante Invasões, aumenta o DANO da Habilidade causado aos Esquadrões de Guarnição em 54%, mas todo DANO recebido dos Esquadrões de Guarnição aumenta em 12.5%.",
+          "descriptionEn": "During Rallies, increase Skill DMG dealt to Garrison Squads by 54%, but all DMG taken from Garrison Squads is increased by 12.5%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1083,
+      "name": "Bella",
+      "nameEn": "Bella",
+      "title": "Garota Coração-de-leão",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "General",
+        "Habilidades"
+      ],
+      "complete": false,
+      "awakeningReplaces": 10831,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10831,
+          "slot": "Fúria",
+          "name": "Garra Fatal",
+          "description": "Causa DANO direto ao Esquadrão selecionado (Fator de Dano: 12000). Tem 50% de chance de aumentar o DANO sofrido por um inimigo em 15% por 3s.",
+          "descriptionEn": "Deals direct DMG to target Squad (Damage Factor: 12000). Has a 50% chance to increase the enemy's DMG taken by 15% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10831,
+          "slot": "Substituição do despertar",
+          "name": "Garra Fatal",
+          "description": "Causa DANO direto ao Esquadrão selecionado (Fator de Dano: 12000). Tem 50% de chance de aumentar o DANO sofrido por um inimigo em 15% por 3s.",
+          "descriptionEn": "Deals direct DMG to target Squad (Damage Factor: 12000). Has a 50% chance to increase the enemy's DMG taken by 15% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10833,
+          "slot": "Passiva 1",
+          "name": "Agitação Selvagem",
+          "description": "Quando não está em batalha, a Velocidade de Viagem do Esquadrão de Motociclistas aumenta em 30%. Ganha 150 de Raiva ao entrar em batalha, mas a Velocidade de Viagem será reduzida em 10% por 3s ao sofrer DANO de Habilidade.",
+          "descriptionEn": "When not in battle, Rider Squad Travel Speed increases by 30%. Gains 150 Rage when entering battle, but Travel Speed will be reduced by 10% for 3s when taking Skill DMG.",
+          "level": 5
+        },
+        {
+          "id": 10834,
+          "slot": "Passiva 2",
+          "name": "Presas Perfurantes",
+          "description": "Aumenta o ATQ do Esquadrão de Motociclistas em 30% e causa 24% mais DANO em Esquadrões com efeitos de Escudo.",
+          "descriptionEn": "Increases Rider Squad ATK by 30% and deals 24% more DMG to Squads with Shield effect.",
+          "level": 5
+        },
+        {
+          "id": 10836,
+          "slot": "Passiva 3",
+          "name": "Caça Brutal",
+          "description": "Ao liderar apenas Esquadrões de Motociclistas, o DANO aumenta em 15%. Aumenta o DANO causado no Esquadrão alvo em 12% quando o tamanho do Esquadrão restante for inferior a 30%.",
+          "descriptionEn": "When leading only Rider Squads, DMG increases by 15%. Increases DMG dealt to target Squad by 12% when its remaining Squad Size is less than 30%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1091,
+      "name": "Bianca Drake",
+      "nameEn": "Bianca Drake",
+      "title": "Rainha Escarlate",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "General",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10911,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10911,
+          "slot": "Fúria",
+          "name": "Tropas da Rainha",
+          "description": "Aumenta o ATQ em 38% e a DEF em 38% para você e aliados próximos. Dura 4s. Também restaura instantaneamente 60 de Fúria a eles. Afeta até 3 Esquadrões.",
+          "descriptionEn": "Increases ATK by 38% and DEF by 38% for you and nearby allies. Lasts 4s. Also instantly restores 60 Rage to them. Affects up to 3 Squads.",
+          "level": 5
+        },
+        {
+          "id": 10915,
+          "slot": "Despertar",
+          "name": "Gambito da Rainha",
+          "description": "Aumenta o ATQ em 42% e DEF em 42% para você e aliados próximos. Dura 4s. Também restaura instantaneamente 60 de Fúria para eles. Afeta até 5 Esquadrões.",
+          "descriptionEn": "Increases ATK by 42% and DEF by 42% for you and nearby allies. Lasts 4s. Also instantly restores 60 Rage to them. Affects up to 5 Squads.",
+          "level": 1
+        },
+        {
+          "id": 10911,
+          "slot": "Substituição do despertar",
+          "name": "Tropas da Rainha",
+          "description": "Aumenta o ATQ em 38% e a DEF em 38% para você e aliados próximos. Dura 4s. Também restaura instantaneamente 60 de Fúria a eles. Afeta até 3 Esquadrões.",
+          "descriptionEn": "Increases ATK by 38% and DEF by 38% for you and nearby allies. Lasts 4s. Also instantly restores 60 Rage to them. Affects up to 3 Squads.",
+          "level": 5
+        },
+        {
+          "id": 10913,
+          "slot": "Passiva 1",
+          "name": "Armadilha da Rainha",
+          "description": "Aumenta a DEF do Esquadrão e 24% a Velocidade de Viagem em 20%.",
+          "descriptionEn": "Increases Squad DEF by 24% and Travel Speed by 20%.",
+          "level": 5
+        },
+        {
+          "id": 10914,
+          "slot": "Passiva 2",
+          "name": "Rainha vs Peão",
+          "description": "Aumenta o ATQ do Esquadrão em 20%. Aumenta o DANO de Ataque Básico em 20% se o tamanho restante do Esquadrão for inferior a 50%.",
+          "descriptionEn": "Increases Squad ATK by 20%. Increases basic attack DMG by 20% if the remaining Squad Size is less than 50%.",
+          "level": 5
+        },
+        {
+          "id": 10916,
+          "slot": "Passiva 3",
+          "name": "Defesa da Rainha",
+          "description": "A cada 10s, concede um Escudo (Fator de Escudo: 2800) a você e aos aliados próximos. Dura 3s. Afeta até 3 Esquadrões.",
+          "descriptionEn": "Every 10s, grants a Shield (Shield Factor: 2800) to you and nearby allies. Lasts 3s. Affects up to 3 Squads.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1101,
+      "name": "Bodala",
+      "nameEn": "Bodala",
+      "title": "Exorcista de Espíritos",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11011,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11011,
+          "slot": "Fúria",
+          "name": "Alcançando a Iluminação",
+          "description": "Ganha um Escudo por 3s (Fator de Escudo: 10800). Quando o Escudo de Bodala desaparece, causa o valor restante de 50% de Escudo como DANO Verdadeiro a até 2 inimigos próximos (causa pelo menos 15% do valor máximo do Escudo como DANO.) Este dano não será afetado pela DEF do inimigo novamente.",
+          "descriptionEn": "Gains a Shield for 3s (Shield Factor: 10800). When Bodala's Shield vanishes, deals the remaining 50% Shield value as True DMG to up to 2 nearby enemies (deals at least 15% max Shield value as DMG.) This damage will not be affected by the enemy's DEF again.",
+          "level": 5
+        },
+        {
+          "id": 11015,
+          "slot": "Despertar",
+          "name": "Dharma Infinito",
+          "description": "Ganha um Escudo por 3s (Fator de Escudo: 12500). Quando o Escudo de Bodala desaparece, causa o valor restante de 50% de Escudo como DANO Verdadeiro a até 3 inimigos próximos (causa pelo menos 15% do valor máximo do Escudo como DANO.) Este dano não será afetado pela DEF do inimigo novamente.",
+          "descriptionEn": "Gains a Shield for 3s (Shield Factor: 12500). When Bodala's Shield vanishes, deals the remaining 50% Shield value as True DMG to up to 3 nearby enemies (deals at least 15% max Shield value as DMG.) This damage will not be affected by the enemy's DEF again.",
+          "level": 1
+        },
+        {
+          "id": 11011,
+          "slot": "Substituição do despertar",
+          "name": "Alcançando a Iluminação",
+          "description": "Ganha um Escudo por 3s (Fator de Escudo: 10800). Quando o Escudo de Bodala desaparece, causa o valor restante de 50% de Escudo como DANO Verdadeiro a até 2 inimigos próximos (causa pelo menos 15% do valor máximo do Escudo como DANO.) Este dano não será afetado pela DEF do inimigo novamente.",
+          "descriptionEn": "Gains a Shield for 3s (Shield Factor: 10800). When Bodala's Shield vanishes, deals the remaining 50% Shield value as True DMG to up to 2 nearby enemies (deals at least 15% max Shield value as DMG.) This damage will not be affected by the enemy's DEF again.",
+          "level": 5
+        },
+        {
+          "id": 11013,
+          "slot": "Passiva 1",
+          "name": "Seis Poderes de Purificação",
+          "description": "Quando não Guarnecido, aumenta a DEF do Esquadrão de Infantaria em 32%, PV em 11% e VEL de Viagem em 20%.",
+          "descriptionEn": "When not Garrisoned, increases Infantry Squad DEF by 32%, HP by 11%, and TRVL SPD by 20%.",
+          "level": 5
+        },
+        {
+          "id": 11014,
+          "slot": "Passiva 2",
+          "name": "Corte de Karma",
+          "description": "Contra-ataques removem 9 de Fúria do inimigo e têm 20% de chance de causar dano adicional ao inimigo (Fator de Dano: 1960).",
+          "descriptionEn": "Counterattacks remove 9 Rage from the enemy and have a 20% chance to deal additional damage to the enemy (Damage Factor: 1960).",
+          "level": 5
+        },
+        {
+          "id": 11016,
+          "slot": "Passiva 3",
+          "name": "Corpo e Mente Efêmeros",
+          "description": "O ATQ do Esquadrão de Infantaria aumenta em 34%. Enquanto o Escudo estiver ativo, reduz o DANO recebido em 6.5%.",
+          "descriptionEn": "Infantry Squad ATK increases by 34%. While Shield is active, reduces DMG taken by 6.5%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1109,
+      "name": "Boyd Warden",
+      "nameEn": "Boyd Warden",
+      "title": "Falcão Solitário",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "Guarnição",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11091,
+          "slot": "Fúria",
+          "name": "Frequência de Fenda",
+          "description": "Causa DANO ao alvo (Fator de Dano: 14000). Quando não estiver guarnecido ou em uma Invasão, este DANO é aumentado com a redução do tamanho do próprio Esquadrão, até um máximo de 25%.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 14000). When not garrisoned or in a Rally, this DMG is increased with the reduction of own Squad Size, up to a maximum of 25%.",
+          "level": 5
+        },
+        {
+          "id": 11095,
+          "slot": "Despertar",
+          "name": "Pulso Sônico",
+          "description": "20% da absorção do Escudo é convertida em DANO e desviada para o alvo atual de Boyd Warden.",
+          "descriptionEn": "20% of the Shield's absorption is converted to DMG and deflected to Boyd Warden's current target.",
+          "level": 1
+        },
+        {
+          "id": 11093,
+          "slot": "Passiva 1",
+          "name": "Dissuasão do Predador",
+          "description": "Quando guarnecido, aumenta o DANO da Habilidade em 30%. Aumenta o DANO causado aos Esquadrões de Motociclistas em 5%.",
+          "descriptionEn": "When garrisoned, increases Skill DMG by 30% and DMG dealt to Rider Squads by 5%.",
+          "level": 5
+        },
+        {
+          "id": 11094,
+          "slot": "Passiva 2",
+          "name": "Vigilância Omni",
+          "description": "Quando não estiver guarnecido nem em uma Invasão, aumenta o ATQ do Esquadrão de Infantaria em 40%. Quando estiver guarnecido, aumenta os PV da Infantaria em 30%. Ao receber DANO de Habilidade, ganha um Escudo (Fator de Escudo: 2000) por 3s. Este efeito pode ser acionado até 1 vezes a cada 6s.",
+          "descriptionEn": "When not garrisoned or in a Rally, increases Infantry Squad ATK by 40%. When garrisoned, increases Infantry HP by 30%. When taking Skill DMG, gains a Shield (Shield Factor: 2000) for 3s. This effect can be triggered up to 1 times every 6s.",
+          "level": 5
+        },
+        {
+          "id": 11096,
+          "slot": "Passiva 3",
+          "name": "Recuperação de Energia Cinética",
+          "description": "Aumenta o ATQ do Esquadrão de Infantaria em 20%. Quando não estiver em uma Invasão, Boyd Warden ganha um Escudo (Fator de Escudo: 6000) por 3s a cada 2 Habilidades de Fúria que ele usa.",
+          "descriptionEn": "Increases Infantry Squad ATK by 20%. When not in a Rally, Boyd Warden gains a Shield (Shield Factor: 6000) for 3s for every 2 Rage Skills he uses.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1117,
+      "name": "Caronte",
+      "nameEn": "Charon",
+      "title": "Bala da Morte",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11171,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11171,
+          "slot": "Fúria",
+          "name": "Disparo Letal",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 14500), reduzindo os PV dele em 40% por 3s. Enquanto no estado de Mira, aumenta esse Dano em 20%.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 14500), reducing their HP by 40% for 3s. While in the Aiming state, increases this DMG by 20%.",
+          "level": 5
+        },
+        {
+          "id": 11175,
+          "slot": "Despertar",
+          "name": "Raio da Morte",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 15000), e causa DANO (Fator de Dano: 5000) a 2 outros alvos inimigos próximos, reduzindo seus PV em 40% por 3s. Enquanto no estado de Mira, aumenta este DANO em 20%.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 15000), and deals DMG (Damage Factor: 5000) to 2 other nearby enemy targets, reducing their HP by 40% for 3s. While in the Aiming state, increases this DMG by 20%.",
+          "level": 11
+        },
+        {
+          "id": 11171,
+          "slot": "Substituição do despertar",
+          "name": "Disparo Letal",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 14500), reduzindo os PV dele em 40% por 3s. Enquanto no estado de Mira, aumenta esse Dano em 20%.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 14500), reducing their HP by 40% for 3s. While in the Aiming state, increases this DMG by 20%.",
+          "level": 5
+        },
+        {
+          "id": 11173,
+          "slot": "Passiva 1",
+          "name": "Respiração Focada",
+          "description": "Entra no estado de Mira por 30s ao entrar em batalha. Quando não estiver em uma Invasão ou guarnecido, se não estiver no estado de Mira, Caronte usa uma Habilidade de Fúria e entra no estado de Mira por 10s. Mira: Aumenta a Velocidade de Recuperação de Fúria em 10%.",
+          "descriptionEn": "Enters the Aiming state for 30s when entering battle. When not in a Rally or garrisoned, if not in the Aiming state, Charon uses a Rage Skill and enters the Aiming state for 10s. Aiming: Increases Rage Recovery Speed by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11174,
+          "slot": "Passiva 2",
+          "name": "Manobra Evasiva",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 30% e aumenta a Velocidade de Viagem em 20%. Enquanto no estado de Mira, reduz o DANO de contra-ataque recebido em 20%.",
+          "descriptionEn": "Increases Ranged Squad ATK by 30%, and increases Travel Speed by 20%. While in the Aiming state, reduces Counter DMG taken by 20%.",
+          "level": 5
+        },
+        {
+          "id": 11176,
+          "slot": "Passiva 3",
+          "name": "Deslocamento de Posição",
+          "description": "Aumenta os PV do Esquadrão de Atiradores em 30%. Se flanqueado quando não estiver em uma Invasão ou guarnecido, aumenta a DEF do Esquadrão de Atiradores em um adicional de 20%.",
+          "descriptionEn": "Increases Ranged Squad HP by 30%. If flanked when not in a Rally or garrisoned, increases Ranged Squad DEF by an additional 20%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1121,
+      "name": "Cassius",
+      "nameEn": "Cassius",
+      "title": "Cientista Rebelde",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "Guarnição",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11211,
+          "slot": "Fúria",
+          "name": "Golpe de Sobrecarga",
+          "description": "Causa DANO Contínuo ao alvo a cada segundo por 3s (Fator de Dano: 4500). Quando não estiver em uma Invasão, pelos próximos 3s, ataques básicos têm 50% de chance de acionar o efeito, causando DANO bônus ao alvo atual (Fator de Dano: 2000).",
+          "descriptionEn": "Deals Continuous DMG to the target every second for 3s (Damage Factor: 4500). When not in a Rally, for the next 3s, basic attacks have a 50% chance to trigger the effect, dealing bonus DMG to the current target (Damage Factor: 2000).",
+          "level": 5
+        },
+        {
+          "id": 11215,
+          "slot": "Despertar",
+          "name": "Combate Integrado",
+          "description": "Contra-ataques têm 20% de chance de causar DANO Contínuo ao alvo a cada segundo por 3s (Fator de Dano: 1000).",
+          "descriptionEn": "Counterattacks have a 20% chance to deal Continuous DMG to the target every second for 3s (Damage Factor: 1000).",
+          "level": 1
+        },
+        {
+          "id": 11213,
+          "slot": "Passiva 1",
+          "name": "Armadura Fluida",
+          "description": "Quando guarnecido, aumenta os PV do Esquadrão de Infantaria em 40% e reduz o DANO recebido de Esquadrões de Motociclistas em 10%.",
+          "descriptionEn": "When garrisoned, increases Infantry Squad HP by 40% and reduces DMG taken from Rider Squads by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11214,
+          "slot": "Passiva 2",
+          "name": "Pulso de Alta Frequência",
+          "description": "Aumenta a DEF do Esquadrão de Infantaria em 30%. Quando não estiver em uma Invasão, contra-ataques reduzem o ATQ do alvo em 5%. Este efeito acumula até 5 vezes e dura 3s.",
+          "descriptionEn": "Increases Infantry Squad DEF by 30%. When not in a Rally, counterattacks reduces the target's ATK by 5%. This effect stacks up to 5 times, and lasts for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11216,
+          "slot": "Passiva 3",
+          "name": "Dedução Instintiva",
+          "description": "Aumenta o ATQ do Esquadrão de Infantaria em 30%. Antes de o Líder usar uma Habilidade de Fúria, aumenta o ATQ do Esquadrão de Infantaria em 5% para cada 1 Esquadrão próximo, até o máximo de 25%, por 4s.",
+          "descriptionEn": "Increases Infantry Squad ATK by 30%. Before the Leader uses a Rage Skill, increases Infantry Squad ATK by 5% for every 1 nearby Squad, up to a maximum of 25%, for 4s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1011,
+      "name": "Catherine Calamity",
+      "nameEn": "Catherine Calamity",
+      "title": "Menina do Desastre",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "Caçador de Zumbis",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10111,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10111,
+          "slot": "Fúria",
+          "name": "Serra Sangrenta",
+          "description": "Causa DANO direto ao alvo (Fator de Dano: 7700). O próximo ataque tem 50% de chance de causar bônus de DANO (Fator de Dano: 4700).",
+          "descriptionEn": "Deals direct DMG to target (Damage Factor: 7700). The next attack has 50% chance to deal bonus DMG (Damage Factor: 4700).",
+          "level": 5
+        },
+        {
+          "id": 10115,
+          "slot": "Despertar",
+          "name": "Dança da Motosserra",
+          "description": "Causa DANO direto ao alvo (Fator de Dano: 7700). O próximo ataque causa bônus de DANO (Fator de Dano: 4700).",
+          "descriptionEn": "Deals direct DMG to the target (Damage Factor: 7700). Next attack deals bonus DMG (Damage Factor: 4700).",
+          "level": 1
+        },
+        {
+          "id": 10111,
+          "slot": "Substituição do despertar",
+          "name": "Serra Sangrenta",
+          "description": "Causa DANO direto ao alvo (Fator de Dano: 7700). O próximo ataque tem 50% de chance de causar bônus de DANO (Fator de Dano: 4700).",
+          "descriptionEn": "Deals direct DMG to target (Damage Factor: 7700). The next attack has 50% chance to deal bonus DMG (Damage Factor: 4700).",
+          "level": 5
+        },
+        {
+          "id": 10116,
+          "slot": "Passiva 1",
+          "name": "Menina do Desastre",
+          "description": "Aumenta o ATQ do Esqd. de Motociclistas em 25%. Quando Cynthia estiver no Esquadrão, aumenta o ATQ do Esqd. de Motociclistas em um 12% adicional.",
+          "descriptionEn": "Increases Rider Squad ATK by 25%. When Cynthia is in the Squad, increases Rider Squad ATK by an additional 12%.",
+          "level": 5
+        },
+        {
+          "id": 10113,
+          "slot": "Passiva 2",
+          "name": "Louca Obsessão",
+          "description": "Aumenta a Velocidade de Viagem do Esquadrão de Motociclistas em 15% e o DANO em Zumbis em 40%.",
+          "descriptionEn": "Increases Rider Squad Travel Speed by 15% and DMG dealt to Zombies by 40%.",
+          "level": 5
+        },
+        {
+          "id": 10114,
+          "slot": "Passiva 3",
+          "name": "Relâmpago Rosa",
+          "description": "Ataques básicos de Esquadrões têm 10% de chance de recuperar 140 de Fúria.",
+          "descriptionEn": "Squads' basic attacks have 10% chance to recover 140 Rage.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1110,
+      "name": "Cedric",
+      "nameEn": "Cedric",
+      "title": "Fantasma da Capital",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "Cerco",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11101,
+          "slot": "Fúria",
+          "name": "Dança da Matança",
+          "description": "Causa DANO direto ao Esquadrão selecionado (Fator de Dano: 14000). Quando não estiver em guarnição, causa dano adicional ao alvo e a 2 outros alvos uma vez (Fator de Dano: 2500).",
+          "descriptionEn": "Deals direct DMG to the target (Damage Factor: 14000). When not garrisoned, deals additional damage to target and 2 other targets around self once (Damage Factor: 2500).",
+          "level": 5
+        },
+        {
+          "id": 11105,
+          "slot": "Despertar",
+          "name": "Tempestade Sangrenta",
+          "description": "Reduz o DANO da Habilidade do alvo atual em 3% e o PV do Esquadrão em 4% quando Cedric usa uma Habilidade de Fúria. Este efeito acumula até 3 vezes e dura por 30s.",
+          "descriptionEn": "Reduces current target's Skill DMG by 3% and Squad HP by 4% when Cedric uses a Rage Skill. This effect stacks up to 3 times, and lasts for 30s.",
+          "level": 1
+        },
+        {
+          "id": 11103,
+          "slot": "Passiva 1",
+          "name": "Sombra no Nevoeiro",
+          "description": "Aumenta a DEF do Esquadrão de Atiradores em 30%. Durante Invasões, aumenta o DANO do Esquadrão de Atiradores em 10%.",
+          "descriptionEn": "Increases Ranged Squad DEF by 30%. During Rallies, increases Ranged Squad DMG by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11104,
+          "slot": "Passiva 2",
+          "name": "Noite do Assassinato",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 30%. Durante Invasões, os contra-ataques têm 30% de chance de causar dano aos Esquadrões no campo (Fator de Dano: 2000). Este efeito pode ser ativado até 1 vezes a cada 3s.",
+          "descriptionEn": "Increases Ranged Squad ATK by 30%. During Rallies, counterattacks have a 30% chance to deal damage to Squads in the field (Damage Factor: 2000). This effect can be triggered up to 1 times every 3s.",
+          "level": 5
+        },
+        {
+          "id": 11106,
+          "slot": "Passiva 3",
+          "name": "Traje Perfeito",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 30%. Reduz o DANO da Habilidade recebido dos Esquadrões de Guarnição em 12%.",
+          "descriptionEn": "Increases Ranged Squad HP by 30%. Reduces Skill DMG taken from Garrison Squads by 12%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1099,
+      "name": "Chasey",
+      "nameEn": "Chasey",
+      "title": "Fantasma Elusivo",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "Guarnição",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 10991,
+          "slot": "Fúria",
+          "name": "Ladrão Antiético",
+          "description": "Aumenta o DANO de Ataque Básico em 290% por 5s. Se Guarnecido durante este tempo, reduz o DANO da Habilidade dos Esquadrões de Atiradores em 17.5%.",
+          "descriptionEn": "Increases basic attack DMG by 290% for 5s. If Garrisoned during this time, reduces Skill DMG from Ranged Squads by 17.5%.",
+          "level": 5
+        },
+        {
+          "id": 10995,
+          "slot": "Despertar",
+          "name": "Perseguidor das Sombras",
+          "description": "Aumenta o DANO de Ataque Básico causado ao Esquadrão alvo em 35% quando o Tamanho restante do Esquadrão for inferior a 50%.",
+          "descriptionEn": "Increases basic attack DMG dealt to target Squad by 35% when its remaining Squad Size is less than 50%.",
+          "level": 1
+        },
+        {
+          "id": 10993,
+          "slot": "Passiva 1",
+          "name": "Perdido à luz do luar",
+          "description": "Aumenta os PV do Esquadrão de Motociclistas em 30%. Reduz o DANO da Habilidade recebido por 7.5% contra Esquadrões com um Tamanho de Esquadrão restante maior que 50%.",
+          "descriptionEn": "Increases Rider Squad HP by 30%. Reduces Skill DMG taken by 7.5% against Squads with a remaining Squad Size greater than 50%.",
+          "level": 5
+        },
+        {
+          "id": 10994,
+          "slot": "Passiva 2",
+          "name": "Laço de Chicoteamento",
+          "description": "Aumenta o DANO de ataque básico em 46%. Se estiver sob o efeito de Silenciar, tem 50% de chance de realizar 1 ataque básico adicional por turno pela duração do efeito. Esses ataques básicos concedem 20 de Fúria.",
+          "descriptionEn": "Increases basic attack DMG by 46%. If inflicted with Silence, has a 50% chance to deal 1 additional basic attack per turn for the duration of the effect. These basic attacks grant 20 Rage.",
+          "level": 5
+        },
+        {
+          "id": 10996,
+          "slot": "Passiva 3",
+          "name": "Astúcia e Eloquência",
+          "description": "Aumenta o ATQ do Esquadrão de Motociclistas em 32% quando guarnecido. Durante este período, ataques básicos têm 10% de chance de causar DANO (Fator de Dano: 1800) a até 3 unidades em uma área em forma de leque. Este efeito só pode ser ativado uma vez a cada 6s.",
+          "descriptionEn": "Increases Rider Squad ATK by 32% when garrisoned. During this period, basic attacks have a 10% chance to deal DMG (Damage Factor: 1800) to up to 3 units in a fan-shaped area. This effect can be triggered only once in 6s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1080,
+      "name": "Chun",
+      "nameEn": "Chun",
+      "title": "Zéfiro da Primavera",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10801,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10801,
+          "slot": "Fúria",
+          "name": "Abate Duplo",
+          "description": "Causa DANO a 2 inimigos em uma linha reta (Fator de DANO 12000. Quando nomeada como Assistente, reduz o DANO em 6000). Se apenas um inimigo for atingido, aumenta o DANO em 20%.",
+          "descriptionEn": "Deals DMG to 2 enemies in a straight line (Damage Factor 12000. When appointed as an Assistant, reduces DMG to 6000). If only one enemy is hit, increases DMG by 20%.",
+          "level": 5
+        },
+        {
+          "id": 10805,
+          "slot": "Despertar",
+          "name": "Flecha Rápida",
+          "description": "Causa DANO a 2 inimigos em uma linha reta (Fator de DANO 13000. Quando nomeada como Assistente, reduz o DANO em 6500). Se apenas um inimigo for atingido, aumenta o DANO em 25%.",
+          "descriptionEn": "Deals DMG to 2 enemies in a straight line (Damage Factor13000. When appointed as an Assistant, reduces DMG to 6500). If only one enemy is hit, increases DMG by 25%.",
+          "level": 1
+        },
+        {
+          "id": 10801,
+          "slot": "Substituição do despertar",
+          "name": "Abate Duplo",
+          "description": "Causa DANO a 2 inimigos em uma linha reta (Fator de DANO 12000. Quando nomeada como Assistente, reduz o DANO em 6000). Se apenas um inimigo for atingido, aumenta o DANO em 20%.",
+          "descriptionEn": "Deals DMG to 2 enemies in a straight line (Damage Factor 12000. When appointed as an Assistant, reduces DMG to 6000). If only one enemy is hit, increases DMG by 20%.",
+          "level": 5
+        },
+        {
+          "id": 10803,
+          "slot": "Passiva 1",
+          "name": "Retribuição",
+          "description": "Ao receber DANO de Habilidade, restaura 100 de Fúria instantaneamente. Há 50% de chance de infligir Silenciar ao atacante por 3s. Este efeito é acionado uma vez a cada 6s.",
+          "descriptionEn": "When taking Skill DMG, restores 100 Rage instantly. There is a 50% chance to inflict Silence on the attacker for 3s. This effect triggers once every 6s.",
+          "level": 5
+        },
+        {
+          "id": 10804,
+          "slot": "Passiva 2",
+          "name": "Batalha de Elite",
+          "description": "Quando está em batalha, o PV do Esquadrão de Atiradores aumenta em 20% e o ATQ em 20%.",
+          "descriptionEn": "When in battle, increases Ranged Squad HP by 20% and ATK by 20%.",
+          "level": 5
+        },
+        {
+          "id": 10806,
+          "slot": "Passiva 3",
+          "name": "Resiliência",
+          "description": "Quando está liderando Esquadrão(ões) somente de Atiradores, aumenta o DANO da Habilidade em 25% e a Velocidade de Viagem em 30%.",
+          "descriptionEn": "When leading Ranged Squad(s) only, increases Skill DMG by 25% and Travel Speed by 30%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1106,
+      "name": "Claude Le Blanc",
+      "nameEn": "Claude Le Blanc",
+      "title": "Mentor de Greenfield",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "Cooperação",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11063,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11061,
+          "slot": "Fúria",
+          "name": "Vida Florescente",
+          "description": "Reduz o DANO de Habilidade recebido em 20% por 4s, e concede um status a si mesmo e aos aliados próximos. Aumenta o DANO do alvo em 25% por 4s se o Tamanho do Esquadrão restante dele for maior que 50%. Quando o Tamanho do Esquadrão do alvo for menor que 50%, cura Esquadrões Levemente Feridos (Fator de Cura: 3000) e reduz o DANO recebido deles em 15% por 4s. Afeta até 5 Esquadrões.",
+          "descriptionEn": "Reduces Skill DMG taken by 20% for 4s, and grants a status to self and nearby allies. Increases the target's DMG by 25% for 4s if their remaining Squad Size is greater than 50%. When the target's Squad Size is less than 50%, heal Lightly Wounded Squads (Heal Factor: 3000) and reduces their DMG taken by 15% for 4s. Affects up to 5 Squads.",
+          "level": 5
+        },
+        {
+          "id": 11065,
+          "slot": "Despertar",
+          "name": "Decompor e Definhar",
+          "description": "Após usar uma Habilidade de Fúria, reduz o PV e a VEL de Viagem de até 5 inimigos em 35% e 40% respectivamente por 3s. Também reduz a Velocidade de Recuperação de Fúria deles em 20% durante esse período.",
+          "descriptionEn": "After using a Rage Skill, reduces HP and TRVL SPD of up to 5 enemies by 35% and 40% respectively for 3s. Also, reduces their Rage Recovery Speed by 20% during this time.",
+          "level": 1
+        },
+        {
+          "id": 11063,
+          "slot": "Substituição do despertar",
+          "name": "Miasma Persistente",
+          "description": "Após usar uma Habilidade de Fúria, reduz o PV e a VEL de Viagem de até 5 inimigos em 30% e 40% respectivamente por 3s.",
+          "descriptionEn": "After using a Rage Skill, reduces HP and TRVL SPD of up to 5 enemies by 30% and 40% respectively for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11063,
+          "slot": "Passiva 1",
+          "name": "Miasma Persistente",
+          "description": "Após usar uma Habilidade de Fúria, reduz o PV e a VEL de Viagem de até 5 inimigos em 30% e 40% respectivamente por 3s.",
+          "descriptionEn": "After using a Rage Skill, reduces HP and TRVL SPD of up to 5 enemies by 30% and 40% respectively for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11064,
+          "slot": "Passiva 2",
+          "name": "Parasitismo de Esporos",
+          "description": "Aumenta o PV do Esquadrão em 20%, a VEL de Viagem em 20% e a Capacidade do Esquadrão em 10%.",
+          "descriptionEn": "Increases Squad HP by 20%, TRVL SPD by 20%, and Squad Capacity by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11066,
+          "slot": "Passiva 3",
+          "name": "Assimilação Fotossintética",
+          "description": "Reduz o DANO de Contra-ataque recebido em 20%. Ao receber DANO de Habilidade, ganha um Escudo (Fator de Escudo: 3000) por 2s. Este efeito só pode ser acionado uma vez a cada 6s.",
+          "descriptionEn": "Reduces Counter DMG taken by 20%. When taking Skill DMG, gains a Shield (Shield Factor: 3000) for 2s. This effect can be triggered only once in 6s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1034,
+      "name": "Cynthia Calamity",
+      "nameEn": "Cynthia Calamity",
+      "title": "Moça do Desastre",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "Caçador de Zumbis",
+        "Campo de Batalha"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10341,
+          "slot": "Fúria",
+          "name": "Fogo Duplo",
+          "description": "Causa DANO direto no Esquadrão alvo (Fator de Dano: 7800), e reduz o ATQ do Esquadrão alvo em 30% e a Velocidade de Viagem em 30% por 2s.",
+          "descriptionEn": "Deals direct DMG to target Squad (Damage Factor: 7800), and reduces the target Squad's ATK by 30% and Travel Speed by 30% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 10345,
+          "slot": "Despertar",
+          "name": "Heroína Irada",
+          "description": "Ganhe 50 de Fúria depois de usar uma habilidade.",
+          "descriptionEn": "Gain 50 Rage after using a skill.",
+          "level": 1
+        },
+        {
+          "id": 10343,
+          "slot": "Passiva 1",
+          "name": "Esquivar e Atacar",
+          "description": "Aumenta o ATQ do Esqd. de Motociclistas em 25% e a Velocidade de Viagem em 12%.",
+          "descriptionEn": "Increases Rider Squad ATK by 25% and Travel Speed by 12%.",
+          "level": 5
+        },
+        {
+          "id": 10344,
+          "slot": "Passiva 2",
+          "name": "Alto Calibre",
+          "description": "Os ataques básicos dos Esquadrões têm 20% de chance de curar unidades Levemente Feridas em seus Esquadrões (Fator de Cura: 1200). Se Catherine estiver no Esquadrão, a cura será aumentada em 15%.",
+          "descriptionEn": "Squads' basic attacks have 20% chance to heal Lightly Wounded units in your Squads (Heal Factor: 1200). If Catherine is in the Squad, healing will be increased by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10346,
+          "slot": "Passiva 3",
+          "name": "Embriões da Vingança",
+          "description": "Aumenta o PV dos Esquadrões de Motociclistas em 15% e o DANO causado em Zumbis em 30%.",
+          "descriptionEn": "Increases Rider Squad HP by 15% and DMG dealt to Zombies by 30%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1105,
+      "name": "Daryl",
+      "nameEn": "Daryl",
+      "title": "Uivador do Gelo",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11054,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11051,
+          "slot": "Fúria",
+          "name": "Interceptação de Avalanche",
+          "description": "Causa DANO a até 3 inimigos em uma área retangular à frente (Fator de Dano: 13500). O DANO recebido por cada inimigo é reduzido em 15% para cada inimigo alvo adicional. Também reduz o DANO AdE recebido por até 3 aliados em 30% por 3s.",
+          "descriptionEn": "Deals DMG to up to 3 enemies in a rectangular area in front (Damage Factor: 13500). DMG taken by each enemy reduces by 15% for every additional target enemy. Also reduces AoE DMG taken by up to 3 allies by 30% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11055,
+          "slot": "Despertar",
+          "name": "Barragem de Neve",
+          "description": "Aumenta a VEL de Viagem do Esquadrão de Motociclistas em 25% e o ATQ do Esquadrão de Motociclistas em 37%. Os ataques básicos têm 20% de chance de causar DANO extra ao alvo (Fator de Dano: 1400). Este efeito pode ser ativado apenas uma vez em 3s.",
+          "descriptionEn": "Increases Rider Squad TRVL SPD by 25% and Rider Squad ATK by 37%. Basic attacks have a 20% chance to deal bonus DMG to the target (Damage Factor: 1400). This effect can be triggered only once in 3s.",
+          "level": 1
+        },
+        {
+          "id": 11054,
+          "slot": "Substituição do despertar",
+          "name": "Corrida Polar",
+          "description": "A VEL de Viagem do Esquadrão de Motociclistas aumenta em 21%, e o ATQ do Esquadrão de Motociclistas aumenta em 32%.",
+          "descriptionEn": "Rider Squad TRVL SPD increases by 21%, and Rider Squad ATK increases by 32%.",
+          "level": 5
+        },
+        {
+          "id": 11053,
+          "slot": "Passiva 1",
+          "name": "Onda de Frio",
+          "description": "Ao liderar apenas Esquadrões de Motociclistas, aumenta o DANO da Habilidade em 21% e os PV do Esquadrão de Motociclistas em 26%.",
+          "descriptionEn": "When leading only Rider Squads, increases Skill DMG by 21% and Rider Squad HP by 26%.",
+          "level": 5
+        },
+        {
+          "id": 11054,
+          "slot": "Passiva 2",
+          "name": "Corrida Polar",
+          "description": "A VEL de Viagem do Esquadrão de Motociclistas aumenta em 21%, e o ATQ do Esquadrão de Motociclistas aumenta em 32%.",
+          "descriptionEn": "Rider Squad TRVL SPD increases by 21%, and Rider Squad ATK increases by 32%.",
+          "level": 5
+        },
+        {
+          "id": 11056,
+          "slot": "Passiva 3",
+          "name": "Armadura de Prisma",
+          "description": "Aumenta a DEF do Esquadrão de Motociclistas em 24%. Ao receber DANO AdE, 50% de chance de causar DANO extra ao atacante (Fator de Dano: 4550). Este efeito pode ser ativado apenas uma vez em 3s.",
+          "descriptionEn": "Increases Rider Squad DEF by 24%. When receiving AoE DMG, there is a 50% chance to deal bonus DMG to the attacker (Damage Factor: 4550). This effect can be triggered only once in 3s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1086,
+      "name": "Eddie",
+      "nameEn": "Eddie",
+      "title": "Açougueiro Voraz",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "Cerco",
+        "Defesa"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10861,
+          "slot": "Fúria",
+          "name": "Grande Banquete",
+          "description": "Causa DANO ao alvo (Fator de Dano: 11300) e ganha um Escudo por 2s (Fator de Escudo: 2500).",
+          "descriptionEn": "Deals DMG to target (Damage Factor: 11300), and gains a Shield for 2s (Shield Factor: 2500).",
+          "level": 5
+        },
+        {
+          "id": 10865,
+          "slot": "Despertar",
+          "name": "Ambição Voraz",
+          "description": "Quando o escudo é quebrado ou desaparece, reduz o HP de até 3 Esquadrões Inimigos próximos por 20% por 2s.",
+          "descriptionEn": "When the Shield is broken or disappears, reduces the HP of up to 3 nearby enemy Squads by 20% for 2s.",
+          "level": 1
+        },
+        {
+          "id": 10863,
+          "slot": "Passiva 1",
+          "name": "Cozinheiro da Crise",
+          "description": "Aumenta o esquadrão de infantaria def por 30%. Quando o tamanho restante do esquadrão é inferior a 30%, aumenta o contador DANO por 15%.",
+          "descriptionEn": "Increases Infantry Squad DEF by 30%. When your remaining Squad Size is less than 30%, increases Counter DMG by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10864,
+          "slot": "Passiva 2",
+          "name": "Caçador Impetuoso",
+          "description": "Ao liderar apenas Esquadrões de Infantaria, aumenta o contador de DANO causado em 44%.",
+          "descriptionEn": "When leading only Infantry Squads, increases Counter DMG dealt by 44%.",
+          "level": 5
+        },
+        {
+          "id": 10866,
+          "slot": "Passiva 3",
+          "name": "Devorador do Abismo",
+          "description": "Aumenta o HP do Esquadrão de Infantaria por 30%. Durante os Cercos, os ataques básicos têm uma chance 20% de reduzir o HP do Esquadrão do Inimigo por 25% para 2s. Esse efeito pode ser acionado no máximo uma vez a cada 6s.",
+          "descriptionEn": "Increases Infantry Squad HP by 30%. During Sieges, basic attacks have a 20% chance to reduce the enemy's Squad HP by 25% for 2s. This effect can be triggered at most once every 6s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1107,
+      "name": "Eileen Volt",
+      "nameEn": "Eileen Volt",
+      "title": "Engenheiro de Arco",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11071,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11071,
+          "slot": "Fúria",
+          "name": "Corrente de Raios",
+          "description": "Causa DANO ao alvo (Fator de Dano: 14000), e quando o Tamanho do Esquadrão próprio for maior que 50%, causa DANO (Fator de Dano: 8000) a até 2 outros alvos próximos.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 14000), and when own Squad Size is more than 50%, deals DMG (Damage Factor :8000) to up to 2 other nearby targets.",
+          "level": 5
+        },
+        {
+          "id": 11075,
+          "slot": "Despertar",
+          "name": "Carga de Alta Tensão",
+          "description": "Causa DANO ao alvo (Fator de Dano: 14500), e causa DANO (Fator de Dano: 8500) a até 2 outros alvos próximos.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 14500), and deals DMG (Damage Factor: 8500) to up to 2 other nearby targets.",
+          "level": 1
+        },
+        {
+          "id": 11071,
+          "slot": "Substituição do despertar",
+          "name": "Corrente de Raios",
+          "description": "Causa DANO ao alvo (Fator de Dano: 14000), e quando o Tamanho do Esquadrão próprio for maior que 50%, causa DANO (Fator de Dano: 8000) a até 2 outros alvos próximos.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 14000), and when own Squad Size is more than 50%, deals DMG (Damage Factor :8000) to up to 2 other nearby targets.",
+          "level": 5
+        },
+        {
+          "id": 11073,
+          "slot": "Passiva 1",
+          "name": "Surto Atual",
+          "description": "Aumenta o ATQ do Esquadrão de Infantaria em 20%. Ataques Básicos têm 20% de chance de causar DANO adicional (Fator de Dano: 1500), este efeito pode ser ativado até 1 vezes a cada 3s. Se o alvo estiver Flanqueado, o Fator de Dano é aumentado para 2500.",
+          "descriptionEn": "Increases Infantry Squad ATK by 20%. Basic attacks have a 20% chance to deal additional DMG (Damage Factor: 1500), this effect can be triggered up to 1 times every 3s. If the target is Flanked, the Damage Factor is increased to 2500.",
+          "level": 5
+        },
+        {
+          "id": 11074,
+          "slot": "Passiva 2",
+          "name": "Circuito Potencializado",
+          "description": "Aumenta a DEF do Esquadrão de Infantaria em 10%. Ao atacar Esquadrões não guarnecidos ou em uma Invasão, aumenta o DANO de Ataque Básico em 20% e reduz o DANO de contra-ataque recebido em 10%.",
+          "descriptionEn": "Increases Infantry Squad DMG by 10%. When attacking Squads not garrisoned or in a Rally, increase basic attack DMG by 20% and reduce Counter DMG received by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11076,
+          "slot": "Passiva 3",
+          "name": "Aceleração Eletromagnética",
+          "description": "O ATQ do Esquadrão de Infantaria aumenta em 35%, e a Velocidade de Viagem aumenta em 20%.",
+          "descriptionEn": "Infantry Squad ATK increases by 35%, and Travel Speed increases by 20%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1085,
+      "name": "Elena",
+      "nameEn": "Elena",
+      "title": "Patrulheira Solitária",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10851,
+          "slot": "Fúria",
+          "name": "Fazendo Justiça",
+          "description": "Causa DANO ao alvo a cada segundo por 3s (Fator de Dano 5400). Se o alvo estiver Flanqueado, o DANO sofrido pelo alvo aumentará para 5950 a cada segundo.",
+          "descriptionEn": "Deals DMG to target every second for 3s (Damage Factor 5400). If the target is Flanked, the DMG received by the target will be increased to 5950 every second.",
+          "level": 5
+        },
+        {
+          "id": 10855,
+          "slot": "Despertar",
+          "name": "Lei da Montaria",
+          "description": "O ATQ do Esquadrão de Motociclistas aumenta em20%, e a Velocidade de Viagem aumenta em 20%.",
+          "descriptionEn": "Rider Squad ATK increases by 20%, and Travel Speed increases by 20%.",
+          "level": 1
+        },
+        {
+          "id": 10853,
+          "slot": "Passiva 1",
+          "name": "Rolagem Tática",
+          "description": "Ao sofrer DANO em Área, há 90% de chance de reduzir o DANO sofrido em 40%. Esse efeito é acionado no máximo uma vez a cada 6s.",
+          "descriptionEn": "When receiving AoE DMG, there is a 90% chance of reducing DMG received by 40%. This effect can be triggered at most once every 6s.",
+          "level": 5
+        },
+        {
+          "id": 10854,
+          "slot": "Passiva 2",
+          "name": "Emboscar",
+          "description": "Aumenta a DEF do Esquadrão de Motociclistas em 30%, e aumenta o DANO causado a inimigos flanqueados em 13.5%.",
+          "descriptionEn": "Increases Rider Squad DEF by 30%, and increases DMG dealt to flanked targets by 13.5%.",
+          "level": 5
+        },
+        {
+          "id": 10856,
+          "slot": "Passiva 3",
+          "name": "Acabou a Brincadeira",
+          "description": "Aumenta o DANO de Ataque Básico em 30%. Quando a Fúria está acima de 50%, o DANO de Ataque Básico aumenta para 53%.",
+          "descriptionEn": "Increases basic attack DMG by 30%. When Rage is above 50%, basic attack DMG increases to 53%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1204,
+      "name": "Eren Yeager",
+      "nameEn": "Eren Yeager",
+      "title": "Eren titanizado",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 12041,
+      "relic": false,
+      "skills": [
+        {
+          "id": 12041,
+          "slot": "Fúria",
+          "name": "Poder dos Titãs",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 10000). Quando não está em Agrupamento ou Guarnição, entra no estado de Alta Mobilidade por 3s. Enquanto estiver nesse estado, ataques básicos causam DANO bônus (Fator de Dano: 1500) a até 3 outros Esquadrões inimigos próximos.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 10000). When not Rallying or Garrisoned, enters the High Mobility state for 3s. While in this state, basic attacks deal bonus DMG (Damage Factor: 1500) to up to 3 other nearby enemy Squads.",
+          "level": 5
+        },
+        {
+          "id": 12045,
+          "slot": "Despertar",
+          "name": "Rugido de Ataque",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 11000). Quando não está em Agrupamento ou Guarnição, entra no estado de Alta Mobilidade por 4s. Enquanto estiver nesse estado, ataques básicos causam DANO bônus (Fator de Dano: 2000) a até 3 outros Esquadrões inimigos próximos e reduz sua Velocidade de Recuperação de Fúria em 10% por 1s.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 11000). When not Rallying or Garrisoned, enters the High Mobility state for 4s. While in this state, basic attacks deal bonus DMG (Damage Factor: 2000) to up to 3 other nearby enemy Squads and reduces their Rage Recovery Speed by 10% for 1s.",
+          "level": 1
+        },
+        {
+          "id": 12041,
+          "slot": "Substituição do despertar",
+          "name": "Poder dos Titãs",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 10000). Quando não está em Agrupamento ou Guarnição, entra no estado de Alta Mobilidade por 3s. Enquanto estiver nesse estado, ataques básicos causam DANO bônus (Fator de Dano: 1500) a até 3 outros Esquadrões inimigos próximos.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 10000). When not Rallying or Garrisoned, enters the High Mobility state for 3s. While in this state, basic attacks deal bonus DMG (Damage Factor: 1500) to up to 3 other nearby enemy Squads.",
+          "level": 5
+        },
+        {
+          "id": 12047,
+          "slot": "Especial",
+          "name": "As Asas da Liberdade",
+          "description": "Aumenta o DANO causado a Esquadrões de Atiradores em 5%, mas o DANO sofrido por Esquadrões de Infantaria aumenta em 3%.",
+          "descriptionEn": "Increase DMG dealt to Ranged Squads by 5%, but DMG taken from Infantry Squads increases by 3%.",
+          "level": 1
+        },
+        {
+          "id": 12043,
+          "slot": "Passiva 1",
+          "name": "Avanço Omnidirecional",
+          "description": "ATQ do Esquadrão de Motociclistas aumenta em 40%, e a Velocidade de Viagem aumenta em 20%.",
+          "descriptionEn": "Squad ATK increases by 40%, and Travel Speed increases by 20%.",
+          "level": 5
+        },
+        {
+          "id": 12044,
+          "slot": "Passiva 2",
+          "name": "Vontade Indomável",
+          "description": "PV do Esquadrão aumenta em 30%, e a Redução de DANO aumenta em 10%. A Redução de DANO de Habilidade própria aumenta em 10% enquanto estiver no estado de Alta Mobilidade.",
+          "descriptionEn": "Squad HP increases by 30%, and DMG Reduction increases by 10%. Own Skill DMG Reduction increases by 10% while in the High Mobility state.",
+          "level": 5
+        },
+        {
+          "id": 12046,
+          "slot": "Passiva 3",
+          "name": "Corte de Precisão",
+          "description": "Aumenta o próprio DANO de Habilidade em 25% por 4s antes que o Líder use uma Habilidade de Fúria. Recupera 20 de Fúria ao realizar Ataques Básicos enquanto estiver no estado de Alta Mobilidade.",
+          "descriptionEn": "Increases own Skill DMG by 25% for 4s before the Leader uses a Rage Skill. Recovers 20 Rage when performing basic attacks while in the High Mobility state.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1102,
+      "name": "Ethan",
+      "nameEn": "Ethan",
+      "title": "Assassino das Sombras",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "Guarnição",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11021,
+          "slot": "Fúria",
+          "name": "Todos Os Tiros Disparados",
+          "description": "Causa DANO a até 3 inimigos (Fator de Dano: 13500) em uma área em forma de leque à frente, o DANO recebido por cada inimigo é reduzido em 15% para cada alvo adicional. Para cada alvo inimigo atingido, ganhe 1 acúmulo de Tiros. Se estiver guarnecido, para cada alvo inimigo atingido, ganhe 2 acúmulos de Tiros. Para cada 10 acúmulos de Tiros obtidos, aumenta o ATQ do Esquadrão de Atiradores em 10%.",
+          "descriptionEn": "Deals DMG to up to 3 enemies (Damage Factor: 13500) in a fan-shaped area in front, DMG taken by each enemy reduces by 15% for every additional enemy target. For every enemy target hit, gain 1 stack of Gunfire. If garrisoned, for every enemy target hit, gain 2 stacks of Gunfire instead. For every 10 stacks of Gunfire gained, increases Ranged Squad ATK by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11025,
+          "slot": "Despertar",
+          "name": "Instinto Mortal",
+          "description": "Aumenta o DANO das Habilidades AdE em 18% Com 30 acúmulos de Tiros, remova todas os acúmulos de Fogo de Artilharia para causar DANO a até 3 inimigos em uma área circular (Fator de Dano: 13500).",
+          "descriptionEn": "Increases DMG of AoE Skills by 18%. At 30 stacks of Gunfire, remove all Gunfire stacks to deal DMG to up to 3 enemies in a circular area (Damage Factor: 13500).",
+          "level": 1
+        },
+        {
+          "id": 11023,
+          "slot": "Passiva 1",
+          "name": "Táticas de Tiroteio",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 42%. Contra-ataques têm 20% de chance de conceder 1 acúmulo de Tiros.",
+          "descriptionEn": "Increases Ranged Squad ATK by 42%. Counterattacks have a 20% chance to grant 1 stack of Gunfire.",
+          "level": 5
+        },
+        {
+          "id": 11024,
+          "slot": "Passiva 2",
+          "name": "Envio Tático",
+          "description": "Aumenta os PV do Esquadrão de Atiradores em 36% e reduz o DANO de Habilidade do Esquadrão em 13% quando guarnecido.",
+          "descriptionEn": "Increases Ranged Squad HP by 36% and reduces Squad's Skill DMG taken by 13% when garrisoned.",
+          "level": 5
+        },
+        {
+          "id": 11026,
+          "slot": "Passiva 3",
+          "name": "Espírito Caçador",
+          "description": "Aumenta a DEF do Esquadrão de Atiradores em 38%. Se guarnecido, reduz todo o DANO recebido em 10% por 1m após entrar em batalha.",
+          "descriptionEn": "Increases Ranged Squad DEF by 38%. If garrisoned, reduces all DMG taken by 10% for 1m after entering battle.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1098,
+      "name": "Felix",
+      "nameEn": "Felix",
+      "title": "Furacão das Trevas",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10981,
+          "slot": "Fúria",
+          "name": "Acelerar e Ultrapassar",
+          "description": "Ataques básicos causam DANO bônus (Fator de Dano: 3100) pelos próximos 5s. Cada ataque básico também reduzirá o DANO de Habilidade do inimigo em 10% por 2s.",
+          "descriptionEn": "Basic attacks deal bonus DMG (Damage Factor: 3100) for the next 5s. Each basic attack will also reduce enemy Skill DMG by 10% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 10985,
+          "slot": "Despertar",
+          "name": "Duelo Rápido",
+          "description": "Realiza um ataque básico adicional a cada 10s. Este ataque básico concede 70 de Fúria e não ativará contra-ataques do inimigo.",
+          "descriptionEn": "Performs an additional basic attack every 10s. This basic attack grants 70 Rage and will not trigger counterattacks from the enemy.",
+          "level": 11
+        },
+        {
+          "id": 10983,
+          "slot": "Passiva 1",
+          "name": "Fluxo de Ar Constante",
+          "description": "A VEL de Viagem do Esquadrão de Motociclistas aumenta em 18%, e reduz o DANO de contra-ataque recebido em 44%.",
+          "descriptionEn": "Rider Squad TRVL SPD increases by 18%, and reduces Counter DMG taken by 44%.",
+          "level": 5
+        },
+        {
+          "id": 10984,
+          "slot": "Passiva 2",
+          "name": "Declaração de Campeão",
+          "description": "Os ataques básicos têm 20% de chance de aumentar todo o DANO causado por si mesmo em 1.8%. Aumenta até 18%.",
+          "descriptionEn": "Basic attacks have a 20% chance to increase all DMG dealt by oneself by 1.8%. Increases up to 18%.",
+          "level": 5
+        },
+        {
+          "id": 10986,
+          "slot": "Passiva 3",
+          "name": "Parada nos Boxes",
+          "description": "Aumenta o ATQ do Esquadrão de Motociclistas em 32%. Ao receber DANO da Habilidade, aumenta o ATQ do próprio Esquadrão em 16% por 3s.",
+          "descriptionEn": "Increases Rider Squad ATK by 32%. When taking Skill DMG, increases own Squad ATK by 16% for 3s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1033,
+      "name": "Hank Jannowitz",
+      "nameEn": "Hank Jannowitz",
+      "title": "Precursor do Apocalipse",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "Cerco",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10331,
+          "slot": "Fúria",
+          "name": "Granada Devoradora de Fogo",
+          "description": "Causa DANO direto (Fator de Dano: 4500) em um alvo, e causa DANO de queimadura pelos próximos 5s (Fator de Dano: 900). Causa DANO extra em Esquadrões de Guarnição (Fator de Dano: 3500).",
+          "descriptionEn": "Deals direct DMG (Damage Factor: 4500) to target, and causes Burn DMG for the next 5s (Damage Factor: 900). Deals bonus DMG to Garrison Squads (Damage Factor: 3500).",
+          "level": 5
+        },
+        {
+          "id": 10335,
+          "slot": "Despertar",
+          "name": "Tempo Explosivo",
+          "description": "Os ataques básicos têm 10% de chance de reduzir o DANO do alvo em 8% e DEF em 20% por 3s.",
+          "descriptionEn": "Basic attacks have 10% chance to reduce target's DMG by 8% and DEF by 20% for 3s.",
+          "level": 1
+        },
+        {
+          "id": 10333,
+          "slot": "Passiva 1",
+          "name": "Sinfonia Bélica",
+          "description": "Aumenta o DANO causado em Torres de Observação em 30% durante o Cerco. Aumenta também a quantidade de recursos saqueados em 10%.",
+          "descriptionEn": "Increases DMG dealt to Lookout Towers by 30% during Siege. Also increases the amount of resources raided by 10%.",
+          "level": 5
+        },
+        {
+          "id": 10334,
+          "slot": "Passiva 2",
+          "name": "Prazer Pecaminoso",
+          "description": "Os ataques básicos dos Esquadrões têm 10% de chance de causar DANO extra (Fator de Dano: 3200) durante o Cerco.",
+          "descriptionEn": "Squads' basic attacks have 10% chance to deal bonus DMG (Damage Factor: 3200) during Siege.",
+          "level": 5
+        },
+        {
+          "id": 10336,
+          "slot": "Passiva 3",
+          "name": "Atirando Granadas",
+          "description": "Aumenta a Capacidade dos Esquadrões em 12% e a Capacidade de Invasão em 12%.",
+          "descriptionEn": "Increases Squad Capacity by 12% and Rally Capacity by 12%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1114,
+      "name": "Isabella Vincens",
+      "nameEn": "Isabella Vincens",
+      "title": "Diva da Moda",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "Cooperação",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11141,
+          "slot": "Fúria",
+          "name": "Grande Abertura",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 14000). Quando não estiver em Invasão ou Guarnição, aumenta o DANO recebido em 3 Esquadrões inimigos próximos em 10% por 3s.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 14000). When not Rallying or Garrisoned, increases DMG received by 3 nearby enemy Squads by 10% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11145,
+          "slot": "Despertar",
+          "name": "Gala da Alta Costura",
+          "description": "Quando atua como Líder e não está em Invasão ou Guarnição, ganha efeitos adicionais com base no tipo de Esquadrão liderado. Esquadrão exclusivo de Infantaria: Usar \"Grande Abertura\" aumenta o DANO do Esquadrão em 3% por 20s. Este efeito acumula até 5 vezes e permanece ativo fora de combate. Esquadrão exclusivo de Motociclistas: \"Grande Abertura\" causa DANO bônus (Fator de Dano: 3500) a 2 outros alvos próximos. Esquadrão exclusivo de Longo Alcance: Aumenta o DANO de \"Grande Abertura\" em 20%.",
+          "descriptionEn": "When serving as Leader and not Rallying or Garrisoned, gains additional effects based on the type of Squad led. Infantry-only Squad: Using \"Grand Opening\" increases Squad DMG by 3% for 20s. This effect stacks up to 5 times, and remains active when out of combat. Rider-only Squad: \"Grand Opening\" deals bonus DMG (Damage Factor: 3500) to 2 other nearby targets. Ranged-only Squad: Increases the DMG of \"Grand Opening\" by 20%.",
+          "level": 1
+        },
+        {
+          "id": 11143,
+          "slot": "Passiva 1",
+          "name": "Lidere a Tendência",
+          "description": "ATQ do Esquadrão de Motociclistas aumenta em 30%, e a Velocidade de Viagem aumenta em 15%.",
+          "descriptionEn": "Squad ATK increases by 30%, and Travel Speed increases by 15%.",
+          "level": 5
+        },
+        {
+          "id": 11144,
+          "slot": "Passiva 2",
+          "name": "Postura Intimidante",
+          "description": "Quando não estiver em Invasão ou Guarnição, aumenta o PV do Esquadrão em 30%. Quando flanqueado, reduz o DANO da Habilidade recebido em 8%.",
+          "descriptionEn": "When not Rallying or Garrisoned, increases Squad HP by 30%. When Flanked, reduces Skill DMG taken by 8%.",
+          "level": 5
+        },
+        {
+          "id": 11146,
+          "slot": "Passiva 3",
+          "name": "Elegância Mortal",
+          "description": "Quando não estiver em Invasão ou Guarnição, aumenta o DANO de Habilidade em 20% e ganha 30 de Fúria a cada 10s.",
+          "descriptionEn": "When not Rallying or Garrisoned, increases Skill DMG by 20%, and gains 30 Rage every 10s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1203,
+      "name": "Jack Bronte",
+      "nameEn": "Jack Bronte",
+      "title": "Guerreiro Destemido",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 12031,
+      "relic": false,
+      "skills": [
+        {
+          "id": 12031,
+          "slot": "Fúria",
+          "name": "Tiros de Ressonância",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 13500). Quando não estiver em Invasão ou Guarnecido, recupera PV com base no número de Esquadrões flanqueando o Esquadrão inimigo (Esquadrões de Flanqueamento x550). Este efeito conta até 5 Esquadrões de Flanqueamento.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 13500). When not Rallying or Garrisoned, recover HP based on the number of Squads flanking the enemy Squad (Flanking Squads x550). This effect counts up to 5 Flanking Squads.",
+          "level": 5
+        },
+        {
+          "id": 12035,
+          "slot": "Despertar",
+          "name": "Sincronia Perfeita",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 14850). Quando não estiver em Invasão ou Guarnecido, recupera PV com base no número de Esquadrões flanqueando o Esquadrão inimigo (Esquadrões de Flanqueamento x550). O Assistente recupera 50% de PV adicionais (Esquadrões de Flanqueamento x330) após lançar uma habilidade. Este efeito conta até 5 Esquadrões de Flanqueamento.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 14850). When not Rallying or Garrisoned, recover HP based on the number of Squads flanking the enemy Squad (Flanking Squads x550). The Assistant has a 50% recover additional HP (Flanking Squads x330) after casting a skill. This effect counts up to 5 Flanking Squads.",
+          "level": 1
+        },
+        {
+          "id": 12031,
+          "slot": "Substituição do despertar",
+          "name": "Tiros de Ressonância",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 13500). Quando não estiver em Invasão ou Guarnecido, recupera PV com base no número de Esquadrões flanqueando o Esquadrão inimigo (Esquadrões de Flanqueamento x550). Este efeito conta até 5 Esquadrões de Flanqueamento.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 13500). When not Rallying or Garrisoned, recover HP based on the number of Squads flanking the enemy Squad (Flanking Squads x550). This effect counts up to 5 Flanking Squads.",
+          "level": 5
+        },
+        {
+          "id": 12037,
+          "slot": "Especial",
+          "name": "Piloto Especialista",
+          "description": "Aumenta o DANO causado aos Esquadrões de Infantaria em 5%, mas o DANO recebido de Esquadrões de Motociclistas aumenta em 3%.",
+          "descriptionEn": "Increase DMG dealt to Infantry Squads by 5%, but DMG taken from Rider Squads increases by 3%.",
+          "level": 1
+        },
+        {
+          "id": 12033,
+          "slot": "Passiva 1",
+          "name": "Táticas Coordenadas",
+          "description": "Aumenta o PV do Esquadrão em 30%. Ataques básicos concedem 10 de Fúria ao flanquear o inimigo.",
+          "descriptionEn": "Increases Squad HP by 30%. Basic attacks grant 10 Rage when flanking the enemy.",
+          "level": 5
+        },
+        {
+          "id": 12034,
+          "slot": "Passiva 2",
+          "name": "Operação de Flanqueamento",
+          "description": "Quando não estiver em Invasão ou Guarnecido, aumenta o DANO da Habilidade em 36% quando o Tamanho do Esquadrão restante for de 50% ou mais. Quando o Tamanho do Esquadrão for inferior a 50%, reduz o DANO de Habilidade recebido em 36% e aumenta a VEL de Viagem do Esquadrão de Atiradores em 20%.",
+          "descriptionEn": "When not Rallying or Garrisoned, increases Skill DMG by 36% when remaining Squad Size is 50% or more. When Squad Size is less than 50%, reduces Skill DMG taken by 36% and increases Ranged Squad TRVL SPD by 20%.",
+          "level": 5
+        },
+        {
+          "id": 12036,
+          "slot": "Passiva 3",
+          "name": "Viagem Rápida",
+          "description": "Aumenta a VEL de Viagem do Esquadrão em 20% e o ATQ em 30%.",
+          "descriptionEn": "Increases Squad TRVL SPD by 20% and ATK by 30%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1088,
+      "name": "Jacob",
+      "nameEn": "Jacob",
+      "title": "Falcoeiro",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "Guarnição",
+        "Defesa"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10881,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10881,
+          "slot": "Fúria",
+          "name": "Ave de Rapina",
+          "description": "Causa DANO em até 3 inimigos (Fator de Dano: 12500) em uma área em forma de leque na frente e aumenta o próprio DANO de Contra-ataque em 23% por 3s. O DANO sofrido por cada Esquadrão inimigo é reduzido em 15% para cada Esquadrão alvo inimigo adicional.",
+          "descriptionEn": "Deals DMG to up to 3 enemies (Damage Factor: 12500) in a fan-shaped area in front, and increases own Counter DMG by 23% for 3s. DMG taken by each enemy Squad reduces by 15% for every additional target enemy Squad.",
+          "level": 5
+        },
+        {
+          "id": 10885,
+          "slot": "Despertar",
+          "name": "Ataque Aéreo",
+          "description": "Causa DANO em até 3 inimigos (Fator de Dano: 13750) em uma área em forma de leque na frente e aumenta o próprio DANO de Contra-ataque em 28% por 3s. O DANO sofrido por cada Esquadrão inimigo é reduzido em 15% para cada Esquadrão alvo inimigo adicional.",
+          "descriptionEn": "Deals DMG to up to 3 enemies (Damage Factor: 13750) in a fan-shaped area in front, and increases own Counter DMG by 28% for 3s. DMG taken by each enemy Squad reduces by 15% for every additional target enemy Squad.",
+          "level": 1
+        },
+        {
+          "id": 10881,
+          "slot": "Substituição do despertar",
+          "name": "Ave de Rapina",
+          "description": "Causa DANO em até 3 inimigos (Fator de Dano: 12500) em uma área em forma de leque na frente e aumenta o próprio DANO de Contra-ataque em 23% por 3s. O DANO sofrido por cada Esquadrão inimigo é reduzido em 15% para cada Esquadrão alvo inimigo adicional.",
+          "descriptionEn": "Deals DMG to up to 3 enemies (Damage Factor: 12500) in a fan-shaped area in front, and increases own Counter DMG by 23% for 3s. DMG taken by each enemy Squad reduces by 15% for every additional target enemy Squad.",
+          "level": 5
+        },
+        {
+          "id": 10883,
+          "slot": "Passiva 1",
+          "name": "Campeão da Terra",
+          "description": "Aumenta o PV do Esquadrão de Atiradores em 20%, e aumenta todo o DANO causado em 7.5%.",
+          "descriptionEn": "Increases Ranged Squad HP by 20%, and increases all DMG dealt by 7.5% when garrisoning.",
+          "level": 5
+        },
+        {
+          "id": 10884,
+          "slot": "Passiva 2",
+          "name": "Dançando com a Águia",
+          "description": "Causa DANO em até 3 Esquadrões inimigos próximos (Fator de Dano: 2000) a cada 8s. Se estiver guarnecendo, também reduzirá o ATQ desses esquadrões em 17% por 2s.",
+          "descriptionEn": "Deals DMG to up to 3 nearby enemy Squads (Damage Factor: 2000) every 8s. If garrisoning, also reduces the ATK of these Squads by 17% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 10886,
+          "slot": "Passiva 3",
+          "name": "Cria do Vento",
+          "description": "Aumenta todo o DANO em 16% se o tamanho restante do Esquadrão for inferior a 50%. Aumenta todo o DANO para 20% se o tamanho restante do Esquadrão for inferior a 30%.",
+          "descriptionEn": "Increases all DMG by 16% if the remaining Squad Size is below 50%. Increases all DMG to 20% if the remaining Squad Size is less than 30%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1061,
+      "name": "Jaden",
+      "nameEn": "Jaden",
+      "title": "Caçador de Zumbis",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "Caçador de Zumbis",
+        "Ataque"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10611,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10611,
+          "slot": "Fúria",
+          "name": "O Despertar do Fim",
+          "description": "Causa DANO ao inimigo (Fator de Dano 8000, reduzido para 4000 quando agindo como Vice-General). Ao mesmo tempo, reduz a DEF do Esquadrão atacado em 25% por 3s.",
+          "descriptionEn": "Deals DMG to the enemy (Damage Factor 8000, reduced to 4000 when acting as Vice-General). At the same time, reduces DEF of the attacked Squad by 25% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10615,
+          "slot": "Despertar",
+          "name": "Ode à Terra Desolada",
+          "description": "Causa DANO ao inimigo (Fator de Dano 9600, reduzido para 4800 quando agindo como Vice-General). Ao mesmo tempo, reduz a DEF do Esquadrão atacado em 30% por 3s.",
+          "descriptionEn": "Deals DMG to the enemy (Damage Factor 9600, reduced to 4800 when acting as Vice-General). At the same time, reduces DEF of the attacked Squad by 30% for 3s.",
+          "level": 1
+        },
+        {
+          "id": 10611,
+          "slot": "Substituição do despertar",
+          "name": "O Despertar do Fim",
+          "description": "Causa DANO ao inimigo (Fator de Dano 8000, reduzido para 4000 quando agindo como Vice-General). Ao mesmo tempo, reduz a DEF do Esquadrão atacado em 25% por 3s.",
+          "descriptionEn": "Deals DMG to the enemy (Damage Factor 8000, reduced to 4000 when acting as Vice-General). At the same time, reduces DEF of the attacked Squad by 25% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10613,
+          "slot": "Passiva 1",
+          "name": "Pastoreio de Zumbis",
+          "description": "Aumenta o DANO causado a Zumbis em 25%. Ao atacar um Zumbi, há 10% de chance de curar Esquadrões Levemente Feridos em (Fator de Cura: 1500).",
+          "descriptionEn": "Increases DMG dealt to Zombies by 25%. When attacking a Zombie, there is a 10% chance to heal Lightly Wounded Squads by (Heal Factor: 1500).",
+          "level": 5
+        },
+        {
+          "id": 10614,
+          "slot": "Passiva 2",
+          "name": "Presságio do Desastre",
+          "description": "Ao usar um ataque básico, há 20% de chance de reduzir o DANO da Habilidade sofrido em 25% em 3s.",
+          "descriptionEn": "When using a basic attack, there is a 20% chance to reduce Skill DMG taken by 25% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10616,
+          "slot": "Passiva 3",
+          "name": "Pastoreio de Zumbis",
+          "description": "Aumenta o ATQ do Esquadrão em 12% e a DEF em 12%.",
+          "descriptionEn": "Increases Squad ATK by 12% and DEF by 12%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1113,
+      "name": "Janet Light",
+      "nameEn": "Janet Light",
+      "title": "Grafite Neon",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11133,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11131,
+          "slot": "Fúria",
+          "name": "Bomba de Tinta",
+          "description": "Causa DANO ao alvo (Fator de Dano 14000), e reduz o DANO da Habilidade do alvo em 15% por 3s. Se o tamanho do seu Esquadrão for menor que 50%, reduz adicionalmente o DANO das Habilidades em área do alvo em 15%.",
+          "descriptionEn": "Deals DMG to target (Damage Factor 14000), and reduces the target’s Skill DMG by 15% for 3s. If your Squad Size is less than 50%, additionally reduces the DMG of target's AoE skills by 15%.",
+          "level": 5
+        },
+        {
+          "id": 11135,
+          "slot": "Despertar",
+          "name": "Spray de Inspiração",
+          "description": "Entra no estado [Grafite] por 5s antes que o Líder use uma Habilidade de Fúria. Enquanto estiver nesse estado, cada vez que DANO da Habilidade for causado, há uma chance 100% de causar dano adicional ao alvo atual (Fator de Dano: 800) e a até 2 outros personagens próximos (Fator de Dano: 1200). Este dano adicional não acionará [Grafite] novamente. O estado expirará após ser acionado 5 vezes.",
+          "descriptionEn": "Enters the [Graffiti] state for 5s before the Leader uses a Rage Skill. While in this state, each time Skill DMG is dealt, there is a 100% chance to deal additional damage to the current target (Damage Factor: 800) and to up to 2 other nearby characters (Damage Factor: 1200). This additional damage will not trigger [Graffiti] again. The state will expire after being triggered 5 times.",
+          "level": 1
+        },
+        {
+          "id": 11133,
+          "slot": "Substituição do despertar",
+          "name": "Grafite Frenético",
+          "description": "Entra no estado [Grafite] por 5s antes que o Líder use uma Habilidade de Fúria. Enquanto estiver nesse estado, cada vez que DANO da Habilidade for causado, há uma chance 65% de causar dano adicional ao alvo atual (Fator de Dano: 800). Este dano adicional não acionará [Grafite] novamente. O estado expirará após ser acionado 5 vezes.",
+          "descriptionEn": "Enters the [Graffiti] state for 5s before the Leader uses a Rage Skill. While in this state, each time Skill DMG is dealt, there is a 65% chance to deal additional damage to the current target (Damage Factor: 800). This additional damage will not trigger [Graffiti] again. The state will expire after being triggered 5 times.",
+          "level": 5
+        },
+        {
+          "id": 11133,
+          "slot": "Passiva 1",
+          "name": "Grafite Frenético",
+          "description": "Entra no estado [Grafite] por 5s antes que o Líder use uma Habilidade de Fúria. Enquanto estiver nesse estado, cada vez que DANO da Habilidade for causado, há uma chance 65% de causar dano adicional ao alvo atual (Fator de Dano: 800). Este dano adicional não acionará [Grafite] novamente. O estado expirará após ser acionado 5 vezes.",
+          "descriptionEn": "Enters the [Graffiti] state for 5s before the Leader uses a Rage Skill. While in this state, each time Skill DMG is dealt, there is a 65% chance to deal additional damage to the current target (Damage Factor: 800). This additional damage will not trigger [Graffiti] again. The state will expire after being triggered 5 times.",
+          "level": 5
+        },
+        {
+          "id": 11134,
+          "slot": "Passiva 2",
+          "name": "Escorrega do Arco-Íris",
+          "description": "ATQ do Esquadrão de Motociclistas aumenta em 35%, e a Velocidade de Viagem aumenta em 20%.",
+          "descriptionEn": "Rider Squad ATK increases by 35%, and Travel Speed increases by 20%.",
+          "level": 5
+        },
+        {
+          "id": 11136,
+          "slot": "Passiva 3",
+          "name": "Ônibus Neon",
+          "description": "PV do Esquadrão de Motociclistas aumenta em 30%. Ao liderar apenas Esquadrões de Motociclistas, aumenta a Redução de DANO em 10%.",
+          "descriptionEn": "Rider Squad HP increases by 30%. When leading only Rider Squads, increases DMG Reduction by 10%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1082,
+      "name": "Johnny Kerry",
+      "nameEn": "Johnny Kerry",
+      "title": "O Bobo",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "Cerco",
+        "Ataque"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10821,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10821,
+          "slot": "Fúria",
+          "name": "Golpe Forte",
+          "description": "Causa DANO ao alvo (Fator de Dano 12000) e reduz o efeito de cura do alvo em 40% por 3s.",
+          "descriptionEn": "Deals DMG to target (Damage Factor 12000) and reduces target's healing effect by 40% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10825,
+          "slot": "Despertar",
+          "name": "Toxinas Letais",
+          "description": "Causa DANO ao alvo (Fator de Dano 13750) e reduz o efeito de cura do alvo em 50% por 5s.",
+          "descriptionEn": "Deals DMG to target (Damage Factor 13750) and reduces target's healing effect by 50% for 5s.",
+          "level": 1
+        },
+        {
+          "id": 10821,
+          "slot": "Substituição do despertar",
+          "name": "Golpe Forte",
+          "description": "Causa DANO ao alvo (Fator de Dano 12000) e reduz o efeito de cura do alvo em 40% por 3s.",
+          "descriptionEn": "Deals DMG to target (Damage Factor 12000) and reduces target's healing effect by 40% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10823,
+          "slot": "Passiva 1",
+          "name": "Divergente",
+          "description": "Quando está fora do território da Aliança, o ATQ do Esquadrão de Atiradores aumenta em30% e a DEF em 10%.",
+          "descriptionEn": "When outside Alliance territory, increases Ranged Squad ATK by 30% and DEF by 10%.",
+          "level": 5
+        },
+        {
+          "id": 10824,
+          "slot": "Passiva 2",
+          "name": "Assassino em Série",
+          "description": "Aumenta o DANO da Habilidade em 4% a cada segundo, até 40%. Após um Assistente usar uma Habilidade de Fúria, o bônus será redefinido e acumulará novamente.",
+          "descriptionEn": "Increases Skill DMG by 4% every second, up to 40%. After an Assistant unleashes a Rage Skill, the buff will reset and stack again.",
+          "level": 5
+        },
+        {
+          "id": 10826,
+          "slot": "Passiva 3",
+          "name": "Extermínio",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 20%. Durante os Cercos, os ataques básicos têm 20% de chance de causar um DANO adicional (Fator de Dano 3120.",
+          "descriptionEn": "Increases Ranged Squad HP by 20%. During Sieges, basic attacks have a 20% to deal an additional DMG (Damage Factor 3120.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1084,
+      "name": "Jonathan",
+      "nameEn": "Jonathan",
+      "title": "Engenheiro da Terra Desolada",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "General",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10841,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10841,
+          "slot": "Fúria",
+          "name": "Ataque Focado",
+          "description": "Causa DANO (Fator de Dano: 12500) ao alvo. Se o alvo for um Esquadrão de Invasão, o PV do alvo é reduzido em 20% e o DANO de Contra-ataque é reduzido em 15% por 2s.",
+          "descriptionEn": "Deals DMG (Damage Factor 12500) to the target. If the target is a Rally Squad, the target's HP is reduced by 20%, and Counter DMG is reduced by 15% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 10845,
+          "slot": "Despertar",
+          "name": "Ataque Aéreo Preciso",
+          "description": "Causa DANO (Fator de Dano: 13750) ao alvo. Se o alvo for um Esquadrão de Invasão, o PV do alvo é reduzido em 25% e o DANO de Contra-ataque é reduzido em 20% por 2s.",
+          "descriptionEn": "Deals DMG (Damage Factor 13750) to the target. If the target is a Rally Squad, the target's HP is reduced by 25%, and Counter DMG is reduced by 20% for 2s.",
+          "level": 1
+        },
+        {
+          "id": 10841,
+          "slot": "Substituição do despertar",
+          "name": "Ataque Focado",
+          "description": "Causa DANO (Fator de Dano: 12500) ao alvo. Se o alvo for um Esquadrão de Invasão, o PV do alvo é reduzido em 20% e o DANO de Contra-ataque é reduzido em 15% por 2s.",
+          "descriptionEn": "Deals DMG (Damage Factor 12500) to the target. If the target is a Rally Squad, the target's HP is reduced by 20%, and Counter DMG is reduced by 15% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 10843,
+          "slot": "Passiva 1",
+          "name": "Reciclagem",
+          "description": "Ao derrotar Esquadrões, recupera o próprio PV (Fator de Cura: 11250). Este efeito é acionado no máximo uma vez a cada 30s. A cada 20s, causa DANO (Fator de Dano: 7500) a um alvo aleatório.",
+          "descriptionEn": "When you defeat Squads, recover own HP (Heal Factor: 11250). This effect is triggered at most once every 30s. Every 20s, inflict DMG (Damage Factor: 7500) to a random target.",
+          "level": 5
+        },
+        {
+          "id": 10844,
+          "slot": "Passiva 2",
+          "name": "Base Partindo",
+          "description": "Um ataque básico tem 20% de chance de reduzir o DANO da Habilidade sofrido 25% por 2s. Se estiver no território da Aliança, também causará DANO adicional (Fator de Dano 2600) ao inimigo. Esse efeito é acionado no máximo uma vez a cada 6s.",
+          "descriptionEn": "A basic attack has a 20% chance of reducing skill DMG received by 25% for 2s. If in Alliance territory, it will also cause additional DMG (Damage Factor 2600) to the enemy. This effect can be triggered at most once ever 6s.",
+          "level": 5
+        },
+        {
+          "id": 10846,
+          "slot": "Passiva 3",
+          "name": "Ajuste de Recursos",
+          "description": "Aumenta o ATQ do Esquadrão de Motociclistas em 25%. Quando as tropas restantes caem para abaixo de 30%, o ATQ do Esquadrão aumenta em 20%.",
+          "descriptionEn": "Rider Squad ATK increases by 25%. When the remaining troops fall below 30%, Squad ATK increases by 20%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1089,
+      "name": "Julia",
+      "nameEn": "Julia",
+      "title": "Grande Mágico",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10891,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10891,
+          "slot": "Fúria",
+          "name": "Mágica Estonteante",
+          "description": "Causa DANO ao alvo (Fator de Dano: 12500) e restaura 100 de Fúria do próprio Esquadrão.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 12500) and restores 100 Rage to own Squad.",
+          "level": 5
+        },
+        {
+          "id": 10895,
+          "slot": "Despertar",
+          "name": "Milagre do Século",
+          "description": "Causa DANO ao alvo (Fator de Dano: 13750) e inflige Silenciar ao inimigo por 3s. Também restaura 120 de Fúria ao próprio Esquadrão.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 13750) and inflicts Silence on the enemy for 3s. Also restores 120 Rage to own Squad.",
+          "level": 1
+        },
+        {
+          "id": 10891,
+          "slot": "Substituição do despertar",
+          "name": "Mágica Estonteante",
+          "description": "Causa DANO ao alvo (Fator de Dano: 12500) e restaura 100 de Fúria do próprio Esquadrão.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 12500) and restores 100 Rage to own Squad.",
+          "level": 5
+        },
+        {
+          "id": 10893,
+          "slot": "Passiva 1",
+          "name": "Preparo de Fuga",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 20% e aumenta a DEF do Esquadrão de Atiradores em 20%.",
+          "descriptionEn": "Increases Ranged Squad ATK by 20%, and increases Ranged Squad DEF by 20%.",
+          "level": 5
+        },
+        {
+          "id": 10894,
+          "slot": "Passiva 2",
+          "name": "Leitura de Mentes",
+          "description": "Reduz o DANO sofrido de ataques básicos em 20%. Quando a Fúria é superior a 90%, aumenta o DANO de Habilidade causado em 17% por 4s.",
+          "descriptionEn": "Reduces DMG taken from basic attacks by 20%. When Rage is more than 90%, increases Skill DMG dealt by 17% for 4s.",
+          "level": 5
+        },
+        {
+          "id": 10896,
+          "slot": "Passiva 3",
+          "name": "Impenetrável",
+          "description": "Aumenta o PV do Esquadrão de Atiradores em 40%. Há 60% de chance de ser imune ao aumento do DANO.",
+          "descriptionEn": "Increases Ranged Squad HP by 40%. There is a 60% chance of being immune to taking increased DMG.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1115,
+      "name": "Julien",
+      "nameEn": "Julien",
+      "title": "Último Chef de Cozinha",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "General",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11151,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11151,
+          "slot": "Fúria",
+          "name": "Banquete Grelhado",
+          "description": "Causa DANO ao alvo (Fator de Dano 14500). Quando não em está Agrupado ou em Guarnição, reduz ATQ, DEF e PV de 2 Esquadrões inimigos próximos em 20% a cada segundo por 4s. Conjurações repetidas aumentam o efeito em 10% (até 50%) por 2s",
+          "descriptionEn": "Deals DMG to target (Damage Factor 14500). When not Rallying or Garrisoned, reduces ATK, DEF, and HP of 2 nearby enemy Squads by 20% every second for 4s. Repeated casts increase the effect by 10% (up to 50%) for 2s.",
+          "level": 5
+        },
+        {
+          "id": 11155,
+          "slot": "Despertar",
+          "name": "Controle Perfeito de Calor",
+          "description": "Causa DANO ao alvo (Fator de Dano 15000). Quando não em está Agrupado ou em Guarnição, reduz ATQ, DEF e PV de 3 Esquadrões inimigos próximos em 20% a cada segundo por 4s. Conjurações repetidas aumentam o efeito em 10% (até 50%) por 2s",
+          "descriptionEn": "Deals DMG to target (Damage Factor 15000). When not Rallying or Garrisoned, reduces ATK, DEF, and HP of 3 nearby enemy Squads by 20% every second for 4s. Repeated casts increase the effect by 10% (up to 50%) for 2s.",
+          "level": 1
+        },
+        {
+          "id": 11151,
+          "slot": "Substituição do despertar",
+          "name": "Banquete Grelhado",
+          "description": "Causa DANO ao alvo (Fator de Dano 14500). Quando não em está Agrupado ou em Guarnição, reduz ATQ, DEF e PV de 2 Esquadrões inimigos próximos em 20% a cada segundo por 4s. Conjurações repetidas aumentam o efeito em 10% (até 50%) por 2s",
+          "descriptionEn": "Deals DMG to target (Damage Factor 14500). When not Rallying or Garrisoned, reduces ATK, DEF, and HP of 2 nearby enemy Squads by 20% every second for 4s. Repeated casts increase the effect by 10% (up to 50%) for 2s.",
+          "level": 5
+        },
+        {
+          "id": 11153,
+          "slot": "Passiva 1",
+          "name": "Serviço Veloz",
+          "description": "PV do Esquadrão de Infantaria aumenta em 30%, e a Velocidade de Viagem aumenta em 20%.",
+          "descriptionEn": "Infantry Squad HP increases by 30%, and Travel Speed increases by 20%.",
+          "level": 5
+        },
+        {
+          "id": 11154,
+          "slot": "Passiva 2",
+          "name": "Tempero Premium",
+          "description": "Aumenta a DEF do Esquadrão de Infantaria em 40%. Ao receber DANO de Habilidade, reduz a Velocidade de Viagem de 30% esquadrões inimigos próximos em 5 por 3s. Este efeito pode ser ativado até 1 vezes a cada 6s.",
+          "descriptionEn": "Increases Infantry Squad DEF by 40%. When taking Skill DMG, reduces Travel Speed of 5 nearby enemy Squads by 30% for 3s. This effect can be triggered up to 1 times every 6s.",
+          "level": 5
+        },
+        {
+          "id": 11156,
+          "slot": "Passiva 3",
+          "name": "Cozinha Perfeita",
+          "description": "Ao liderar apenas Esquadrões de Infantaria, reduz o DANO de ataque básico recebido em 15%. Quando não estiver em uma Invasão nem guarnecido, ganha um Escudo por 3s (Fator de Escudo: 3000) a cada 10s.",
+          "descriptionEn": "When leading only Infantry Squads, reduces basic attack DMG taken by 15%. When not in a Rally or garrisoned, gains a Shield for 3s (Shield Factor: 3000) every 10s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1036,
+      "name": "Lee Seung-won",
+      "nameEn": "Lee Seung-won",
+      "title": "Batedor Implacável",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "Caçador de Zumbis",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10361,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10361,
+          "slot": "Fúria",
+          "name": "Soco Brutal",
+          "description": "Lança uma bola giratória rápida, causando DANO em 5 Esquadrões alvo em uma área em forma de leque na frente (Fator de Dano: 3800). Reduz o ATQ, DEF e PV dos alvos em 30% por 2s.",
+          "descriptionEn": "Pitches a spinning fastball, dealing DMG to up to 5 target Squads in a fan-shaped area in front (Damage Factor: 3800). Reduces targets' ATK, DEF, and HP by 30% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 10365,
+          "slot": "Despertar",
+          "name": "Goleada Mortal",
+          "description": "Lança uma bola giratória rápida, causando DANO em até 5 Esquadrões alvo em uma área em forma de leque na frente (Fator de Dano: 4600). Reduz o ATQ, DEF e PV dos alvos em 35% por 2s.",
+          "descriptionEn": "Pitches a spinning fastball, dealing DMG to up to 5 target Squads in a fan-shaped area in front (Damage Factor: 4600). Reduces targets' ATK, DEF, and HP by 35% for 2s.",
+          "level": 1
+        },
+        {
+          "id": 10361,
+          "slot": "Substituição do despertar",
+          "name": "Soco Brutal",
+          "description": "Lança uma bola giratória rápida, causando DANO em 5 Esquadrões alvo em uma área em forma de leque na frente (Fator de Dano: 3800). Reduz o ATQ, DEF e PV dos alvos em 30% por 2s.",
+          "descriptionEn": "Pitches a spinning fastball, dealing DMG to up to 5 target Squads in a fan-shaped area in front (Damage Factor: 3800). Reduces targets' ATK, DEF, and HP by 30% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 10363,
+          "slot": "Passiva 1",
+          "name": "Energizado",
+          "description": "Aumenta o DANO causado pelos Esquadrões a Zumbis em 25%. Cura algumas unidades Levemente Feridas após matar Zumbis (Fator de Cura: 3800).",
+          "descriptionEn": "Increases Squads' DMG dealt to Zombies by 25%. Heals some Lightly Wounded units after killing Zombies (Heal Factor: 3800).",
+          "level": 5
+        },
+        {
+          "id": 10364,
+          "slot": "Passiva 2",
+          "name": "Estrela do Beisebol",
+          "description": "Ao liderar 2 ou mais tipos de tropas, aumenta o ATQ de Esquadrão em 24%.",
+          "descriptionEn": "When leading 2 or more troop types, increases Squad ATK by 24%.",
+          "level": 5
+        },
+        {
+          "id": 10366,
+          "slot": "Passiva 3",
+          "name": "Golpe Contracorrente",
+          "description": "Reduz o DANO de contra-ataque recebido por 14% e aumenta a Capacidade de Invasão em 12%.",
+          "descriptionEn": "Reduces Counter DMG taken by 14%, and increases Rally Capacity by 12%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1039,
+      "name": "Louis",
+      "nameEn": "Louis",
+      "title": "Pianista Demoníaco",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "Guarnição",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10391,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10391,
+          "slot": "Fúria",
+          "name": "Para o Inferno",
+          "description": "Causa DANO em até 5 Esquadrões inimigos em uma área em forma de leque (Fator de Dano: 10000). O DANO recebido por cada Esquadrão inimigo é reduzido em 15% para cada Esquadrão inimigo alvo adicional.",
+          "descriptionEn": "Deals DMG to up to 5 enemy Squads in a fan-shaped area (Damage Factor: 10000). DMG taken by each enemy Squad reduces by 15% for every additional target enemy Squad.",
+          "level": 5
+        },
+        {
+          "id": 10395,
+          "slot": "Despertar",
+          "name": "Retorno ao Palco Perfeito",
+          "description": "Causa DANO em até 5 Esquadrões inimigos em uma área circular (Fator de Dano: 12000). O DANO recebido por cada Esquadrão inimigo é reduzido em 15% para cada Esquadrão inimigo alvo adicional.",
+          "descriptionEn": "Deals DMG to up to 5 enemy Squads in a circular area (Damage Factor: 12000). DMG taken by each enemy Squad reduces by 15% for every additional target enemy Squad.",
+          "level": 1
+        },
+        {
+          "id": 10391,
+          "slot": "Substituição do despertar",
+          "name": "Para o Inferno",
+          "description": "Causa DANO em até 5 Esquadrões inimigos em uma área em forma de leque (Fator de Dano: 10000). O DANO recebido por cada Esquadrão inimigo é reduzido em 15% para cada Esquadrão inimigo alvo adicional.",
+          "descriptionEn": "Deals DMG to up to 5 enemy Squads in a fan-shaped area (Damage Factor: 10000). DMG taken by each enemy Squad reduces by 15% for every additional target enemy Squad.",
+          "level": 5
+        },
+        {
+          "id": 10393,
+          "slot": "Passiva 1",
+          "name": "Concerto do Massacre",
+          "description": "Aumenta o DANO da Habilidade em 30%. Aumenta o PV de Esquadrão de Atiradores em 10% ao guarnecer.",
+          "descriptionEn": "Increases Skill DMG by 30%.Increases the HP of Ranged Squads by 10% when garrisoning.",
+          "level": 5
+        },
+        {
+          "id": 10394,
+          "slot": "Passiva 2",
+          "name": "Batida Mortal",
+          "description": "Aumenta o ATQ do Esqd. de Atiradores em 30%.",
+          "descriptionEn": "Increases Ranged Squad ATK by 30%.",
+          "level": 5
+        },
+        {
+          "id": 10396,
+          "slot": "Passiva 3",
+          "name": "Sonata da Dor",
+          "description": "Os Esquadrões ganham 25 de Fúria adicional ao usar ataques básicos.",
+          "descriptionEn": "Squads gain an additional 25 Rage when using basic attacks.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1097,
+      "name": "Lynne",
+      "nameEn": "Lynne",
+      "title": "Heroína de Exoesqueleto",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10971,
+          "slot": "Fúria",
+          "name": "Avanço Preciso",
+          "description": "Causa DANO ao alvo (Fator de Dano: 11700). Se estiver Flanqueado quando não estiver Guarnecido ou em uma Invasão, causa DANO adicional ao alvo atual (Fator de Dano: 3000) e reduz o DANO da Habilidade recebido por 20% por 2s.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 11700). If Flanked when not Rallying or Garrisoned, deals additional DMG to the current target (Damage Factor: 3000) and reduces Skill DMG taken by 20% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 10975,
+          "slot": "Despertar",
+          "name": "Modo de Alta Produção",
+          "description": "Quando em batalhas no mapa mundial, aumenta o DANO do Esquadrão de Atiradores em 3%. Se estiver Flanqueado quando não estiver Guarnecido ou em uma Invasão, reduz o DANO recebido em 10%.",
+          "descriptionEn": "When in World Map battles, increases Ranged Squad DMG by 3%. If Flanked when not Rallying or Garrisoned, reduces DMG taken by 10%.",
+          "level": 1
+        },
+        {
+          "id": 10973,
+          "slot": "Passiva 1",
+          "name": "Fortificação Automática",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 30%. Se estiver Flanqueado quando não estiver Guarnecido ou em uma Invasão, aumenta a DEF do Esquadrão de Atiradores em 15%.",
+          "descriptionEn": "Increases Ranged Squad ATK by 30%. If Flanked when not Rallying or Garrisoned, increases Ranged Squad DEF by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10974,
+          "slot": "Passiva 2",
+          "name": "Verificação de Fraquezas",
+          "description": "Aumenta o HP do Esquadrão de Atiradores em 34%. Contra-ataques têm 20% de chance de reduzir todo DANO recebido em 4.5% por 2s. Este efeito pode ser ativado apenas uma vez a cada 4 segundos.",
+          "descriptionEn": "Increases Ranged Squad HP by 34%. Counterattacks have a 20% chance to reduce all DMG taken by 4.5% for 2s. This effect can be triggered only once in 4s.",
+          "level": 5
+        },
+        {
+          "id": 10976,
+          "slot": "Passiva 3",
+          "name": "Manobra Tática",
+          "description": "Aumenta o DANO de contra-ataque em 32% e a Velocidade de Viagem do Esquadrão de Atiradores em 20%.",
+          "descriptionEn": "Increases Counter DMG by 32% and Ranged Squad Travel Speed by 20%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1201,
+      "name": "Mai Shiranui",
+      "nameEn": "Mai Shiranui",
+      "title": "A Bela Ninja",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "General",
+        "Campo de Batalha"
+      ],
+      "complete": true,
+      "awakeningReplaces": 12016,
+      "relic": false,
+      "skills": [
+        {
+          "id": 12011,
+          "slot": "Fúria",
+          "name": "Hakuro no Mai",
+          "description": "Causa Dano Flamejante a até 2 inimigos em uma área em formato de leque à frente a cada segundo (Fator de Dano: 4500), e reduz sua Velocidade de Viagem em 25% por 3s.",
+          "descriptionEn": "Deals Scorch DMG to up to 2 enemies in a fan-shaped area in front every second (Damage Factor: 4500), and reduces their Travel Speed by 25% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 12015,
+          "slot": "Despertar",
+          "name": "Houou no Mai",
+          "description": "Aumenta o ATQ do Esquadrão de Motociclistas em 30%. Após sair de uma batalha, aumenta a Velocidade de Viagem do Esquadrão de Motociclistas em 45% por 5s se o tamanho restante do Esquadrão estiver acima de 50%.",
+          "descriptionEn": "Increases Rider Squad ATK by 30%. After leaving a battle, increases Rider Squad Travel Speed by 45% for 5s if the remaining Squad Size is above 50%.",
+          "level": 1
+        },
+        {
+          "id": 12016,
+          "slot": "Substituição do despertar",
+          "name": "Musasabi no Mai",
+          "description": "Aumenta o ATQ do Esquadrão de Motociclistas em 20%. Após sair de uma batalha, aumenta a Velocidade de Viagem do Esquadrão de Motociclistas em 30% por 5s se o tamanho restante do Esquadrão estiver acima de 50%.",
+          "descriptionEn": "Increases Rider Squad ATK by 20%. After leaving a battle, increases Rider Squad Travel Speed by 30% for 5s if the remaining Squad Size is above 50%.",
+          "level": 5
+        },
+        {
+          "id": 12017,
+          "slot": "Especial",
+          "name": "Shiranui-ryuu Ninjutsu",
+          "description": "Aumenta o DANO causado a Esquadrões de Atiradores em 5%, mas o DANO sofrido por Esquadrões de Infantaria aumenta em 3%.",
+          "descriptionEn": "Increase DMG dealt to Ranged Squads by 5%, but DMG taken from Infantry Squads increases by 3%.",
+          "level": 1
+        },
+        {
+          "id": 12013,
+          "slot": "Passiva 1",
+          "name": "Chou Hissatsu Shinobi-Bachi",
+          "description": "Aumenta o PV do Esquadrão de Motociclistas em 20% e o DANO de Ataque Básico causado a alvos com lentidão em 33%.",
+          "descriptionEn": "Increases Rider Squad HP by 20% and basic attack DMG dealt to slowed targets by 33%.",
+          "level": 5
+        },
+        {
+          "id": 12014,
+          "slot": "Passiva 2",
+          "name": "Kachousen",
+          "description": "O ATQ do Esquadrão de Motociclistas aumenta em 30% e a Velocidade de Viagem do Esquadrão de Motociclistas aumenta em 15%.",
+          "descriptionEn": "Rider Squad ATK increases by 30%, and Rider Squad Travel Speed increases by 15%.",
+          "level": 5
+        },
+        {
+          "id": 12016,
+          "slot": "Passiva 3",
+          "name": "Musasabi no Mai",
+          "description": "Aumenta o ATQ do Esquadrão de Motociclistas em 20%. Após sair de uma batalha, aumenta a Velocidade de Viagem do Esquadrão de Motociclistas em 30% por 5s se o tamanho restante do Esquadrão estiver acima de 50%.",
+          "descriptionEn": "Increases Rider Squad ATK by 20%. After leaving a battle, increases Rider Squad Travel Speed by 30% for 5s if the remaining Squad Size is above 50%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1202,
+      "name": "Marco e Eri",
+      "nameEn": "Marco & Eri",
+      "title": "Peregrinos e Pardais",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 12021,
+          "slot": "Fúria",
+          "name": "Tiros Explosivos",
+          "description": "Causa DANO ao alvo inimigo (Fator de Dano: 13000） e reduz a Fúria de até 5 inimigos próximos em 80. Esse efeito só pode ser ativado no mesmo alvo uma vez a cada 5s.",
+          "descriptionEn": "Deals DMG to the enemy target (Damage Factor: 13000） and reduces Rage of up to 5 nearby enemies by 80. This effect can be triggered on the same target only once in 5s.",
+          "level": 5
+        },
+        {
+          "id": 12025,
+          "slot": "Despertar",
+          "name": "Recompensa de Resgate",
+          "description": "Ao receber DANO da Habilidade, há uma chance de 50% de restaurar PV para até 3 aliados próximos (Fator de Cura: 1600). Esse efeito só pode ser ativado uma vez a cada 5s.",
+          "descriptionEn": "When taking Skill DMG, there is a 50% chance to restore HP to up to 3 nearby allies (Heal Factor: 1600). This effect can be triggered only once in 5s.",
+          "level": 1
+        },
+        {
+          "id": 12027,
+          "slot": "Especial",
+          "name": "Pássaros Voadores",
+          "description": "Aumenta o DANO causado a Esquadrões de Motociclistas em 5%, mas o DANO recebido de Esquadrões de Atiradores aumenta em 3%.",
+          "descriptionEn": "Increase DMG dealt to Rider Squads by 5%, but DMG taken from Ranged Squads increases by 3%.",
+          "level": 1
+        },
+        {
+          "id": 12023,
+          "slot": "Passiva 1",
+          "name": "Interferência Eletrônica",
+          "description": "Contra-ataques têm 30% de chance de reduzir o PV de até 5 inimigos próximos em 47% por 3s. Este efeito só pode ser ativado uma vez a cada 5s",
+          "descriptionEn": "Counterattacks have a 30% chance to reduce HP of up to 5 nearby enemies by 47% for 3s. This effect can be triggered only once in 5s.",
+          "level": 5
+        },
+        {
+          "id": 12024,
+          "slot": "Passiva 2",
+          "name": "Armadura de Aço",
+          "description": "A cada 10s, concede um Escudo a si mesmo por 2s (Fator de Escudo: 3300). Também reduz a VEL de Viagem e DANO de até 5 inimigos próximos em 35% e 16% respectivamente por 3s.",
+          "descriptionEn": "Every 10s, grants a Shield to oneself for 2s (Shield Factor: 3300). Also reduces TRVL SPD and DMG of up to 5 nearby enemies by 35% and 16% respectively for 3s.",
+          "level": 5
+        },
+        {
+          "id": 12026,
+          "slot": "Passiva 3",
+          "name": "Potência da Bala",
+          "description": "Durante as batalhas no campo, o ATQ do Esquadrão aumenta em 27% e a VEL de VIAGEM aumenta em 22%.",
+          "descriptionEn": "During field battles, Squad ATK increases by 27% and TRVL SPD increases by 22%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1070,
+      "name": "Martin",
+      "nameEn": "Martin",
+      "title": "Padre Herege",
+      "troop": "Geral",
+      "rarity": "Lendário",
+      "tags": [
+        "Geral",
+        "Caçador de Zumbis",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10701,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10701,
+          "slot": "Fúria",
+          "name": "Dogma da Salvação",
+          "description": "Causa DANO direto ao alvo (Fator de Dano: 7000), e cura unidades Levemente Feridos do seu Esquadrão em 40% do DANO causado.",
+          "descriptionEn": "Deals direct DMG to the target (Damage Factor: 7000), and heals the Lightly Wounded units in your Squad for 40% of the DMG dealt.",
+          "level": 5
+        },
+        {
+          "id": 10705,
+          "slot": "Despertar",
+          "name": "Transcendental",
+          "description": "Causa DANO direto ao alvo (Fator de Dano: 8400), e cura unidades Levemente Feridos do seu Esquadrão em 45% do DANO causado.",
+          "descriptionEn": "Deals direct DMG to the target (Damage Factor: 8400), and heals the Lightly Wounded units in your Squad for 45% of the DMG dealt.",
+          "level": 1
+        },
+        {
+          "id": 10701,
+          "slot": "Substituição do despertar",
+          "name": "Dogma da Salvação",
+          "description": "Causa DANO direto ao alvo (Fator de Dano: 7000), e cura unidades Levemente Feridos do seu Esquadrão em 40% do DANO causado.",
+          "descriptionEn": "Deals direct DMG to the target (Damage Factor: 7000), and heals the Lightly Wounded units in your Squad for 40% of the DMG dealt.",
+          "level": 5
+        },
+        {
+          "id": 10703,
+          "slot": "Passiva 1",
+          "name": "Batismo Celestial",
+          "description": "Aumenta o efeito de cura dos Esquadrões em 35%.",
+          "descriptionEn": "Increases healing effect on Squads by 35%.",
+          "level": 5
+        },
+        {
+          "id": 10704,
+          "slot": "Passiva 2",
+          "name": "Proteção Sagrada",
+          "description": "Aumenta o EXP obtido pelo Líder do Esquadrão e Herói de Suporte em 50%, e o PV deles aumenta em 12%.",
+          "descriptionEn": "Increases EXP gained by the Squad Leader and Assistant Hero by 50%, and their HP by 12%.",
+          "level": 5
+        },
+        {
+          "id": 10706,
+          "slot": "Passiva 3",
+          "name": "Graça Divina",
+          "description": "Quando a cura é recebida, aumenta a DEF do Esquadrão para 45% por 3s. Esse efeito pode ser acionado apenas uma vez em 6s.",
+          "descriptionEn": "When healing is received, increases Squad DEF for 45% for 3s. This effect can be triggered only once in 6s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1062,
+      "name": "Maxine Wincott",
+      "nameEn": "Maxine Wincott",
+      "title": "Patrulheiro",
+      "troop": "Geral",
+      "rarity": "Lendário",
+      "tags": [
+        "Geral",
+        "Coletar",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10621,
+          "slot": "Fúria",
+          "name": "Ataque Invasivo",
+          "description": "Causa DANO direto ao Esquadrão selecionado (Fator de Dano: 7000), e reduz a Fúria do Esquadrão em 50. Também reduz o DANO do Esquadrão alvo em 13% nos próximos 2s.",
+          "descriptionEn": "Deals direct DMG to the target Squad (Damage Factor: 7000), and reduces target Squad's Rage by 50. Also reduces target Squad's DMG by 13% for the next 2s.",
+          "level": 5
+        },
+        {
+          "id": 10625,
+          "slot": "Despertar",
+          "name": "Voltando para Casa",
+          "description": "Ganhe uma recompensa bônus depois de coletar em um Ponto de Recurso.",
+          "descriptionEn": "Gain a bonus reward after gathering at a Resource Node.",
+          "level": 1
+        },
+        {
+          "id": 10623,
+          "slot": "Passiva 1",
+          "name": "Sobrecarga",
+          "description": "Aumenta a Vel. de Coleta de Comida e Petróleo dos Esquadrões em 36%, e a Vel. de Coleta de Madeira e Aço em 24%. Também aumenta a carga dos Esquadrões em 25%.",
+          "descriptionEn": "Increases Squads' Food and Oil Gathering Speed by 36%, and Wood and Steel Gathering Speed 24%. Also increases Squad Load by 25%.",
+          "level": 5
+        },
+        {
+          "id": 10624,
+          "slot": "Passiva 2",
+          "name": "Percepção Aguçada",
+          "description": "Quando estiver coletando, aumenta o ATQ do Esquadrão em 25% e a DEF em 25%.",
+          "descriptionEn": "When gathering, increases Squad ATK by 25% and DEF by 25%.",
+          "level": 5
+        },
+        {
+          "id": 10626,
+          "slot": "Passiva 3",
+          "name": "Parada de Sorte",
+          "description": "Recebe 15% recursos adicionais quando a coleta estiver concluída.",
+          "descriptionEn": "Receive 15% additional resources when gathering is complete.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1119,
+      "name": "Maxwell",
+      "nameEn": "Maxwell",
+      "title": "Especialista em Voos",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "General",
+        "Campo de Batalha"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11193,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11191,
+          "slot": "Fúria",
+          "name": "Impacto Mecânico",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 14500) e reduz a Velocidade de Viagem do alvo em 30% por 3s. Se sua Velocidade de Viagem for maior que a Velocidade de Viagem do inimigo, o Fator de Dano aumenta para 16500.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 14500), and reduces the target's Travel Speed by 30% for 3s. If your Travel Speed is greater than the enemy's Travel Speed, Damage Factor increases to 16500.",
+          "level": 5
+        },
+        {
+          "id": 11195,
+          "slot": "Despertar",
+          "name": "Fluxo de Ar de Alta Velocidade",
+          "description": "ATQ do Esquadrão de Motociclistas aumenta em 50%, e a Velocidade de Viagem aumenta em 25%. Aumenta o DANO causado a alvos com Velocidade de Viagem inferior à própria em 10%.",
+          "descriptionEn": "Rider Squad ATK increases by 50%, and Travel Speed increases by 25%. Increases DMG dealt to targets with a Travel Speed lower than self by 10%.",
+          "level": 1
+        },
+        {
+          "id": 11193,
+          "slot": "Substituição do despertar",
+          "name": "Motor de Sobrecarga",
+          "description": "O ATQ do Esquadrão de Motociclistas aumenta em 40%, e a Velocidade de Viagem aumenta em 20%.",
+          "descriptionEn": "Rider Squad ATK increases by 40%, and Travel Speed increases by 20%.",
+          "level": 5
+        },
+        {
+          "id": 11193,
+          "slot": "Passiva 1",
+          "name": "Motor de Sobrecarga",
+          "description": "O ATQ do Esquadrão de Motociclistas aumenta em 40%, e a Velocidade de Viagem aumenta em 20%.",
+          "descriptionEn": "Rider Squad ATK increases by 40%, and Travel Speed increases by 20%.",
+          "level": 5
+        },
+        {
+          "id": 11194,
+          "slot": "Passiva 2",
+          "name": "Patinação Acrobática",
+          "description": "Aumenta o PV do Esquadrão de Motociclistas em 30%. Reduz o DANO AdE recebido em 15%.",
+          "descriptionEn": "Increases RIDER Squad HP by 30%. Reduces AoE DMG taken by 15%.",
+          "level": 5
+        },
+        {
+          "id": 11196,
+          "slot": "Passiva 3",
+          "name": "Supressão Aérea",
+          "description": "Quando não está em uma Invasão ou guarnecido, diminui a Velocidade de Viagem do alvo em 30% por 3s ao entrar em batalha. Também causa DANO ao alvo a cada 10s (Fator de Dano: 4000) e reaplica a redução de velocidade.",
+          "descriptionEn": "When not in a Rally or garrisoned, decreases the target's Travel Speed by 30% for 3s when entering battle. Also deals DMG to the target every 10s (Damage Factor: 4000) and reapplies the decrease in speed.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1040,
+      "name": "Mestre Jin",
+      "nameEn": "Master Jin",
+      "title": "Comerciante do Apocalipse",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "Cerco",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10401,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10401,
+          "slot": "Fúria",
+          "name": "Nostalgia da Terra Natal",
+          "description": "Aumenta o ATQ do Esquadrão em 45% e a DEF em 45%, e ganha um adicional de 20 Pontos de Fúria de cada ataque básico. Dura 5s.",
+          "descriptionEn": "Increases Squad ATK by 45% and DEF by 45%, and gains an additional 20 Rage Points from each basic attack. Lasts 5s.",
+          "level": 5
+        },
+        {
+          "id": 10405,
+          "slot": "Despertar",
+          "name": "Comandante da Tempestade",
+          "description": "Aumenta o ATQ do Esquadrão em 55% e a DEF em 55%, e ganha um adicional de 25 Pontos de Fúria de cada ataque básico. Dura 5s.",
+          "descriptionEn": "Increases Squad ATK by 55% and DEF by 55%, and gains an additional 25 Rage Points from each basic attack. Lasts 5s.",
+          "level": 1
+        },
+        {
+          "id": 10401,
+          "slot": "Substituição do despertar",
+          "name": "Nostalgia da Terra Natal",
+          "description": "Aumenta o ATQ do Esquadrão em 45% e a DEF em 45%, e ganha um adicional de 20 Pontos de Fúria de cada ataque básico. Dura 5s.",
+          "descriptionEn": "Increases Squad ATK by 45% and DEF by 45%, and gains an additional 20 Rage Points from each basic attack. Lasts 5s.",
+          "level": 5
+        },
+        {
+          "id": 10403,
+          "slot": "Passiva 1",
+          "name": "Harmonia Primeiro",
+          "description": "Reduz o DANO recebido pelos Esquadrões em 7.5%. Também tem 10% de chance de curar ao receber DANO (Fator de Cura: 1500). Este efeito só pode ser ativado uma vez a cada 6s.",
+          "descriptionEn": "Reduces Squads' DMG taken by 7.5%. Also has 10% chance of healing when DMG is taken (Heal Factor: 1500). This effect can be triggered only once in 6s.",
+          "level": 5
+        },
+        {
+          "id": 10404,
+          "slot": "Passiva 2",
+          "name": "Desejo Terrestre",
+          "description": "Aumenta a capacidade da Invasão em 15%. Também aumenta o DANO causado pelo Esquadrão em 11% durante o Cerco.",
+          "descriptionEn": "Increases Rally Capacity by 15%. Also increases DMG dealt by Squad by 11% during Siege.",
+          "level": 5
+        },
+        {
+          "id": 10406,
+          "slot": "Passiva 3",
+          "name": "Quebra de Confiança",
+          "description": "Aumenta o ATQ do Esquadrão em 18% e a DEF em 18%.",
+          "descriptionEn": "Increases Squad ATK by 18% and DEF by 18%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1120,
+      "name": "Metok Tso",
+      "nameEn": "Metok Tso",
+      "title": "Pastora do Vento",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "Cerco",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11201,
+          "slot": "Fúria",
+          "name": "Comando de Bando",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 11000). Quando não estiver guarnecido, contabiliza o dano causado por si mesmo nos próximos 3s e, em seguida, causa 20% do DANO causado ao alvo novamente no final. Este DANO não excede o Fator de 8000.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 11000). When not garrisoned, tallies the damage dealt by self within the next 3s, then deals 20% of the DMG dealt to the target again at the end. This DMG does not exceed the Factor of 8000.",
+          "level": 5
+        },
+        {
+          "id": 11205,
+          "slot": "Despertar",
+          "name": "Jornada da Alma para Casa",
+          "description": "Aumenta a Velocidade de Recuperação de Fúria em 5%; quando o Tamanho do Esquadrão está abaixo de 50%, aumenta em 3% adicional. O Comando de Bando reduz o DEF dos alvos atingidos em 30% por 2s.",
+          "descriptionEn": "Increases Rage Recovery Speed by 5%; when Squad Size is below 50%, increases by an additional 3%. Flock Command reduces DEF of damaged targets by 30% for 2s.",
+          "level": 1
+        },
+        {
+          "id": 11203,
+          "slot": "Passiva 1",
+          "name": "Ode à Natureza",
+          "description": "Quando em uma Invasão, aumenta o ATQ do Esquadrão de Motociclistas em 40%. Após usar uma Habilidade de Fúria, aumenta o DANO do próprio Esquadrão de Motociclistas em 12% por 3s.",
+          "descriptionEn": "When in a Rally, increases Rider Squad ATK 40%. After using a Rage Skill, increases own Rider Squad DMG by 12% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11204,
+          "slot": "Passiva 2",
+          "name": "Levados pelo Vento",
+          "description": "Durante Invasões, aumenta o PV do Esquadrão de Motociclistas em 40% e reduz o DANO recebido de Esquadrões de Atiradores em 10%.",
+          "descriptionEn": "During Rallies, increases Rider Squad HP by 40% and reduces DMG taken from Ranged Squads by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11206,
+          "slot": "Passiva 3",
+          "name": "Bênção das Terras Altas",
+          "description": "Aumenta a DEF do Esquadrão de Motociclistas em 30%. Quando não estiver guarnecido, recupera PV ao usar Comando de Bando (Fator de Cura: 3000).",
+          "descriptionEn": "Increases Rider Squad DEF by 30%. When not garrisoned, recovers HP when using Flock Command (Heal Factor: 3000).",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1095,
+      "name": "Miyamoto Doichi",
+      "nameEn": "Miyamoto Doichi",
+      "title": "Andarilho de Terra Árida",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10954,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10951,
+          "slot": "Fúria",
+          "name": "Dois Céus como Um",
+          "description": "Causa DANO a até 3 Esquadrões inimigos em uma área em forma de leque à frente (Fator de Dano: 13000). O DANO recebido de cada Esquadrão inimigo é reduzido em 20% para cada Esquadrão inimigo alvo adicional.",
+          "descriptionEn": "Deals DMG to up to 3 enemy Squads in a fan-shaped area in front (Damage Factor: 13000). DMG taken by each enemy Squad reduces by 20% for every additional target enemy Squad.",
+          "level": 5
+        },
+        {
+          "id": 10955,
+          "slot": "Despertar",
+          "name": "Cinco Anéis",
+          "description": "O ATQ do Esquadrão de Infantaria aumenta em 40%, e a Velocidade de Viagem aumenta em 25%.",
+          "descriptionEn": "Infantry Squad ATK increases by 40%, and Travel Speed increases by 25%.",
+          "level": 1
+        },
+        {
+          "id": 10954,
+          "slot": "Substituição do despertar",
+          "name": "Impulso Rápido",
+          "description": "O ATQ do Esquadrão de Infantaria aumenta em 30%, e a Velocidade de Viagem aumenta em 15%.",
+          "descriptionEn": "Infantry Squad ATK increases by 30%, and Travel Speed increases by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10953,
+          "slot": "Passiva 1",
+          "name": "Postura Defensiva",
+          "description": "Quando estiver liderando apenas Esquadrões de Infantaria, o DANO aumenta em 12%. Contra-ataques têm 20% de chance de reduzir o PV do inimigo em 27% por 3s.",
+          "descriptionEn": "When leading only Infantry Squads, DMG increases by 12%. Counterattacks have a 20% chance to reduce enemy HP by 27% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10954,
+          "slot": "Passiva 2",
+          "name": "Impulso Rápido",
+          "description": "O ATQ do Esquadrão de Infantaria aumenta em 30%, e a Velocidade de Viagem aumenta em 15%.",
+          "descriptionEn": "Infantry Squad ATK increases by 30%, and Travel Speed increases by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10956,
+          "slot": "Passiva 3",
+          "name": "Técnica de Saque Rápido",
+          "description": "Aumenta a DEF do Esquadrão de Infantaria em 20%. Contra-ataques têm 20% de chance de reduzir o DANO de Habilidade causado pelo inimigo em 28% por 3s.",
+          "descriptionEn": "Increases Infantry Squad DEF by 20%. Counterattacks have a 20% chance to reduce Skill DMG dealt by the enemy by 28% for 3s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1023,
+      "name": "Nakano Maaya",
+      "nameEn": "Nakano Maaya",
+      "title": "Dançarino Fantasma",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10231,
+          "slot": "Fúria",
+          "name": "Técnica Especial - Retribuição",
+          "description": "Causa uma grande quantidade de DANO no inimigo (Fator de Dano: 8000) e aumenta o ATQ do Esquadrão em 24%. Dura 3s.",
+          "descriptionEn": "Deals a large amount of DMG to the enemy (Damage Factor: 8000) and increases Squad ATK by 24%. Lasts 3s.",
+          "level": 5
+        },
+        {
+          "id": 10235,
+          "slot": "Despertar",
+          "name": "Técnica Especial - Kiai",
+          "description": "Aumenta o DANO causado em Esquadrões de Infantaria em 10%.",
+          "descriptionEn": "Increases DMG dealt to Infantry Squads by 10%.",
+          "level": 1
+        },
+        {
+          "id": 10233,
+          "slot": "Passiva 1",
+          "name": "Técnica Especial - Dança da Águia",
+          "description": "Aumenta o ATQ do Esqd. de Atiradores em 15% e a Velocidade de Viagem em 15%.",
+          "descriptionEn": "Increases Ranged Squad ATK by 15% and Travel Speed by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10234,
+          "slot": "Passiva 2",
+          "name": "Técnica Especial - Tempestade Violenta",
+          "description": "Os ataques básicos dos Esquadrões têm 10% de chance de causar DANO extra no alvo (Fator de Dano: 4000).",
+          "descriptionEn": "Squads' basic attacks have 10% chance to deal additional DMG to the target (Damage Factor: 4000).",
+          "level": 5
+        },
+        {
+          "id": 10236,
+          "slot": "Passiva 3",
+          "name": "Técnica Especial - Talismã",
+          "description": "Quando o HP do Esquadrão for menor que 50%, aumenta o ATQ do Esqd. de Atiradores em 26% e a Velocidade de Viagem em 18%.",
+          "descriptionEn": "When Squad HP is lower than 50%, increases Ranged Squad ATK by 26% and Travel Speed by 18%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1108,
+      "name": "Norah",
+      "nameEn": "Norah",
+      "title": "Guardião Renascido",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "Cerco",
+        "Ataque"
+      ],
+      "complete": false,
+      "awakeningReplaces": 11084,
+      "relic": false,
+      "skills": []
+    },
+    {
+      "id": 1118,
+      "name": "Nova",
+      "nameEn": "Nova",
+      "title": "Streamer Superestrela",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "Guarnição",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11181,
+          "slot": "Fúria",
+          "name": "Ruptura Múltipla",
+          "description": "Causa DANO a até 3 inimigos em uma área em leque (Fator de Dano: 14500, aumentado para 16500 quando guarnecido). O DANO recebido por cada Esquadrão inimigo reduz em 15% para cada 1 Esquadrões inimigos adicionais como alvo. Também reduz o DANO de Habilidade causado pelos Esquadrões alvo em 10% por 2s.",
+          "descriptionEn": "Deals DMG to up to 3 enemies in a fan-shaped area (Damage Factor: 14500, increased to 16500 when garrisoned). DMG taken by each enemy Squad reduces by 15% for every 1 additional target enemy Squads. Also reduces Skill DMG dealt by target Squads by 10% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 11185,
+          "slot": "Despertar",
+          "name": "Código de Trapaça",
+          "description": "Ganha 1 acúmulos de Código de Trapaça antes de o Líder usar uma Habilidade de Fúria quando não estiver em uma Invasão. Ao atingir 6 acúmulos, remove todos os acúmulos, aumenta o DANO do Esquadrão de Atiradores em 10% por 3s e, se o Líder tiver um Talento de Esquadrão de Atiradores, o Líder usará uma Habilidade de Fúria novamente no segundo seguinte após o Assistente usar uma Habilidade de Fúria. Código de Trapaça: Aumenta o ATQ do Esquadrão de Atiradores em 3%.",
+          "descriptionEn": "Gains 1 stacks of Cheat Code before the Leader uses a Rage Skill when not in a Rally. At 6 stacks, removes all stacks, increases Ranged Squad DMG by 10% for 3s, and if the Leader has a Ranged Squad Talent, the Leader will use a Rage Skill again the next second after the Assistant uses a Rage Skill. Cheat Code: Increases Ranged Squad ATK by 3%.",
+          "level": 51
+        },
+        {
+          "id": 11183,
+          "slot": "Passiva 1",
+          "name": "Fluxo de Aquecimento",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 40%. Quando guarnecido, aumenta a Velocidade de Recuperação de Fúria em 10% pelos primeiros 1m após entrar em batalha.",
+          "descriptionEn": "Increases Ranged Squad ATK by 40%. When garrisoned, increases Rage Recovery Speed by 10% for the first 1m after entering battle.",
+          "level": 5
+        },
+        {
+          "id": 11184,
+          "slot": "Passiva 2",
+          "name": "Corrida Extrema",
+          "description": "Quando não estiver em uma Invasão, aumenta a DEF do Esquadrão de Atiradores em 35% e a Redução de DANO do Esquadrão de Atiradores em 8%.",
+          "descriptionEn": "When not in a Rally, increases Ranged Squad DEF by 35% and Ranged Squad DMG Reduction by 8%.",
+          "level": 5
+        },
+        {
+          "id": 11186,
+          "slot": "Passiva 3",
+          "name": "Avatar Virtual",
+          "description": "Aumenta os PV do Esquadrão de Atiradores em 40%. Quando guarnecido, reduz o DANO de Habilidade recebido em 12%.",
+          "descriptionEn": "Increases Ranged Squad HP by 40%. When garrisoned, reduces Skill DMG taken by 12%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1013,
+      "name": "Peter Karelin",
+      "nameEn": "Peter Karelin",
+      "title": "Urso Sanguinolento",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "Cerco",
+        "Ataque"
+      ],
+      "complete": false,
+      "awakeningReplaces": 10131,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10131,
+          "slot": "Fúria",
+          "name": "Esplendor Baikal",
+          "description": "Nos próximos 3s, todos os ataques básicos têm 80% de chance de causar DANO extra no alvo (Fator de Dano 4500).",
+          "descriptionEn": "For the next 3s, every basic attack has a 80% chance to deal additional DMG to the target (Damage Factor 4500).",
+          "level": 5
+        },
+        {
+          "id": 10131,
+          "slot": "Substituição do despertar",
+          "name": "Esplendor Baikal",
+          "description": "Nos próximos 3s, todos os ataques básicos têm 80% de chance de causar DANO extra no alvo (Fator de Dano 4500).",
+          "descriptionEn": "For the next 3s, every basic attack has a 80% chance to deal additional DMG to the target (Damage Factor 4500).",
+          "level": 5
+        },
+        {
+          "id": 10133,
+          "slot": "Passiva 1",
+          "name": "Sangue em Fúria",
+          "description": "Aumenta a Capacidade dos Esquadrões em 12% e a Capacidade de Invasão em 12%.",
+          "descriptionEn": "Increases Squad Capacity by 12% and Rally Capacity by 12%.",
+          "level": 5
+        },
+        {
+          "id": 10134,
+          "slot": "Passiva 2",
+          "name": "Sede de Sangue",
+          "description": "Se houver 2 ou mais tipos de tropas no Esquadrão, aumenta o ATQ do Esquadrão em 24%.",
+          "descriptionEn": "If there are 2 or more types of troops in the Squad, increases Squad ATK by 24%.",
+          "level": 5
+        },
+        {
+          "id": 10136,
+          "slot": "Passiva 3",
+          "name": "Fúria Embriagada",
+          "description": "Aumenta a DEF do Esquadrão em 15% durante o Cerco. Também aumenta o DANO causado às Torre de Observação em 30%.",
+          "descriptionEn": "Increases Squad DEF by 15% during Siege. Also increases DMG dealt to Lookout Towers by 30%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1081,
+      "name": "Peterson Trovão",
+      "nameEn": "Thunder Peterson",
+      "title": "Dublê",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "Guarnição",
+        "Defesa"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10811,
+          "slot": "Fúria",
+          "name": "Super Trovão",
+          "description": "Recupera PV a cada segundo por 5s (Fator de Cura: 2800) . Reduz o ATQ de até 3 Esquadrões em uma área em forma de leque à frente em 30% por 2s. Reduz o ATQ de Esquadrão(ões) de Motociclistas em mais 15%.",
+          "descriptionEn": "Recovers HP every second for 5s (Heal Factor: 2800) . Reduces the ATK of up to 3 Squads in a fan-shaped area ahead by 30% for 2s. Reduces Rider Squad(s) ATK by an additional 15%.",
+          "level": 5
+        },
+        {
+          "id": 10815,
+          "slot": "Despertar",
+          "name": "Exemplo de Líder",
+          "description": "Aumenta o DANO para você e aliados próximos em 15% após usar uma Habilidade. Dura 2s. Afeta até 3 Esquadrões.",
+          "descriptionEn": "Increases DMG for you and nearby allies by 15% after using a Skill. Lasts 2s. Affects up to 3 Squads.",
+          "level": 1
+        },
+        {
+          "id": 10813,
+          "slot": "Passiva 1",
+          "name": "Fortificação Armada",
+          "description": "Aumenta o PV do Esquadrão de Infantaria em 30% e a DEF em 10%.",
+          "descriptionEn": "Increases Infantry Squad HP by 30% and DEF by 10%.",
+          "level": 5
+        },
+        {
+          "id": 10814,
+          "slot": "Passiva 2",
+          "name": "Atuação Corajosa",
+          "description": "Reduz o dano sofrido pelo Esquadrão em ataques básicos por 30%. Aumenta o DANO de contra-ataque em 22% enquanto guarnecido.",
+          "descriptionEn": "Reduces Squad's damage received from basic attacks by 30%. Increases Counter DMG by 22% while garrisoned.",
+          "level": 5
+        },
+        {
+          "id": 10816,
+          "slot": "Passiva 3",
+          "name": "Base Secreta",
+          "description": "Ao guarnecer, reduz todo o DANO recebido em 12%. Tem 10% de chance de recuperar PV (Fator de Cura: 2200) ao contra-atacar. Pode ser acionado uma vez a cada 6s.",
+          "descriptionEn": "When garrisoning, reduces all DMG taken by 12%. Has a 10% chance to recover HP (Heal Factor: 2200) when counterattacking. Can be triggered once every 6s.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1031,
+      "name": "Raigoro",
+      "nameEn": "Raigoro",
+      "title": "Tempestade",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "Guarnição",
+        "Defesa"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10313,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10311,
+          "slot": "Fúria",
+          "name": "Divindade Protetora",
+          "description": "Ativa um escudo que absorve DANO por 3 turnos (Fator de Dano: 9600). Raigoro recupera 20 de Fúria para cada inimigo que o ataca, até 60 de Fúria por turno.",
+          "descriptionEn": "Activates a Shield that absorbs DMG for 3 turns (Damage Factor: 9600). Raigoro recovers 20 Rage for every enemy that attacks him, up to 60 Rage per turn.",
+          "level": 5
+        },
+        {
+          "id": 10315,
+          "slot": "Despertar",
+          "name": "Possessão da Tempestade",
+          "description": "Reduz o DANO recebido pelos Esquadrões por 5% e aumenta o DANO de Contra-ataque do Esquadrão em 30%. Quando atacado, reduz a Velocidade de Viagem do atacante em 30% por 5s. Este efeito pode ser acionado apenas uma vez a cada 10s.",
+          "descriptionEn": "Reduces DMG taken by Squads by 5% and increases Squad Counter DMG by 30%. When attacked, reduces the attacker's Travel Speed by 30% for 5s. This effect can be triggered only once in 10s.",
+          "level": 1
+        },
+        {
+          "id": 10313,
+          "slot": "Substituição do despertar",
+          "name": "Yorikiri",
+          "description": "Aumenta o DANO de Contra-ataque do Esquadrão em 20%. Quando atacado, reduz a Velocidade de Viagem do atacante em 25%. Dura 5s. Este efeito pode ser acionado apenas uma vez a cada 10s.",
+          "descriptionEn": "Increases Squad Counter DMG by 20%. When attacked, reduces the attacker's Travel Speed by 25%. Lasts 5s. This effect can be triggered only once in 10s.",
+          "level": 5
+        },
+        {
+          "id": 10313,
+          "slot": "Passiva 1",
+          "name": "Yorikiri",
+          "description": "Aumenta o DANO de Contra-ataque do Esquadrão em 20%. Quando atacado, reduz a Velocidade de Viagem do atacante em 25%. Dura 5s. Este efeito pode ser acionado apenas uma vez a cada 10s.",
+          "descriptionEn": "Increases Squad Counter DMG by 20%. When attacked, reduces the attacker's Travel Speed by 25%. Lasts 5s. This effect can be triggered only once in 10s.",
+          "level": 5
+        },
+        {
+          "id": 10314,
+          "slot": "Passiva 2",
+          "name": "Oshidashi",
+          "description": "Aumenta o ATQ do Esqd. de Infantaria em 15% e a DEF em 15%.",
+          "descriptionEn": "Increases Infantry Squad ATK by 15% and DEF by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10316,
+          "slot": "Passiva 3",
+          "name": "Lutador de Sumô",
+          "description": "Aumenta o DANO causado por 16% quando um Escudo é ativado. Ao guarnecer, aumenta o PV do Esqd. de Infantaria em 11%.",
+          "descriptionEn": "Increases DMG dealt by 16% when a Shield is activated. When garrisoning, increases Infantry Squad HP by 11%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1112,
+      "name": "Rick Light",
+      "nameEn": "Rick Light",
+      "title": "Garoto Skatista",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "Guarnição",
+        "Ataque"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11121,
+          "slot": "Fúria",
+          "name": "Giro do Tubarão",
+          "description": "Ataques Básicos causam DANO bônus (Fator de Dano: 3300) pelos próximos 5s. Quando não estiver em uma Invasão, tem 20% de chance de causar 1 Ataques Básicos adicionais por turno.",
+          "descriptionEn": "Basic attacks deal bonus DMG (Damage Factor: 3300) for the next 5s. When not in a Rally, has a 20% chance to deal 1 additional basic attacks per turn.",
+          "level": 5
+        },
+        {
+          "id": 11125,
+          "slot": "Despertar",
+          "name": "Saltador de Rua",
+          "description": "Quando não estiver em uma invasão, os ataques básicos têm uma chance 20% de causar DANO (Fator de Dano: 1000) uma vez a até 3 inimigos próximos. Esse dano é afetado por bônus de DANO de Ataque Básico.",
+          "descriptionEn": "When not in a rally, basic attacks have a 20% chance to deal DMG (Damage Factor: 1000) once to up to 3 nearby enemies. This damage is affected by basic attack DMG buffs.",
+          "level": 1
+        },
+        {
+          "id": 11123,
+          "slot": "Passiva 1",
+          "name": "Tiro de Rasteira",
+          "description": "Quando não estiver em uma Invasão, para cada 10 Ataques Básicos realizados, causa DANO ao alvo (Fator de Dano: 4000).",
+          "descriptionEn": "When not in a Rally, for every 10 basic attacks dealt, deals DMG to the target (Damage Factor: 4000).",
+          "level": 5
+        },
+        {
+          "id": 11124,
+          "slot": "Passiva 2",
+          "name": "Patinação Acrobática",
+          "description": "ATQ do Esquadrão de Motociclistas aumenta em 30%, e DANO do Esquadrão de Motociclistas aumenta em 8%.",
+          "descriptionEn": "Rider Squad ATK increases by 30%, and Rider Squad DMG increases by 8%.",
+          "level": 5
+        },
+        {
+          "id": 11126,
+          "slot": "Passiva 3",
+          "name": "Freestyle",
+          "description": "Aumenta o PV do Esquadrão de Motociclistas em 35% e reduz o DANO recebido dos Esquadrões de Atiradores em 8% quando guarnecido.",
+          "descriptionEn": "Increases Rider Squad HP by 35% and reduces DMG taken from Ranged Squads by 8% when garrisoned.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1092,
+      "name": "Riven",
+      "nameEn": "Riven",
+      "title": "Coração Viking",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "General",
+        "Defesa"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10921,
+          "slot": "Fúria",
+          "name": "Chuva de Socos",
+          "description": "Causa DANO ao alvo a cada segundo por 4s (Fator de Dano: 3900). Se estiver guarnecendo, aumenta a DEF do Esquadrão em 32% por 3s.",
+          "descriptionEn": "Deals DMG to target every second for 4s (Damage Factor: 3900). If garrisoning, increases Squad DEF by 32% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10925,
+          "slot": "Despertar",
+          "name": "Grande Ambição",
+          "description": "Ao receber DANO de Habilidade, tem 50% de chance de conceder um Escudo a si mesmo por 3s (Fator de Escudo: 2000). Este efeito só pode ser acionado uma vez a cada 6s.",
+          "descriptionEn": "When taking Skill DMG, has a 50% chance to grant a Shield to oneself for 3s (Shield Factor: 2000). This effect can be triggered only once in 6s.",
+          "level": 1
+        },
+        {
+          "id": 10923,
+          "slot": "Passiva 1",
+          "name": "Braço Protético",
+          "description": "Aumenta o PV do Esquadrão de Infantaria em 30%. Quando estiver em território da Aliança, a DEF do Esquadrão de Infantaria aumenta em 15%.",
+          "descriptionEn": "Increases Infantry Squad HP by 30%. When in Alliance territory, Infantry Squad DEF increases by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10924,
+          "slot": "Passiva 2",
+          "name": "Alma Indomável",
+          "description": "Aumenta o ATQ do Esquadrão de Infantaria em 24%. Contra-ataques têm 20% de chance de conceder um Escudo a si mesmo por 3s (Fator de Escudo: 1700). Este efeito só pode ser ativado uma vez a cada 3s.",
+          "descriptionEn": "Increases Infantry Squad ATK by 24%. Counterattacks have a 20% chance to grant a Shield to oneself for 3s (Shield Factor: 1700). This effect can be triggered only once in 3s.",
+          "level": 5
+        },
+        {
+          "id": 10926,
+          "slot": "Passiva 3",
+          "name": "Urso Poderoso",
+          "description": "Adiciona um bônus de 30% ao Escudo obtido. Enquanto o Escudo estiver ativo, o DANO de contra-ataque aumenta em 27%.",
+          "descriptionEn": "Adds a 30% bonus to the obtained Shield. While the Shield is active, Counter DMG increases by 27%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1087,
+      "name": "Robert",
+      "nameEn": "Robert",
+      "title": "Rei do Rock",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10871,
+          "slot": "Fúria",
+          "name": "Rock do Coração Partido",
+          "description": "Causa DANO no alvo (Fator de Dano: 12500) e reduz o HP do alvo em 25% por 2s.",
+          "descriptionEn": "Deals DMG to target (Damage Factor: 12500) and reduces the target's HP by 25% for 2s.",
+          "level": 5
+        },
+        {
+          "id": 10875,
+          "slot": "Despertar",
+          "name": "Paixão ardente",
+          "description": "Aumentos queimaduras DANO lidaram com esquadrões infligidos com a redução de HP por um 50% adicional.",
+          "descriptionEn": "Increases Burn DMG dealt to Squads inflicted with HP reduction by an additional 50%.",
+          "level": 1
+        },
+        {
+          "id": 10873,
+          "slot": "Passiva 1",
+          "name": "Escudo da Sorte",
+          "description": "Aumenta o ATQ do Esquadrão de Infantaria por 20%. 16% do DANO absorvido pelo escudo será desviado e causado ao inimigo.",
+          "descriptionEn": "Increases Infantry Squad ATK by 20%. 16% of the DMG absorbed by the Shield will be deflected and dealt to the enemy.",
+          "level": 5
+        },
+        {
+          "id": 10874,
+          "slot": "Passiva 2",
+          "name": "Dança Eterna",
+          "description": "Ao usar ataques básicos, há 20% de chance de conceder um Escudo a si mesmo e a um Esquadrão aliado por 2s (Fator de Escudo: 2400). Este efeito só pode ser acionado uma vez a cada 6s.",
+          "descriptionEn": "When using basic attacks, there's a 20% chance to grant a Shield to oneself and an allied Squad for 2s (Shield Factor: 2400). This effect can be triggered only once in 6s.",
+          "level": 5
+        },
+        {
+          "id": 10876,
+          "slot": "Passiva 3",
+          "name": "Disfarçe do Diabo",
+          "description": "Os contra-ataques têm uma chance de 20% de queimar o inimigo por 3s, lidando com DANO a cada segundo (Fator de Dano: 1200). Esse efeito pode ser acionado apenas uma vez em 6s por destino.",
+          "descriptionEn": "Counterattacks have a 20% chance to burn the enemy for 3s, dealing DMG every second (Damage Factor: 1200). This effect can be triggered only once in 6s per target.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1122,
+      "name": "Rozalia",
+      "nameEn": "Rozalia",
+      "title": "Dançarina das Lâminas",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11221,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11221,
+          "slot": "Fúria",
+          "name": "Dança das Lâminas",
+          "description": "Contra-ataques causam DANO bônus (Fator de Dano: 3000) pelos próximos 3s. Este efeito pode ser acionado até 6 vezes. Quando não estiver em uma Invasão ou em guarnição, e houver acionamentos restantes quando a duração terminar, causa DANO (Fator de Dano: 10000) a até 2 outros personagens próximos.",
+          "descriptionEn": "Counterattacks deal bonus DMG (Damage Factor: 3000) for the next 3s. This effect can be triggered up to 6 times. When not in a Rally or garrisoned, and there are remaining triggers when the duration ends, deals DMG (Damage Factor: 10000) to up to 2 other nearby characters.",
+          "level": 5
+        },
+        {
+          "id": 11225,
+          "slot": "Despertar",
+          "name": "Dança da Morte",
+          "description": "Contra-ataques causam DANO bônus (Fator de Dano: 3000) pelos próximos 3s. Este efeito pode ser acionado até 8 vezes. Quando não estiver em uma Invasão ou em guarnição, e houver acionamentos restantes quando a duração terminar, causa DANO (Fator de Dano: 11000) a até 3 outros personagens próximos.",
+          "descriptionEn": "Counterattacks deal bonus DMG (Damage Factor: 3000) for the next 3s. This effect can be triggered up to 8 times. When not in a Rally or garrisoned, and there are remaining triggers when the duration ends, deals DMG (Damage Factor: 11000) to up to 3 other nearby characters.",
+          "level": 1
+        },
+        {
+          "id": 11221,
+          "slot": "Substituição do despertar",
+          "name": "Dança das Lâminas",
+          "description": "Contra-ataques causam DANO bônus (Fator de Dano: 3000) pelos próximos 3s. Este efeito pode ser acionado até 6 vezes. Quando não estiver em uma Invasão ou em guarnição, e houver acionamentos restantes quando a duração terminar, causa DANO (Fator de Dano: 10000) a até 2 outros personagens próximos.",
+          "descriptionEn": "Counterattacks deal bonus DMG (Damage Factor: 3000) for the next 3s. This effect can be triggered up to 6 times. When not in a Rally or garrisoned, and there are remaining triggers when the duration ends, deals DMG (Damage Factor: 10000) to up to 2 other nearby characters.",
+          "level": 5
+        },
+        {
+          "id": 11223,
+          "slot": "Passiva 1",
+          "name": "Dança Rodopiante",
+          "description": "O DANO de Contra-ataque do esquadrão aumenta em 20%. Contra-ataques têm 20% de chance de conceder 20 de Fúria. Este efeito pode ser acionado até 1 vezes a cada 3s.",
+          "descriptionEn": "Squad Counter DMG increases by 20%. Counterattacks have a 20% chance to grant 20 Rage. This effect can be triggered up to 1 times every 3s.",
+          "level": 5
+        },
+        {
+          "id": 11224,
+          "slot": "Passiva 2",
+          "name": "Dança Graciosa",
+          "description": "Aumenta o PV do Esquadrão de Infantaria em 30%. Reduz o DANO de ataque básico recebido em 15%.",
+          "descriptionEn": "Increases Infantry Squad HP by 30%. Reduces basic attack DMG taken by 15%.",
+          "level": 5
+        },
+        {
+          "id": 11226,
+          "slot": "Passiva 3",
+          "name": "Dança de Pés Leves",
+          "description": "O ATQ do Esquadrão de Infantaria aumenta em 40%, e a Velocidade de Viagem aumenta em 20%.",
+          "descriptionEn": "Infantry Squad ATK increases by 40%, and Travel Speed increases by 20%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1104,
+      "name": "Rubina",
+      "nameEn": "Rubina",
+      "title": "Caçadora de Sangue",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "Cerco",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11041,
+          "slot": "Fúria",
+          "name": "Massacre Carmesim",
+          "description": "Causa DANO ao alvo (Fator de Dano: 9500). Quando não guarnecido, tem 60% de chance de causar DANO bônus ao alvo 1-5 vezes (Fator de Dano: 5100). Para cada instância desse DANO bônus que o alvo receber dentro de 5s, o próximo DANO bônus será reduzido em 10%, até atingir um mínimo de 40%.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 9500). When not garrisoned, has a 60% chance to deal bonus DMG to the target 1-5 times (Damage Factor: 5100). For each instance of this bonus DMG the target takes within 5s, the next bonus DMG will reduce by 10%, until it reaches a minimum of 40%.",
+          "level": 5
+        },
+        {
+          "id": 11045,
+          "slot": "Despertar",
+          "name": "Vestígio de Caça",
+          "description": "Para cada 15% de Tamanho do Esquadrão perdido, aumenta a DEF do Esquadrão de Motociclistas em 4.5%. Este efeito acumula até 6 vezes.",
+          "descriptionEn": "For every 15% of Squad Size lost, increases Rider Squad DEF by 4.5%. This effect stacks up to 6 times.",
+          "level": 1
+        },
+        {
+          "id": 11043,
+          "slot": "Passiva 1",
+          "name": "Pacto de Sangue de Lobo",
+          "description": "Durante Invasões, aumenta o PV do Esquadrão de Motociclistas em 34% e o DANO causado aos Esquadrões de Atiradores em 5%.",
+          "descriptionEn": "During Rallies, increases Rider Squad HP by 34% and DMG dealt to Ranged Squads by 5%.",
+          "level": 5
+        },
+        {
+          "id": 11044,
+          "slot": "Passiva 2",
+          "name": "Uivos de Guerra",
+          "description": "Quando não guarnecido, usar Habilidades de Fúria aumenta o próprio DANO de Habilidade em 3%. Este efeito acumula até 15 vezes.",
+          "descriptionEn": "When not garrisoned, using Rage Skills increases own Skill DMG by 3%. This effect stacks up to 15 times.",
+          "level": 5
+        },
+        {
+          "id": 11046,
+          "slot": "Passiva 3",
+          "name": "Valsa da Lua Escarlate",
+          "description": "Aumenta o ATQ do Esquadrão de Motociclistas em 38%. Durante Invasões, reduz o DANO recebido quando flanqueado em 5.5%. Quando flanqueado por mais de 3 Esquadrões, reduz o DANO recebido ao ser flanqueado em mais 3.5%.",
+          "descriptionEn": "Increases Rider Squad ATK by 38%. During Rallies, reduces DMG taken when flanked by 5.5%. When flanked by more than 3 Squads, reduces DMG taken when flanked by an additional 3.5%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1116,
+      "name": "Sakura",
+      "nameEn": "Sakura",
+      "title": "A Jardineira",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "Cerco",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11161,
+          "slot": "Fúria",
+          "name": "Primeira Forma: Corte de Lenha Morta",
+          "description": "Causa DANO a até 3 Esquadrões inimigos em uma área semicircular à frente (Fator de Dano: 14500). DANO sofrido por cada Esquadrão inimigo reduz em 15% para cada 1 Esquadrões inimigos adicionais como alvo. Quando não está em Guarnição, tem uma chance de 50% de desferir um golpe pesado que aumenta o DANO do ataque atual em 25%.",
+          "descriptionEn": "Deals DMG to up to 3 enemy Squads in a semicircular area in front (Damage Factor: 14500). DMG taken by each enemy Squad reduces by 15% for every 1 additional target enemy Squads. When not Garrisoned, has a 50% chance to trigger a heavy strike that increases the DMG for the current attack by 25%.",
+          "level": 5
+        },
+        {
+          "id": 11165,
+          "slot": "Despertar",
+          "name": "Forma Final: Sakura",
+          "description": "Para cada 2 golpes pesado ativado por \"Primeira Forma: Corte de Madeira Morta\", causa DANO adicional ao alvo atual (Fator de Dano: 9000).",
+          "descriptionEn": "For every 2 heavy strikes triggered by \"First Form: Deadwood Slash\", deals additional DMG to the current target (Damage Factor: 9000).",
+          "level": 1
+        },
+        {
+          "id": 11163,
+          "slot": "Passiva 1",
+          "name": "Segunda Forma: Golpe de Vendaval",
+          "description": "Durante as Invasões, aumenta o ATQ do Esquadrão de Infantaria em 40% e aumenta o dano causado aos Esquadrões de Motociclistas em 8%.",
+          "descriptionEn": "During Rallies, increases Infantry Squad ATK by 40% and increases damage dealt to Rider Squads by 8%.",
+          "level": 5
+        },
+        {
+          "id": 11164,
+          "slot": "Passiva 2",
+          "name": "Terceira Forma: Dança da Explosão Solar",
+          "description": "Aumenta o ATQ do Esquadrão de Infantaria em 30%. Para cada 15% de Tamanho de Esquadrão perdido, reduz o DANO de Ataque Básico recebido por 4%. Esse efeito acumula até 6 vezes.",
+          "descriptionEn": "Increases Infantry Squad HP by 30%. For every 15% of Squad Size lost, reduces basic attack DMG taken by 4%. This effect stacks up to 6 times.",
+          "level": 5
+        },
+        {
+          "id": 11166,
+          "slot": "Passiva 3",
+          "name": "Quarta Forma: Montanha em Ruínas",
+          "description": "Quando não está em Guarnição, aumenta o DEF do Esquadrão de Infantaria em 40%. Se o alvo for Flanqueado durante as Invasões, aumenta ainda mais a velocidade de Recuperação de Fúria em 8%.",
+          "descriptionEn": "When not Garrisoned, increases Infantry Squad DEF by 40%. If the target is Flanked during Rallies, further increases Rage Recovery speed by 8%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1094,
+      "name": "Sara Vandermeer",
+      "nameEn": "Sara Vandermeer",
+      "title": "Terra Gentil",
+      "troop": "Geral",
+      "rarity": "Lendário",
+      "tags": [
+        "Geral",
+        "Coletar",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10943,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10941,
+          "slot": "Fúria",
+          "name": "Produção de Madeira",
+          "description": "Causa DANO ao alvo Fator de Dano: 7500) e aumenta a DEF do seu Esquadrão de Automóveis em 30% por 3s.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 7500) and increases your Engine Squad DEF by 30% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10945,
+          "slot": "Despertar",
+          "name": "Amor Parental",
+          "description": "Aumenta a Velocidade de Coleta em 30%, e a Velocidade de Coleta de Comida e Madeira por um adicional de 18%. Recebe 10% recursos adicionais quando a coleta estiver concluída.",
+          "descriptionEn": "Increases Gathering Speed by 30%, and Food and Wood Gathering Speed by an additional 18%. Also receive 10% additional resources when gathering is complete.",
+          "level": 1
+        },
+        {
+          "id": 10943,
+          "slot": "Substituição do despertar",
+          "name": "Patrulheiro Florestal",
+          "description": "Aumenta a Velocidade de Coleta em 24%, e a Velocidade de Coleta de Comida e Madeira por um adicional de 15%.",
+          "descriptionEn": "Increases Gathering Speed by 24%, and Food and Wood Gathering Speed by an additional 15%.",
+          "level": 5
+        },
+        {
+          "id": 10943,
+          "slot": "Passiva 1",
+          "name": "Patrulheiro Florestal",
+          "description": "Aumenta a Velocidade de Coleta em 24%, e a Velocidade de Coleta de Comida e Madeira por um adicional de 15%.",
+          "descriptionEn": "Increases Gathering Speed by 24%, and Food and Wood Gathering Speed by an additional 15%.",
+          "level": 5
+        },
+        {
+          "id": 10944,
+          "slot": "Passiva 2",
+          "name": "Assistência ao Parceiro",
+          "description": "Ao reunir, reduz a proporção de Tropas Gravemente Feridas em 15%. Ao sair do ponto de coleta, aumenta a Velocidade de Viagem do Esquadrão de Automóveis em 60% por 10s.",
+          "descriptionEn": "When gathering, reduces the ratio of Heavily Wounded Troops by 15%. When leaving the gathering point, increases Engine Squad Travel Speed by 60% for 10s.",
+          "level": 5
+        },
+        {
+          "id": 10946,
+          "slot": "Passiva 3",
+          "name": "Patrulha Fora da Rota",
+          "description": "Aumenta a Carga do Esquadrão em 40% e a Velocidade de Viagem do Esquadrão de Automóveis em 30%.",
+          "descriptionEn": "Increases Squad Load by 40% and Engine Squad Travel Speed by 30%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1124,
+      "name": "Sebastian",
+      "nameEn": "Sebastian",
+      "title": "Senhor das Cordas",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "Cerco",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11241,
+          "slot": "Fúria",
+          "name": "Prelúdio da Morte",
+          "description": "Causa Dano ao alvo (Fator de Dano 15000). Quando não estiver em guarnição, o Fator de Dano aumenta para 18000 e aumenta a Redução de DANO em 3% para cada 1 Esquadrões próximos ao usar a Habilidade. Este efeito acumula até 3 vezes e dura 3s.",
+          "descriptionEn": "Deals damage to the target (Damage Factor 15000). When not garrisoned, the Damage Factor is increased to 18000, and increases DMG Reduction by 3% for every 1 nearby Squads when using the Skill. This effect stacks up to 3 times, and lasts for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11245,
+          "slot": "Despertar",
+          "name": "Valsa da Chamada Final",
+          "description": "Prelúdio da Morte também reduz a DEF do alvo em 6%. Este efeito acumula até 5 vezes e dura 30s. Reduz o Efeito de Escudo dos alvos que atingem o limite de acúmulos em 30% e aumenta o próprio DANO de Habilidade causado a eles em 15%.",
+          "descriptionEn": "Prelude to Death additionally reduces the target's DEF by 6%. This effect stacks up to 5 times, and lasts for 30s. Reduces Shield Effect of targets that reach the stack limit by 30% and increases own Skill DMG dealt to them by 15%.",
+          "level": 21
+        },
+        {
+          "id": 11243,
+          "slot": "Passiva 1",
+          "name": "Ária de Marionete",
+          "description": "Durante Invasões, aumenta o ATQ do Esquadrão de Atiradores em 40% e aumenta o dano causado aos Esquadrões de Infantaria em 10%.",
+          "descriptionEn": "During Rallies, increases Ranged Squad ATK by 40% and increases damage dealt to Infantry Squads by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11244,
+          "slot": "Passiva 2",
+          "name": "Variação Fantasma",
+          "description": "Aumenta a DEF do Esquadrão de Atiradores em 30%. Ao receber DANO de Habilidade, há 30% de chance de recuperar PV (Fator de Cura: 3000). Este efeito pode ser ativado até 1 vezes a cada 6s.",
+          "descriptionEn": "Increases Ranged Squad DEF by 30%. When taking Skill DMG, there is a 30% chance to recover HP (Heal Factor: 3000). This effect can be triggered up to 1 times every 6s.",
+          "level": 5
+        },
+        {
+          "id": 11246,
+          "slot": "Passiva 3",
+          "name": "Rapsódia da Marionete",
+          "description": "Aumenta os PV do Esquadrão de Atiradores em 40%. Durante Invasões, os contra-ataques têm 25% de chance de causar dano aos Esquadrões no campo (Fator de Dano: 2500). Este DANO aumenta em 100% nos primeiros 1 minutos de batalha.",
+          "descriptionEn": "Increases Ranged Squad HP by 40%. During Rallies, counterattacks have a 25% chance to deal damage to Squads in the field (Damage Factor: 2500). This DMG increases by 100% in the first 1 minutes of battle.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1103,
+      "name": "Sophie",
+      "nameEn": "Sophie",
+      "title": "Gigante Onírico",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11031,
+          "slot": "Fúria",
+          "name": "Ira do Gigante",
+          "description": "Causa DANO ao alvo atual (Fator de Dano: 13500) e aumenta o DANO da Habilidade de até 3 inimigos próximos em 20% por 3s.",
+          "descriptionEn": "Deals DMG to the current target (Damage Factor: 13500) and increases Skill DMG received by nearby enemies, up to 3 enemies, by 20% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11035,
+          "slot": "Despertar",
+          "name": "Autoridade do Gigante",
+          "description": "Ganha Carga imediatamente por 15s ao entrar em batalha. Toda vez que Carga é consumida, há 30% de chance de causar DANO novamente.",
+          "descriptionEn": "Immediately gains Charge for 15s when entering battle. Every time Charge is consumed, there is a 30% chance to deal DMG again.",
+          "level": 1
+        },
+        {
+          "id": 11033,
+          "slot": "Passiva 1",
+          "name": "Cavalinho",
+          "description": "Aumenta a VEL de Viagem do Esquadrão de Atiradores em 20% e o ATQ em 32% quando não está em uma invasão.",
+          "descriptionEn": "Increases Ranged Squad TRVL SPD by 20% and ATK by 32% when not rallying.",
+          "level": 5
+        },
+        {
+          "id": 11034,
+          "slot": "Passiva 2",
+          "name": "Contra-ataque do Gigante",
+          "description": "Ao usar Habilidades de Fúria sem Carga, ganha Carga. Ao usar Habilidades de Fúria com Carga, consome Carga para causar DANO a até 3 Esquadrões em uma área circular (Fator de Dano: 7850). Carga: Aumenta o DANO do Esquadrão de Atiradores em 10%.",
+          "descriptionEn": "When using Rage Skills without Charge, gains Charge. When using Rage Skills with Charge, consumes Charge to deal DMG to up to 3 Squads in a circular area (Damage Factor: 7850). Charge: Increases Ranged Squad DMG by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11036,
+          "slot": "Passiva 3",
+          "name": "Sonho Engarrafado",
+          "description": "Aumenta o PV do Esquadrão de Atiradores em 32% e aumenta a Redução de DANO do Esquadrão de Atiradores em 5.5%.",
+          "descriptionEn": "Increases Ranged Squad HP by 32%, and increases Ranged Squad DMG Reduction by 5.5%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1111,
+      "name": "Spectra",
+      "nameEn": "Spectra",
+      "title": "Senhora da Moda",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "General",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11114,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11111,
+          "slot": "Fúria",
+          "name": "Atirador Mágico",
+          "description": "Causa DANO ao alvo (Fator de Dano: 14000). Se o alvo estiver Flanqueado, o Fator de Dano aumenta para 15500. Quando não estiver guarnecida, reduz o ATQ inimigo em 30% adicional por 3s.",
+          "descriptionEn": "Deals damage to the target (Damage Factor 14000). If the target is Flanked, the Damage Factor is increased to 15500. When not garrisoned, reduces enemy ATK by an additional 30% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 11115,
+          "slot": "Despertar",
+          "name": "Reflexo Preciso",
+          "description": "Aumenta a DEF do Esquadrão de Atiradores em 25%. Ao realizar ataques básicos, há 20% de chance de roubar 50 de Fúria do inimigo. Este efeito pode ser ativado até 1 vezes a cada 4s. Após roubar Fúria com sucesso, também rouba 8% de DANO de Habilidade do inimigo por 3s.",
+          "descriptionEn": "Increases Ranged Squad DEF by 25%. When performing basic attacks, there is a 20% chance to steal 50 Rage from the enemy. This effect can be triggered up to 1 times every 4s. After successfully stealing Rage, also steals 8% of Skill DMG from the enemy for 3s.",
+          "level": 1
+        },
+        {
+          "id": 11114,
+          "slot": "Substituição do despertar",
+          "name": "Comando Prismático",
+          "description": "Aumenta a DEF do Esquadrão de Atiradores em 20%. Ao realizar ataques básicos, há 20% de chance de roubar 50 de Fúria do inimigo. Este efeito pode ser ativado até 1 vezes a cada 4s.",
+          "descriptionEn": "Increases Ranged Squad DEF by 20%. When performing basic attacks, there is a 20% chance to steal 50 Rage from the enemy. This effect can be triggered up to 1 times every 4s.",
+          "level": 5
+        },
+        {
+          "id": 11113,
+          "slot": "Passiva 1",
+          "name": "Véu da Aurora",
+          "description": "Aumenta o PV do Esquadrão de Atiradores em 25%. Ao receber DANO de Habilidade, reduz o DANO recebido pelo próprio Esquadrão de Atiradores em 20% por 3s. Este efeito pode ser ativado até 1 vezes a cada 10s.",
+          "descriptionEn": "Increased Ranged Squad HP by 25%. When taking Skill DMG, reduces DMG taken by own Ranged Squad by 20% for 3s. This effect can be triggered up to 1 times every 10s.",
+          "level": 5
+        },
+        {
+          "id": 11114,
+          "slot": "Passiva 2",
+          "name": "Comando Prismático",
+          "description": "Aumenta a DEF do Esquadrão de Atiradores em 20%. Ao realizar ataques básicos, há 20% de chance de roubar 50 de Fúria do inimigo. Este efeito pode ser ativado até 1 vezes a cada 4s.",
+          "descriptionEn": "Increases Ranged Squad DEF by 20%. When performing basic attacks, there is a 20% chance to steal 50 Rage from the enemy. This effect can be triggered up to 1 times every 4s.",
+          "level": 5
+        },
+        {
+          "id": 11116,
+          "slot": "Passiva 3",
+          "name": "Momento Brilhante",
+          "description": "Aumenta o ATQ do Esquadrão de Atiradores em 20% e aumenta a VEL de Viagem em 20%. Se o alvo estiver Flanqueado, aumenta o DANO recebido em 15% por 3s após usar uma Habilidade de Fúria.",
+          "descriptionEn": "Increases Ranged Squad ATK by 20% and increases TRVL SPD by 20%. If target is Flanked, increases DMG received by 15% for 3s after using a Rage Skill.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1100,
+      "name": "Stella",
+      "nameEn": "Stella",
+      "title": "Estrela Brilhante",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "Cerco",
+        "Habilidades"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": true,
+      "skills": [
+        {
+          "id": 11001,
+          "slot": "Fúria",
+          "name": "É Hora do Show",
+          "description": "Causa DANO ao alvo inimigo (Fator de Dano: 13500) e aumenta o próprio DANO de Contra-ataque em 22.5% por 3s. Se estiver em uma invasão, o DANO de Contra-ataque aumenta para 29%.",
+          "descriptionEn": "Deals DMG to the enemy target (Damage Factor: 13500) and increases own Counter DMG by 22.5% for 3s. If rallying, Counter DMG increases to 29%.",
+          "level": 5
+        },
+        {
+          "id": 11005,
+          "slot": "Despertar",
+          "name": "Bis!",
+          "description": "Aumenta o DANO de Contra-ataque em 21%. Quando os acúmulos de Desejo de Guerra forem removidos, tem 20% de chance de ganhar imediatamente 2 acúmulos de Desejo de Guerra novamente. Quando em uma Invasão, a chance aumenta para 40%.",
+          "descriptionEn": "Increases Counter DMG by 21%. When War Will stacks are cleared, has a 20% chance to immediately gain 2 War Will stacks again. When in a Rally, the chance increases to 40%.",
+          "level": 2
+        },
+        {
+          "id": 11003,
+          "slot": "Passiva 1",
+          "name": "Dança de Batalha",
+          "description": "Aumenta o ATQ do Esquadrão de Infantaria em 32%. Contra-ataques têm 30% de chance de conceder 1 acúmulo de Desejo de Guerra a si mesmo, até 2 acúmulos por segundo. Este efeito acumula até 10 vezes. Cada acúmulo de Desejo de Guerra reduz o DANO de ataque básico recebido em 4%.",
+          "descriptionEn": "Increases Infantry Squad ATK by 32%. Counterattacks have a 30% chance to grant 1 stack of War Will to oneself, up to 2 stacks per second. This effect stacks up to 10 times. Each stack of War Will reduces basic attack DMG taken by 4%.",
+          "level": 5
+        },
+        {
+          "id": 11004,
+          "slot": "Passiva 2",
+          "name": "Turnê de Concertos",
+          "description": "Durante Invasões, aumenta o HP do Esquadrão de Infantaria em 26% e o DANO do Esquadrão de Contra-ataque em 24%.",
+          "descriptionEn": "During Rallies, increases Infantry Squad HP by 26% and Squad Counter DMG by 24%.",
+          "level": 5
+        },
+        {
+          "id": 11006,
+          "slot": "Passiva 3",
+          "name": "Apresentação Final",
+          "description": "Ao ter 10 ou mais acúmulos de Desejo de Guerra, remove todos os acúmulos de Desejo de Guerra e causa DANO ao alvo inimigo (Fator de Dano: 11200). Quando o tamanho do próprio Esquadrão for inferior a 50%, o DANO aumenta em mais 20%.",
+          "descriptionEn": "When having 10 or more War Will stacks, clears all War Will stacks and deals DMG to the enemy target (Damage Factor: 11200). When own Squad Size is less than 50%, the DMG increases by an additional 20%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1009,
+      "name": "Sven Schaefer",
+      "nameEn": "Sven Schaefer",
+      "title": "Diabo da Noite",
+      "troop": "Motos",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Motociclistas",
+        "Cerco",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 0,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10091,
+          "slot": "Fúria",
+          "name": "Ódio Ardente",
+          "description": "Causa DANO direto no Esquadrão alvo (Fator de Dano: 13000) , e aumenta sua Velocidade de Viagem em 50% por 5s.",
+          "descriptionEn": "Deals direct DMG to target Squad (Damage Factor: 13000) and increases your Travel Speed by 50% for 5s.",
+          "level": 5
+        },
+        {
+          "id": 10095,
+          "slot": "Despertar",
+          "name": "Ousado",
+          "description": "Aumenta o DANO da Habilidade em 10% e reduz o DANO de Contra-ataque recebido em 20%.",
+          "descriptionEn": "Increases Skill DMG by 10% and reduces Counter DMG taken by 20%.",
+          "level": 1
+        },
+        {
+          "id": 10093,
+          "slot": "Passiva 1",
+          "name": "Briga de Gangue",
+          "description": "Aumenta o ATQ do Esquadrão de Motociclistas em 20% e a DEF em 20%.",
+          "descriptionEn": "Increases Rider Squad ATK by 20% and DEF by 20%.",
+          "level": 5
+        },
+        {
+          "id": 10094,
+          "slot": "Passiva 2",
+          "name": "Caçador Selvagem",
+          "description": "Ao liderar apenas Esquadrões de Motociclistas, o DANO sofrido é reduzido em 15%.",
+          "descriptionEn": "When leading only Rider Squads, DMG taken is reduced by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10096,
+          "slot": "Passiva 3",
+          "name": "Massacre da Retaliação",
+          "description": "Reduz o DANO recebido em 12% durante o Cerco. Ataques básicos têm 20% de chance de causar DANO adicional (Fator de Dano: 1100) em Esquadrões de Guarnição.",
+          "descriptionEn": "Reduces DMG taken by 12% during Siege. Basic attacks have 20% chance to deal additional DMG (Damage Factor: 1100) to Garrison Squads.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1032,
+      "name": "Tom",
+      "nameEn": "Tom",
+      "title": "Leão Veloz",
+      "troop": "Infantaria",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Infantaria",
+        "Guarnição",
+        "Defesa"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10321,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10321,
+          "slot": "Fúria",
+          "name": "Queda de Energia",
+          "description": "Avança bravamente contra um alvo à frente e causa DANO (Fator de Dano: 6000). Concede bônus à moral do Esquadrão, curando unidades Levemente Feridas no Esquadrão (Fator de Cura: 4000). Também reduz o DANO recebido por você e aliados próximos (até 3 Esquadrões no total) em 15% por 3s.",
+          "descriptionEn": "Bravely slams into a target in front and deals DMG (Damage Factor: 6000). Boosts Squad morale, healing Lightly Wounded units in the Squad (Heal Factor: 4000). Also reduces DMG taken by you and nearby allies (up to 3 Squads in total) by 15% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10325,
+          "slot": "Despertar",
+          "name": "Rugido do Leão",
+          "description": "Avança bravamente contra um alvo à frente e causa DANO (Fator de Dano: 7200). Reduz o DANO do alvo em 15% pelos próximos 3s, e cura unidades Levemente Feridas no seu Esquadrão (Fator de Cura: 4800). Também reduz o DANO recebido por você e aliados próximos (até 5 Esquadrões no total) em 15% por 3s.",
+          "descriptionEn": "Bravely slams into a target in front and deals DMG (Damage Factor: 7200). Reduces target's DMG by 15% for the next 3s, and heals Lightly Wounded units in your Squad (Heal Factor: 4800). Also reduces DMG taken by you and nearby allies (up to 5 Squads in total) by 15% for 3s.",
+          "level": 1
+        },
+        {
+          "id": 10321,
+          "slot": "Substituição do despertar",
+          "name": "Queda de Energia",
+          "description": "Avança bravamente contra um alvo à frente e causa DANO (Fator de Dano: 6000). Concede bônus à moral do Esquadrão, curando unidades Levemente Feridas no Esquadrão (Fator de Cura: 4000). Também reduz o DANO recebido por você e aliados próximos (até 3 Esquadrões no total) em 15% por 3s.",
+          "descriptionEn": "Bravely slams into a target in front and deals DMG (Damage Factor: 6000). Boosts Squad morale, healing Lightly Wounded units in the Squad (Heal Factor: 4000). Also reduces DMG taken by you and nearby allies (up to 3 Squads in total) by 15% for 3s.",
+          "level": 5
+        },
+        {
+          "id": 10323,
+          "slot": "Passiva 1",
+          "name": "Quarterback Duplo",
+          "description": "Os contra-ataques dos Esquadrões têm 10% de chance de causar DANO extra (Fator de Dano: 4000). Este efeito só pode ser ativado uma vez a cada 3s.",
+          "descriptionEn": "Squads' counterattacks have 10% chance to deal bonus DMG (Damage Factor: 4000). This effect can be triggered only once every 3s.",
+          "level": 5
+        },
+        {
+          "id": 10324,
+          "slot": "Passiva 2",
+          "name": "Defesa Especial",
+          "description": "Aumenta a DEF do Esqd. de Infantaria em 15% e o PV em 15%.",
+          "descriptionEn": "Increases Infantry Squad DEF by 15% and HP by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10326,
+          "slot": "Passiva 3",
+          "name": "Defesa Absoluta",
+          "description": "Aumenta o efeito de cura em 30%. Ao guarnecer, aumenta a DEF do Esqd. de Infantaria em 18%.",
+          "descriptionEn": "Increases healing effect by 30%. When garrisoning, increases Infantry Squad DEF by 18%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1125,
+      "name": "Valeria Moretti",
+      "nameEn": "Valeria Moretti",
+      "title": "Caçadora das Cinzas",
+      "troop": "Atirador",
+      "rarity": "Lendário",
+      "tags": [
+        "Esquadrão de Atiradores",
+        "General",
+        "Suporte"
+      ],
+      "complete": true,
+      "awakeningReplaces": 11251,
+      "relic": false,
+      "skills": [
+        {
+          "id": 11251,
+          "slot": "Fúria",
+          "name": "Julgamento Final",
+          "description": "Causa DANO ao alvo (Fator de Dano: 15000). Quando não está em uma Invasão ou guarnecido, cura até 3 aliados próximos com base em 30% deste DANO causado.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 15000). When not in a Rally or garrisoned, heals up to 3 nearby allies based on 30% of this DMG dealt.",
+          "level": 5
+        },
+        {
+          "id": 11255,
+          "slot": "Despertar",
+          "name": "Caçadora das Cinzas",
+          "description": "Causa DANO ao alvo (Fator de Dano: 16000). Quando não está em uma Invasão ou guarnecido, cura até 5 aliados próximos com base em 35% deste DANO causado.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 16000). When not in a Rally or garrisoned, heals up to 5 nearby allies based on 35% of this DMG dealt.",
+          "level": 11
+        },
+        {
+          "id": 11251,
+          "slot": "Substituição do despertar",
+          "name": "Julgamento Final",
+          "description": "Causa DANO ao alvo (Fator de Dano: 15000). Quando não está em uma Invasão ou guarnecido, cura até 3 aliados próximos com base em 30% deste DANO causado.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 15000). When not in a Rally or garrisoned, heals up to 3 nearby allies based on 30% of this DMG dealt.",
+          "level": 5
+        },
+        {
+          "id": 11253,
+          "slot": "Passiva 1",
+          "name": "Caminho da Redenção",
+          "description": "Quando não está em uma Invasão ou guarnecido, aumenta o próprio efeito de cura concedido em 20%. Para cada 30% de Tamanho do Esquadrão perdido, aumenta adicionalmente este efeito em 10%.",
+          "descriptionEn": "When not in a Rally or garrisoned, increases own healing effect granted by 20%. For every 30% of Squad Size lost, additionally increases this by 10%.",
+          "level": 5
+        },
+        {
+          "id": 11254,
+          "slot": "Passiva 2",
+          "name": "Sopro do Amanhecer",
+          "description": "[Julgamento Final] Aumenta adicionalmente o DANO dos Esquadrões que recebem cura em 10%. Este efeito acumula até 2 vezes e dura 10s.",
+          "descriptionEn": "[Final Judgment] Additionally increases DMG of Squads that receive healing by 10%. This effect stacks up to 2 times, and lasts for 10s.",
+          "level": 5
+        },
+        {
+          "id": 11256,
+          "slot": "Passiva 3",
+          "name": "Dança Apocalíptica",
+          "description": "PV do Esquadrão de Atiradores aumenta em 40%, e Velocidade de Viagem aumenta em 20%.",
+          "descriptionEn": "Ranged Squad HP increases by 40%, and Travel Speed increases by 20%.",
+          "level": 5
+        }
+      ]
+    },
+    {
+      "id": 1090,
+      "name": "Victor Blackwood",
+      "nameEn": "Victor Blackwood",
+      "title": "Chefe do Laboratório Químico",
+      "troop": "Líder",
+      "rarity": "Lendário",
+      "tags": [
+        "Líder",
+        "Guarnição",
+        "Defesa"
+      ],
+      "complete": true,
+      "awakeningReplaces": 10901,
+      "relic": false,
+      "skills": [
+        {
+          "id": 10901,
+          "slot": "Fúria",
+          "name": "Arma corporal",
+          "description": "Causa DANO ao alvo (Fator de Dano: 12500). Se guarnecer, aumenta o DANO desta habilidade em 15%.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 12500). If garrisoning, increases this skill's DMG by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10905,
+          "slot": "Despertar",
+          "name": "Evolução Natural",
+          "description": "Causa DANO ao alvo (Fator de Dano: 13750). Se guarnecer, aumenta o DANO desta habilidade em 20%.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 13750). If garrisoning, increases this skill's DMG by 20%.",
+          "level": 1
+        },
+        {
+          "id": 10901,
+          "slot": "Substituição do despertar",
+          "name": "Arma corporal",
+          "description": "Causa DANO ao alvo (Fator de Dano: 12500). Se guarnecer, aumenta o DANO desta habilidade em 15%.",
+          "descriptionEn": "Deals DMG to the target (Damage Factor: 12500). If garrisoning, increases this skill's DMG by 15%.",
+          "level": 5
+        },
+        {
+          "id": 10903,
+          "slot": "Passiva 1",
+          "name": "Líder Evolucionário",
+          "description": "Aumenta o próprio ATQ do Esquadrão em 17%, e aumenta o PV do Esquadrão em 17%.",
+          "descriptionEn": "Increases own Squad ATK by 17%, and increases Squad HP by 17%.",
+          "level": 5
+        },
+        {
+          "id": 10904,
+          "slot": "Passiva 2",
+          "name": "Privilégios do Supervisor",
+          "description": "Reduz o DANO de Habilidade recebido em 17%. Quando o Esquadrão tiver 2 ou mais tipos de Tropa, aumenta o ATQ do Esquadrão em 20%.",
+          "descriptionEn": "Reduces Skill DMG taken by 17%. When Squad contains 2 or more types of Troops, increases Squad ATK by 20%.",
+          "level": 5
+        },
+        {
+          "id": 10906,
+          "slot": "Passiva 3",
+          "name": "Sobrevivência do mais apto",
+          "description": "Ao guarnecer, aumenta o PV do Esquadrão em 20%. Os ataques básicos têm 20% de chance de causar DANO adicional ao alvo (Fator de Dano: 1920).",
+          "descriptionEn": "When garrisoning, increases Squad HP by 20%. Basic attacks have a 20% chance to deal additional DMG to the target (Damage Factor: 1920).",
+          "level": 5
+        }
+      ]
+    }
+  ]
+}

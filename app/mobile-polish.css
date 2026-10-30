@@ -1,0 +1,127 @@
+/* Shared finishing rules: navigation, readable controls and guided rosters. */
+:root{--control-radius:10px;--control-height:46px;--mobile-nav-offset:96px}
+body{line-height:1.6}button,input,select,textarea{font-family:inherit}button:disabled{cursor:not-allowed}
+[aria-busy=true] button:disabled{cursor:wait}
+.wrap{overflow-wrap:break-word}
+.nav-topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex:none;margin-bottom:24px}
+.topmenu .nav-topbar .topmenu-brand{margin:0;min-width:0}
+.nav-mobile-toggle{display:none}
+.site-nav-content{display:flex;flex:1;flex-direction:column;min-height:0}
+.site-nav-content .nav-signature{margin-top:auto}
+html body .wrap select{appearance:none;-webkit-appearance:none;box-sizing:border-box;min-height:var(--control-height);max-width:100%;padding-right:42px;border-radius:var(--control-radius);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23d0b77f' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m7 10 5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:18px 18px;line-height:1.5}
+html body .wrap input:not([type=checkbox]):not([type=radio]):not([type=hidden]),html body .wrap textarea{min-height:var(--control-height);max-width:100%;border-radius:var(--control-radius)}
+.wrap :is(.r4-refresh,.account-secondary,.hero-selection-actions button,.troop-speedup-format button,.troop-operation button,.troop-planner table button){min-height:44px;border-radius:var(--control-radius)}
+.wrap :is(.rot-table-wrap,.rank-table-wrap,.troop-table-scroll){max-width:100%;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-gutter:stable}
+html body .wrap :is(.hero-skills,.hero-method,.cal-source-note,.calendar-variants,.troop-source,.member-edition-details)>summary{display:flex;align-items:center;gap:9px;list-style:none;min-height:46px;line-height:1.6}
+html body .wrap :is(.hero-skills,.hero-method,.cal-source-note,.calendar-variants,.troop-source,.member-edition-details)>summary::-webkit-details-marker{display:none}
+html body .wrap :is(.hero-skills,.hero-method,.cal-source-note,.calendar-variants,.troop-source,.member-edition-details)>summary::before{content:'';width:14px;height:14px;flex:none;background:center/14px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d0b77f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 5 7 7-7 7'/%3E%3C/svg%3E");transition:transform 150ms}
+html body .wrap :is(.hero-skills,.hero-method,.cal-source-note,.calendar-variants,.troop-source,.member-edition-details)[open]>summary::before{transform:rotate(90deg)}
+.roster-step-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 24px}
+.roster-step-links a{display:flex;gap:10px;align-items:center;min-height:48px;padding:10px 14px;box-sizing:border-box;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text-muted);font-size:13px;text-decoration:none}
+.roster-step-links a>span{display:grid;place-items:center;width:24px;height:24px;flex:none;border-radius:7px;background:var(--ops-tint);color:var(--ops-strong);font-size:11px}
+.roster-step-links a:hover{color:var(--ops-strong);border-color:var(--ops)}
+.heroes-page :is(.hero-skills p,.hero-pair details p){font-size:13px;line-height:1.85}
+.heroes-page .hero-card-tags>span{font-size:11px}
+.heroes-page .hero-pair-grid{align-items:stretch}
+.heroes-page .hero-pair{display:flex;flex-direction:column}
+.heroes-page .hero-pair>details{margin-top:auto}
+.heroes-page .hero-pair>ul{font-size:13px;line-height:1.85;margin-bottom:20px}
+.heroes-page .hero-card-select{align-items:start}
+.heroes-page :is(.hero-skills,.hero-method){scroll-margin-top:24px}
+.heroes-page [id$="-title"]{scroll-margin-top:24px}
+.hero-page-head .brand-sub{font-size:15px}
+.hero-selection-actions button:enabled:hover{color:var(--ops-strong);border-color:var(--ops);background:var(--ops-tint)}
+.roster-action-bar{position:fixed;z-index:25;bottom:20px;left:calc(256px + clamp(24px,3.5vw,64px));right:clamp(24px,3.5vw,64px);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 20px;border:1px solid #75643f;border-radius:16px;background:#24251ff5;box-shadow:0 10px 38px #0008;backdrop-filter:blur(16px)}
+.roster-action-bar>div{min-width:0}.roster-action-bar strong{display:block;font-size:14px;font-weight:600;color:var(--text)}.roster-action-bar small{display:block;margin-top:4px;font-size:12px;color:var(--text-muted);line-height:1.6}
+.roster-action-bar .hero-primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px}
+body:has(.roster-action-bar) .site-footer{padding-bottom:110px}
+body:has(.roster-action-bar) .back-to-top{bottom:118px}
+.member-account-header{gap:16px}.member-profile-nick{overflow-wrap:anywhere}
+.account-access .account-tabs button{flex:1;min-height:46px}
+.account-access .account-login-help p{font-size:12px;line-height:1.8}
+@media(max-width:1100px){
+  .topmenu{position:sticky;top:0;z-index:40;background:#191a17fa;backdrop-filter:blur(16px)}
+  .topmenu .topmenu-inner{display:block;padding:14px 22px;overflow:visible}
+  .topmenu .nav-topbar{display:flex;align-items:center;gap:12px;margin:0}
+  .topmenu .topmenu-logo{width:42px;height:42px;border-radius:11px}
+  .topmenu .topmenu-brand{gap:10px}.topmenu .topmenu-brand-text{font-size:21px}.topmenu .brand-game{font-size:9px}
+  .nav-mobile-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:none;min-height:44px;padding:10px 13px;border:1px solid var(--border);border-radius:10px;background:var(--surface);color:var(--text);font:inherit;font-size:12px;font-weight:500}
+  .nav-mobile-toggle[aria-expanded=true]{border-color:var(--ops);background:var(--ops-tint);color:var(--ops-strong)}
+  .site-nav-content{display:none;max-height:calc(100dvh - 86px);overflow-y:auto;overscroll-behavior:contain}
+  .site-nav-content.is-open{display:flex;padding-top:22px;padding-bottom:6px}
+  .site-nav-content>.nav-label{display:block!important;margin-bottom:9px}
+  .site-nav-content .topmenu-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0;gap:8px;width:100%}
+  .site-nav-content .sidebar-member-access{flex-basis:auto;margin-top:18px;padding-top:18px}
+  .site-nav-content .sidebar-member-access .member-section-nav{display:flex;flex-direction:column;gap:18px}
+  .site-nav-content .member-section-group>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .site-nav-content .member-section-admin{border-left:0;border-top:1px solid var(--border);padding:18px 0 0}
+  .site-nav-content .topmenu-link{min-height:48px;flex-direction:row;justify-content:flex-start;text-align:left;padding:11px 10px;font-size:12px}
+  .site-nav-content .sidebar-member-login{margin-top:12px}
+  .site-nav-content .nav-signature{display:none}
+  .wrap{padding-top:28px}
+  .roster-action-bar{left:24px;right:24px}
+  html{scroll-padding-top:var(--mobile-nav-offset)}
+  .heroes-page [id$="-title"]{scroll-margin-top:0}
+}
+@media(max-width:760px){
+  .topmenu .topmenu-inner{padding:12px 16px}.topmenu .topmenu-brand-text{font-size:20px}
+  .wrap{padding:24px 16px 20px}.brand-title{font-size:clamp(27px,7.8vw,34px);line-height:1.2}.brand-sub{font-size:14px;line-height:1.8}
+  .wrap :is(input:not([type=checkbox]):not([type=radio]),select,textarea){font-size:16px}
+  .hero-page-head{gap:18px;margin-bottom:22px}.hero-page-head .brand-title{font-size:30px;max-width:none}
+  .hero-edition{padding:12px 15px;border-radius:12px;font-size:11px;gap:5px}.hero-edition strong{font-size:18px}.hero-edition small{font-size:10px}
+  .roster-step-links{gap:7px;margin-bottom:20px}.roster-step-links a{padding:9px 8px;gap:7px;font-size:11px;border-radius:10px;min-height:48px}.roster-step-links a>span{width:21px;height:21px;font-size:10px}
+  .hero-workspace{gap:20px}.hero-setup,.hero-roster,.hero-combinations{padding:20px 16px;border-radius:15px}
+  .hero-section-head h2{font-size:18px;line-height:1.5}.hero-section-head>div{gap:10px;min-width:0}.hero-section-head{align-items:flex-start}
+  .hero-section-intro,.hero-assumption{font-size:12px;line-height:1.85}
+  .hero-roster-toolbar .hero-check{margin-top:0}.hero-selection-actions{gap:8px}.hero-selection-actions button{flex:1;font-size:12px;padding:10px 8px}
+  .hero-card{padding:18px}.hero-card-identity strong{font-size:15px}.hero-card .hero-skills summary{font-size:13px}
+  .hero-check{align-items:center;line-height:1.6;min-height:44px}
+  .hero-pair{padding:20px 18px}.hero-pair h3{font-size:17px}.hero-pair details h4{font-size:15px}
+  .roster-action-bar{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));padding:13px 14px;border-radius:14px;gap:12px}
+  .roster-action-bar strong{font-size:12px;line-height:1.5}.roster-action-bar small{font-size:10px;line-height:1.5;max-width:23ch}
+  .roster-action-bar .hero-primary{width:auto;font-size:12px;padding:11px 13px;min-height:46px;max-width:150px}
+  .roster-action-bar .hero-primary svg{display:none}
+  .hero-calculate .hero-primary{min-height:48px}
+  .r4-login,.gate{padding:26px 20px;margin:4px auto 36px;border-radius:18px}.r4-login .brand-title{font-size:28px}.r4-login p{font-size:14px;line-height:1.8}
+  .member-account-header{padding:17px}.member-profile{gap:12px}.member-profile-nick{font-size:21px}.member-profile-help{font-size:11px}
+  .account-member{padding:18px}.account-summary{gap:9px}.account-summary>span{font-size:12px}
+  .troop-reference{white-space:normal;line-height:1.6}.troop-planner .troop-operation button{font-size:12px}.troop-types{gap:7px}.troop-types button{flex:1;min-height:46px;padding:10px 12px}
+  .troop-mode button{min-height:46px;line-height:1.5}.troop-time-fields{gap:8px}.troop-time-summary>div{line-height:1.7}
+  .calendar-filters{align-items:stretch}.calendar-filters select{flex:1 1 100%;width:100%}.calendar-filters input{width:100%}
+  .site-footer{font-size:11px;line-height:1.8;margin-top:36px;padding-top:20px}
+}
+@media(max-width:360px){
+  .topmenu .topmenu-logo{width:36px;height:36px}.topmenu .topmenu-brand{gap:8px}.topmenu .topmenu-brand-text{font-size:18px}.topmenu .brand-game{font-size:8px}.nav-mobile-toggle{padding:10px;gap:6px}
+  .wrap{padding-left:12px;padding-right:12px}.hero-setup,.hero-roster,.hero-combinations{padding:18px 12px}
+  .hero-section-head h2{font-size:17px}.hero-section-head>div{gap:7px}.hero-step{width:24px;height:24px}
+  .roster-step-links a{gap:5px;font-size:10px;padding:8px 6px}.roster-step-links a>span{width:19px;height:19px}
+  .roster-action-bar{left:8px;right:8px;gap:8px;padding:12px 10px}.roster-action-bar .hero-primary{font-size:11px;padding:10px;max-width:132px}
+  .account-filter-tabs{gap:7px}.account-management .account-filter-tab{font-size:12px;padding:10px}
+}
+@media(prefers-reduced-motion:reduce){.wrap summary::before{transition:none}}
+@media(forced-colors:active){html body .wrap select{appearance:auto;background-image:none}}
+
+html body .wrap button{min-height:44px}
+.troop-main-result strong{font-family:'Work Sans',sans-serif;font-weight:600;letter-spacing:-.04em}
+#tab-alianca .alliance-stats{background:none;border:0;gap:12px}
+#tab-alianca .alliance-stats .stat .n{font-family:'Work Sans',sans-serif;font-weight:600;letter-spacing:-.04em}
+@media(max-width:760px){
+  #tab-alianca .alliance-stats>.stat:last-child:nth-child(odd){grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  #tab-alianca .alliance-stats>.stat:last-child:nth-child(odd) .l{margin-top:0;text-align:right}
+  #tab-alianca .alliance-stats .stat .n{font-size:26px}
+}
+
+@media(max-width:760px){
+  .roster-step-links a{flex-direction:column;justify-content:center;gap:5px;min-height:64px;padding:9px 5px;text-align:center}
+  .heroes-page :is(input,select,textarea){scroll-margin-bottom:130px}
+  body:has(.roster-action-bar) .site-footer{padding-bottom:calc(124px + env(safe-area-inset-bottom))}
+}
+
+.site-nav-content{box-sizing:border-box}
+.member-kpi strong{font-size:clamp(22px,2.1vw,30px);line-height:1.35}
+@media(max-width:1400px){.member-personal-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+  .member-personal-kpis{grid-template-columns:minmax(0,1fr);gap:12px}
+  .member-kpi{padding:20px}
+  .member-kpi strong{font-size:26px}
+}
