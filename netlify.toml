@@ -4,6 +4,8 @@
 
 [build.environment]
   NODE_VERSION = "22.22.2"
+  # Auth mode is a public selector, not a credential. Keep all other secrets scanned.
+  SECRETS_SCAN_OMIT_KEYS = "MEMBERS_AUTH_MODE"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
