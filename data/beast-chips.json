@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-10-26",
-  "client": "1.61.5",
-  "build": "32",
-  "patch": "26",
-  "manifest": "F84F83F326",
+  "asOf": "2026-10-27",
+  "client": "1.62.0",
+  "build": "4",
+  "patch": "3",
+  "manifest": "E2938DB03",
   "sourceHashes": {
-    "tables_current.json": "40239bc2c6111988bcc7b576b13096734251ce15b4ff45dc5443b320805c4fce",
-    "string_parts.json": "ceb4a8330c5de02a8413e1d1b66a8d0c0f0a23fcf0bbf6c79e8177498c6e6fe3",
-    "scan_summary.json": "070802a8119eddf378cc24cc98293920b38fe7fb60245ea316ab2e00fd6dd2e0"
+    "tables_current.json": "ccc04ffe80120e15d4c971e110109afda57ea63b8fecc6c737f6067d6fbad936",
+    "string_parts.json": "22478b925ff74a4b7366908e7b6f9fc8716a03c60a99df91b8dc1ca47fd74fd9",
+    "scan_summary.json": "77b1c33315477876372dc3944a196a23f27f415ed33933f49e9e519fd1971367"
   },
   "slots": [
     {

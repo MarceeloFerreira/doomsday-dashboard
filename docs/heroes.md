@@ -17,10 +17,14 @@ Relatório com antes/depois: `outputs/catalogo_herois_bestas_2026-10-27/ATUALIZA
 ## Primeira comparação
 
 - Apenas heróis possuídos, lendários, completos e com especialização da tropa selecionada ou tag Líder.
-- Pares sem ordem de liderança, sem repetir o mesmo herói.
+- Formação de até 5 duplas sem ordem de liderança. Cada herói só pode ocupar um esquadrão; elencos menores geram `floor(quantidade / 2)` duplas, e os demais ficam de reserva.
 - Habilidades máximas; despertar opcional para todo o elenco. O despertar substitui o grupo básico quando configurado, sem somar as duas versões.
 - Não usa as variantes de relíquia ou melhorias condicionais.
-- Heurística textual, não simulação de PvP. Ordena lexicograficamente por interação entre estado aplicado e aproveitado, tags do cenário, especialistas da tropa e complementaridade de dano/resistência; empate por nome. A tela explica o método.
+- Heurística textual, não simulação de PvP. Avalia interações entre estados aplicados e aproveitados, tags do cenário, especialistas da tropa e complementaridade de dano/resistência. A formação compara a soma desses critérios lexicograficamente, em vez de escolher apenas o primeiro par do ranking.
+- Busca limitada (beam search): até 128 formações parciais por etapa, com até 8 arranjos por conjunto de heróis usados. Procura boa sinergia global sem prometer um ótimo matemático ou ranking definitivo de combate. Empates têm ordem estável.
+- “Gerar novas combinações” exclui todas as duplas da formação anterior, troca os parceiros e busca sinergia entre as opções restantes, com o mesmo elenco e cenário. Mantém histórico das formações já exibidas para priorizar versões inéditas; ao esgotar as alternativas encontradas, reinicia o ciclo. Com apenas dois heróis, há uma única dupla e o botão fica desabilitado com explicação.
+- Cards mostram pontos fortes e de atenção lado a lado, empilhados em telas muito estreitas. Os pontos de atenção citam o herói, a habilidade e o trecho de origem, explicando condições como escudo restante, flanqueamento, tamanho do esquadrão, chance de ativação, composição de tropas e intervalos. São usadas somente as versões ativas das habilidades, conforme o despertar.
+- Alterar elenco, cenário ou despertar invalida a formação exibida, exigindo nova geração. Busca e filtro visual não alteram o elenco.
 - Condições de cenário e habilidades de construção/coleta não fornecem recursos de combate fora do contexto.
 - A seleção dura apenas enquanto a tela está montada e é limpa ao trocar de tropa; não é salva na conta ou no navegador nesta versão.
 

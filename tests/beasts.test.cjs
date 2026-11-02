@@ -6,10 +6,10 @@ const vm=require('node:vm');
 const catalog=require('../data/beasts.json');
 const {ELEMENTS,MODES,roleSkills,profile,recommend}=require('../lib/beast-combinations.cjs');
 const context=(mode='Campo',supportElement='Água',enemyElement='')=>({mode,supportElement,enemyElement});
-test('private catalog contains all 17 legendary beasts with separate leader and support skill sets',()=>{
-  assert.equal(catalog.beasts.length,17);assert.equal(new Set(catalog.beasts.map(b=>b.id)).size,17);
+test('private catalog contains 17 legendary and 8 epic beasts with separate leader and support skill sets',()=>{
+  assert.equal(catalog.beasts.length,25);assert.equal(new Set(catalog.beasts.map(b=>b.id)).size,25);
   for(const b of catalog.beasts){
-    assert.equal(b.rarity,'Lendário');assert.equal(b.complete,true);assert.ok(ELEMENTS.includes(b.element));
+    assert.ok(['Lendário','Épico'].includes(b.rarity));assert.equal(b.complete,true);assert.ok(ELEMENTS.includes(b.element));
     assert.equal(roleSkills(b,'Líder').length,4);assert.equal(roleSkills(b,'Suporte').length,3);
     assert.ok(roleSkills(b,'Líder').every(s=>!roleSkills(b,'Suporte').some(other=>other.id===s.id)));
     assert.ok([...roleSkills(b,'Líder'),...roleSkills(b,'Suporte')].every(s=>s.level>0&&s.description&&s.descriptionEn));
@@ -21,10 +21,10 @@ test('combinations are ordered, owned-only and never pair a beast with itself',(
   assert.deepEqual(new Set(pairs.map(p=>p.leader.id+'-'+p.support.id)),new Set(['51-86','86-51']));
   for(const mode of MODES){
     const all=catalog.beasts.map(b=>b.id),result=recommend(catalog.beasts,all,{mode});
-    assert.equal(result.length,17*16);assert.equal(new Set(result.map(p=>p.leader.id+'-'+p.support.id)).size,272);
+    assert.equal(result.length,25*24);assert.equal(new Set(result.map(p=>p.leader.id+'-'+p.support.id)).size,600);
     assert.ok(result.every(p=>p.leader.id!==p.support.id));
   }
-  const fake={...catalog.beasts[0],id:999,rarity:'Épico'};
+  const fake={...catalog.beasts[0],id:999,rarity:'Raro'};
   assert.equal(recommend([...catalog.beasts,fake],[51,999]).length,0);
   assert.equal(recommend(catalog.beasts,[51]).length,0);assert.equal(recommend(catalog.beasts,[]).length,0);
 });

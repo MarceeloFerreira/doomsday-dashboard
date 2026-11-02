@@ -34,7 +34,7 @@ test('comparison action bar shows the actual prerequisite and forwards only the 
   let node=Bar({kind:'herois',selectedCount:1,readyCount:1,pairCount:0,onCompare:()=>compared++});
   assert.equal(find(node,n=>n.type==='button').props.disabled,true);
   assert.match(renderToStaticMarkup(node),/1 herói selecionado/);assert.match(renderToStaticMarkup(node),/pelo menos 2/);
-  node=Bar({kind:'bestas',selectedCount:3,readyCount:3,pairCount:6,onCompare:()=>compared++});
+  node=Bar({kind:'bestas',selectedCount:3,readyCount:3,pairCount:1,onCompare:()=>compared++});
   const button=find(node,n=>n.type==='button');assert.equal(button.props.disabled,false);button.props.onClick();assert.equal(compared,1);
-  assert.match(renderToStaticMarkup(node),/3 bestas selecionadas/);assert.match(renderToStaticMarkup(node),/6 combinações de líder e suporte/);
+  assert.match(renderToStaticMarkup(node),/3 bestas selecionadas/);assert.match(renderToStaticMarkup(node),/1 esquadrão sem repetir bestas/);
 });

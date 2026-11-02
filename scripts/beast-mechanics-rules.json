@@ -1,0 +1,2197 @@
+{
+  "version": 1,
+  "beasts": {
+    "85": {
+      "Líder": [
+        {
+          "skillId": 6195,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 150,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 688%). For every 1 stacks of Detonate applied in battle, increase this DMG by 10%, up to a maximum of 30%. Also gains Counter +150 for 3s. If no counterattack is triggered during this duration, deals follow-up DMG to the target (Skill Multiplier: 264%). When deployed, Squad Skill DMG Reduction +4%.",
+          "duration": 3,
+          "period": "leader"
+        },
+        {
+          "skillId": 6196,
+          "kind": "state",
+          "mechanism": "detonate",
+          "amount": 0,
+          "sourceDescription": "Deals damage to the target (Skill Multiplier: 232%) every 3 seconds, There is a 50% chance to apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 124%). If the Active Skill was triggered by a counterattack, the chance increases to 100%.",
+          "chance": 50,
+          "improvedBy": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6195,
+          "kind": "need",
+          "mechanism": "detonate",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 688%). For every 1 stacks of Detonate applied in battle, increase this DMG by 10%, up to a maximum of 30%. Also gains Counter +150 for 3s. If no counterattack is triggered during this duration, deals follow-up DMG to the target (Skill Multiplier: 264%). When deployed, Squad Skill DMG Reduction +4%."
+        },
+        {
+          "skillId": 6196,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "Deals damage to the target (Skill Multiplier: 232%) every 3 seconds, There is a 50% chance to apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 124%). If the Active Skill was triggered by a counterattack, the chance increases to 100%."
+        },
+        {
+          "skillId": 6198,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "Gains ATK +18% and DEF +10% for 3s when entering battle. When using the Leader Skill or triggering a counterattack, has a 100% chance to increase the DMG for the current attack by 16% and reset the status duration."
+        },
+        {
+          "skillId": 6200,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 70,
+          "sourceDescription": "When the Active Skill deals DMG to a Grass-type Biochemical Beast, gain DMG +20% for the current attack. then gains Counter +70 for 3s.",
+          "enemy": "Grama"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6197,
+          "kind": "state",
+          "mechanism": "detonate",
+          "amount": 0,
+          "sourceDescription": "When triggering a counterattack, increases DMG taken by the target by 15% for 3s, then apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 248%).",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6197,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 248,
+          "sourceDescription": "When triggering a counterattack, increases DMG taken by the target by 15% for 3s, then apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 248%).",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6197,
+          "kind": "buff",
+          "mechanism": "vulnerability",
+          "amount": 15,
+          "sourceDescription": "When triggering a counterattack, increases DMG taken by the target by 15% for 3s, then apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 248%).",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6199,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 40,
+          "sourceDescription": "When attacked, Leader Counter +40. Effect can stack up to 5 times. When triggering a counterattack, increases Leader Skill DMG by 30% for 6s.",
+          "external": "incoming_damage",
+          "stackLimit": 5
+        },
+        {
+          "skillId": 6199,
+          "kind": "buff",
+          "mechanism": "skillDamage",
+          "amount": 30,
+          "sourceDescription": "When attacked, Leader Counter +40. Effect can stack up to 5 times. When triggering a counterattack, increases Leader Skill DMG by 30% for 6s.",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6201,
+          "kind": "buff",
+          "mechanism": "attack",
+          "amount": 22,
+          "sourceDescription": "When taking DMG from Leader Skills, if the opponent's team has a Grass-type Biochemical Beast, Leader ATK +22% and Counter DMG +17.5% for 3s.",
+          "enemy": "Grama",
+          "external": "incoming_skill"
+        }
+      ]
+    },
+    "61": {
+      "Líder": [
+        {
+          "skillId": 6212,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 270%). Grants CRIT DMG +20% for this attack. When triggering Active Skills through counterattacks, the target's Combo -60 for 3s."
+        },
+        {
+          "skillId": 6214,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "When in a Rally or garrisoned, increases Counter DMG by 20% and increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 450% of own attributes. When triggering a critical hit, increases own CRIT DMG by 2%, up to a maximum of 30%."
+        },
+        {
+          "skillId": 6216,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 200,
+          "sourceDescription": "When garrisoned, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Counter +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield.",
+          "modes": [
+            "Guarnição"
+          ],
+          "supportElement": "Físico"
+        },
+        {
+          "skillId": 6216,
+          "kind": "state",
+          "mechanism": "detonate",
+          "amount": 0,
+          "sourceDescription": "When garrisoned, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Counter +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield.",
+          "modes": [
+            "Guarnição"
+          ],
+          "supportElement": "Fogo"
+        },
+        {
+          "skillId": 6216,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "When garrisoned, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Counter +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield.",
+          "modes": [
+            "Guarnição"
+          ],
+          "supportElement": "Água"
+        },
+        {
+          "skillId": 6216,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "When garrisoned, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Counter +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield.",
+          "modes": [
+            "Guarnição"
+          ],
+          "supportElement": "Grama"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6213,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 220,
+          "sourceDescription": "When triggering a counterattack, deals follow-up DMG to the target (Skill Multiplier: 220%). Grants CRIT DMG +20% for this follow-up attack. Also, the target's Combo DMG -15%.",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6215,
+          "kind": "buff",
+          "mechanism": "defense",
+          "amount": 15,
+          "sourceDescription": "Leader DEF +15% and CRIT +60. When garrisoned, Leader DMG Reduction +8%."
+        },
+        {
+          "skillId": 6215,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 60,
+          "sourceDescription": "Leader DEF +15% and CRIT +60. When garrisoned, Leader DMG Reduction +8%."
+        },
+        {
+          "skillId": 6215,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 8,
+          "sourceDescription": "Leader DEF +15% and CRIT +60. When garrisoned, Leader DMG Reduction +8%.",
+          "modes": [
+            "Guarnição"
+          ]
+        }
+      ]
+    },
+    "22": {
+      "Líder": [
+        {
+          "skillId": 6078,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 236%), has a 100% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 240%), and increase Corrosion DMG by 7.5% for 3s. When deployed, Squad Basic Attack DMG+5%"
+        },
+        {
+          "skillId": 6079,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 140%), and has a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 108%). If the Active Skill was triggered by a combo, the chance increases to 100%."
+        },
+        {
+          "skillId": 6081,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "When triggering a combo, Corrosion DMG +20% and Combo +90 the next time the Leader Skill is used."
+        },
+        {
+          "skillId": 6081,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 90,
+          "sourceDescription": "When triggering a combo, Corrosion DMG +20% and Combo +90 the next time the Leader Skill is used.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6083,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 30,
+          "sourceDescription": "When the Leader Skill deals DMG to a Fire-type Biochemical Beast, gains Corrosion DMG +11% and Combo +30 for 3s.",
+          "enemy": "Fogo"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6080,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "When triggering a combo, inflicts Corrosion on the target, dealing Corrosion DMG to the target over3s (Skill Multiplier: 180%). While this effect is active, target's CRIT -40.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6080,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 180,
+          "sourceDescription": "When triggering a combo, inflicts Corrosion on the target, dealing Corrosion DMG to the target over3s (Skill Multiplier: 180%). While this effect is active, target's CRIT -40.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6082,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 110,
+          "sourceDescription": "When using the Leader Skill, Leader Combo +110 for 3s. If a combo is triggered during this time, increases Combo DMG for current attack by 8%.",
+          "duration": 3,
+          "period": "leader"
+        },
+        {
+          "skillId": 6082,
+          "kind": "buff",
+          "mechanism": "comboDamage",
+          "amount": 8,
+          "sourceDescription": "When using the Leader Skill, Leader Combo +110 for 3s. If a combo is triggered during this time, increases Combo DMG for current attack by 8%.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6084,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 7,
+          "sourceDescription": "When receiving a critical hit, if the opponent's team has a Fire-type Biochemical Beast, DMG taken -7%, and target Leader's CRIT -20 for 3s.",
+          "enemy": "Fogo",
+          "external": "incoming_crit"
+        }
+      ]
+    },
+    "52": {
+      "Líder": [
+        {
+          "skillId": 6022,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 350%), and inflicts Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 420%). Also gains Whirlpool for 3s. If the Biochemical Beast had Whirlpool before using the skill, increases Corrosion DMG Skill Multiplier to 504%. When deployed, Squad Basic Attack DMG+8%"
+        },
+        {
+          "skillId": 6025,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "When triggering a combo, gains Whirlpool: ATK +15% and Combo +110 for 3s. When triggering a combo under with Whirlpool, increases current round of Corrosion DMG by 19%."
+        },
+        {
+          "skillId": 6025,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 110,
+          "sourceDescription": "When triggering a combo, gains Whirlpool: ATK +15% and Combo +110 for 3s. When triggering a combo under with Whirlpool, increases current round of Corrosion DMG by 19%.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6027,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 40,
+          "sourceDescription": "When the Active Skill deals DMG to a Fire-type Biochemical Beast, gains Corrosion DMG +15% and Combo +40 for 3s.",
+          "enemy": "Fogo"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6024,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "When triggering a combo, inflicts Corrosion on the target, dealing Corrosion DMG to the target over3s (Skill Multiplier: 264%). Also gains Leader Combo +50 for 3s.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6024,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 264,
+          "sourceDescription": "When triggering a combo, inflicts Corrosion on the target, dealing Corrosion DMG to the target over3s (Skill Multiplier: 264%). Also gains Leader Combo +50 for 3s.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6024,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 50,
+          "sourceDescription": "When triggering a combo, inflicts Corrosion on the target, dealing Corrosion DMG to the target over3s (Skill Multiplier: 264%). Also gains Leader Combo +50 for 3s.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6026,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 150,
+          "sourceDescription": "When using the Leader Skill, Leader Combo +150 for 3s. If a combo is triggered during this time, has a 30% chance to trigger another combo.",
+          "duration": 3,
+          "period": "leader"
+        },
+        {
+          "skillId": 6028,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 14,
+          "sourceDescription": "When receiving a critical hit, if the opponent's team has a Fire-type Biochemical Beast, DMG taken -14%.",
+          "enemy": "Fogo",
+          "external": "incoming_crit"
+        }
+      ]
+    },
+    "24": {
+      "Líder": [
+        {
+          "skillId": 6067,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "When the skill deals a critical hit, gain CRIT DMG +13% for the current attack, and CRIT +80 for 3s."
+        },
+        {
+          "skillId": 6067,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 80,
+          "sourceDescription": "When the skill deals a critical hit, gain CRIT DMG +13% for the current attack, and CRIT +80 for 3s.",
+          "requires": [
+            "crit"
+          ]
+        },
+        {
+          "skillId": 6069,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 30,
+          "sourceDescription": "When the Active Skill deals DMG to a Grass-type Biochemical Beast, DMG +20% and CRIT +30 the next time the skill is used.",
+          "enemy": "Grama"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6066,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 168,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 168%), and has a 50% chance to increase DMG of the current attack by 15%.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6068,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 100,
+          "sourceDescription": "When using the Leader Skill, Leader CRIT +100 for 3s. Has a 50% chance to increase CRIT DMG by +18% the next time the skill is used.",
+          "duration": 3,
+          "period": "leader"
+        },
+        {
+          "skillId": 6068,
+          "kind": "buff",
+          "mechanism": "critDamage",
+          "amount": 18,
+          "sourceDescription": "When using the Leader Skill, Leader CRIT +100 for 3s. Has a 50% chance to increase CRIT DMG by +18% the next time the skill is used.",
+          "chance": 50
+        },
+        {
+          "skillId": 6070,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 70,
+          "sourceDescription": "When taking DMG from a target with a Shield, Leader CRIT +70 and CRIT DMG +5% for 3s.",
+          "external": "enemy_shield_and_incoming_damage"
+        }
+      ]
+    },
+    "54": {
+      "Líder": [
+        {
+          "skillId": 6011,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "When the skill deals a critical hit, gains Wildfire: ATK +15% and CRIT +110 for 3s. When dealing a critical hit with Wildfire, increases CRIT DMG for this attack by 19%."
+        },
+        {
+          "skillId": 6011,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 110,
+          "sourceDescription": "When the skill deals a critical hit, gains Wildfire: ATK +15% and CRIT +110 for 3s. When dealing a critical hit with Wildfire, increases CRIT DMG for this attack by 19%.",
+          "requires": [
+            "crit"
+          ]
+        },
+        {
+          "skillId": 6013,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 40,
+          "sourceDescription": "When the Active Skill deals DMG to a Grass-type Biochemical Beast, gains Active Skill DMG +15% and CRIT +40 for 3s.",
+          "enemy": "Grama"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6010,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 236,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 236%), and has a 100% chance for CRIT +100 the next time the Active Skill is used.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6010,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 100,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 236%), and has a 100% chance for CRIT +100 the next time the Active Skill is used.",
+          "requires": [
+            "crit"
+          ],
+          "scope": "active",
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6012,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 150,
+          "sourceDescription": "When using the Leader Skill, Leader CRIT +150 for 3s. If a critical hit is dealt during this time, has a 50% chance to grant additional CRIT DMG +26%.",
+          "duration": 3,
+          "period": "leader"
+        },
+        {
+          "skillId": 6012,
+          "kind": "buff",
+          "mechanism": "critDamage",
+          "amount": 26,
+          "sourceDescription": "When using the Leader Skill, Leader CRIT +150 for 3s. If a critical hit is dealt during this time, has a 50% chance to grant additional CRIT DMG +26%.",
+          "requires": [
+            "crit"
+          ],
+          "chance": 50
+        },
+        {
+          "skillId": 6014,
+          "kind": "buff",
+          "mechanism": "damage",
+          "amount": 10,
+          "sourceDescription": "When dealing damage to a target with a Shield, increases DMG for current attack by 10% and CRIT by 50.",
+          "external": "enemy_shield"
+        }
+      ]
+    },
+    "26": {
+      "Líder": [
+        {
+          "skillId": 6085,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 300%), has a 100% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 180%), and gain Counter +60 for 3s. When deployed, Squad Basic Attack DMG Reduction+5%"
+        },
+        {
+          "skillId": 6085,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 60,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 300%), has a 100% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 180%), and gain Counter +60 for 3s. When deployed, Squad Basic Attack DMG Reduction+5%"
+        },
+        {
+          "skillId": 6088,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 50,
+          "sourceDescription": "Counter +50. When triggering a counterattack, has a 50% chance to gain a Shield for 3s based on the counterattack DMG dealt (Skill Multiplier: 280%)."
+        },
+        {
+          "skillId": 6088,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Counter +50. When triggering a counterattack, has a 50% chance to gain a Shield for 3s based on the counterattack DMG dealt (Skill Multiplier: 280%).",
+          "requires": [
+            "counter"
+          ],
+          "chance": 50
+        },
+        {
+          "skillId": 6086,
+          "kind": "need",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 168%). When having a shield, increases the Skill Multiplier for this attack to 252%."
+        },
+        {
+          "skillId": 6088,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "Counter +50. When triggering a counterattack, has a 50% chance to gain a Shield for 3s based on the counterattack DMG dealt (Skill Multiplier: 280%)."
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6087,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 152,
+          "sourceDescription": "When triggering a counterattack, deals follow-up DMG (Skill Multiplier: 152%). Also has a 50% chance to gain Counter DMG +6% for 3s.",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6089,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 110,
+          "sourceDescription": "When using the Leader Skill, Leader Counter +110 for 3s. If a counterattack is triggered during this time, Counter DMG for current attack +4%.",
+          "duration": 3,
+          "period": "leader"
+        },
+        {
+          "skillId": 6089,
+          "kind": "buff",
+          "mechanism": "counterDamage",
+          "amount": 4,
+          "sourceDescription": "When using the Leader Skill, Leader Counter +110 for 3s. If a counterattack is triggered during this time, Counter DMG for current attack +4%.",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6091,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 40,
+          "sourceDescription": "When taking Corrosion DMG, Leader Skill DMG +10% and Counter +40 for 3s.",
+          "external": "incoming_corrosion"
+        }
+      ]
+    },
+    "56": {
+      "Líder": [
+        {
+          "skillId": 6029,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 420%), and has a 100% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 260%). Also deals follow-up DMG to the target the next second (Skill Multiplier: 140%). Each stack of Shield increases follow-up DMG Skill Multiplier by 60%. This effect stacks up to 180% times. When deployed, Squad Basic Attack DMG Reduction+8%"
+        },
+        {
+          "skillId": 6032,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 70,
+          "sourceDescription": "Counter +70. When triggering a counterattack, has a 50% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 280%). There is a 50% chance to increase the Shield strength by 30%."
+        },
+        {
+          "skillId": 6030,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 60,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 240%). When having a shield, gains Counter +60 for 3s.",
+          "requires": [
+            "shield"
+          ]
+        },
+        {
+          "skillId": 6032,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Counter +70. When triggering a counterattack, has a 50% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 280%). There is a 50% chance to increase the Shield strength by 30%.",
+          "requires": [
+            "counter"
+          ],
+          "chance": 50
+        },
+        {
+          "skillId": 6029,
+          "kind": "need",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 420%), and has a 100% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 260%). Also deals follow-up DMG to the target the next second (Skill Multiplier: 140%). Each stack of Shield increases follow-up DMG Skill Multiplier by 60%. This effect stacks up to 180% times. When deployed, Squad Basic Attack DMG Reduction+8%"
+        },
+        {
+          "skillId": 6032,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "Counter +70. When triggering a counterattack, has a 50% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 280%). There is a 50% chance to increase the Shield strength by 30%."
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6031,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 288,
+          "sourceDescription": "When triggering a counterattack, deals follow-up DMG to the target (Skill Multiplier: 288%). Also, the target's Combo -50 for 3s.",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6033,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 150,
+          "sourceDescription": "When using the Leader Skill, Leader Counter +150 for 3s. If a counterattack is triggered during this time, has a 30% chance to reset the duration.",
+          "duration": 3,
+          "period": "leader"
+        },
+        {
+          "skillId": 6035,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 14,
+          "sourceDescription": "Reduces Corrosion DMG taken by 14%. When taking Corrosion DMG, Leader Counter DMG +10% for 3s.",
+          "external": "incoming_corrosion"
+        }
+      ]
+    },
+    "86": {
+      "Líder": [
+        {
+          "skillId": 6220,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 220%, and increases to 264% in \"Full Size\" state). There is a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 120%). When triggering Active Skills through counterattacks, the chance of inflicting Corrosion increases to 100%.",
+          "chance": 50,
+          "improvedBy": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6219,
+          "kind": "need",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 600%, and increases to 750% in \"Full Size\" state), and gains Corrosion DMG dealt +30% for 3s. If the target is inflicted with Corrosion, deals bonus follow-up DMG to the target (Skill Multiplier: 300%). When deployed, Squad Skill DMG Reduction+4%."
+        },
+        {
+          "skillId": 6220,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 220%, and increases to 264% in \"Full Size\" state). There is a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 120%). When triggering Active Skills through counterattacks, the chance of inflicting Corrosion increases to 100%."
+        },
+        {
+          "skillId": 6222,
+          "kind": "need",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "Uses \"Full Size\" when entering battle. While in this state, ATK +30% and Biochemical Beast DMG +8% for 6s. 6s after inflicting Corrosion or \"Full Size\" ends, if not in the \"Full Size\" state, uses \"Full Size\" again for 6s."
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6221,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "When triggering a counterattack, inflicts Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 180%). For 3s after using the Leader Skill, increases the duration of Corrosion inflicted by this skill to 6s (Skill Multiplier increases to 360%).",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6221,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 180,
+          "sourceDescription": "When triggering a counterattack, inflicts Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 180%). For 3s after using the Leader Skill, increases the duration of Corrosion inflicted by this skill to 6s (Skill Multiplier increases to 360%).",
+          "requires": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6223,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 15,
+          "sourceDescription": "If the target is inflicted with Corrosion, gain Biochemical Beast DMG Reduction +15%. Gain Counter DMG +10% when counterattacking. This effect stacks up to 5 times.",
+          "requires": [
+            "corrosion"
+          ]
+        },
+        {
+          "skillId": 6223,
+          "kind": "buff",
+          "mechanism": "counterDamage",
+          "amount": 10,
+          "sourceDescription": "If the target is inflicted with Corrosion, gain Biochemical Beast DMG Reduction +15%. Gain Counter DMG +10% when counterattacking. This effect stacks up to 5 times.",
+          "requires": [
+            "counter"
+          ],
+          "stackLimit": 5
+        },
+        {
+          "skillId": 6225,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 15,
+          "sourceDescription": "When receiving a critical hit, if the opponent's team has a Fire-type Biochemical Beast, DMG taken -15% for this hit, and Leader Skill DMG +10% for 6s.",
+          "enemy": "Fogo",
+          "external": "incoming_crit"
+        }
+      ]
+    },
+    "59": {
+      "Líder": [
+        {
+          "skillId": 6171,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 130,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 554%), and gains CRIT +130 for 3s. Also deals follow-up DMG to the target the next second (Skill Multiplier: 202%). If the Leader Skill deals a critical hit, increases the Skill Multiplier of the current follow-up attack to 304%, and the follow-up attack is guaranteed to deal a critical hit. When deployed, Squad Skill DMG+5%",
+          "duration": 3,
+          "period": "leader"
+        },
+        {
+          "skillId": 6174,
+          "kind": "state",
+          "mechanism": "detonate",
+          "amount": 0,
+          "sourceDescription": "When dealing a critical hit, has a 100% chance to inflict 1 stacks of Detonate on the target. The stacks disappear after 1s to deal DMG to the target (Skill Multiplier: 172%). When using the Leader Skill, inflicts 2 stacks of Detonate on the target."
+        },
+        {
+          "skillId": 6171,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 554%), and gains CRIT +130 for 3s. Also deals follow-up DMG to the target the next second (Skill Multiplier: 202%). If the Leader Skill deals a critical hit, increases the Skill Multiplier of the current follow-up attack to 304%, and the follow-up attack is guaranteed to deal a critical hit. When deployed, Squad Skill DMG+5%",
+          "triggerScope": "main"
+        },
+        {
+          "skillId": 6172,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 274%). If the Active Skill was triggered by a combo, additionally deals follow-up DMG to the target the next second (Skill Multiplier: 150%), and the follow-up attack gains CRIT +60."
+        },
+        {
+          "skillId": 6174,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "When dealing a critical hit, has a 100% chance to inflict 1 stacks of Detonate on the target. The stacks disappear after 1s to deal DMG to the target (Skill Multiplier: 172%). When using the Leader Skill, inflicts 2 stacks of Detonate on the target."
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6173,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 234,
+          "sourceDescription": "When the Active Skill deals DMG, has a 50% chance to deal follow-up DMG (Skill Multiplier: 234%). When dealing critical hits or triggering Active Skills through combos, the chance increases to 100%.",
+          "chance": 50,
+          "improvedBy": [
+            "crit",
+            "combo"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6175,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 40,
+          "sourceDescription": "When dealing a critical hit or inflicting Detonate, grants Leader ATK +6% and CRIT +40 for 3s. This effect stacks up to 4 times. The effect duration resets each time it triggers.",
+          "anyOf": [
+            "crit",
+            "detonate"
+          ],
+          "stackLimit": 4
+        },
+        {
+          "skillId": 6175,
+          "kind": "buff",
+          "mechanism": "attack",
+          "amount": 6,
+          "sourceDescription": "When dealing a critical hit or inflicting Detonate, grants Leader ATK +6% and CRIT +40 for 3s. This effect stacks up to 4 times. The effect duration resets each time it triggers.",
+          "anyOf": [
+            "crit",
+            "detonate"
+          ],
+          "stackLimit": 4
+        },
+        {
+          "skillId": 6177,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 120,
+          "sourceDescription": "When the Leader Skill deals DMG to a target with a Shield, gains Combo +120 and DMG +8.5% for 3s.",
+          "external": "enemy_shield"
+        }
+      ]
+    },
+    "81": {
+      "Líder": [
+        {
+          "skillId": 6163,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 150,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 750%), CRIT for current attack +150. When this attack deals a critical hit, has a 50% chance to deal residual damage equivalent to 20% of the actual Skill DMG dealt. When having a shield, Skill Multiplier of this skill increases to 900%, and the chance of residual damage from a critical hit increases to 100%. When deployed, Squad Skill DMG+4%",
+          "scope": "main"
+        },
+        {
+          "skillId": 6164,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 65,
+          "sourceDescription": "Deals DMG to the target every 3s （Skill Multiplier: 264%）. Current attack CRIT +65.",
+          "scope": "active"
+        },
+        {
+          "skillId": 6166,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "When dealing a critical hit, CRIT DMG for current attack +34%, and gains a Shield for 3s based on the DMG dealt for this attack （Skill Multiplier: 76%）.",
+          "requires": [
+            "crit"
+          ]
+        },
+        {
+          "skillId": 6163,
+          "kind": "need",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 750%), CRIT for current attack +150. When this attack deals a critical hit, has a 50% chance to deal residual damage equivalent to 20% of the actual Skill DMG dealt. When having a shield, Skill Multiplier of this skill increases to 900%, and the chance of residual damage from a critical hit increases to 100%. When deployed, Squad Skill DMG+4%"
+        },
+        {
+          "skillId": 6166,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "When dealing a critical hit, CRIT DMG for current attack +34%, and gains a Shield for 3s based on the DMG dealt for this attack （Skill Multiplier: 76%）."
+        },
+        {
+          "skillId": 6168,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 70,
+          "sourceDescription": "When the Leader Skill deals DMG to a Water-type Biochemical Beast, DMG for current attack +22% and CRIT +70.",
+          "enemy": "Água"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6165,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 172,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG （Skill Multiplier: 172%）. There is a 100% chance to gain a Shield for 3s at the next second based on the DMG dealt for this attack （Skill Multiplier: 116%）.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6165,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG （Skill Multiplier: 172%）. There is a 100% chance to gain a Shield for 3s at the next second based on the DMG dealt for this attack （Skill Multiplier: 116%）.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6167,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 160,
+          "sourceDescription": "CRIT DMG +9%. For the duration of the Shield, Leader CRIT +160.",
+          "requires": [
+            "shield"
+          ]
+        },
+        {
+          "skillId": 6167,
+          "kind": "buff",
+          "mechanism": "critDamage",
+          "amount": 9,
+          "sourceDescription": "CRIT DMG +9%. For the duration of the Shield, Leader CRIT +160."
+        },
+        {
+          "skillId": 6169,
+          "kind": "buff",
+          "mechanism": "defense",
+          "amount": 21.5,
+          "sourceDescription": "When receiving combo attacks, Leader DEF +21.5% and DMG Reduction +5% for 3s if the opponent's team has a Water-type Biochemical Beast.",
+          "enemy": "Água",
+          "external": "incoming_combo"
+        }
+      ]
+    },
+    "83": {
+      "Líder": [
+        {
+          "skillId": 6179,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 150,
+          "sourceDescription": "Deals damage to the target (Skill Multiplier: 658%) every 6 seconds, with additional Combo for this attack +150. There is a 50% chance to apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 132%). If this attack triggers a Combo, applies 1 additional stack of Detonate to the target. When deployed, Squad Skill DMG+4%"
+        },
+        {
+          "skillId": 6180,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 65,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 236%) Additional Combo for this attack +65. When triggering Active Skills through combos, damage increases by an additional 20%"
+        },
+        {
+          "skillId": 6179,
+          "kind": "state",
+          "mechanism": "detonate",
+          "amount": 0,
+          "sourceDescription": "Deals damage to the target (Skill Multiplier: 658%) every 6 seconds, with additional Combo for this attack +150. There is a 50% chance to apply 1 stack of Detonate to the target. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 132%). If this attack triggers a Combo, applies 1 additional stack of Detonate to the target. When deployed, Squad Skill DMG+4%",
+          "chance": 50,
+          "improvedBy": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6180,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 236%) Additional Combo for this attack +65. When triggering Active Skills through combos, damage increases by an additional 20%"
+        },
+        {
+          "skillId": 6182,
+          "kind": "need",
+          "mechanism": "detonate",
+          "amount": 0,
+          "sourceDescription": "Gains 2 stack(s) of [Charge] when entering battle for 3s. [Charge]: Increases DMG of next Active Skill by 34%. Effect can stack up to 3 times. When using the Leader Skill or inflicting Detonate, there is a 100% chance to gain 1 stack of [Charge]"
+        },
+        {
+          "skillId": 6184,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 70,
+          "sourceDescription": "When the Leader Skill deals DMG to a Grass-type Biochemical Beast, Leader Skill DMG +22% and Combo +70 for the next attack.",
+          "enemy": "Grama"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6181,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 244,
+          "sourceDescription": "When a combo is triggered, deals follow-up DMG to the target (Skill Multiplier: 244%), with a 50% chance to apply 1 stack of Detonate. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 86%)",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6181,
+          "kind": "state",
+          "mechanism": "detonate",
+          "amount": 0,
+          "sourceDescription": "When a combo is triggered, deals follow-up DMG to the target (Skill Multiplier: 244%), with a 50% chance to apply 1 stack of Detonate. Stacks disappear after 1 second and deals damage to the target (Skill Multiplier: 86%)",
+          "requires": [
+            "combo"
+          ],
+          "chance": 50
+        },
+        {
+          "skillId": 6183,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 10,
+          "sourceDescription": "For every Combo or Detonate inflicted in a single battle, Combo DMG +13%, Combo +10. This effect stacks up to 5 times.",
+          "anyOf": [
+            "combo",
+            "detonate"
+          ],
+          "stackLimit": 5
+        },
+        {
+          "skillId": 6183,
+          "kind": "buff",
+          "mechanism": "comboDamage",
+          "amount": 13,
+          "sourceDescription": "For every Combo or Detonate inflicted in a single battle, Combo DMG +13%, Combo +10. This effect stacks up to 5 times.",
+          "anyOf": [
+            "combo",
+            "detonate"
+          ],
+          "stackLimit": 5
+        },
+        {
+          "skillId": 6185,
+          "kind": "buff",
+          "mechanism": "attack",
+          "amount": 21.5,
+          "sourceDescription": "When taking Counter DMG, reduces DMG taken for current attack by 5% and Leader ATK +21.5% for 3s if the opponent's team has a Grass-type Biochemical Beast.",
+          "enemy": "Grama",
+          "external": "incoming_counter"
+        }
+      ]
+    },
+    "60": {
+      "Líder": [
+        {
+          "skillId": 6204,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 270%). Grants CRIT DMG +20% for this attack. When triggering Active Skills through combos, the target's Counter -60 for 3s."
+        },
+        {
+          "skillId": 6206,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "When in a Rally or garrisoned, increases Combo DMG by 20% and increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 450% of own attributes. When triggering a critical hit, increases own CRIT DMG by 2%, up to a maximum of 30%."
+        },
+        {
+          "skillId": 6208,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 200,
+          "sourceDescription": "When in a Rally, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Combo +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield.",
+          "modes": [
+            "Invasão"
+          ],
+          "supportElement": "Físico"
+        },
+        {
+          "skillId": 6208,
+          "kind": "state",
+          "mechanism": "detonate",
+          "amount": 0,
+          "sourceDescription": "When in a Rally, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Combo +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield.",
+          "modes": [
+            "Invasão"
+          ],
+          "supportElement": "Fogo"
+        },
+        {
+          "skillId": 6208,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "When in a Rally, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Combo +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield.",
+          "modes": [
+            "Invasão"
+          ],
+          "supportElement": "Água"
+        },
+        {
+          "skillId": 6208,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "When in a Rally, using the Leader Skill has a 100% chance to trigger an additional effect based on the Support Biochemical Beast's element. Physical: Gains Combo +200 for 3s. Fire: Inflicts Detonate on the target. Water: Inflicts Corrosion on the target. Grass: Gains a Shield.",
+          "modes": [
+            "Invasão"
+          ],
+          "supportElement": "Grama"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6205,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 220,
+          "sourceDescription": "When triggering a combo, deals follow-up DMG to the target (Skill Multiplier: 220%). Grants CRIT DMG +20% for this follow-up attack. Also, the target's Counter DMG -15% for 3s.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6207,
+          "kind": "buff",
+          "mechanism": "attack",
+          "amount": 15,
+          "sourceDescription": "Leader ATK +15% and CRIT +60. When in a Rally, Leader DMG +8%."
+        },
+        {
+          "skillId": 6207,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 60,
+          "sourceDescription": "Leader ATK +15% and CRIT +60. When in a Rally, Leader DMG +8%."
+        },
+        {
+          "skillId": 6207,
+          "kind": "buff",
+          "mechanism": "damage",
+          "amount": 8,
+          "sourceDescription": "Leader ATK +15% and CRIT +60. When in a Rally, Leader DMG +8%.",
+          "modes": [
+            "Invasão"
+          ]
+        }
+      ]
+    },
+    "82": {
+      "Líder": [
+        {
+          "skillId": 6156,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 65,
+          "sourceDescription": "Deals DMG to the target every 3s （Skill Multiplier: 264%）. Current attack CRIT +65.",
+          "scope": "active"
+        },
+        {
+          "skillId": 6155,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s （Skill Multiplier: 416%）. There is a 70% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s （Skill Multiplier: 348%）. For every stack of Acid held, the chance increases to 10%. For every stack of Acid consumed, DMG dealt for current attack +5%. If 3 stacks of Acid is consumed in a go, Corrosion DMG for current attack deals CRIT DMG. When deployed, Squad Skill DMG+4%",
+          "chance": 70
+        },
+        {
+          "skillId": 6158,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "For every 1 critical hits or stacks of Corrosion dealt in a single battle, has a 100% chance to gain 1 stacks of Acid, which increases Corrosion DMG of the next Leader Skill by 58%. This effect stacks up to 3 times."
+        },
+        {
+          "skillId": 6158,
+          "kind": "need",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "For every 1 critical hits or stacks of Corrosion dealt in a single battle, has a 100% chance to gain 1 stacks of Acid, which increases Corrosion DMG of the next Leader Skill by 58%. This effect stacks up to 3 times."
+        },
+        {
+          "skillId": 6160,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 70,
+          "sourceDescription": "When the Leader Skill deals DMG to a Fire-type Biochemical Beast, gain DMG +22% and CRIT +70 for the current attack.",
+          "enemy": "Fogo"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6157,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "When the Active Skill deals a critical hit, inflicts Corrosion on the target, dealing Corrosion DMG to the target over 3s （Skill Multiplier: 258%）. Leader CRIT DMG +15% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6157,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 258,
+          "sourceDescription": "When the Active Skill deals a critical hit, inflicts Corrosion on the target, dealing Corrosion DMG to the target over 3s （Skill Multiplier: 258%）. Leader CRIT DMG +15% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6157,
+          "kind": "buff",
+          "mechanism": "critDamage",
+          "amount": 15,
+          "sourceDescription": "When the Active Skill deals a critical hit, inflicts Corrosion on the target, dealing Corrosion DMG to the target over 3s （Skill Multiplier: 258%）. Leader CRIT DMG +15% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6159,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 10,
+          "sourceDescription": "For every 1 critical hits dealt in a single battle, Leader CRIT +10 and CRIT DMG +13%. This effect stacks up to 5 times.",
+          "requires": [
+            "crit"
+          ],
+          "stackLimit": 5
+        },
+        {
+          "skillId": 6159,
+          "kind": "buff",
+          "mechanism": "critDamage",
+          "amount": 13,
+          "sourceDescription": "For every 1 critical hits dealt in a single battle, Leader CRIT +10 and CRIT DMG +13%. This effect stacks up to 5 times.",
+          "requires": [
+            "crit"
+          ],
+          "stackLimit": 5
+        },
+        {
+          "skillId": 6161,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 8,
+          "sourceDescription": "When taking DMG, reduces DMG taken by 8% if the opponent's team has a Fire-type Biochemical Beast. There is a 50% chance to further reduce DMG taken by 7%.",
+          "enemy": "Fogo",
+          "external": "incoming_damage"
+        }
+      ]
+    },
+    "28": {
+      "Líder": [
+        {
+          "skillId": 6107,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 186%). If the Active Skill was triggered by a counterattack, increases the Skill Multiplier for this attack to 234%."
+        },
+        {
+          "skillId": 6109,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "When in a Rally or garrisoned, increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 250% of own attributes. When triggering a counterattack, Active Skill DMG increases by 15% the next time the Active Skill is used."
+        },
+        {
+          "skillId": 6106,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 50,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 420%). If this Pet is garrisoned, increase Skill Multiplier to 630%, and gain +50 Counter for 3s. When deployed, Squad DMG Reduction+2%",
+          "modes": [
+            "Guarnição"
+          ]
+        },
+        {
+          "skillId": 6111,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 70,
+          "sourceDescription": "When garrisoned, CRIT +70 and Counter +30.",
+          "modes": [
+            "Guarnição"
+          ]
+        },
+        {
+          "skillId": 6111,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 30,
+          "sourceDescription": "When garrisoned, CRIT +70 and Counter +30.",
+          "modes": [
+            "Guarnição"
+          ]
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6108,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 172,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 172%). Also, the target's Combo DMG -6% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6110,
+          "kind": "buff",
+          "mechanism": "defense",
+          "amount": 10,
+          "sourceDescription": "Leader DEF +10%."
+        }
+      ]
+    },
+    "58": {
+      "Líder": [
+        {
+          "skillId": 6051,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 240%). When this attack deals a critical hit, gains Counter +60 for 3s.",
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6053,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "When in a Rally or garrisoned, increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 400% of own attributes. When triggering a counterattack, increases own Counter DMG by 2%, up to a maximum of 30%."
+        },
+        {
+          "skillId": 6051,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 60,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 240%). When this attack deals a critical hit, gains Counter +60 for 3s.",
+          "requires": [
+            "crit"
+          ]
+        },
+        {
+          "skillId": 6050,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 70,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 600%). When garrisoned, increases Skill Multiplier to 900%, and gains +70 Counter for 3s. For every Leader Skill used in battle, gains 2% ATK, up to a maximum of 20%. When deployed, Squad DMG Reduction+4%",
+          "modes": [
+            "Guarnição"
+          ]
+        },
+        {
+          "skillId": 6055,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 50,
+          "sourceDescription": "When garrisoned, CRIT +120 and Counter +50.",
+          "modes": [
+            "Guarnição"
+          ]
+        },
+        {
+          "skillId": 6055,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 120,
+          "sourceDescription": "When garrisoned, CRIT +120 and Counter +50.",
+          "modes": [
+            "Guarnição"
+          ]
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6052,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 248,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 248%). Also, the target's Combo -50 for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6054,
+          "kind": "buff",
+          "mechanism": "defense",
+          "amount": 15,
+          "sourceDescription": "Leader DEF +15%. When garrisoned, Leader DMG Reduction +7%."
+        },
+        {
+          "skillId": 6054,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 7,
+          "sourceDescription": "Leader DEF +15%. When garrisoned, Leader DMG Reduction +7%.",
+          "modes": [
+            "Guarnição"
+          ]
+        }
+      ]
+    },
+    "23": {
+      "Líder": [
+        {
+          "skillId": 6057,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 100,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 490%), CRIT for current attack +100, and CRIT DMG +20%. When deployed, Squad Skill DMG+2.5%",
+          "scope": "main"
+        },
+        {
+          "skillId": 6058,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 196%). When this attack deals a critical hit, has a 50% chance to increase Skill Multiplier to 236%.",
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6060,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "When the Leader Skill deals a critical hit, has a 100% chance to increase DMG by 72% the next time the skill is used.",
+          "triggerScope": "main"
+        },
+        {
+          "skillId": 6062,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 50,
+          "sourceDescription": "When the Leader Skill deals DMG to a Grass-type Biochemical Beast, gain CRIT +50 and CRIT DMG +21% for the current attack.",
+          "enemy": "Grama"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6059,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 176,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 176%). Also has a 100% chance to cause target's DEF -10% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6059,
+          "kind": "buff",
+          "mechanism": "armorBreak",
+          "amount": 10,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 176%). Also has a 100% chance to cause target's DEF -10% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6061,
+          "kind": "buff",
+          "mechanism": "critDamage",
+          "amount": 24,
+          "sourceDescription": "When the Active Skill deals a critical hit, has a 100% chance to increase Leader CRIT DMG by 24% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6063,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 30,
+          "sourceDescription": "When the Leader Skill deals DMG to a target with a Shield, increases DMG for current attack by +7% and CRIT by +30.",
+          "external": "enemy_shield"
+        }
+      ]
+    },
+    "53": {
+      "Líder": [
+        {
+          "skillId": 6001,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 150,
+          "sourceDescription": "Deals DMG to the target every 5s (Skill Multiplier: 476%), and CRIT for current attack +150. Every time a Hero in the Squad uses a Rage Skill, receives an additional CRIT +20, up to a maximum of +100. When deployed, Squad Skill DMG+4%",
+          "scope": "main"
+        },
+        {
+          "skillId": 6002,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 282%). If this attack deals a critical hit, DMG +15% the next time the Leader Skill is used."
+        },
+        {
+          "skillId": 6004,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "When the Leader Skill deals a critical hit, has a 100% chance to deal residual damage to the target, equivalent to 92% of the actual Leader Skill DMG dealt.",
+          "triggerScope": "main"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6003,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 248,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 248%). Also, the target's DEF -15% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6003,
+          "kind": "buff",
+          "mechanism": "armorBreak",
+          "amount": 15,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 248%). Also, the target's DEF -15% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6005,
+          "kind": "buff",
+          "mechanism": "critDamage",
+          "amount": 34,
+          "sourceDescription": "When any skill deals a critical hit, grants additional CRIT DMG +34%.",
+          "requires": [
+            "crit"
+          ]
+        },
+        {
+          "skillId": 6007,
+          "kind": "buff",
+          "mechanism": "damage",
+          "amount": 10,
+          "sourceDescription": "When dealing damage to a target with a Shield, increases DMG for current attack by 10% and CRIT DMG by 7%.",
+          "external": "enemy_shield"
+        }
+      ]
+    },
+    "84": {
+      "Líder": [
+        {
+          "skillId": 6187,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 150,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 668%), with additional Combo for this attack +150. If this attack triggers a Combo, has a 100% chance to deal additional follow-up DMG (Skill Multiplier: 200%). Every 1 stacks of Harden additionally increases follow-up DMG for the current attack by 10%. When deployed, Squad Skill DMG Reduction +4%."
+        },
+        {
+          "skillId": 6187,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 668%), with additional Combo for this attack +150. If this attack triggers a Combo, has a 100% chance to deal additional follow-up DMG (Skill Multiplier: 200%). Every 1 stacks of Harden additionally increases follow-up DMG for the current attack by 10%. When deployed, Squad Skill DMG Reduction +4%."
+        },
+        {
+          "skillId": 6192,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 70,
+          "sourceDescription": "When the Leader Skill deals DMG to a Water-type Biochemical Beast, gains Active Skill DMG +20% and Combo +70 for 3s.",
+          "enemy": "Água"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6189,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "When a combo is triggered, gains a Shield for 3s based on the damage dealt (Skill Multiplier: 232%). While the Shield is active, Active Skill DMG +15%.",
+          "requires": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6189,
+          "kind": "buff",
+          "mechanism": "skillDamage",
+          "amount": 15,
+          "sourceDescription": "When a combo is triggered, gains a Shield for 3s based on the damage dealt (Skill Multiplier: 232%). While the Shield is active, Active Skill DMG +15%.",
+          "requires": [
+            "shield"
+          ]
+        },
+        {
+          "skillId": 6191,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "When using Leader Skill, gain a Shield for 3s (Skill Multiplier: 200%). When gaining a Shield, if there is an attack target, deal 100% DMG based on the current total remaining Shield amount, not exceeding the Skill Multiplier of 240%."
+        },
+        {
+          "skillId": 6193,
+          "kind": "buff",
+          "mechanism": "attack",
+          "amount": 22,
+          "sourceDescription": "When receiving combo attacks, if the opponent's team has a Water-type Biochemical Beast, Leader ATK +22% and DMG +5% for 3s.",
+          "enemy": "Água",
+          "external": "incoming_combo"
+        }
+      ]
+    },
+    "27": {
+      "Líder": [
+        {
+          "skillId": 6100,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 186%). If the Active Skill was triggered by a combo, increases the Skill Multiplier for this attack to 234%."
+        },
+        {
+          "skillId": 6102,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "When in a Rally or garrisoned, increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 250% of own attributes. When triggering a combo, Active Skill DMG increases by 15% the next time the Active Skill is used."
+        },
+        {
+          "skillId": 6099,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 50,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 420%). When in a Rally, increase Skill Multiplier to 630% and Combo for this attack +50. When deployed, Squad DMG+2%",
+          "modes": [
+            "Invasão"
+          ]
+        },
+        {
+          "skillId": 6104,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 70,
+          "sourceDescription": "When in a Rally, Combo +70 and CRIT +30.",
+          "modes": [
+            "Invasão"
+          ]
+        },
+        {
+          "skillId": 6104,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 30,
+          "sourceDescription": "When in a Rally, Combo +70 and CRIT +30.",
+          "modes": [
+            "Invasão"
+          ]
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6101,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 172,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 172%). Also, the target's Counter DMG -6% for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6103,
+          "kind": "buff",
+          "mechanism": "attack",
+          "amount": 10,
+          "sourceDescription": "Leader ATK +10%."
+        }
+      ]
+    },
+    "57": {
+      "Líder": [
+        {
+          "skillId": 6044,
+          "kind": "need",
+          "mechanism": "crit",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 240%). When this attack deals a critical hit, gains Combo +60 for 3s.",
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6046,
+          "kind": "need",
+          "mechanism": "combo",
+          "amount": 0,
+          "sourceDescription": "When in a Rally or garrisoned, increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 400% of own attributes. When triggering a Combo, increases own Combo DMG by 2%, up to a maximum of 30%."
+        },
+        {
+          "skillId": 6044,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 60,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 240%). When this attack deals a critical hit, gains Combo +60 for 3s.",
+          "requires": [
+            "crit"
+          ]
+        },
+        {
+          "skillId": 6043,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 70,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 600%). When in a Rally, increases Skill Multiplier to 900%, and Combo for this attack +70. For every Leader Skill used in battle, gain 2% ATK, up to a maximum of 20%. When deployed, Squad DMG+4%",
+          "modes": [
+            "Invasão"
+          ]
+        },
+        {
+          "skillId": 6048,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 50,
+          "sourceDescription": "When in a Rally, CRIT +120 and Combo +50.",
+          "modes": [
+            "Invasão"
+          ]
+        },
+        {
+          "skillId": 6048,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 120,
+          "sourceDescription": "When in a Rally, CRIT +120 and Combo +50.",
+          "modes": [
+            "Invasão"
+          ]
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6045,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 248,
+          "sourceDescription": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 248%). Also, the target's Counter -50 for 3s.",
+          "requires": [
+            "crit"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6047,
+          "kind": "buff",
+          "mechanism": "attack",
+          "amount": 15,
+          "sourceDescription": "Leader ATK +15%. When in a Rally, Leader DMG +7%."
+        },
+        {
+          "skillId": 6047,
+          "kind": "buff",
+          "mechanism": "damage",
+          "amount": 7,
+          "sourceDescription": "Leader ATK +15%. When in a Rally, Leader DMG +7%.",
+          "modes": [
+            "Invasão"
+          ]
+        }
+      ]
+    },
+    "55": {
+      "Líder": [
+        {
+          "skillId": 6036,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 80,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 680%). When having a shield, increases DMG dealt for current attack by 15%. Also gains Bramble. Counter +80. When attacked, deals DMG to the attacker for 3s (Skill Multiplier: 200%). When deployed, Squad Counter DMG+10%"
+        },
+        {
+          "skillId": 6036,
+          "kind": "need",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 680%). When having a shield, increases DMG dealt for current attack by 15%. Also gains Bramble. Counter +80. When attacked, deals DMG to the attacker for 3s (Skill Multiplier: 200%). When deployed, Squad Counter DMG+10%"
+        },
+        {
+          "skillId": 6037,
+          "kind": "need",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 288%). When having a shield, CRIT +70."
+        },
+        {
+          "skillId": 6039,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "When Bramble is lost, gains a Shield (Skill Multiplier: 432%) for 3s. Based on the duration Bramble was held, grants additional Shield value by 15% of own DMG taken, up to a maximum of 325% of the Skill Multiplier.",
+          "delayed": true
+        },
+        {
+          "skillId": 6041,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 50,
+          "sourceDescription": "When the Leader Skill deals DMG to a Water-type Biochemical Beast, gains Active Skill DMG +15%, Counter DMG +11%, and Counter +50 for 3s.",
+          "enemy": "Água"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6038,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 196,
+          "sourceDescription": "When the Active Skill deals DMG, has a 50% chance to deal follow-up DMG to the target (Skill Multiplier: 196%). If the Leader has a Shield, increases Skill Multiplier to 294%. Otherwise, grants the Leader a Shield for 3s (Skill Multiplier: 98%). When dealing critical hits or triggering Active Skills through counterattacks, the chance increases to 100%.",
+          "chance": 50,
+          "improvedBy": [
+            "crit",
+            "counter"
+          ],
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6038,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "When the Active Skill deals DMG, has a 50% chance to deal follow-up DMG to the target (Skill Multiplier: 196%). If the Leader has a Shield, increases Skill Multiplier to 294%. Otherwise, grants the Leader a Shield for 3s (Skill Multiplier: 98%). When dealing critical hits or triggering Active Skills through counterattacks, the chance increases to 100%.",
+          "chance": 50,
+          "improvedBy": [
+            "crit",
+            "counter"
+          ],
+          "onlyWithout": "shield",
+          "triggerScope": "active"
+        },
+        {
+          "skillId": 6040,
+          "kind": "buff",
+          "mechanism": "shieldStrength",
+          "amount": 25,
+          "sourceDescription": "Increases Shield strength by 25%. For the duration of the Shield, Leader DMG +15%. When the Shield vanishes, Leader DMG Reduction +10% for 3s."
+        },
+        {
+          "skillId": 6040,
+          "kind": "buff",
+          "mechanism": "damage",
+          "amount": 15,
+          "sourceDescription": "Increases Shield strength by 25%. For the duration of the Shield, Leader DMG +15%. When the Shield vanishes, Leader DMG Reduction +10% for 3s.",
+          "requires": [
+            "shield"
+          ]
+        },
+        {
+          "skillId": 6042,
+          "kind": "boost",
+          "mechanism": "crit",
+          "amount": 120,
+          "sourceDescription": "When taking Corrosion DMG, Leader CRIT +120 and DMG Reduction +10% for 3s.",
+          "external": "incoming_corrosion"
+        }
+      ]
+    },
+    "25": {
+      "Líder": [
+        {
+          "skillId": 6092,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 50,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 460%), and gains Counter +50 for 3s. When having a shield, increases DMG dealt for current attack by 20%. When deployed, Squad Counter DMG+5%"
+        },
+        {
+          "skillId": 6092,
+          "kind": "need",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 460%), and gains Counter +50 for 3s. When having a shield, increases DMG dealt for current attack by 20%. When deployed, Squad Counter DMG+5%"
+        },
+        {
+          "skillId": 6093,
+          "kind": "need",
+          "mechanism": "counter",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 3s (Skill Multiplier: 168%). When triggering the Active Skill with a counterattack while having a shield, Counter DMG for the current attack +15%.",
+          "requires": [
+            "shield"
+          ]
+        },
+        {
+          "skillId": 6095,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "For every 3 Leader Skills used in a single battle, gains a Shield based on the DMG dealt for the last attack (Skill Multiplier: 706%) and Counter +100 for 3s.",
+          "delayed": true
+        },
+        {
+          "skillId": 6095,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 100,
+          "sourceDescription": "For every 3 Leader Skills used in a single battle, gains a Shield based on the DMG dealt for the last attack (Skill Multiplier: 706%) and Counter +100 for 3s.",
+          "delayed": true
+        },
+        {
+          "skillId": 6097,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 30,
+          "sourceDescription": "When the Leader Skill deals DMG to a Water-type Biochemical Beast, DMG +11% the next time the skill is used and gains Counter +30 for 3s.",
+          "enemy": "Água"
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6094,
+          "kind": "state",
+          "mechanism": "shield",
+          "amount": 0,
+          "sourceDescription": "When the Active Skill deals DMG, has a 50% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 176%). If the Active Skill was triggered by a counterattack, the chance increases to 100%",
+          "chance": 50,
+          "improvedBy": [
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6096,
+          "kind": "buff",
+          "mechanism": "shieldStrength",
+          "amount": 10,
+          "sourceDescription": "Increases Shield strength by 10%. For the duration of the Shield, Leader DMG +4.5%."
+        },
+        {
+          "skillId": 6096,
+          "kind": "buff",
+          "mechanism": "damage",
+          "amount": 4.5,
+          "sourceDescription": "Increases Shield strength by 10%. For the duration of the Shield, Leader DMG +4.5%.",
+          "requires": [
+            "shield"
+          ]
+        },
+        {
+          "skillId": 6098,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 70,
+          "sourceDescription": "When taking Corrosion DMG, Leader Counter +70 and DMG Reduction +3% for 3s.",
+          "external": "incoming_corrosion"
+        }
+      ]
+    },
+    "51": {
+      "Líder": [
+        {
+          "skillId": 6015,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "Deals DMG to the target every 6s (Skill Multiplier: 420%), and has a 100% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 504%). For every 12 Active Skills used in a single battle, inflicts 1 additional stacks of Corrosion on the target the next time the Leader Skill is used, up to a maximum of 2 stacks. When deployed, Squad Basic Attack DMG+10%"
+        },
+        {
+          "skillId": 6018,
+          "kind": "need",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "For every 1 stacks of Corrosion inflicted on the target in a single battle, gains Corrosion DMG +2% and Combo +20, up to a maximum combo of +12%/+120. When dealing Corrosion DMG, has a 25% chance to increase current round of Corrosion DMG by 37%."
+        },
+        {
+          "skillId": 6018,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 20,
+          "sourceDescription": "For every 1 stacks of Corrosion inflicted on the target in a single battle, gains Corrosion DMG +2% and Combo +20, up to a maximum combo of +12%/+120. When dealing Corrosion DMG, has a 25% chance to increase current round of Corrosion DMG by 37%.",
+          "requires": [
+            "corrosion"
+          ],
+          "stackLimit": 6
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6017,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "When the Active Skill deals DMG, has a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 276%). If the Active Skill was triggered by a combo or counterattack, the chance increases to 100%.",
+          "chance": 50,
+          "improvedBy": [
+            "combo",
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6017,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 276,
+          "sourceDescription": "When the Active Skill deals DMG, has a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 276%). If the Active Skill was triggered by a combo or counterattack, the chance increases to 100%.",
+          "chance": 50,
+          "improvedBy": [
+            "combo",
+            "counter"
+          ]
+        },
+        {
+          "skillId": 6019,
+          "kind": "buff",
+          "mechanism": "damage",
+          "amount": 33,
+          "sourceDescription": "When dealing damage to a target with Corrosion, increases the DMG by 33%.",
+          "requires": [
+            "corrosion"
+          ]
+        },
+        {
+          "skillId": 6021,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 60,
+          "sourceDescription": "When receiving a critical hit, Leader Counter +60. If the opponent's team has a Fire-type Biochemical Beast, grants additional Counter +90 and DMG Reduction +10% for 3s.",
+          "external": "incoming_crit"
+        },
+        {
+          "skillId": 6021,
+          "kind": "boost",
+          "mechanism": "counter",
+          "amount": 90,
+          "sourceDescription": "When receiving a critical hit, Leader Counter +60. If the opponent's team has a Fire-type Biochemical Beast, grants additional Counter +90 and DMG Reduction +10% for 3s.",
+          "enemy": "Fogo",
+          "external": "incoming_crit"
+        },
+        {
+          "skillId": 6021,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 10,
+          "sourceDescription": "When receiving a critical hit, Leader Counter +60. If the opponent's team has a Fire-type Biochemical Beast, grants additional Counter +90 and DMG Reduction +10% for 3s.",
+          "enemy": "Fogo",
+          "external": "incoming_crit"
+        }
+      ]
+    },
+    "21": {
+      "Líder": [
+        {
+          "skillId": 6071,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "Inflicts Corrosion on the target every 6s, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 444%), and gains Combo +100 and Corrosion DMG +15% the next time the Active Skill is used. When deployed, Squad Basic Attack DMG+5%"
+        },
+        {
+          "skillId": 6071,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 100,
+          "sourceDescription": "Inflicts Corrosion on the target every 6s, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 444%), and gains Combo +100 and Corrosion DMG +15% the next time the Active Skill is used. When deployed, Squad Basic Attack DMG+5%"
+        },
+        {
+          "skillId": 6074,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 50,
+          "sourceDescription": "Corrosion DMG +12%. When dealing Corrosion DMG, gain Combo +50 for 3s.",
+          "requires": [
+            "corrosion"
+          ]
+        },
+        {
+          "skillId": 6074,
+          "kind": "need",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "Corrosion DMG +12%. When dealing Corrosion DMG, gain Combo +50 for 3s."
+        }
+      ],
+      "Suporte": [
+        {
+          "skillId": 6073,
+          "kind": "state",
+          "mechanism": "corrosion",
+          "amount": 0,
+          "sourceDescription": "When the Active Skill deals DMG, has a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 156%). If the Active Skill was triggered by a combo, the chance increases to 100%.",
+          "chance": 50,
+          "improvedBy": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6073,
+          "kind": "followup",
+          "mechanism": "damage",
+          "amount": 156,
+          "sourceDescription": "When the Active Skill deals DMG, has a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 156%). If the Active Skill was triggered by a combo, the chance increases to 100%.",
+          "chance": 50,
+          "improvedBy": [
+            "combo"
+          ]
+        },
+        {
+          "skillId": 6075,
+          "kind": "buff",
+          "mechanism": "comboDamage",
+          "amount": 17,
+          "sourceDescription": "When fighting a target with Corrosion, Combo DMG +17% and CRIT DMG received -7.5%.",
+          "requires": [
+            "corrosion"
+          ]
+        },
+        {
+          "skillId": 6075,
+          "kind": "buff",
+          "mechanism": "protection",
+          "amount": 7.5,
+          "sourceDescription": "When fighting a target with Corrosion, Combo DMG +17% and CRIT DMG received -7.5%.",
+          "requires": [
+            "corrosion"
+          ]
+        },
+        {
+          "skillId": 6077,
+          "kind": "boost",
+          "mechanism": "combo",
+          "amount": 70,
+          "sourceDescription": "When receiving a critical hit, if the opponent's team has a Fire-type Biochemical Beast, Leader Combo +70 and Corrosion DMG +3% for 3s.",
+          "enemy": "Fogo",
+          "external": "incoming_crit"
+        }
+      ]
+    }
+  }
+}

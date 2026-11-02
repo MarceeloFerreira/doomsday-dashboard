@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "asOf": "2026-10-26",
-  "client": "1.61.5",
-  "build": "32",
-  "patch": "26",
-  "manifest": "F84F83F326",
+  "asOf": "2026-10-27",
+  "client": "1.62.0",
+  "build": "4",
+  "patch": "3",
+  "manifest": "E2938DB03",
   "beasts": [
     {
       "id": 85,
@@ -14,6 +14,138 @@
       "element": "Fogo",
       "type": "Criatura do Deserto",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1575,
+          "defense": 1500,
+          "hp": 28950
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6195,
+            "name": "Rugido do Dragão Negro",
+            "multiplier": 688.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6196,
+            "name": "Golpe de Garra do Dragão Negro",
+            "multiplier": 232.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6195,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 150,
+              "duration": 3,
+              "period": "leader"
+            },
+            {
+              "skillId": 6196,
+              "kind": "state",
+              "mechanism": "detonate",
+              "amount": 0,
+              "chance": 50,
+              "improvedBy": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6195,
+              "kind": "need",
+              "mechanism": "detonate",
+              "amount": 0
+            },
+            {
+              "skillId": 6196,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0
+            },
+            {
+              "skillId": 6198,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0
+            },
+            {
+              "skillId": 6200,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 70,
+              "enemy": "Grama"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6197,
+              "kind": "state",
+              "mechanism": "detonate",
+              "amount": 0,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6197,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 248,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6197,
+              "kind": "buff",
+              "mechanism": "vulnerability",
+              "amount": 15,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6199,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 40,
+              "external": "incoming_damage",
+              "stackLimit": 5
+            },
+            {
+              "skillId": 6199,
+              "kind": "buff",
+              "mechanism": "skillDamage",
+              "amount": 30,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6201,
+              "kind": "buff",
+              "mechanism": "attack",
+              "amount": 22,
+              "enemy": "Grama",
+              "external": "incoming_skill"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -104,6 +236,127 @@
       "element": "Físico",
       "type": "Criatura Social",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1665,
+          "defense": 1440,
+          "hp": 28500
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6211,
+            "name": "Lamento da Morte",
+            "multiplier": 700.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {
+              "Guarnição": 1050.0
+            }
+          },
+          {
+            "skillId": 6212,
+            "name": "Cauda Rasga-Céus",
+            "multiplier": 270.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6212,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0
+            },
+            {
+              "skillId": 6214,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0
+            },
+            {
+              "skillId": 6216,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 200,
+              "modes": [
+                "Guarnição"
+              ],
+              "supportElement": "Físico"
+            },
+            {
+              "skillId": 6216,
+              "kind": "state",
+              "mechanism": "detonate",
+              "amount": 0,
+              "modes": [
+                "Guarnição"
+              ],
+              "supportElement": "Fogo"
+            },
+            {
+              "skillId": 6216,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "modes": [
+                "Guarnição"
+              ],
+              "supportElement": "Água"
+            },
+            {
+              "skillId": 6216,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "modes": [
+                "Guarnição"
+              ],
+              "supportElement": "Grama"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6213,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 220,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6215,
+              "kind": "buff",
+              "mechanism": "defense",
+              "amount": 15
+            },
+            {
+              "skillId": 6215,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 60
+            },
+            {
+              "skillId": 6215,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 8,
+              "modes": [
+                "Guarnição"
+              ]
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -177,6 +430,200 @@
       }
     },
     {
+      "id": 22,
+      "name": "Caranguejo Garra Gigante",
+      "nameEn": "Giantclaw Crab",
+      "rarity": "Épico",
+      "element": "Água",
+      "type": "Criatura Aquática",
+      "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 60000,
+        "baseStats": {
+          "attack": 1248,
+          "defense": 1140,
+          "hp": 24480
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6078,
+            "name": "Assalto Espiral",
+            "multiplier": 236.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6079,
+            "name": "Garras Poderosas",
+            "multiplier": 140.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6078,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0
+            },
+            {
+              "skillId": 6079,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6081,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6081,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 90,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6083,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 30,
+              "enemy": "Fogo"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6080,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6080,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 180,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6082,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 110,
+              "duration": 3,
+              "period": "leader"
+            },
+            {
+              "skillId": 6082,
+              "kind": "buff",
+              "mechanism": "comboDamage",
+              "amount": 8,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6084,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 7,
+              "enemy": "Fogo",
+              "external": "incoming_crit"
+            }
+          ]
+        }
+      },
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6078,
+            "groupId": 6078,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Assalto Espiral",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 236%), tem 100% de chance de infligir Corrosão no alvo, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 240%), e aumenta o DANO de Corrosão em 7.5% por 3s. Quando enviado, DANO de Ataque Básico do Esquadrão+5%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 236%), has a 100% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 240%), and increase Corrosion DMG by 7.5% for 3s. When deployed, Squad Basic Attack DMG+5%"
+          },
+          {
+            "id": 6079,
+            "groupId": 6079,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Garras Poderosas",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 140%), e tem 50% de chance de infligir Corrosão no alvo, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 108%). Se a Habilidade Ativa foi acionada por um combo, a chance aumenta para 100%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 140%), and has a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 108%). If the Active Skill was triggered by a combo, the chance increases to 100%."
+          },
+          {
+            "id": 6081,
+            "groupId": 6081,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Maré Alta",
+            "description": "Ao acionar um combo, DANO de Corrosão +20% e Combo +90 na próxima vez que a Habilidade do Líder for usada.",
+            "descriptionEn": "When triggering a combo, Corrosion DMG +20% and Combo +90 the next time the Leader Skill is used."
+          },
+          {
+            "id": 6083,
+            "groupId": 6083,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Fluxo de Poder",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Besta Bioquímica do tipo Fogo, ganha DANO de Corrosão +11% e Combo +30 por 3s.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Fire-type Biochemical Beast, gains Corrosion DMG +11% and Combo +30 for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6080,
+            "groupId": 6080,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Garras Poderosas",
+            "description": "Ao acionar um combo, causa Corrosão no alvo, infligindo DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 180%). Enquanto este efeito estiver ativo, o CRIT do alvo -40.",
+            "descriptionEn": "When triggering a combo, inflicts Corrosion on the target, dealing Corrosion DMG to the target over3s (Skill Multiplier: 180%). While this effect is active, target's CRIT -40."
+          },
+          {
+            "id": 6082,
+            "groupId": 6082,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Maré Alta",
+            "description": "Ao usar a Habilidade do Líder, Combo de Líder +110 por 3s. Se um combo for acionado durante este tempo, aumenta o DANO de Combo para o ataque atual em 8%.",
+            "descriptionEn": "When using the Leader Skill, Leader Combo +110 for 3s. If a combo is triggered during this time, increases Combo DMG for current attack by 8%."
+          },
+          {
+            "id": 6084,
+            "groupId": 6084,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Fluxo de Poder",
+            "description": "Ao receber um golpe crítico, se a equipe adversária tiver uma Besta Bioquímica do tipo Fogo, o DANO recebido será -7%, e o CRIT de Líder do alvo será -20 por 3s.",
+            "descriptionEn": "When receiving a critical hit, if the opponent's team has a Fire-type Biochemical Beast, DMG taken -7%, and target Leader's CRIT -20 for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
       "id": 52,
       "name": "Caranguejo General",
       "nameEn": "General Crab",
@@ -184,6 +631,114 @@
       "element": "Água",
       "type": "Criatura Aquática",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1560,
+          "defense": 1425,
+          "hp": 30600
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6022,
+            "name": "Beliscão Mortal",
+            "multiplier": 350.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6023,
+            "name": "Ataque de Pinça",
+            "multiplier": 180.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6022,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0
+            },
+            {
+              "skillId": 6025,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6025,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 110,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6027,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 40,
+              "enemy": "Fogo"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6024,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6024,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 264,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6024,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 50,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6026,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 150,
+              "duration": 3,
+              "period": "leader"
+            },
+            {
+              "skillId": 6028,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 14,
+              "enemy": "Fogo",
+              "external": "incoming_crit"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -257,6 +812,177 @@
       }
     },
     {
+      "id": 24,
+      "name": "Dentes de Sabe de Cinzas",
+      "nameEn": "Ash Sabretooth",
+      "rarity": "Épico",
+      "element": "Fogo",
+      "type": "Criatura do Deserto",
+      "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 60000,
+        "baseStats": {
+          "attack": 1260,
+          "defense": 1152,
+          "hp": 24000
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6064,
+            "name": "Saque Cinzento",
+            "multiplier": 526.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6065,
+            "name": "Garra de Combustão",
+            "multiplier": 184.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6067,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0
+            },
+            {
+              "skillId": 6067,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 80,
+              "requires": [
+                "crit"
+              ]
+            },
+            {
+              "skillId": 6069,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 30,
+              "enemy": "Grama"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6066,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 168,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6068,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 100,
+              "duration": 3,
+              "period": "leader"
+            },
+            {
+              "skillId": 6068,
+              "kind": "buff",
+              "mechanism": "critDamage",
+              "amount": 18,
+              "chance": 50
+            },
+            {
+              "skillId": 6070,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 70,
+              "external": "enemy_shield_and_incoming_damage"
+            }
+          ]
+        }
+      },
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6064,
+            "groupId": 6064,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Saque Cinzento",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 526%). Existe 100% de chance de aumentar o DANO em 15% nas próximas 1 vezes que Garra de Combustão for usado. Quando enviado, DANO de Habilidade do Esquadrão+2.5%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 526%). There is a 100% chance to increase DMG by 15% for the next 1 times Combustion Claw is used. When deployed, Squad Skill DMG+2.5%"
+          },
+          {
+            "id": 6065,
+            "groupId": 6065,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Garra de Combustão",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 184%). Tem 50% de chance de aumentar o Multiplicador de Habilidade para 230%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 184%). Has a 50% chance to increase Skill Multiplier to 230%."
+          },
+          {
+            "id": 6067,
+            "groupId": 6067,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Surto de Energia",
+            "description": "Quando a habilidade causa um acerto crítico, ganhe DANO DE CRIT +13% para o ataque atual, e CRIT +80 por 3s.",
+            "descriptionEn": "When the skill deals a critical hit, gain CRIT DMG +13% for the current attack, and CRIT +80 for 3s."
+          },
+          {
+            "id": 6069,
+            "groupId": 6069,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Ardente",
+            "description": "Quando a Habilidade Ativa causa DANO a uma Besta Bioquímica do tipo Grama, o DANO +20% e o CRIT +30 na próxima vez que a habilidade for usada.",
+            "descriptionEn": "When the Active Skill deals DMG to a Grass-type Biochemical Beast, DMG +20% and CRIT +30 the next time the skill is used."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6066,
+            "groupId": 6066,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Garra de Combustão",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, causa um DANO de acompanhamento (Multiplicador da Habilidade: 168%) e tem 50% de chance de aumentar o DANO do ataque atual em 15%.",
+            "descriptionEn": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 168%), and has a 50% chance to increase DMG of the current attack by 15%."
+          },
+          {
+            "id": 6068,
+            "groupId": 6068,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Surto de Energia",
+            "description": "Ao usar a Habilidade de Líder, CRIT de Líder +100 por 3s. Tem 50% de chance de aumentar o DANO CRIT em +18% na próxima vez que a habilidade for usada.",
+            "descriptionEn": "When using the Leader Skill, Leader CRIT +100 for 3s. Has a 50% chance to increase CRIT DMG by +18% the next time the skill is used."
+          },
+          {
+            "id": 6070,
+            "groupId": 6070,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Ardente",
+            "description": "Ao receber DANO de um alvo com um Escudo, CRIT de Líder +70 e DANO CRIT +5% por 3s.",
+            "descriptionEn": "When taking DMG from a target with a Shield, Leader CRIT +70 and CRIT DMG +5% for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
       "id": 54,
       "name": "Dentes de Sabe Flamejante",
       "nameEn": "Blaze Sabretooth",
@@ -264,6 +990,111 @@
       "element": "Fogo",
       "type": "Criatura do Deserto",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1575,
+          "defense": 1440,
+          "hp": 30000
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6008,
+            "name": "Duplo Abate Infernal",
+            "multiplier": 720.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6009,
+            "name": "Deslizes de Chamas",
+            "multiplier": 256.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6011,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0
+            },
+            {
+              "skillId": 6011,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 110,
+              "requires": [
+                "crit"
+              ]
+            },
+            {
+              "skillId": 6013,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 40,
+              "enemy": "Grama"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6010,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 236,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6010,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 100,
+              "requires": [
+                "crit"
+              ],
+              "scope": "active",
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6012,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 150,
+              "duration": 3,
+              "period": "leader"
+            },
+            {
+              "skillId": 6012,
+              "kind": "buff",
+              "mechanism": "critDamage",
+              "amount": 26,
+              "requires": [
+                "crit"
+              ],
+              "chance": 50
+            },
+            {
+              "skillId": 6014,
+              "kind": "buff",
+              "mechanism": "damage",
+              "amount": 10,
+              "external": "enemy_shield"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -337,6 +1168,196 @@
       }
     },
     {
+      "id": 26,
+      "name": "Dragão da Tempestade",
+      "nameEn": "Gale Draco",
+      "rarity": "Épico",
+      "element": "Grama",
+      "type": "Criatura da Floresta",
+      "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 60000,
+        "baseStats": {
+          "attack": 1236,
+          "defense": 1164,
+          "hp": 24240
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6085,
+            "name": "Carga de Ciclone",
+            "multiplier": 300.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6086,
+            "name": "Furacão Voador",
+            "multiplier": 168.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6085,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0
+            },
+            {
+              "skillId": 6085,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 60
+            },
+            {
+              "skillId": 6088,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 50
+            },
+            {
+              "skillId": 6088,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "requires": [
+                "counter"
+              ],
+              "chance": 50
+            },
+            {
+              "skillId": 6086,
+              "kind": "need",
+              "mechanism": "shield",
+              "amount": 0
+            },
+            {
+              "skillId": 6088,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6087,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 152,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6089,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 110,
+              "duration": 3,
+              "period": "leader"
+            },
+            {
+              "skillId": 6089,
+              "kind": "buff",
+              "mechanism": "counterDamage",
+              "amount": 4,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6091,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 40,
+              "external": "incoming_corrosion"
+            }
+          ]
+        }
+      },
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6085,
+            "groupId": 6085,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Carga de Ciclone",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 300%), tem 100% de chance de ganhar um Escudo por 3s com base no DANO causado (Multiplicador de Habilidade: 180%), e ganha Contra-ataque +60 por 3s. Quando enviado, Redução de DANO de Ataque Básico do Esquadrão+5%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 300%), has a 100% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 180%), and gain Counter +60 for 3s. When deployed, Squad Basic Attack DMG Reduction+5%"
+          },
+          {
+            "id": 6086,
+            "groupId": 6086,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Furacão Voador",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 168%). Quando estiver com um escudo, aumenta o Multiplicador de Habilidade deste ataque para 252%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 168%). When having a shield, increases the Skill Multiplier for this attack to 252%."
+          },
+          {
+            "id": 6088,
+            "groupId": 6088,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Madeira Envolvente",
+            "description": "Contra-ataque +50. Ao acionar um contra-ataque, tem 50% de chance de ganhar um Escudo por 3s com base no DANO do contra-ataque causado (Multiplicador de Habilidade: 280%).",
+            "descriptionEn": "Counter +50. When triggering a counterattack, has a 50% chance to gain a Shield for 3s based on the counterattack DMG dealt (Skill Multiplier: 280%)."
+          },
+          {
+            "id": 6090,
+            "groupId": 6090,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Solitário",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Besta Bioquímica do tipo Água, ganha DANO de Líder +11% e Redução de Água +3% por 3s.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Water-type Biochemical Beast, gains Leader DMG +11% and Water Reduction +3% for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6087,
+            "groupId": 6087,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Furacão Voador",
+            "description": "Ao acionar um contra-ataque, causa dano de acompanhamento (Multiplicador de Habilidade: 152%) . Também tem 50% de chance de ganhar DANO de Contra-ataque +6% por 3s.",
+            "descriptionEn": "When triggering a counterattack, deals follow-up DMG (Skill Multiplier: 152%). Also has a 50% chance to gain Counter DMG +6% for 3s."
+          },
+          {
+            "id": 6089,
+            "groupId": 6089,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Madeira Envolvente",
+            "description": "Ao usar a Habilidade do Líder, Contra-ataque de Líder +110 por 3s. Se um contra-ataque for acionado durante este tempo, DANO de Contra-ataque para o ataque atual +4%.",
+            "descriptionEn": "When using the Leader Skill, Leader Counter +110 for 3s. If a counterattack is triggered during this time, Counter DMG for current attack +4%."
+          },
+          {
+            "id": 6091,
+            "groupId": 6091,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Solitário",
+            "description": "Ao receber DANO de Corrosão, DANO da Habilidade de Líder +10% e Contra-ataque +40 por 3s.",
+            "descriptionEn": "When taking Corrosion DMG, Leader Skill DMG +10% and Counter +40 for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
       "id": 56,
       "name": "Dragão Furcacão",
       "nameEn": "Hurricane Draco",
@@ -344,6 +1365,110 @@
       "element": "Grama",
       "type": "Criatura da Floresta",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1545,
+          "defense": 1455,
+          "hp": 30300
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6029,
+            "name": "Emboscada de Furacão",
+            "multiplier": 420.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6030,
+            "name": "Mil Espinhos",
+            "multiplier": 240.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6029,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0
+            },
+            {
+              "skillId": 6032,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 70
+            },
+            {
+              "skillId": 6030,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 60,
+              "requires": [
+                "shield"
+              ]
+            },
+            {
+              "skillId": 6032,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "requires": [
+                "counter"
+              ],
+              "chance": 50
+            },
+            {
+              "skillId": 6029,
+              "kind": "need",
+              "mechanism": "shield",
+              "amount": 0
+            },
+            {
+              "skillId": 6032,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6031,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 288,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6033,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 150,
+              "duration": 3,
+              "period": "leader"
+            },
+            {
+              "skillId": 6035,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 14,
+              "external": "incoming_corrosion"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -424,6 +1549,116 @@
       "element": "Água",
       "type": "Criatura Aquática",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1605,
+          "defense": 1478,
+          "hp": 28800
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6219,
+            "name": "Pisada Demoníaca",
+            "multiplier": 600.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6220,
+            "name": "Garra Demoníaca",
+            "multiplier": 220.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6220,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "chance": 50,
+              "improvedBy": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6219,
+              "kind": "need",
+              "mechanism": "corrosion",
+              "amount": 0
+            },
+            {
+              "skillId": 6220,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0
+            },
+            {
+              "skillId": 6222,
+              "kind": "need",
+              "mechanism": "corrosion",
+              "amount": 0
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6221,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6221,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 180,
+              "requires": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6223,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 15,
+              "requires": [
+                "corrosion"
+              ]
+            },
+            {
+              "skillId": 6223,
+              "kind": "buff",
+              "mechanism": "counterDamage",
+              "amount": 10,
+              "requires": [
+                "counter"
+              ],
+              "stackLimit": 5
+            },
+            {
+              "skillId": 6225,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 15,
+              "enemy": "Fogo",
+              "external": "incoming_crit"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -514,6 +1749,117 @@
       "element": "Fogo",
       "type": "Criatura do Deserto",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1650,
+          "defense": 1448,
+          "hp": 28500
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6171,
+            "name": "Carga Rápida",
+            "multiplier": 554.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6172,
+            "name": "Dança das Chamas",
+            "multiplier": 274.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6171,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 130,
+              "duration": 3,
+              "period": "leader"
+            },
+            {
+              "skillId": 6174,
+              "kind": "state",
+              "mechanism": "detonate",
+              "amount": 0
+            },
+            {
+              "skillId": 6171,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0,
+              "triggerScope": "main"
+            },
+            {
+              "skillId": 6172,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6174,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6173,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 234,
+              "chance": 50,
+              "improvedBy": [
+                "crit",
+                "combo"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6175,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 40,
+              "anyOf": [
+                "crit",
+                "detonate"
+              ],
+              "stackLimit": 4
+            },
+            {
+              "skillId": 6175,
+              "kind": "buff",
+              "mechanism": "attack",
+              "amount": 6,
+              "anyOf": [
+                "crit",
+                "detonate"
+              ],
+              "stackLimit": 4
+            },
+            {
+              "skillId": 6177,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 120,
+              "external": "enemy_shield"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -594,6 +1940,128 @@
       "element": "Grama",
       "type": "Criatura da Floresta",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1620,
+          "defense": 1455,
+          "hp": 28800
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6163,
+            "name": "Martelo de Lâmina",
+            "multiplier": 750.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6164,
+            "name": "Garras Selvagens",
+            "multiplier": 264.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6163,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 150,
+              "scope": "main"
+            },
+            {
+              "skillId": 6164,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 65,
+              "scope": "active"
+            },
+            {
+              "skillId": 6166,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "requires": [
+                "crit"
+              ]
+            },
+            {
+              "skillId": 6163,
+              "kind": "need",
+              "mechanism": "shield",
+              "amount": 0
+            },
+            {
+              "skillId": 6166,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0
+            },
+            {
+              "skillId": 6168,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 70,
+              "enemy": "Água"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6165,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 172,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6165,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6167,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 160,
+              "requires": [
+                "shield"
+              ]
+            },
+            {
+              "skillId": 6167,
+              "kind": "buff",
+              "mechanism": "critDamage",
+              "amount": 9
+            },
+            {
+              "skillId": 6169,
+              "kind": "buff",
+              "mechanism": "defense",
+              "amount": 21.5,
+              "enemy": "Água",
+              "external": "incoming_combo"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -684,6 +2152,133 @@
       "element": "Fogo",
       "type": "Criatura do Deserto",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1650,
+          "defense": 1425,
+          "hp": 28950
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6179,
+            "name": "Golpe Oco",
+            "multiplier": 658.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6180,
+            "name": "Golpe Retumbante",
+            "multiplier": 236.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6179,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 150
+            },
+            {
+              "skillId": 6180,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 65
+            },
+            {
+              "skillId": 6179,
+              "kind": "state",
+              "mechanism": "detonate",
+              "amount": 0,
+              "chance": 50,
+              "improvedBy": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6180,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6182,
+              "kind": "need",
+              "mechanism": "detonate",
+              "amount": 0
+            },
+            {
+              "skillId": 6184,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 70,
+              "enemy": "Grama"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6181,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 244,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6181,
+              "kind": "state",
+              "mechanism": "detonate",
+              "amount": 0,
+              "requires": [
+                "combo"
+              ],
+              "chance": 50
+            },
+            {
+              "skillId": 6183,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 10,
+              "anyOf": [
+                "combo",
+                "detonate"
+              ],
+              "stackLimit": 5
+            },
+            {
+              "skillId": 6183,
+              "kind": "buff",
+              "mechanism": "comboDamage",
+              "amount": 13,
+              "anyOf": [
+                "combo",
+                "detonate"
+              ],
+              "stackLimit": 5
+            },
+            {
+              "skillId": 6185,
+              "kind": "buff",
+              "mechanism": "attack",
+              "amount": 21.5,
+              "enemy": "Grama",
+              "external": "incoming_counter"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -774,6 +2369,127 @@
       "element": "Físico",
       "type": "Criatura Social",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1665,
+          "defense": 1440,
+          "hp": 28500
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6203,
+            "name": "Olhar do Lorde",
+            "multiplier": 700.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {
+              "Invasão": 1050.0
+            }
+          },
+          {
+            "skillId": 6204,
+            "name": "Garra Dilaceradora",
+            "multiplier": 270.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6204,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6206,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0
+            },
+            {
+              "skillId": 6208,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 200,
+              "modes": [
+                "Invasão"
+              ],
+              "supportElement": "Físico"
+            },
+            {
+              "skillId": 6208,
+              "kind": "state",
+              "mechanism": "detonate",
+              "amount": 0,
+              "modes": [
+                "Invasão"
+              ],
+              "supportElement": "Fogo"
+            },
+            {
+              "skillId": 6208,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "modes": [
+                "Invasão"
+              ],
+              "supportElement": "Água"
+            },
+            {
+              "skillId": 6208,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "modes": [
+                "Invasão"
+              ],
+              "supportElement": "Grama"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6205,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 220,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6207,
+              "kind": "buff",
+              "mechanism": "attack",
+              "amount": 15
+            },
+            {
+              "skillId": 6207,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 60
+            },
+            {
+              "skillId": 6207,
+              "kind": "buff",
+              "mechanism": "damage",
+              "amount": 8,
+              "modes": [
+                "Invasão"
+              ]
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -854,6 +2570,134 @@
       "element": "Água",
       "type": "Criatura Aquática",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1590,
+          "defense": 1455,
+          "hp": 29400
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6155,
+            "name": "Explosão Ácida",
+            "multiplier": 416.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6156,
+            "name": "Golpe de Cauda",
+            "multiplier": 264.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6156,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 65,
+              "scope": "active"
+            },
+            {
+              "skillId": 6155,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "chance": 70
+            },
+            {
+              "skillId": 6158,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0
+            },
+            {
+              "skillId": 6158,
+              "kind": "need",
+              "mechanism": "corrosion",
+              "amount": 0
+            },
+            {
+              "skillId": 6160,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 70,
+              "enemy": "Fogo"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6157,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6157,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 258,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6157,
+              "kind": "buff",
+              "mechanism": "critDamage",
+              "amount": 15,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6159,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 10,
+              "requires": [
+                "crit"
+              ],
+              "stackLimit": 5
+            },
+            {
+              "skillId": 6159,
+              "kind": "buff",
+              "mechanism": "critDamage",
+              "amount": 13,
+              "requires": [
+                "crit"
+              ],
+              "stackLimit": 5
+            },
+            {
+              "skillId": 6161,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 8,
+              "enemy": "Fogo",
+              "external": "incoming_damage"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -937,6 +2781,180 @@
       }
     },
     {
+      "id": 28,
+      "name": "Pangolim de Cristal",
+      "nameEn": "Crystal Pangolin",
+      "rarity": "Épico",
+      "element": "Físico",
+      "type": "Criatura Social",
+      "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 60000,
+        "baseStats": {
+          "attack": 1320,
+          "defense": 1140,
+          "hp": 23160
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6106,
+            "name": "Topo de Cristal",
+            "multiplier": 420.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {
+              "Guarnição": 630.0
+            }
+          },
+          {
+            "skillId": 6107,
+            "name": "Deslizes Estranhos",
+            "multiplier": 186.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6107,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0
+            },
+            {
+              "skillId": 6109,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0
+            },
+            {
+              "skillId": 6106,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 50,
+              "modes": [
+                "Guarnição"
+              ]
+            },
+            {
+              "skillId": 6111,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 70,
+              "modes": [
+                "Guarnição"
+              ]
+            },
+            {
+              "skillId": 6111,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 30,
+              "modes": [
+                "Guarnição"
+              ]
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6108,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 172,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6110,
+              "kind": "buff",
+              "mechanism": "defense",
+              "amount": 10
+            }
+          ]
+        }
+      },
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6106,
+            "groupId": 6106,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Topo de Cristal",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 420%). Se este Pet estiver guarnecido, aumenta o Multiplicador de Habilidade para 630% e ganha +50 de Contra-ataque por 3s. Quando enviado, Redução de DANO do Esquadrão+2%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 420%). If this Pet is garrisoned, increase Skill Multiplier to 630%, and gain +50 Counter for 3s. When deployed, Squad DMG Reduction+2%"
+          },
+          {
+            "id": 6107,
+            "groupId": 6107,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Deslizes Estranhos",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 186%). Se a Habilidade Ativa foi acionada por um contra-ataque, aumenta o Multiplicador de Habilidade para este ataque para 234%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 186%). If the Active Skill was triggered by a counterattack, increases the Skill Multiplier for this attack to 234%."
+          },
+          {
+            "id": 6109,
+            "groupId": 6109,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Táticas Defensivas",
+            "description": "Quando em uma Invasão ou guarnecido, aumenta seu próprio ATQ e DEF com base no número de tropas no Esquadrão e nos atributos das tropas, até um máximo de 250% de seus próprios atributos. Quando acionar um contra-ataque, o DANO da Habilidade Ativa aumenta em 15% na próxima vez que a Habilidade Ativa for usada.",
+            "descriptionEn": "When in a Rally or garrisoned, increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 250% of own attributes. When triggering a counterattack, Active Skill DMG increases by 15% the next time the Active Skill is used."
+          },
+          {
+            "id": 6111,
+            "groupId": 6111,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder das Pedras",
+            "description": "Quando guarnecido, CRIT +70 e Contra-ataque +30.",
+            "descriptionEn": "When garrisoned, CRIT +70 and Counter +30."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6108,
+            "groupId": 6108,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Deslizes Estranhos",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, causa um DANO de acompanhamento (Multiplicador da Habilidade: 172%). Também, o DANO de Combo do alvo é -6% por 3s.",
+            "descriptionEn": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 172%). Also, the target's Combo DMG -6% for 3s."
+          },
+          {
+            "id": 6110,
+            "groupId": 6110,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Táticas Defensivas",
+            "description": "DEF de Líder +10%.",
+            "descriptionEn": "Leader DEF +10%."
+          },
+          {
+            "id": 6112,
+            "groupId": 6112,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder das Pedras",
+            "description": "Ao acionar um contra-ataque contra um alvo Agrupado, causa um DANO adicional de +6% para o ataque atual. Também, o CRIT do alvo é -30 por 3s.",
+            "descriptionEn": "When triggering a counterattack against a Rallied target, deals additional +6% DMG for the current attack. Also, the target's CRIT -30 for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
       "id": 58,
       "name": "Pangolim Martelo",
       "nameEn": "Hammer Pangolin",
@@ -944,6 +2962,119 @@
       "element": "Físico",
       "type": "Criatura Social",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1650,
+          "defense": 1425,
+          "hp": 28950
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6050,
+            "name": "Contra-ataque de Martelo",
+            "multiplier": 600.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {
+              "Guarnição": 900.0
+            }
+          },
+          {
+            "skillId": 6051,
+            "name": "Corte de Foice",
+            "multiplier": 240.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6051,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0,
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6053,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0
+            },
+            {
+              "skillId": 6051,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 60,
+              "requires": [
+                "crit"
+              ]
+            },
+            {
+              "skillId": 6050,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 70,
+              "modes": [
+                "Guarnição"
+              ]
+            },
+            {
+              "skillId": 6055,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 50,
+              "modes": [
+                "Guarnição"
+              ]
+            },
+            {
+              "skillId": 6055,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 120,
+              "modes": [
+                "Guarnição"
+              ]
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6052,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 248,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6054,
+              "kind": "buff",
+              "mechanism": "defense",
+              "amount": 15
+            },
+            {
+              "skillId": 6054,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 7,
+              "modes": [
+                "Guarnição"
+              ]
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -1017,6 +3148,188 @@
       }
     },
     {
+      "id": 23,
+      "name": "Rinoceronte de Lava",
+      "nameEn": "Lava Rhino",
+      "rarity": "Épico",
+      "element": "Fogo",
+      "type": "Criatura do Deserto",
+      "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 60000,
+        "baseStats": {
+          "attack": 1200,
+          "defense": 1200,
+          "hp": 24000
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6057,
+            "name": "Derrubada Infernal",
+            "multiplier": 490.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6058,
+            "name": "Derrubada de Chifre",
+            "multiplier": 196.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6057,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 100,
+              "scope": "main"
+            },
+            {
+              "skillId": 6058,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0,
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6060,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0,
+              "triggerScope": "main"
+            },
+            {
+              "skillId": 6062,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 50,
+              "enemy": "Grama"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6059,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 176,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6059,
+              "kind": "buff",
+              "mechanism": "armorBreak",
+              "amount": 10,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6061,
+              "kind": "buff",
+              "mechanism": "critDamage",
+              "amount": 24,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6063,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 30,
+              "external": "enemy_shield"
+            }
+          ]
+        }
+      },
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6057,
+            "groupId": 6057,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Derrubada Infernal",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 490%), CRIT para o ataque atual +100, e DANO CRIT +20%. Quando enviado, DANO de Habilidade do Esquadrão+2.5%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 490%), CRIT for current attack +100, and CRIT DMG +20%. When deployed, Squad Skill DMG+2.5%"
+          },
+          {
+            "id": 6058,
+            "groupId": 6058,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Derrubada de Chifre",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 196%). Quando este ataque causa um acerto crítico, tem 50% de chance de aumentar o Multiplicador de Habilidade para 236%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 196%). When this attack deals a critical hit, has a 50% chance to increase Skill Multiplier to 236%."
+          },
+          {
+            "id": 6060,
+            "groupId": 6060,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Corrente de Lava",
+            "description": "Quando a Habilidade do Líder causa um acerto crítico, tem 100% de chance de aumentar o DANO em 72% na próxima vez que a habilidade for usada.",
+            "descriptionEn": "When the Leader Skill deals a critical hit, has a 100% chance to increase DMG by 72% the next time the skill is used."
+          },
+          {
+            "id": 6062,
+            "groupId": 6062,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder de Lava",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Fera Bioquímica do tipo Grama, ganhe CRÍTICO +50 e DANO DE CRÍTICO +21% para o ataque atual.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Grass-type Biochemical Beast, gain CRIT +50 and CRIT DMG +21% for the current attack."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6059,
+            "groupId": 6059,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Derrubada de Chifre",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, causa um DANO de acompanhamento (Multiplicador da Habilidade: 176%). Também tem 100% de chance de causar DEF do alvo -10% por 3s.",
+            "descriptionEn": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 176%). Also has a 100% chance to cause target's DEF -10% for 3s."
+          },
+          {
+            "id": 6061,
+            "groupId": 6061,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Corrente de Lava",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, tem 100% de chance de aumentar o DANO CRÍTICO do Líder em 24% por 3s.",
+            "descriptionEn": "When the Active Skill deals a critical hit, has a 100% chance to increase Leader CRIT DMG by 24% for 3s."
+          },
+          {
+            "id": 6063,
+            "groupId": 6063,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder de Lava",
+            "description": "Quando a Habilidade de Líder causa DANO a um alvo com um Escudo, aumenta o DANO para o ataque atual em +7% e CRÍTICO em +30.",
+            "descriptionEn": "When the Leader Skill deals DMG to a target with a Shield, increases DMG for current attack by +7% and CRIT by +30."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
       "id": 53,
       "name": "Rinoceronte Vulcânico",
       "nameEn": "Volcano Rhino",
@@ -1024,6 +3337,99 @@
       "element": "Fogo",
       "type": "Criatura do Deserto",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1500,
+          "defense": 1500,
+          "hp": 30000
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6001,
+            "name": "Impacto Extremo",
+            "multiplier": 476.0,
+            "interval": 5.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6002,
+            "name": "Chifrada Flamejante",
+            "multiplier": 282.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6001,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 150,
+              "scope": "main"
+            },
+            {
+              "skillId": 6002,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0
+            },
+            {
+              "skillId": 6004,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0,
+              "triggerScope": "main"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6003,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 248,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6003,
+              "kind": "buff",
+              "mechanism": "armorBreak",
+              "amount": 15,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6005,
+              "kind": "buff",
+              "mechanism": "critDamage",
+              "amount": 34,
+              "requires": [
+                "crit"
+              ]
+            },
+            {
+              "skillId": 6007,
+              "kind": "buff",
+              "mechanism": "damage",
+              "amount": 10,
+              "external": "enemy_shield"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -1104,6 +3510,94 @@
       "element": "Grama",
       "type": "Criatura da Floresta",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1650,
+          "defense": 1448,
+          "hp": 28500
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6187,
+            "name": "Impacto Pesado",
+            "multiplier": 668.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6188,
+            "name": "Punho Desorientado",
+            "multiplier": 232.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6187,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 150
+            },
+            {
+              "skillId": 6187,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6192,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 70,
+              "enemy": "Água"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6189,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "requires": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6189,
+              "kind": "buff",
+              "mechanism": "skillDamage",
+              "amount": 15,
+              "requires": [
+                "shield"
+              ]
+            },
+            {
+              "skillId": 6191,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0
+            },
+            {
+              "skillId": 6193,
+              "kind": "buff",
+              "mechanism": "attack",
+              "amount": 22,
+              "enemy": "Água",
+              "external": "incoming_combo"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -1187,6 +3681,180 @@
       }
     },
     {
+      "id": 27,
+      "name": "Touro Cadáver",
+      "nameEn": "Corpse Bull",
+      "rarity": "Épico",
+      "element": "Físico",
+      "type": "Criatura Social",
+      "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 60000,
+        "baseStats": {
+          "attack": 1320,
+          "defense": 1140,
+          "hp": 23160
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6099,
+            "name": "Pedido de Cerco",
+            "multiplier": 420.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {
+              "Invasão": 630.0
+            }
+          },
+          {
+            "skillId": 6100,
+            "name": "Avanço de Touro",
+            "multiplier": 186.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6100,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6102,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6099,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 50,
+              "modes": [
+                "Invasão"
+              ]
+            },
+            {
+              "skillId": 6104,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 70,
+              "modes": [
+                "Invasão"
+              ]
+            },
+            {
+              "skillId": 6104,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 30,
+              "modes": [
+                "Invasão"
+              ]
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6101,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 172,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6103,
+              "kind": "buff",
+              "mechanism": "attack",
+              "amount": 10
+            }
+          ]
+        }
+      },
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6099,
+            "groupId": 6099,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Pedido de Cerco",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 420%). Quando em uma Invasão, aumenta o Multiplicador de Habilidade para 630% e o Combo para este ataque é +50. Quando enviado, DANO do Esquadrão+2%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 420%). When in a Rally, increase Skill Multiplier to 630% and Combo for this attack +50. When deployed, Squad DMG+2%"
+          },
+          {
+            "id": 6100,
+            "groupId": 6100,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Avanço de Touro",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 186%). Se a Habilidade Ativa foi acionada por um combo, aumenta o Multiplicador de Habilidade para este ataque para 234%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 186%). If the Active Skill was triggered by a combo, increases the Skill Multiplier for this attack to 234%."
+          },
+          {
+            "id": 6102,
+            "groupId": 6102,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Táticas de Rebanho",
+            "description": "Quando em uma Invasão ou guarnecido, aumenta seu próprio ATQ e DEF com base no número de tropas no Esquadrão e nos atributos das tropas, até um máximo de 250% de seus próprios atributos. Quando acionar um combo, o DANO da Habilidade Ativa aumenta em 15% na próxima vez que a Habilidade Ativa for usada.",
+            "descriptionEn": "When in a Rally or garrisoned, increases own ATK and DEF based on the number of troops in the Squad and the troops' attributes, up to a maximum of 250% of own attributes. When triggering a combo, Active Skill DMG increases by 15% the next time the Active Skill is used."
+          },
+          {
+            "id": 6104,
+            "groupId": 6104,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Unido",
+            "description": "Quando em uma Invasão, Combo +70 e CRIT +30.",
+            "descriptionEn": "When in a Rally, Combo +70 and CRIT +30."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6101,
+            "groupId": 6101,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Avanço de Touro",
+            "description": "Quando a Habilidade Ativa causa um acerto crítico, causa um DANO de acompanhamento (Multiplicador da Habilidade: 172%). Também, o DANO de Contra-ataque do alvo é -6% por 3s.",
+            "descriptionEn": "When the Active Skill deals a critical hit, deals follow-up DMG (Skill Multiplier: 172%). Also, the target's Counter DMG -6% for 3s."
+          },
+          {
+            "id": 6103,
+            "groupId": 6103,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Táticas de Rebanho",
+            "description": "ATQ de Líder +10%.",
+            "descriptionEn": "Leader ATK +10%."
+          },
+          {
+            "id": 6105,
+            "groupId": 6105,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Unido",
+            "description": "Ao acionar um combo contra um alvo guarnecido, causa um DANO adicional de +6% para o ataque atual. Também, o CRIT do alvo é -30 por 3s.",
+            "descriptionEn": "When triggering a combo against a garrisoned target, deals additional +6% DMG for current attack. Also, the target's CRIT -30 for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
       "id": 57,
       "name": "Touro Morto-Vivo",
       "nameEn": "Undead Bull",
@@ -1194,6 +3862,119 @@
       "element": "Físico",
       "type": "Criatura Social",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1650,
+          "defense": 1425,
+          "hp": 28950
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6043,
+            "name": "Carga Circundante",
+            "multiplier": 600.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {
+              "Invasão": 900.0
+            }
+          },
+          {
+            "skillId": 6044,
+            "name": "Cascos de Ferro",
+            "multiplier": 240.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6044,
+              "kind": "need",
+              "mechanism": "crit",
+              "amount": 0,
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6046,
+              "kind": "need",
+              "mechanism": "combo",
+              "amount": 0
+            },
+            {
+              "skillId": 6044,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 60,
+              "requires": [
+                "crit"
+              ]
+            },
+            {
+              "skillId": 6043,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 70,
+              "modes": [
+                "Invasão"
+              ]
+            },
+            {
+              "skillId": 6048,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 50,
+              "modes": [
+                "Invasão"
+              ]
+            },
+            {
+              "skillId": 6048,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 120,
+              "modes": [
+                "Invasão"
+              ]
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6045,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 248,
+              "requires": [
+                "crit"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6047,
+              "kind": "buff",
+              "mechanism": "attack",
+              "amount": 15
+            },
+            {
+              "skillId": 6047,
+              "kind": "buff",
+              "mechanism": "damage",
+              "amount": 7,
+              "modes": [
+                "Invasão"
+              ]
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -1274,6 +4055,122 @@
       "element": "Grama",
       "type": "Criatura da Floresta",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1635,
+          "defense": 1448,
+          "hp": 28800
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6036,
+            "name": "Coroa de Espinhos",
+            "multiplier": 680.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6037,
+            "name": "Tiros de Esporos",
+            "multiplier": 288.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6036,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 80
+            },
+            {
+              "skillId": 6036,
+              "kind": "need",
+              "mechanism": "shield",
+              "amount": 0
+            },
+            {
+              "skillId": 6037,
+              "kind": "need",
+              "mechanism": "shield",
+              "amount": 0
+            },
+            {
+              "skillId": 6039,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "delayed": true
+            },
+            {
+              "skillId": 6041,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 50,
+              "enemy": "Água"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6038,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 196,
+              "chance": 50,
+              "improvedBy": [
+                "crit",
+                "counter"
+              ],
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6038,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "chance": 50,
+              "improvedBy": [
+                "crit",
+                "counter"
+              ],
+              "onlyWithout": "shield",
+              "triggerScope": "active"
+            },
+            {
+              "skillId": 6040,
+              "kind": "buff",
+              "mechanism": "shieldStrength",
+              "amount": 25
+            },
+            {
+              "skillId": 6040,
+              "kind": "buff",
+              "mechanism": "damage",
+              "amount": 15,
+              "requires": [
+                "shield"
+              ]
+            },
+            {
+              "skillId": 6042,
+              "kind": "boost",
+              "mechanism": "crit",
+              "amount": 120,
+              "external": "incoming_corrosion"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -1347,6 +4244,197 @@
       }
     },
     {
+      "id": 25,
+      "name": "Veado Esporífero",
+      "nameEn": "Spore Deer",
+      "rarity": "Épico",
+      "element": "Grama",
+      "type": "Criatura da Floresta",
+      "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 60000,
+        "baseStats": {
+          "attack": 1308,
+          "defense": 1158,
+          "hp": 23040
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6092,
+            "name": "Envoltório de Videira",
+            "multiplier": 460.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6093,
+            "name": "Tiros de Esporos",
+            "multiplier": 168.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6092,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 50
+            },
+            {
+              "skillId": 6092,
+              "kind": "need",
+              "mechanism": "shield",
+              "amount": 0
+            },
+            {
+              "skillId": 6093,
+              "kind": "need",
+              "mechanism": "counter",
+              "amount": 0,
+              "requires": [
+                "shield"
+              ]
+            },
+            {
+              "skillId": 6095,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "delayed": true
+            },
+            {
+              "skillId": 6095,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 100,
+              "delayed": true
+            },
+            {
+              "skillId": 6097,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 30,
+              "enemy": "Água"
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6094,
+              "kind": "state",
+              "mechanism": "shield",
+              "amount": 0,
+              "chance": 50,
+              "improvedBy": [
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6096,
+              "kind": "buff",
+              "mechanism": "shieldStrength",
+              "amount": 10
+            },
+            {
+              "skillId": 6096,
+              "kind": "buff",
+              "mechanism": "damage",
+              "amount": 4.5,
+              "requires": [
+                "shield"
+              ]
+            },
+            {
+              "skillId": 6098,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 70,
+              "external": "incoming_corrosion"
+            }
+          ]
+        }
+      },
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6092,
+            "groupId": 6092,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Envoltório de Videira",
+            "description": "Causa DANO ao alvo a cada 6s (Multiplicador de Habilidade: 460%), e ganha Contra-ataque +50 por 3s. Quando estiver com um escudo, aumenta o DANO causado para o ataque atual em 20%. Quando enviado, DANO de Contra-ataque do Esquadrão+5%",
+            "descriptionEn": "Deals DMG to the target every 6s (Skill Multiplier: 460%), and gains Counter +50 for 3s. When having a shield, increases DMG dealt for current attack by 20%. When deployed, Squad Counter DMG+5%"
+          },
+          {
+            "id": 6093,
+            "groupId": 6093,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Tiros de Esporos",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 168%). Ao acionar a Habilidade Ativa com um contra-ataque enquanto estiver com um escudo, o DANO de Contra-ataque para o ataque atual +15%.",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 168%). When triggering the Active Skill with a counterattack while having a shield, Counter DMG for the current attack +15%."
+          },
+          {
+            "id": 6095,
+            "groupId": 6095,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Primavera Revitalizante",
+            "description": "Para cada 3 Habilidades de Líder usadas em uma única batalha, ganha um Escudo com base no DANO causado pelo último ataque (Multiplicador de Habilidade: 706%) e Contra-ataque +100 por 3s.",
+            "descriptionEn": "For every 3 Leader Skills used in a single battle, gains a Shield based on the DMG dealt for the last attack (Skill Multiplier: 706%) and Counter +100 for 3s."
+          },
+          {
+            "id": 6097,
+            "groupId": 6097,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder Crescente",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Besta Bioquímica do tipo Água, o DANO +11% na próxima vez que a habilidade for usada e ganha Contra-ataque +30 por 3s.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Water-type Biochemical Beast, DMG +11% the next time the skill is used and gains Counter +30 for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6094,
+            "groupId": 6094,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Tiros de Esporos",
+            "description": "Quando a Habilidade Ativa causa DANO, tem 50% de chance de ganhar um Escudo por 3s com base no DANO causado (Multiplicador da Habilidade: 176%). Se a Habilidade Ativa foi acionada por um contra-ataque, a chance aumenta para 100%.",
+            "descriptionEn": "When the Active Skill deals DMG, has a 50% chance to gain a Shield for 3s based on the DMG dealt (Skill Multiplier: 176%). If the Active Skill was triggered by a counterattack, the chance increases to 100%"
+          },
+          {
+            "id": 6096,
+            "groupId": 6096,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Primavera Revitalizante",
+            "description": "Aumenta a força do Escudo em 10%. Durante o tempo de Escudo, DANO de Líder +4.5%.",
+            "descriptionEn": "Increases Shield strength by 10%. For the duration of the Shield, Leader DMG +4.5%."
+          },
+          {
+            "id": 6098,
+            "groupId": 6098,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder Crescente",
+            "description": "Ao receber DANO de Corrosão, CRIT de Líder +70 e Redução de DANO +3% por 3s.",
+            "descriptionEn": "When taking Corrosion DMG, Leader Counter +70 and DMG Reduction +3% for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
       "id": 51,
       "name": "Água-viva de Plutão",
       "nameEn": "Pluto Jellyfish",
@@ -1354,6 +4442,119 @@
       "element": "Água",
       "type": "Criatura Aquática",
       "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 100000,
+        "baseStats": {
+          "attack": 1650,
+          "defense": 1425,
+          "hp": 28950
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6015,
+            "name": "Maré Tóxica",
+            "multiplier": 420.0,
+            "interval": 6.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6016,
+            "name": "Chicote Invisível",
+            "multiplier": 174.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6015,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0
+            },
+            {
+              "skillId": 6018,
+              "kind": "need",
+              "mechanism": "corrosion",
+              "amount": 0
+            },
+            {
+              "skillId": 6018,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 20,
+              "requires": [
+                "corrosion"
+              ],
+              "stackLimit": 6
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6017,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "chance": 50,
+              "improvedBy": [
+                "combo",
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6017,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 276,
+              "chance": 50,
+              "improvedBy": [
+                "combo",
+                "counter"
+              ]
+            },
+            {
+              "skillId": 6019,
+              "kind": "buff",
+              "mechanism": "damage",
+              "amount": 33,
+              "requires": [
+                "corrosion"
+              ]
+            },
+            {
+              "skillId": 6021,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 60,
+              "external": "incoming_crit"
+            },
+            {
+              "skillId": 6021,
+              "kind": "boost",
+              "mechanism": "counter",
+              "amount": 90,
+              "enemy": "Fogo",
+              "external": "incoming_crit"
+            },
+            {
+              "skillId": 6021,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 10,
+              "enemy": "Fogo",
+              "external": "incoming_crit"
+            }
+          ]
+        }
+      },
       "complete": true,
       "skills": {
         "Líder": [
@@ -1421,6 +4622,196 @@
             "name": "Poder Abissal",
             "description": "Quando receber um golpe crítico, Contra-ataque de Líder +60. Se a equipe adversária tiver uma Besta Bioquímica do tipo Fogo, concede Contra-ataque adicional +90 e Redução de DANO +10% por 3s.",
             "descriptionEn": "When receiving a critical hit, Leader Counter +60. If the opponent's team has a Fire-type Biochemical Beast, grants additional Counter +90 and DMG Reduction +10% for 3s."
+          }
+        ],
+        "Especial": []
+      }
+    },
+    {
+      "id": 21,
+      "name": "Água-viva Mímica",
+      "nameEn": "Mimic Jellyfish",
+      "rarity": "Épico",
+      "element": "Água",
+      "type": "Criatura Aquática",
+      "maxClass": 21,
+      "combatReference": {
+        "level": 100,
+        "baseMight": 60000,
+        "baseStats": {
+          "attack": 1320,
+          "defense": 1140,
+          "hp": 23160
+        },
+        "periodicAttacks": [
+          {
+            "skillId": 6071,
+            "name": "Mergulho em Veneno",
+            "multiplier": 444.0,
+            "interval": 6.0,
+            "kind": "corrosion",
+            "scenarioMultipliers": {}
+          },
+          {
+            "skillId": 6072,
+            "name": "Chicote Voador",
+            "multiplier": 108.0,
+            "interval": 3.0,
+            "kind": "direct",
+            "scenarioMultipliers": {}
+          }
+        ],
+        "source": "pet_level / Id + Level; skills_group / Id + Lv"
+      },
+      "mechanics": {
+        "version": 1,
+        "roles": {
+          "Líder": [
+            {
+              "skillId": 6071,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0
+            },
+            {
+              "skillId": 6071,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 100
+            },
+            {
+              "skillId": 6074,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 50,
+              "requires": [
+                "corrosion"
+              ]
+            },
+            {
+              "skillId": 6074,
+              "kind": "need",
+              "mechanism": "corrosion",
+              "amount": 0
+            }
+          ],
+          "Suporte": [
+            {
+              "skillId": 6073,
+              "kind": "state",
+              "mechanism": "corrosion",
+              "amount": 0,
+              "chance": 50,
+              "improvedBy": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6073,
+              "kind": "followup",
+              "mechanism": "damage",
+              "amount": 156,
+              "chance": 50,
+              "improvedBy": [
+                "combo"
+              ]
+            },
+            {
+              "skillId": 6075,
+              "kind": "buff",
+              "mechanism": "comboDamage",
+              "amount": 17,
+              "requires": [
+                "corrosion"
+              ]
+            },
+            {
+              "skillId": 6075,
+              "kind": "buff",
+              "mechanism": "protection",
+              "amount": 7.5,
+              "requires": [
+                "corrosion"
+              ]
+            },
+            {
+              "skillId": 6077,
+              "kind": "boost",
+              "mechanism": "combo",
+              "amount": 70,
+              "enemy": "Fogo",
+              "external": "incoming_crit"
+            }
+          ]
+        }
+      },
+      "complete": true,
+      "skills": {
+        "Líder": [
+          {
+            "id": 6071,
+            "groupId": 6071,
+            "level": 3,
+            "slot": "Líder 1",
+            "name": "Mergulho em Veneno",
+            "description": "Inflige Corrosão no alvo a cada 6s, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 444%), e ganha Combo +100 e DANO de Corrosão +15% na próxima vez que a Habilidade Ativa for usada. Quando enviado, DANO de Ataque Básico do Esquadrão+5%",
+            "descriptionEn": "Inflicts Corrosion on the target every 6s, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 444%), and gains Combo +100 and Corrosion DMG +15% the next time the Active Skill is used. When deployed, Squad Basic Attack DMG+5%"
+          },
+          {
+            "id": 6072,
+            "groupId": 6072,
+            "level": 5,
+            "slot": "Líder 2",
+            "name": "Chicote Voador",
+            "description": "Causa DANO ao alvo a cada 3s (Multiplicador de Habilidade: 108%), e tem 70% de chance de infligir Corrosão no alvo, causando DANO de Corrosão ao alvo ao longo de 3s (Multiplicador de Habilidade: 108%). Enquanto este efeito estiver ativo, o DANO CRIT do alvo -5%",
+            "descriptionEn": "Deals DMG to the target every 3s (Skill Multiplier: 108%), and has a 70% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 108%). While this effect is active, target's CRIT DMG -5%"
+          },
+          {
+            "id": 6074,
+            "groupId": 6074,
+            "level": 5,
+            "slot": "Líder 3",
+            "name": "Fantasma Mímico",
+            "description": "DANO de Corrosão +12%. Ao lidar com DANO de Corrosão, ganhe Combo +50 por 3s.",
+            "descriptionEn": "Corrosion DMG +12%. When dealing Corrosion DMG, gain Combo +50 for 3s."
+          },
+          {
+            "id": 6076,
+            "groupId": 6076,
+            "level": 5,
+            "slot": "Líder 4",
+            "name": "Poder das Marés",
+            "description": "Quando a Habilidade de Líder causa DANO a uma Besta Bioquímica do tipo Fogo, ganha DANO de Corrosão +11% e Redução de Fogo +3% por 3s.",
+            "descriptionEn": "When the Leader Skill deals DMG to a Fire-type Biochemical Beast, gains Corrosion DMG +11% and Fire Reduction +3% for 3s."
+          }
+        ],
+        "Suporte": [
+          {
+            "id": 6073,
+            "groupId": 6073,
+            "level": 5,
+            "slot": "Suporte 2",
+            "name": "Chicote Voador",
+            "description": "Quando a Habilidade Ativa causa DANO, tem 50% de chance de infligir Corrosão no alvo, causando DANO de Corrosão ao alvo por 3s (Multiplicador de Habilidade: 156%). Se a Habilidade Ativa foi acionada por um combo, a chance aumenta para 100%.",
+            "descriptionEn": "When the Active Skill deals DMG, has a 50% chance to inflict Corrosion on the target, dealing Corrosion DMG to the target over 3s (Skill Multiplier: 156%). If the Active Skill was triggered by a combo, the chance increases to 100%."
+          },
+          {
+            "id": 6075,
+            "groupId": 6075,
+            "level": 5,
+            "slot": "Suporte 3",
+            "name": "Fantasma Mímico",
+            "description": "Ao lutar contra um alvo com Corrosão, DANO de Combo +17%, DANO CRIT recebido -7.5%.",
+            "descriptionEn": "When fighting a target with Corrosion, Combo DMG +17% and CRIT DMG received -7.5%."
+          },
+          {
+            "id": 6077,
+            "groupId": 6077,
+            "level": 5,
+            "slot": "Suporte 4",
+            "name": "Poder das Marés",
+            "description": "Ao receber um golpe crítico, se a equipe adversária tiver uma Besta Bioquímica do tipo Fogo, Combo de Líder +70 e DANO de Corrosão +3% por 3s.",
+            "descriptionEn": "When receiving a critical hit, if the opponent's team has a Fire-type Biochemical Beast, Leader Combo +70 and Corrosion DMG +3% for 3s."
           }
         ],
         "Especial": []

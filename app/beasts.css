@@ -39,3 +39,7 @@
 .beasts-page .beast-chip-note{font-size:12px;line-height:1.8;color:var(--text-muted);margin:12px 0;overflow-wrap:anywhere}
 @container(min-width:600px){.beast-chip-duo{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.beast-chip-profiles,.beast-chip-reference-grid{grid-template-columns:1fr}.beast-chip-profiles button{min-height:80px}.beast-chip-controls label{min-width:0;max-width:none;flex-basis:100%}.beast-chip-build{padding:14px}}
+.beast-leadership{margin:18px 0;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--surface);min-width:0}
+.beast-leadership h4{color:var(--ops-strong);font-size:13px;margin:0 0 8px}.beast-leadership p{font-size:12px;line-height:1.8;color:var(--text-muted);margin:8px 0}
+.beast-leadership-table{max-width:100%;overflow-x:auto}.beast-leadership table{width:100%;border-collapse:collapse;font-size:11px;text-align:left;line-height:1.65}.beast-leadership caption{text-align:left;padding:8px 0;color:var(--text-muted)}
+.beast-leadership th,.beast-leadership td{padding:10px 8px;border-bottom:1px solid var(--border);vertical-align:top;overflow-wrap:anywhere}.beast-leadership th{color:var(--ops-strong);font-weight:500}.beast-leadership td{color:var(--text-muted)}.beast-leadership td strong,.beast-leadership td span{display:block}.beast-leadership td strong{font-weight:500;color:var(--text);margin-bottom:5px}

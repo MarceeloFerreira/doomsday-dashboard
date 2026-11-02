@@ -28,3 +28,18 @@
 .hero-card .hero-skills[open]{margin-top:0}
 .hero-card .hero-skills summary{box-sizing:border-box;display:list-item;padding:13px 0;min-height:46px}
 @media(max-width:760px){.hero-card{padding:18px;min-height:258px}.hero-card-select{min-height:84px;grid-template-columns:42px minmax(0,1fr)26px}}
+
+.hero-formation-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:24px 0 16px}
+.hero-formation-head .hero-pairs-context{margin:0}
+.hero-regenerate{min-height:46px;padding:10px 16px;border:1px solid var(--ops);border-radius:10px;background:var(--ops-tint);color:var(--ops-strong);font:inherit;font-size:13px;cursor:pointer}
+.hero-regenerate:disabled{opacity:.45;cursor:not-allowed}
+.hero-pair-assessment{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0}
+.hero-pair-assessment section{min-width:0;padding:14px 12px;border:1px solid var(--border);border-radius:10px;background:var(--surface)}
+.hero-pair-assessment h4{font-size:12px;margin:0 0 10px}
+.hero-pair-strengths h4{color:#c3dfc7}.hero-pair-cautions h4{color:var(--ops-strong)}
+.hero-pair-assessment ul{margin:0;overflow-wrap:anywhere}.hero-pair-assessment li+li{margin-top:8px}
+@media(min-width:761px) and (max-width:1200px){.hero-pair-grid{grid-template-columns:1fr}}
+@media(max-width:400px){.hero-pair-assessment{grid-template-columns:1fr}.hero-regenerate{width:100%}}
+.roster-evolution-notice{margin:0 0 24px;padding:16px 18px;border:1px solid var(--border);border-left:3px solid var(--ops);border-radius:12px;background:var(--ops-tint)}
+.roster-evolution-notice strong{display:block;color:var(--ops-strong);font-size:13px;font-weight:600;margin-bottom:6px}
+.roster-evolution-notice p{margin:0;color:var(--text-muted);font-size:13px;line-height:1.8}
