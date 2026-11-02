@@ -145,3 +145,39 @@ Execute uma vez `supabase/migrations/20261022_pending_request_deletion.sql` no S
 Administradores podem confirmar a exclusão de pedidos pendentes pelo nome e e-mail. O servidor valida o perfil e o banco bloqueia o pedido contra aprovação simultânea; a API administrativa do Supabase remove a conta Auth, com cascata do perfil e das sessões. O mesmo e-mail pode ser usado em novo cadastro. Players e pontuações da planilha não são excluídos. Contas já aprovadas ou inativadas, inclusive depois de retornarem à situação pendente, não podem ser removidas por essa função.
 
 Se o serviço Auth falhar, o pedido permanece bloqueado e pode ser excluído novamente pelo botão. O registro de auditoria mantém a solicitação de exclusão mesmo após a remoção da conta. Nenhuma conta real é excluída ao instalar a migração ou ao executar os testes locais.
+
+## Meu perfil e troca da própria senha
+
+O cabeçalho da conta aparece em todas as páginas enquanto houver acesso autenticado.
+**Meu perfil** mostra player, ID do jogo, permissão na aliança e e-mail da conta.
+Membros e administradores podem trocar a própria senha informando a senha atual
+e confirmando a nova senha (6 a 128 caracteres). Não é necessário outro administrador.
+As sessões abertas são encerradas e a pessoa entra novamente com a nova senha.
+
+Antes de publicar, execute `supabase/migrations/20261102_member_password_change.sql`
+no SQL Editor do Supabase. A migração adiciona uma função restrita ao servidor;
+não altera contas nem senhas existentes. Sem ela, a troca mostra um aviso e não altera a senha.
+A função valida a sessão e a versão da identidade Auth dentro da mesma transação
+usada para bloquear resets concorrentes e eliminar as sessões antigas. Nenhuma
+senha é registrada na auditoria. Se o resultado da alteração no Auth for incerto,
+a conta permanece bloqueada com `reset_pending=true` para manutenção conferir e concluir.
+
+## Histórico de uso nos cards de gestão
+
+Execute uma vez `supabase/migrations/20261102_member_access_audit.sql` no SQL Editor.
+Essa migração é independente da troca de senha. Adiciona uma tabela privada de
+estatísticas e gatilhos: não troca senhas, não encerra sessões nem reconstrói logins antigos.
+Cada card de gestão mostra primeiro/último login, quantidade de logins registrados
+e última atividade. Datas usam Europe/Lisbon, com o início do acompanhamento explícito.
+Zero significa **sem login registrado desde o início do acompanhamento**, não prova
+que a conta nunca foi usada antes. Logins pendentes/inativos também contam quando
+o servidor cria uma sessão; login recusado, recarregamento e consultas automáticas não contam.
+
+Última atividade registra página visível, retorno à aba, clique, teclado ou rolagem,
+com gravações limitadas a uma a cada 5 minutos. Consultas em segundo plano não
+renovam atividade. Esse indicador não significa presença online nem tempo de uso.
+Sessões já existentes podem registrar atividade sem um novo login.
+Somente a gestão administrativa entrega as estatísticas ao navegador. Nenhum IP,
+agente do navegador, senha ou histórico de páginas é armazenado.
+Sem a migração ou numa falha de leitura, a gestão avisa que o histórico está
+indisponível e preserva as demais funções. Falhas de telemetria não bloqueiam o uso do site.

@@ -1,8 +1,20 @@
 'use client';
 import {useEffect,useState} from 'react';
 import {occupiedMessage} from '../lib/roster-players.cjs';
+import {accessSummary} from '../lib/member-access-summary.cjs';
 const statuses={pending:'Pendente',active:'Ativo',inactive:'Inativo'};
 async function api(input){const r=await fetch('/api/members/manage',input?{signal:AbortSignal.timeout(35000),method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(input)}:{cache:'no-store',signal:AbortSignal.timeout(35000)});const data=await r.json();if(!r.ok)throw Object.assign(Error(data.error||'Não foi possível carregar o cadastro.'),{status:r.status});return data;}
+function MemberAccess({access}){
+  const summary=accessSummary(access);
+  return <section className="account-access-audit" aria-label="Histórico de acesso">
+    <h3>Uso do site</h3>{summary?<><dl>
+      <div><dt>Última atividade</dt><dd>{summary.activity||'Sem atividade registrada'}</dd></div>
+      <div><dt>Último login</dt><dd>{summary.last||'Sem login registrado'}</dd></div>
+      <div><dt>Primeiro login registrado</dt><dd>{summary.first||'Sem login registrado'}</dd></div>
+      <div><dt>Logins registrados</dt><dd>{summary.count===1?'1 login':`${summary.count} logins`}</dd></div>
+    </dl><p>{summary.since?`Histórico desde ${summary.since} (Lisboa). `:''}A atividade considera visitas e interações, com atualização a cada 5 minutos. Acessos anteriores ao início do histórico não estão incluídos.</p></>:<p>Histórico de acessos indisponível no momento.</p>}
+  </section>;
+}
 function MemberEditor({member,players,onSave,busy}){
   const [role,setRole]=useState(member.role),[status,setStatus]=useState(member.status),[player,setPlayer]=useState(member.player_id||''),[reset,setReset]=useState(false),[password,setPassword]=useState(''),[confirm,setConfirm]=useState(''),[deleting,setDeleting]=useState(false),[error,setError]=useState('');
   const labels={member:'Membro',admin:'Administrador'};
@@ -11,6 +23,7 @@ function MemberEditor({member,players,onSave,busy}){
   async function deleteRequest(){setError('');try{await onSave({action:'delete_pending',target:member.id,email:member.email,confirm:true});setDeleting(false);}catch(e){setError(e.message);}}
   return <article className={'account-member'+(member.status==='pending'?' account-member-pending':'')}><header><div><h2>{member.display_name}</h2><p>{member.email}</p></div><span className={'account-status '+member.status}>{statuses[member.status]} · {labels[member.role]}</span></header>
     {member.status==='pending'&&<p className="account-approval-hint">Aguardando aprovação · vincule o player e altere a situação para Ativo para liberar o acesso.</p>}
+    <MemberAccess access={member.access}/>
     <form onSubmit={save}><div className="account-edit-grid"><label>Player vinculado<select value={player} onChange={e=>{const selected=players.find(p=>p.id===e.target.value);if(selected?.owner&&selected.owner.id!==member.id){setError(occupiedMessage(selected.owner));return;}setError('');setPlayer(e.target.value);}}><option value="">Sem vínculo</option>{players.map(p=><option key={p.id} value={p.id}>{p.nick}{p.game_id?' · ID '+p.game_id:''}{p.sheetMissing?' · vínculo anterior, fora da lista atual':''}{p.owner&&p.owner.id!==member.id?' · já vinculado a '+p.owner.name:''}</option>)}</select></label><label>Situação<select value={status} onChange={e=>setStatus(e.target.value)}>{Object.entries(statuses).map(([value,label])=><option value={value} key={value}>{label}</option>)}</select></label><label>Permissão<select value={role} onChange={e=>setRole(e.target.value)}><option value="member">Membro</option><option value="admin">Administrador</option></select></label></div><p className="calendar-note">Ativar exige um player vinculado. Inativar bloqueia o acesso e encerra as sessões. Administradores podem gerenciar outras contas.</p><button disabled={busy||member.reset_pending}>Salvar cadastro</button></form>
     <button className="account-secondary" disabled={busy||member.reset_pending} onClick={()=>{setReset(!reset);setPassword('');setConfirm('');setError('');}}>{reset?'Cancelar redefinição':'Redefinir senha'}</button>
     {reset&&<form className="account-reset" onSubmit={changePassword}><p>Defina uma nova senha para esta conta. As sessões anteriores serão encerradas. A senha não ficará visível no cadastro.</p><label>Nova senha<input type="password" autoComplete="new-password" minLength={6} maxLength={128} required value={password} onChange={e=>setPassword(e.target.value)}/></label><label>Repita a nova senha<input type="password" autoComplete="new-password" minLength={6} maxLength={128} required value={confirm} onChange={e=>setConfirm(e.target.value)}/></label><button disabled={busy}>Confirmar nova senha</button></form>}
@@ -37,6 +50,7 @@ export default function MemberManagement({embedded=false}){
     <div className="account-filter-tabs" role="group" aria-label="Filtrar contas por situação">{filters.map(([key,label])=><button type="button" key={key} className={'account-filter-tab '+(key||'all')+(key==='pending'&&counts.pending?' has-pending':'')} aria-pressed={filter===key} onClick={()=>setFilter(key)}><span>{label}</span><strong>{key?counts[key]:data.members.length}</strong>{key==='pending'&&counts.pending>0&&<small>Aprovação necessária</small>}</button>)}</div>
     {counts.pending>0&&<div className="account-pending-notice" role="status"><span aria-hidden="true">!</span><div><strong>{counts.pending===1?'1 cadastro aguarda aprovação':`${counts.pending} cadastros aguardam aprovação`}</strong><p>Confira o player vinculado antes de liberar o acesso.</p></div>{filter!=='pending'&&<button type="button" onClick={()=>{setFilter('pending');setQuery('');}}>Ver pendentes</button>}</div>}
     <p className="calendar-note">{data.rosterAvailable?'Players da aba Membros da planilha. Um jogador só pode pertencer a uma conta, inclusive quando ela está inativa.':'Lista da planilha ainda indisponível.'}</p>{data.rosterWarning&&<p className="r4-notice" role="status">{data.rosterWarning}</p>}
+    {data.accessWarning&&<p className="r4-notice" role="status">{data.accessWarning}</p>}
     <div className="account-search-toolbar"><label>Buscar conta ou player<input type="search" placeholder="Digite o nome, e-mail ou player…" value={query} onChange={e=>setQuery(e.target.value)}/></label><button className="account-secondary" disabled={busy||loading} onClick={()=>load()}>{loading?'Atualizando…':'Atualizar cadastros'}</button></div>
     <p className="account-result-count" role="status">{members.length} {members.length===1?'conta encontrada':'contas encontradas'}{query?' para esta busca':''}.</p>
     {members.map(m=><MemberEditor key={m.id+':'+m.updated_at} member={m} players={data.players} onSave={save} busy={busy}/>)}{!members.length&&<div className="account-filter-empty"><h2>{query?'Nenhuma conta encontrada':filter==='pending'?'Tudo em dia por aqui!':'Nenhuma conta nesta situação'}</h2><p>{query?'Tente outro nome, e-mail ou player.':filter==='pending'?'Não há cadastros aguardando aprovação.':'Novas contas aparecerão aqui conforme a situação do cadastro.'}</p>{query&&<button type="button" className="account-secondary" onClick={()=>setQuery('')}>Limpar busca</button>}</div>}

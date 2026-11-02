@@ -4,7 +4,6 @@ import {createPortal} from 'react-dom';
 import PersonalPerformance from './PersonalPerformance';
 import TroopTraining from './TroopTraining';
 import AccountAccess from './AccountAccess';
-import MemberAccountActions from './MemberAccountActions';
 import Leadership from './Leadership';
 import MemberManagement from './MemberManagement';
 import SessionLoading from './SessionLoading';
@@ -61,7 +60,7 @@ export default function MemberArea(){
   useEffect(()=>{if(!session)return;window.dispatchEvent(new CustomEvent('bope-session-changed'));if(session.authenticated&&['calendario','herois','bestas'].includes(searchParams.get('destino')))window.location.replace('/'+searchParams.get('destino'));},[session?.authenticated,session?.profile?.role,session?.profile?.status]);
   const isAdmin=session?.mode==='accounts'&&session?.authenticated&&session.profile?.role==='admin';
   if(!targets)return <SessionLoading error={error}/>;
-  const gate=!session?<SessionLoading error={error}/>:!session.authenticated?<AccountAccess session={session} onSession={setSession} onLogout={logout}/>:<><header className="member-account-header"><div className="member-profile"><span className="member-profile-avatar" aria-hidden="true">{(session.profile?.player?.nick||'B').slice(0,1).toUpperCase()}</span><div><span className="member-profile-label">Sua conta · BoPE</span><strong className="member-profile-nick">{session.profile?.player?.nick||'Membro da aliança'}</strong><span className={'member-profile-role'+(isAdmin?' admin':'')}>{isAdmin?'Administrador · Liderança R4 / R5':'Membro ativo'}</span>{session?.mode==='accounts'&&<span className="member-profile-help">Player incorreto? Fale com a liderança.</span>}</div></div><MemberAccountActions onLogout={logout}/></header></>;
+  const gate=!session?<SessionLoading error={error}/>:!session.authenticated?<AccountAccess session={session} onSession={setSession} onLogout={logout}/>:null;
   const scores=data?.scores||[];
   const {analysis,effectiveEdition,lastParticipation}=memberSelection(scores,{player,event,period,edition,personal:view==='me'});
   const progress=memberProgress(scores,player,analysis,effectiveEdition);
