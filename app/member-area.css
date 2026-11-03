@@ -51,3 +51,4 @@
 @media(max-width:1150px){.burnt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.burnt-photo{height:250px}}
 @media(max-width:760px){.burnt-grid{grid-template-columns:1fr;gap:22px}.burnt-photo{height:clamp(220px,65vw,300px)}.burnt-hero{padding:20px 16px}.burnt-hero-icon{width:50px;height:50px;font-size:28px}}
 @media(prefers-reduced-motion:reduce){.burnt-card-latest::before,.burnt-card-latest::after{animation:none}}
+.member-filter-panel.r4-event-picker{border-color:#655637;background:linear-gradient(125deg,#353024,var(--surface) 70%)}.member-filter-panel.r4-event-picker h2{font-size:28px}.member-filter-panel header .brand-eyebrow{color:var(--ops);font-size:11px}.member-filter-panel .r4-event-types button:focus-visible{outline:2px solid var(--ops);outline-offset:3px}@media(max-width:760px){.member-filter-panel.r4-event-picker h2{font-size:24px}}

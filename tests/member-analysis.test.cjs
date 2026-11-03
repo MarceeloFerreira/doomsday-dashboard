@@ -26,3 +26,12 @@ test('unusual event labels cannot mutate JavaScript object prototypes',()=>{
   analyzeMembers([['2026-10-16','__proto__','Player',100],['2026-10-17','constructor','Player',200]],'','0');
   assert.equal(Object.prototype.total,undefined);assert.equal(Object.prototype.records,undefined);assert.equal(Object.total,undefined);
 });
+
+test('additional sheet events remain selectable and contribute their own event summaries',()=>{
+  const rows=[['2026-11-01','Liga Aliança','Alice',100],['2026-11-02','Confronto Extremo','Alice',200],['2026-11-03','P','Alice',0,'pompeia:test','Pompeia manhã']];
+  const all=analyzeMembers(rows,'','0');
+  assert.deepEqual(all.events.map(e=>e.label).sort(),['Confronto Extremo','Liga Aliança','Pompeia']);
+  assert.equal(analyzeMembers(rows,'Liga Aliança','0').total,100);
+  assert.equal(analyzeMembers(rows,'Confronto Extremo','0').ranking[0].records,1);
+  assert.equal(analyzeMembers(rows,'P','0').total,0);
+});

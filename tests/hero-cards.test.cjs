@@ -52,3 +52,15 @@ test('available hero uses an accessible custom checkbox and can toggle its stabl
   assert.match(html,/hero-card-toggle/);assert.match(html,/hero-card-status/);
   assert.match(html,/No meu elenco/);assert.doesNotMatch(html,/is-preview/);
 });
+
+test('Miyamoto card exposes an independent accessible skin checkbox and switches displayed skills',async()=>{
+ const Card=await loadCard(),hero=catalog.heroes.find(h=>h.id===1095);let selection;
+ const card=Card({hero,selected:true,skinId:109501,onToggle(){},onSkinChange:(...args)=>{selection=args;}});
+ function inputs(node){if(!node||typeof node!=='object')return [];return [...(node.type==='input'?[node]:[]),...React.Children.toArray(node.props?.children).flatMap(inputs)];}
+ const checkboxes=inputs(card);assert.equal(checkboxes.length,2);assert.equal(checkboxes[1].props.checked,true);
+ checkboxes[1].props.onChange({target:{checked:false}});assert.deepEqual(selection,[1095,null]);
+ checkboxes[1].props.onChange({target:{checked:true}});assert.deepEqual(selection,[1095,109501]);
+ const html=renderToStaticMarkup(card);assert.match(html,/Possui Skin Samurai Mundano/);assert.match(html,/Grande Momento/);assert.match(html,/Firme e Resoluto/);assert.match(html,/Crença Inabalável/);assert.doesNotMatch(html,/Dois Céus como Um|Cinco Anéis|Postura Defensiva/);
+ const normal=renderToStaticMarkup(Card({hero,selected:true,onToggle(){}}));assert.match(normal,/Dois Céus como Um/);assert.match(normal,/Postura Defensiva/);assert.match(normal,/Cinco Anéis/);assert.doesNotMatch(normal,/Grande Momento|Crença Inabalável/);
+ const other=catalog.heroes.find(h=>h.id===1092);assert.doesNotMatch(renderToStaticMarkup(Card({hero:other,onToggle(){}})),/hero-skin-choice/);
+});

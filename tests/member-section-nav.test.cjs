@@ -17,13 +17,13 @@ test('unified navigation hides admin sections for members and retains tools for 
   vm.createContext(context);vm.runInContext(compiled.code,context);
   const Nav=context.exports.default;
   const member=renderToStaticMarkup(React.createElement(Nav,{isAdmin:false,selected:'desempenho',pendingCount:3}));
-  assert.doesNotMatch(member,/aba=gestao|aba=lideranca|Liderança|R4|R5|nav-pending-badge/);
+  assert.doesNotMatch(member,/aba=gestao|aba=lideranca|aba=pompeia|Liderança|R4|R5|nav-pending-badge/);
   assert.match(member,/href="\/bestas"/);assert.match(member,/Bestas/);assert.match(member,/Membros/);assert.match(member,/Calendário/);assert.match(member,/Desempenho/);assert.match(member,/Cálculos do Supremo/);assert.match(member,/Utilitários/);
   const withPending=renderToStaticMarkup(React.createElement(Nav,{isAdmin:true,selected:'gestao',pendingCount:3}));
   assert.match(withPending,/Membros e acessos, 3 pedidos pendentes/);assert.match(withPending,/nav-pending-badge/);
   const admin=renderToStaticMarkup(React.createElement(Nav,{isAdmin:true,selected:'lideranca'}));
   assert.doesNotMatch(admin,/nav-pending-badge/);
-  for(const section of ['desempenho','supremo','util','lideranca','gestao'])assert.ok(admin.includes('aba='+section));
+  for(const section of ['desempenho','supremo','util','lideranca','gestao','pompeia'])assert.ok(admin.includes('aba='+section));
   assert.equal((admin.match(/aria-current="page"/g)||[]).length,1);
   assert.match(admin,/href="\/membros\?aba=lideranca" class="topmenu-link active" aria-current="page"/);
 });

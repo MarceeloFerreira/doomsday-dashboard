@@ -8,6 +8,7 @@ const sections=[
   {id:'supremo',label:'Cálculos do Supremo',description:'Planeje seus pontos no evento',icon:'calculator'},
   {id:'util',label:'Utilitários',description:'Ferramentas para sua evolução',icon:'tools'},
   {id:'lideranca',label:'Eventos e metas',description:'Resultados e objetivos do time',icon:'shield',admin:true},
+  {id:'pompeia',label:'Times da Pompeia',description:'Inscritos, equipes e aviso do evento',icon:'calculator',admin:true},
   {id:'gestao',label:'Membros e acessos',description:'Cadastros, vínculos e permissões',icon:'users',admin:true}
 ];
 function Icon({name}){

@@ -1,0 +1,10 @@
+import {NextResponse} from 'next/server';
+import {createAccounts} from '../../../../../lib/member-accounts.cjs';
+import {memberRosterSource} from '../../../../../lib/leadership-source';
+import {pompeiiSheet} from '../../../../../lib/pompeii-sheet';
+import {createPompeiiHistoryHandlers} from '../../../../../lib/pompeii-history-handlers.cjs';
+export const runtime='nodejs';
+export const dynamic='force-dynamic';
+const handlers=createPompeiiHistoryHandlers({NextResponse,service:createAccounts({rosterSource:memberRosterSource}),sheet:pompeiiSheet});
+export const GET=handlers.GET;
+export const POST=handlers.POST;

@@ -33,5 +33,11 @@ def build(source):
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('source');parser.add_argument('destination');args=parser.parse_args()
     result=build(args.source);target=Path(args.destination);target.parent.mkdir(parents=True,exist_ok=True)
+    if target.exists():
+        prior=json.loads(target.read_text(encoding='utf-8'))
+        skins={h['id']:h['skins'] for h in prior.get('heroes',[]) if h.get('skins')}
+        for hero in result['heroes']:
+            if hero['id'] in skins:hero['skins']=skins[hero['id']]
+    # Re-run import-hero-skins.py with a validated current snapshot to refresh skin data.
     temporary=target.with_suffix('.tmp');temporary.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');temporary.replace(target)
     print(f'Imported {len(result["heroes"])} legendary heroes')

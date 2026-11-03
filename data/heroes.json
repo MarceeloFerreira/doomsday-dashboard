@@ -2730,6 +2730,71 @@
           "descriptionEn": "Increases Infantry Squad DEF by 20%. Counterattacks have a 20% chance to reduce Skill DMG dealt by the enemy by 28% for 3s.",
           "level": 5
         }
+      ],
+      "skins": [
+        {
+          "id": 109501,
+          "name": "Samurai Mundano",
+          "skills": [
+            {
+              "id": 10952,
+              "replaces": 10951,
+              "slot": "Fúria",
+              "name": "Grande Momento",
+              "description": "Causa DANO a até 3 Esquadrões inimigos em uma área semicircular à frente (Fator de Dano: 13500). O DANO sofrido por cada Esquadrão inimigo é reduzido em 10% para cada Esquadrão inimigo alvo adicional.",
+              "descriptionEn": "Deals DMG to up to 3 enemy Squads in a semicircular area in front (Damage Factor: 13500). DMG taken by each enemy Squad reduces by 10% for every additional target enemy Squad.",
+              "level": 5
+            },
+            {
+              "id": 10957,
+              "replaces": 10953,
+              "slot": "Passiva 1",
+              "name": "Firme e Resoluto",
+              "description": "Ao liderar apenas Esquadrões de Infantaria, o DANO aumenta em 15%. Contra-ataques têm 25% de chance de reduzir o PV do inimigo em 30% por 3s.",
+              "descriptionEn": "When leading only Infantry Squads, DMG increases by 15%. Counterattacks have a 25% chance to reduce enemy HP by 30% for 3s.",
+              "level": 5
+            },
+            {
+              "id": 10959,
+              "replaces": 10955,
+              "slot": "Despertar",
+              "name": "Crença Inabalável",
+              "description": "O ATQ do Esquadrão de Infantaria aumenta em 45%, e a Velocidade de Viagem aumenta em 30%.",
+              "descriptionEn": "Infantry Squad ATK increases by 45%, and Travel Speed increases by 30%.",
+              "level": 1
+            }
+          ],
+          "evidence": {
+            "asOf": "2026-11-03",
+            "client": "1.62.0",
+            "build": "13",
+            "patch": "12",
+            "manifest": "4218D2AB12",
+            "manifestSha256": "580f8963ac3bfc37d0782ed2592983b288deeee671eec966759b8f108c8745c2",
+            "sources": [
+              {
+                "table": "gameconfig_hero_skin",
+                "sha256": "7288849210aa4b15f0c6bee936c88e0d98dcde3c970d253c30b41c4b3a84d6fb"
+              },
+              {
+                "table": "gameconfig_skills_group",
+                "sha256": "e88f717d17c1feaee60c7fb75bae1ea97842b69b939dd3cd3f1f3ef76d375f49"
+              },
+              {
+                "table": "gameconfig_string_en",
+                "sha256": "af674bdd52513cc0b45fdcb06af4052b34502dd7b1a4f749de66b5e31b55147f"
+              },
+              {
+                "table": "gameconfig_string_fix",
+                "sha256": "f257398f8fc08d6ddda56746c818f9edc37d2b3d2fe9b45ad9cda2b35aa14cda"
+              },
+              {
+                "table": "gameconfig_string_pt",
+                "sha256": "593b556ea3d41badd27118f4706c7d56c28e9f11601a0190e04d0ce6cbf622e4"
+              }
+            ]
+          }
+        }
       ]
     },
     {
