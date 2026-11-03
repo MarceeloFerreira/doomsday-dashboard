@@ -64,6 +64,23 @@ Campos de pontos em branco ficam fora das estatísticas, zero é preservado e as
 
 Para atualizar os pontos de Pompeia no Desempenho após preenchê-los, use **Atualizar dados**. A leitura da aba dedicada é feita na consulta do relatório; não depende do cache de cinco minutos dos eventos antigos. Se essa leitura falhar, o site avisa e mantém disponíveis os resultados dos demais eventos.
 
+## Pompeia em Eventos e metas
+
+O painel **Membros → Eventos e metas** também lê os pontos das abas dedicadas da
+Pompeia. O filtro **Pompeia** inclui ranking, totais, gráficos, comparação com a
+edição anterior e cumprimento de metas. Nomes e IDs distinguem edições no mesmo
+dia. Somente contas de membros atuais entram nos indicadores, como nos demais
+eventos. Pontos em branco não são tratados como zero; edições incompletas aparecem
+como parciais e edições inteiramente sem pontos aguardam algum valor informado.
+
+As metas usam as regras ativas da aba **RegrasMetas**. Na coluna **Evento**, use
+`Pompeia`, `Pompéia` ou `P`; as três formas identificam o mesmo evento. As colunas
+de tropa, faixa de poder e meta percentual ou em pontos seguem o funcionamento dos
+outros eventos. Regras desativadas são ignoradas e, sem regra aplicável, o jogador
+fica **Sem avaliação**. Nenhuma meta de outro evento é aplicada automaticamente.
+Alterações nas regras seguem o cache de leitura da planilha de até cinco minutos.
+Esta integração utiliza as ações já existentes do Apps Script e não exige novo SQL.
+
 ## Responsabilidade adicional: Incubadora
 
 Aplique `supabase/migrations/20261103_pompeii_incubadora.sql` após a migração inicial de funções. O SQL atualiza a restrição de valores permitidos e a função privada de gravação, preservando os cadastros e funções existentes. Não exige atualizar o Apps Script.

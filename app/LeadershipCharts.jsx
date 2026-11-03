@@ -1,6 +1,7 @@
 'use client';
 import {useState} from 'react';
 import {chartAnalysis} from '../lib/r4-analytics.cjs';
+const editionId=e=>e.id||e.date;
 const fmt=n=>new Intl.NumberFormat('pt-BR',{maximumFractionDigits:0}).format(n);
 const compact=n=>new Intl.NumberFormat('pt-BR',{notation:'compact',maximumFractionDigits:1}).format(n);
 const date=s=>s.split('-').reverse().join('/');
@@ -32,11 +33,11 @@ export default function LeadershipCharts({data,rows,onDate,onPlayer,onStatus,sta
         <svg className="r4-history-chart" viewBox="0 0 620 230" role="img" aria-label={`${metricName[metric]} nas últimas ${history.length} edições de ${data.edition.label}. Valores e seleção de edição disponíveis abaixo.`}>
           {[0,.25,.5,.75,1].map(f=><g key={f}><line x1={chart.left} x2={chart.right} y1={chart.bottom-f*(chart.bottom-chart.top)} y2={chart.bottom-f*(chart.bottom-chart.top)} stroke="var(--border)" strokeDasharray="3 5"/><text x={chart.left-10} y={chart.bottom-f*(chart.bottom-chart.top)+4} textAnchor="end">{compact(max*f)}</text></g>)}
           {coords.length>1&&<><polygon points={`${coords[0].x},${chart.bottom} ${points} ${coords.at(-1).x},${chart.bottom}`} fill="var(--ops)" opacity=".08"/><polyline points={points} fill="none" stroke="var(--ops)" strokeWidth="2.5"/></>}
-          {coords.map(({e,x,y})=><g key={e.date}><circle cx={x} cy={y} r="5" fill={e.date===data.edition.date?'var(--ops-strong)':'var(--surface)'} stroke="var(--ops)" strokeWidth="2"><title>{date(e.date)}: {fmt(historyValue(e))}</title></circle><text x={x} y="214" textAnchor="middle">{date(e.date).slice(0,5)}</text></g>)}
+          {coords.map(({e,x,y})=><g key={editionId(e)}><circle cx={x} cy={y} r="5" fill={editionId(e)===editionId(data.edition)?'var(--ops-strong)':'var(--surface)'} stroke="var(--ops)" strokeWidth="2"><title>{date(e.date)}{e.name?" · "+e.name:""}: {fmt(historyValue(e))}</title></circle><text x={x} y="214" textAnchor="middle">{date(e.date).slice(0,5)}</text></g>)}
         </svg>
         {history.length<2&&<p className="r4-chart-note">Uma edição disponível. A tendência aparece quando houver outras edições deste evento.</p>}
-        <div className="r4-history-values" aria-label="Valores do histórico">{history.map(e=><button key={e.date} aria-label={`${date(e.date)}: ${metricName[metric]}, ${fmt(historyValue(e))}${e.partial?' · resultado parcial':''}`} onClick={()=>onDate(e.date)} aria-current={e.date===data.edition.date?'true':undefined}><span>{date(e.date)}{e.partial?' *':''}</span><strong>{compact(historyValue(e))}</strong></button>)}</div>
-        <p className="r4-chart-note">Selecione uma data acima para abrir a edição. “Jogadores com registro” inclui registros com zero pontos. {history.some(e=>e.partial)&&' * Edição com registros conflitantes excluídos: resultado parcial.'}</p>
+        <div className="r4-history-values" aria-label="Valores do histórico">{history.map(e=><button key={editionId(e)} aria-label={`${date(e.date)}${e.name?" · "+e.name:""}: ${metricName[metric]}, ${fmt(historyValue(e))}${e.partial?' · resultado parcial':''}`} onClick={()=>onDate(editionId(e))} aria-current={editionId(e)===editionId(data.edition)?'true':undefined}><span>{date(e.date)}{e.name?" · "+e.name:""}{e.partial?' *':''}</span><strong>{compact(historyValue(e))}</strong></button>)}</div>
+        <p className="r4-chart-note">Selecione uma data acima para abrir a edição. “Jogadores com registro” inclui registros com zero pontos. {history.some(e=>e.partial)&&' * Edição com pontos ainda não informados ou registros conflitantes excluídos: resultado parcial.'}</p>
       </article>
       <article className="r4-chart-card">
         <header><div><h3>Cumprimento das metas</h3><p>Identifique quem atingiu a meta e quem precisa de acompanhamento.</p></div></header>
